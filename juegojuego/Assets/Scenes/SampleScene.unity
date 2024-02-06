@@ -132,9 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 98476794}
-  - component: {fileID: 98476795}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: WheelRearLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,45 +154,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009451810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &98476795
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98476793}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4000
-    targetPosition: 0.2
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 1
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
 --- !u!1 &596073144
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +163,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596073145}
-  - component: {fileID: 596073146}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: WheelRearRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,45 +185,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009451810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &596073146
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596073144}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4000
-    targetPosition: 0.2
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 1
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
 --- !u!1 &652014059
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,9 +194,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 652014060}
-  - component: {fileID: 652014061}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: WheelFrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,45 +216,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009451810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &652014061
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652014059}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4000
-    targetPosition: 0.2
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 1
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,9 +319,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859574133}
-  - component: {fileID: 859574134}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WheelFrontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,45 +341,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009451810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &859574134
-WheelCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859574132}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.3
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4000
-    targetPosition: 0.2
-  m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
-  m_Mass: 1
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
