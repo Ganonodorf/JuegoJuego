@@ -173,13 +173,13 @@ MonoBehaviour:
   wheelRearRight: 1
   restLength: 1.3
   springTravel: 1.3
-  springStiffness: 6000
+  springStiffness: 15000
   damperStiffness: 1000
   steerAngle: 0
   steerTime: 0
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 10
-  maxForwardVelocity: 40
+  maxForwardVelocity: 1
   forceVectorLength: 3000
   sidewaysGripCurve:
     serializedVersion: 2
@@ -404,7 +404,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396062969}
   serializedVersion: 4
-  m_Mass: 1000
+  m_Mass: 2000
   m_Drag: 0.02
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -562,13 +562,13 @@ MonoBehaviour:
   wheelRearRight: 0
   restLength: 1.3
   springTravel: 1.3
-  springStiffness: 6000
+  springStiffness: 15000
   damperStiffness: 1000
   steerAngle: 0
   steerTime: 240
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 10
-  maxForwardVelocity: 40
+  maxForwardVelocity: 20
   forceVectorLength: 3000
   sidewaysGripCurve:
     serializedVersion: 2
@@ -1049,13 +1049,13 @@ MonoBehaviour:
   wheelRearRight: 0
   restLength: 1.3
   springTravel: 1.3
-  springStiffness: 6000
+  springStiffness: 15000
   damperStiffness: 1000
   steerAngle: 0
   steerTime: 240
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 10
-  maxForwardVelocity: 40
+  maxForwardVelocity: 20
   forceVectorLength: 3000
   sidewaysGripCurve:
     serializedVersion: 2
@@ -1182,13 +1182,13 @@ MonoBehaviour:
   wheelRearRight: 0
   restLength: 1.3
   springTravel: 1.3
-  springStiffness: 6000
+  springStiffness: 15000
   damperStiffness: 1000
   steerAngle: 0
   steerTime: 0
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 10
-  maxForwardVelocity: 40
+  maxForwardVelocity: 1
   forceVectorLength: 3000
   sidewaysGripCurve:
     serializedVersion: 2
