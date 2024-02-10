@@ -37,12 +37,15 @@ public class WheelController : MonoBehaviour
     public float wheelRadius;
     public float maxGripSidewaysVelocity;
     public float maxForwardVelocity;
+    [SerializeField] private float motorForce;
+    [SerializeField] private float breakForce;
     public float forceVectorLength;
 
     private float wheelAngle;
 
     public AnimationCurve sidewaysGripCurve;
     public AnimationCurve torqueCurve;
+    [SerializeField] private AnimationCurve stiffnessCurve;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +73,7 @@ public class WheelController : MonoBehaviour
             springLength = hit.distance - wheelRadius;
             springLength = Mathf.Clamp(springLength, minLength, restLength);
             springVelocity = (lastLength - springLength) / Time.fixedDeltaTime;
-            springForce = springStiffness * (restLength - springLength);
+            springForce = springStiffness * stiffnessCurve.Evaluate((restLength - springLength)/restLength);
             damperForce = damperStiffness * springVelocity;
 
             suspensionForce = (springForce + damperForce) * transform.up;
@@ -78,8 +81,13 @@ public class WheelController : MonoBehaviour
             wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
 
             // motor acceleration force
-
-            fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocity) * springForce;
+            if ((Input.GetAxis("Vertical") > 0 && wheelVelocityLS.z > 0) || (Input.GetAxis("Vertical") < 0 && wheelVelocityLS.z < 0))
+            {
+                fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocity) * motorForce;
+            }else
+            {
+                fx = Input.GetAxis("Vertical") * breakForce;
+            }
 
             // Sideways grip
             fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocity) * springForce;
