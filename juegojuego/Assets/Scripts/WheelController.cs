@@ -52,6 +52,7 @@ public class WheelController : MonoBehaviour
 
     private float wheelAngle;
 
+    [Header("Curvas")]
     public AnimationCurve sidewaysGripCurve;
     public AnimationCurve torqueCurve;
     [SerializeField] private AnimationCurve stiffnessCurve;
