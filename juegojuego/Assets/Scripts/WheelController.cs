@@ -36,10 +36,19 @@ public class WheelController : MonoBehaviour
     public float steerTime;
     public float wheelRadius;
     public float maxGripSidewaysVelocity;
+
+    [Header("Motor")]
     public float maxForwardVelocity;
     [SerializeField] private float motorForce;
     [SerializeField] private float breakForce;
     public float forceVectorLength;
+
+    [Header("Automatic Break")]
+    [SerializeField] private float autoBreakMaxVelocity;
+    [SerializeField] private float autoBreakForce;
+
+
+
 
     private float wheelAngle;
 
@@ -89,8 +98,19 @@ public class WheelController : MonoBehaviour
                 fx = Input.GetAxis("Vertical") * breakForce;
             }
 
-            // Sideways grip
-            fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocity) * springForce;
+            //auto break force if low velocity and no input
+            if((Input.GetAxis("Vertical") == 0) &&
+                wheelVelocityLS.z > 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
+            {
+                fx = -autoBreakForce;
+            } else if ((Input.GetAxis("Vertical") == 0) &&
+                wheelVelocityLS.z < 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
+            {
+                fx = autoBreakForce;
+            }
+
+                // Sideways grip
+                fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocity) * springForce;
 
             rb.AddForceAtPosition(suspensionForce + (fx * transform.forward) + (fy * -transform.right), transform.position);
 
