@@ -36,16 +36,27 @@ public class WheelController : MonoBehaviour
     public float steerTime;
     public float wheelRadius;
     public float maxGripSidewaysVelocity;
+    private float maxGripSidewaysVelocityFactor;
 
     [Header("Motor")]
     public float maxForwardVelocity;
+    private float maxForwardVelocityFactor;
     [SerializeField] private float motorForce;
+    private float motorForceFactor;
     [SerializeField] private float breakForce;
     public float forceVectorLength;
 
     [Header("Automatic Break")]
     [SerializeField] private float autoBreakMaxVelocity;
     [SerializeField] private float autoBreakForce;
+
+    [Header("Drifting Multipliers")]
+    [SerializeField] private float driftMaxGripSidewaysMultiplier;
+    [SerializeField] private float driftMaxForwardVelocityMultiplier;
+    [SerializeField] private float driftMotorForceMultiplier;
+
+
+
 
 
 
@@ -90,10 +101,24 @@ public class WheelController : MonoBehaviour
 
             wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
 
+            // if drifting button
+
+            if (Input.GetKey("space"))
+            {
+                maxForwardVelocityFactor = maxForwardVelocity * driftMaxForwardVelocityMultiplier;
+                maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity * driftMaxGripSidewaysMultiplier;
+                motorForceFactor = motorForce * driftMotorForceMultiplier;
+            }else
+            {
+                maxForwardVelocityFactor = maxForwardVelocity;
+                maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
+                motorForceFactor = motorForce;
+            }
+
             // motor acceleration force
             if ((Input.GetAxis("Vertical") > 0 && wheelVelocityLS.z > 0) || (Input.GetAxis("Vertical") < 0 && wheelVelocityLS.z < 0))
             {
-                fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocity) * motorForce;
+                fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocityFactor) * motorForceFactor;
             }else
             {
                 fx = Input.GetAxis("Vertical") * breakForce;
@@ -111,7 +136,7 @@ public class WheelController : MonoBehaviour
             }
 
                 // Sideways grip
-                fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocity) * springForce;
+                fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocityFactor) * springForce;
 
             rb.AddForceAtPosition(suspensionForce + (fx * transform.forward) + (fy * -transform.right), transform.position);
 
