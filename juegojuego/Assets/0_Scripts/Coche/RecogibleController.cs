@@ -30,8 +30,6 @@ public class RecogibleController : MonoBehaviour
         {
             SoltarObjeto();
         }
-
-
     }
 
     private void OnTriggerEnter(Collider collision)
