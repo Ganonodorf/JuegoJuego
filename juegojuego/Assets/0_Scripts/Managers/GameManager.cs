@@ -4,7 +4,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Con esto declaras que esta clase va a ser estática, es decir, va a estar siempre activa
-    // y disponible para todos
+    // y disponible para todos.
+    // El static hace que la clase simplemente exista, siempre.
     public static GameManager Instance;
 
     // Este va a ser el estado actual de juego
