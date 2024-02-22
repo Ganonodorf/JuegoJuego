@@ -1,7 +1,4 @@
 using PixelCrushers.DialogueSystem;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour
@@ -10,7 +7,6 @@ public class DialogManager : MonoBehaviour
     // y disponible para todos
     public static DialogManager Instance;
 
-    private int c = 0;
     // En el awake decimos que si cuando el GameObject que tenga este script es creado
     // no existe ya un GameManager, asignamos Instance a ese GameObject.
     // Si no es así y ya existe un GameManager, el que se acaba de crear se borra.
@@ -29,9 +25,14 @@ public class DialogManager : MonoBehaviour
 
     public void ObjectPicked(string objectPickedName)
     {
-        if(objectPickedName == "ModemNegro")
+        if (objectPickedName == "ModemNegro")
         {
-            DialogueLua.SetVariable("HaveModemNegro", true);
+            DialogueLua.SetVariable(objectPickedName, true);
+        }
+
+        if (objectPickedName == "ModemBlanco")
+        {
+            DialogueLua.SetVariable(objectPickedName, true);
         }
     }
 }

@@ -26,7 +26,7 @@ public class RecogibleController : MonoBehaviour
             RecogerObjeto();
         }
 
-        if(Input.GetKeyDown(KeyCode.E) && ObjetosRecogidos.Count > 0)
+        if(Input.GetKeyDown(KeyCode.R) && ObjetosRecogidos.Count > 0)
         {
             SoltarObjeto();
         }
@@ -79,6 +79,9 @@ public class RecogibleController : MonoBehaviour
 
         // Mete el objeto en la lista
         ObjetosRecogidos.Add(RecogibleObject);
+
+        // Avisa de que ha recogido el objeto X
+        DialogManager.Instance.ObjectPicked(RecogibleObject.name);
 
         // Pone la variable a null para que no pueda seguir recogiéndolo una vez ya recogida
         RecogibleObject = null;
