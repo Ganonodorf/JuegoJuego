@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Player
+      value: Conductor
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -925,7 +925,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["have_moden_negro"] = false
+      userScript: Variable["HaveModemNegro"] = false
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1269,7 +1269,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["have_moden_negro"] = true
+      userScript: Variable["HaveModemNegro"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1429,7 +1429,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["hablado_con_esqueleto"] = true
+      userScript: Variable["HabladoConEsqueleto"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1587,7 +1587,7 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: Variable["hablado_con_calaveras"] == true
+      conditionsString: Variable["HabladoConCalaveras"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1753,7 +1753,7 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: Variable["have_moden_negro"] == true
+      conditionsString: Variable["HaveModemNegro"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2308,7 +2308,7 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: Variable["have_moden_negro"] == true
+      conditionsString: Variable["HaveModenNegro"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2421,7 +2421,7 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: Variable["have_moden_negro"] == true
+      conditionsString: Variable["HaveModenNegro"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2692,7 +2692,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["have_modem_blanco"] == true
+      conditionsString: Variable["HaveModemBlanco"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2704,8 +2704,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.47901902
+    canvasScrollPosition: {x: 253.40292, y: 716.8983}
+    canvasZoom: 1.1000282
   - id: 3
     fields:
     - title: Title
@@ -3790,7 +3790,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 3
@@ -4032,8 +4032,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 19.227121, y: 829.85956}
-    canvasZoom: 0.9140033
+    canvasScrollPosition: {x: 0, y: 605.97217}
+    canvasZoom: 0.75250983
   syncInfo:
     syncActors: 0
     syncItems: 0
