@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.49641275, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2800,23 +2800,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529244901}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &536686938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6564230932841214942, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
-  m_PrefabInstance: {fileID: 1439588324}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &536686939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536686938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b3b4e11cd3ecf34aac6b3990a0df6f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &536686954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5787976464604457316, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
@@ -6020,14 +6003,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
-      propertyPath: actor
-      value: Conductor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
-      propertyPath: standardDialogueUISettings.setSubtitleColor
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5787976464604457316, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -152.6
@@ -6075,10 +6050,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6564230932841214942, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
-      insertIndex: 14
-      addedObject: {fileID: 536686939}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
 --- !u!1 &1477091571
 GameObject:
