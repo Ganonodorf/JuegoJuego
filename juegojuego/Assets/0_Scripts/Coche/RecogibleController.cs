@@ -26,7 +26,7 @@ public class RecogibleController : MonoBehaviour
             RecogerObjeto();
         }
 
-        if(Input.GetKeyDown(KeyCode.E) && ObjetosRecogidos.Count > 0)
+        if(Input.GetKeyDown(KeyCode.R) && ObjetosRecogidos.Count > 0)
         {
             SoltarObjeto();
         }
@@ -51,6 +51,9 @@ public class RecogibleController : MonoBehaviour
     // Este método recoge el objeto y lo pone encima del coche
     private void RecogerObjeto()
     {
+        // Pone la variable true en el dialogue manager
+        DialogManager.Instance.ObjectPicked(RecogibleObject.name);
+
         // Lo hace kinematic para que no se mueva
         RecogibleObject.transform.GetComponent<Rigidbody>().isKinematic = true;
 
@@ -89,6 +92,9 @@ public class RecogibleController : MonoBehaviour
         int totalObjetos = ObjetosRecogidos.Count;
 
         GameObject objetoSoltar = ObjetosRecogidos[totalObjetos - 1];
+
+        // Pone la variable false en el dialogue manager
+        DialogManager.Instance.ObjectPicked(objetoSoltar.name);
 
         // Lo pone delante del coche
         objetoSoltar.transform.localPosition = new Vector3(0.0f,

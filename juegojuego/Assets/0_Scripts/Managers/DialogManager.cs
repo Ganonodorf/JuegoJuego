@@ -29,9 +29,9 @@ public class DialogManager : MonoBehaviour
 
     public void ObjectPicked(string objectPickedName)
     {
-        if(objectPickedName == "ModemNegro")
+        if(objectPickedName == "Radio_Normal")
         {
-            DialogueLua.SetVariable("HaveModemNegro", true);
+            DialogueLua.SetVariable("Radio_Normal", true);
         }
     }
 }
