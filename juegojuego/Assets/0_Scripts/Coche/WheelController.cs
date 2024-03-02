@@ -37,6 +37,9 @@ public class WheelController : MonoBehaviour
     public float wheelRadius;
     public float maxGripSidewaysVelocity;
     private float maxGripSidewaysVelocityFactor;
+    [SerializeField] private float maxGroundAngleToGrip;
+    private float hitGroundAngle;
+
 
     [Header("Motor")]
     public float maxForwardVelocity;
@@ -67,6 +70,7 @@ public class WheelController : MonoBehaviour
     public AnimationCurve sidewaysGripCurve;
     public AnimationCurve torqueCurve;
     [SerializeField] private AnimationCurve stiffnessCurve;
+    [SerializeField] private AnimationCurve inclinationToGripCurve;
 
     // Start is called before the first frame update
     void Start()
@@ -115,13 +119,16 @@ public class WheelController : MonoBehaviour
                 motorForceFactor = motorForce;
             }
 
+            // calculate inclination angle of the floor hit
+            hitGroundAngle = Vector3.Angle(Vector3.up, hit.normal);
+
             // motor acceleration force
             if ((Input.GetAxis("Vertical") > 0 && wheelVelocityLS.z > 0) || (Input.GetAxis("Vertical") < 0 && wheelVelocityLS.z < 0))
             {
-                fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocityFactor) * motorForceFactor;
+                fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocityFactor) * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * motorForceFactor;
             }else
             {
-                fx = Input.GetAxis("Vertical") * breakForce;
+                fx = Input.GetAxis("Vertical") * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * breakForce;
             }
 
             //auto break force if low velocity and no input
