@@ -2011,19 +2011,13 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 0
         destinationConversationID: 3
-        destinationDialogueID: 22
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 0
-        destinationConversationID: 3
-        destinationDialogueID: 27
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 0
-        destinationConversationID: 3
         destinationDialogueID: 31
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 37
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2033,8 +2027,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159.17648
-        y: 874.8369
+        x: 57.990234
+        y: 933.26776
         width: 160
         height: 30
     - id: 1
@@ -2087,15 +2081,23 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: "CurrentQuestState(\"Radio peque\xF1a\") == \"unassigned\""
+      - originConversationID: 3
+        originDialogueID: 1
+        destinationConversationID: 3
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      conditionsString: "CurrentQuestState(\"Radio peque\xF1a\") == \"unassigned\"
+        and (CurrentQuestState(\"Robo radio\") == \"unassigned\") and (CurrentQuestState(\"Radio
+        verde y azul\") == \"unassigned\")"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 173.3086
-        y: 538.9044
+        x: 91.454025
+        y: 770.5575
         width: 160
         height: 30
     - id: 4
@@ -2150,8 +2152,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 934.4517
-        y: 601.1261
+        x: 893.9396
+        y: 835.4586
         width: 160
         height: 30
     - id: 6
@@ -2205,8 +2207,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 66.72191
-        y: 364.75528
+        x: 95.28699
+        y: 678.7152
         width: 160
         height: 30
     - id: 7
@@ -2260,8 +2262,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 264.4708
-        y: 370.2654
+        x: 294.34705
+        y: 680.0767
         width: 160
         height: 30
     - id: 8
@@ -2309,8 +2311,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 69.0022
-        y: 297.74594
+        x: 93.65968
+        y: 611.5494
         width: 160
         height: 30
     - id: 9
@@ -2358,8 +2360,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 283.70322
-        y: 288.60394
+        x: 296.8041
+        y: 611.54944
         width: 160
         height: 30
     - id: 10
@@ -2419,8 +2421,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1177.1921
-        y: 589.7185
+        x: 1073.9395
+        y: 835.4586
         width: 160
         height: 30
     - id: 11
@@ -2478,8 +2480,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1385.7329
-        y: 577.4182
+        x: 1252.6804
+        y: 796.0957
         width: 160
         height: 30
     - id: 12
@@ -2527,8 +2529,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1598.2341
-        y: 574.0969
+        x: 1432.6804
+        y: 796.0957
         width: 160
         height: 30
     - id: 13
@@ -2582,8 +2584,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1383.9294
-        y: 619.33887
+        x: 1251.4216
+        y: 857.99146
         width: 160
         height: 30
     - id: 14
@@ -2631,8 +2633,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1592.824
-        y: 618.2639
+        x: 1431.4216
+        y: 857.99146
         width: 160
         height: 30
     - id: 15
@@ -2658,7 +2660,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Has robao?
+        value: Como vas?
         type: 0
         typeString: 
       - title: Sequence
@@ -2697,15 +2699,41 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Robo radio") == "active"
+      - originConversationID: 3
+        originDialogueID: 15
+        destinationConversationID: 3
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 15
+        destinationConversationID: 3
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 15
+        destinationConversationID: 3
+        destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 15
+        destinationConversationID: 3
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      conditionsString: "CurrentQuestState(\"Robo radio\") == \"active\" or (CurrentQuestState(\"Radio
+        peque\xF1a\") == \"active\") or (CurrentQuestState(\"Radio verde y azul\")
+        == \"active\")"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 796.7727
-        y: 796.02856
+        x: 573.24457
+        y: 947.5948
         width: 160
         height: 30
     - id: 16
@@ -2754,19 +2782,14 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["Radio_Grande"] == true and (Variable["Radio_Normal"]
         == false)
-      userScript: 'SetQuestState("Robo radio", "success");
-
-        SoltarObjeto("Radio_Grande");
-
-        Variable["Radio_Grande"]
-        = false;'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1146.0839
-        y: 714.42535
+        x: 893.9396
+        y: 885.4585
         width: 160
         height: 30
     - id: 17
@@ -2815,19 +2838,14 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["Radio_Normal"] == true and (Variable["Radio_Grande"]
         == false)
-      userScript: 'SetQuestState("Robo radio", "success");
-
-        SoltarObjeto("Radio_Normal");
-
-        Variable["Radio_Normal"]
-        = false'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1147.8873
-        y: 764.42535
+        x: 893.9396
+        y: 935.4587
         width: 160
         height: 30
     - id: 18
@@ -2882,8 +2900,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1144.2804
-        y: 819.83545
+        x: 893.9396
+        y: 985.4596
         width: 160
         height: 30
     - id: 19
@@ -2937,8 +2955,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1148.3417
-        y: 877.79156
+        x: 893.9396
+        y: 1035.46
         width: 160
         height: 30
     - id: 20
@@ -2986,8 +3004,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1333.2347
-        y: 881.86127
+        x: 1073.9395
+        y: 1035.46
         width: 160
         height: 30
     - id: 21
@@ -3044,69 +3062,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1326.0841
-        y: 826.4375
-        width: 160
-        height: 30
-    - id: 22
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 0
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "Tienes ya la radio peque\xF1a?"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 22
-        destinationConversationID: 3
-        destinationDialogueID: 23
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 22
-        destinationConversationID: 3
-        destinationDialogueID: 24
-        isConnector: 0
-        priority: 2
-      conditionsString: "CurrentQuestState(\"Radio peque\xF1a\") == \"active\""
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 429.1474
-        y: 533.92224
+        x: 1073.9395
+        y: 985.4596
         width: 160
         height: 30
     - id: 23
@@ -3160,112 +3117,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 508.18677
-        y: 371.25284
-        width: 160
-        height: 30
-    - id: 24
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 0
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: No
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 24
-        destinationConversationID: 3
-        destinationDialogueID: 25
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 719.0131
-        y: 371.25607
-        width: 160
-        height: 30
-    - id: 25
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 0
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Pff
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 716.5416
-        y: 278.44165
+        x: 893.9396
+        y: 1085.46
         width: 160
         height: 30
     - id: 26
@@ -3314,64 +3167,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 512.45715
-        y: 278.25497
-        width: 160
-        height: 30
-    - id: 27
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 0
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "Gracias por traerme la radio peque\xF1a"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 27
-        destinationConversationID: 3
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
-      conditionsString: "CurrentQuestState(\"Radio peque\xF1a\") == \"success\" and
-        (CurrentQuestState(\"Robo radio\") == \"unassigned\") and "
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 713.0629
-        y: 601.8287
+        x: 1073.9395
+        y: 1085.46
         width: 160
         height: 30
     - id: 28
@@ -3425,8 +3222,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 717.70416
-        y: 1058.645
+        x: 55.101334
+        y: 1096.7169
         width: 160
         height: 30
     - id: 29
@@ -3473,14 +3270,16 @@ MonoBehaviour:
         SoltarObjeto("Radio_Grande");
 
         Variable["Radio_Grande"]
-        = false'
+        = false;
+
+        DisablearObjeto("Radio_Normal")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1326.0841
-        y: 716.8389
+        x: 1073.9395
+        y: 885.4585
         width: 160
         height: 30
     - id: 30
@@ -3527,14 +3326,16 @@ MonoBehaviour:
         SoltarObjeto("Radio_Normal");
 
         Variable["Radio_Normal"]
-        = false'
+        = false;
+
+        DisablearObjeto("Radio_Grande")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1331.4943
-        y: 770.7365
+        x: 1073.9395
+        y: 935.4587
         width: 160
         height: 30
     - id: 31
@@ -3590,8 +3391,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 479.6098
-        y: 1029.6743
+        x: 55.08571
+        y: 1038.82
         width: 160
         height: 30
     - id: 32
@@ -3640,13 +3441,419 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 948.94604
-        y: 1069.2374
+        x: 53.860245
+        y: 1153.3555
+        width: 160
+        height: 30
+    - id: 34
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Si, mu majo
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 238.88791
+        y: 1268.0159
+        width: 160
+        height: 30
+    - id: 35
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "S\xED. y adem\xE1s te quiere dar esto!"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 35
+        destinationConversationID: 3
+        destinationDialogueID: 36
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Radio_Verde"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 437.28815
+        y: 1265.864
+        width: 160
+        height: 30
+    - id: 36
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Que majoooo, me encanta! Dale las gracias de mi parte
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'SetQuestState("Radio verde y azul", "returnToNPC");
+
+        Variable["Radio_Verde"]
+        = true;
+
+        SoltarObjeto("Radio_Normal_Verde")'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 438.6215
+        y: 1324.2858
+        width: 160
+        height: 30
+    - id: 37
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Qu\xE9 majo mi primo la verdad"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 37
+        destinationConversationID: 3
+        destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 37
+        destinationConversationID: 3
+        destinationDialogueID: 34
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 37
+        destinationConversationID: 3
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 37
+        destinationConversationID: 3
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      conditionsString: '(CurrentQuestState("Radio verde y azul") == "returnToNPC")
+        or (CurrentQuestState("Radio verde y azul") == "success") or
+
+        (CurrentQuestState("Radio
+        verde y azul") == "active")'
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 469.13623
+        y: 1120.8997
+        width: 160
+        height: 30
+    - id: 39
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 0
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "C\xF3mo era aquello de la radio peque\xF1a?"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 39
+        destinationConversationID: 3
+        destinationDialogueID: 40
+        isConnector: 0
+        priority: 2
+      conditionsString: "CurrentQuestState(\"Radio peque\xF1a\") == \"unassigned\""
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 432.77155
+        y: 866.984
+        width: 160
+        height: 30
+    - id: 40
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 0
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Pues, que si me traes la radio chica
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 40
+        destinationConversationID: 3
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 40
+        destinationConversationID: 3
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 310.71194
+        y: 771.955
+        width: 160
+        height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 0
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Mira lo que me ha dado tu primo!!
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 41
+        destinationConversationID: 3
+        destinationDialogueID: 36
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Radio_Verde"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 894.44037
+        y: 1143.3367
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 290.94293}
-    canvasZoom: 0.55451375
+    canvasScrollPosition: {x: 0, y: 481.95187}
+    canvasZoom: 0.7045136
   - id: 4
     fields:
     - title: Title
@@ -4151,7 +4358,7 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Radio_Azul"] == false
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4314,7 +4521,9 @@ MonoBehaviour:
       userScript: 'Variable["Radio_Azul"] = false;
 
         Variable["Radio_Verde"]
-        = true'
+        = true;
+
+        SoltarObjeto("Radio_Normal_Azul")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4351,7 +4560,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(Radio_Normal_Azul,false)
         type: 0
         typeString: 
       conversationID: 4
@@ -4369,7 +4578,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["Radio_Verde"] = true;
+
+        RecogerObjeto("Radio_Normal_Verde")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4798,7 +5009,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1167.8723
+        x: 1169.1382
         y: 114.893616
         width: 160
         height: 30
@@ -4852,8 +5063,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 57.10527, y: 0}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 91.228485, y: 0}
+    canvasZoom: 0.85000014
   syncInfo:
     syncActors: 0
     syncItems: 0
