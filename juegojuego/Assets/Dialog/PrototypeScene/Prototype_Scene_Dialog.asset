@@ -2766,12 +2766,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["Radio_Grande"] == true and (Variable["Radio_Normal"]
         == false)
-      userScript: 'SetQuestState("Robo radio", "success");
-
-        SoltarObjeto("Radio_Grande");
-
-        Variable["Radio_Grande"]
-        = false;'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2827,18 +2822,13 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["Radio_Normal"] == true and (Variable["Radio_Grande"]
         == false)
-      userScript: 'SetQuestState("Robo radio", "success");
-
-        SoltarObjeto("Radio_Normal");
-
-        Variable["Radio_Normal"]
-        = false'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1147.8873
+        x: 1146.26
         y: 764.42535
         width: 160
         height: 30
@@ -3485,7 +3475,9 @@ MonoBehaviour:
         SoltarObjeto("Radio_Grande");
 
         Variable["Radio_Grande"]
-        = false'
+        = false;
+
+        DisablearObjeto("Radio_Normal")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3539,7 +3531,9 @@ MonoBehaviour:
         SoltarObjeto("Radio_Normal");
 
         Variable["Radio_Normal"]
-        = false'
+        = false;
+
+        DisablearObjeto("Radio_Grande")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5137,8 +5131,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 133.58145, y: 0}
+    canvasZoom: 0.85000014
   syncInfo:
     syncActors: 0
     syncItems: 0

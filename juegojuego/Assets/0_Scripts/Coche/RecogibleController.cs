@@ -10,20 +10,17 @@ public class RecogibleController : MonoBehaviour
     private float EscalaReduccion = 2f;
     private float AlturaDelCoche = 2.5f;
     private float LongitudDelCoche = 6.0f;
-    private Vector3 FuerzaLanzar = new Vector3(0.0f, 5.0f, 20.0f);
 
-
-    private void Start()
-    {
-
-    }
+    // Cuando el controlador esté disponible, se registran en código Lua las funciones que se van a llamar desde el dialog system
     void OnEnable()
     {
         Lua.RegisterFunction(nameof(RecogerObjeto), this, SymbolExtensions.GetMethodInfo(() => RecogerObjeto(string.Empty)));
         Lua.RegisterFunction(nameof(SoltarObjeto), this, SymbolExtensions.GetMethodInfo(() => SoltarObjeto(string.Empty)));
         Lua.RegisterFunction(nameof(EnablearObjeto), this, SymbolExtensions.GetMethodInfo(() => EnablearObjeto(string.Empty)));
+        Lua.RegisterFunction(nameof(DisablearObjeto), this, SymbolExtensions.GetMethodInfo(() => DisablearObjeto(string.Empty)));
     }
 
+    // Cuando el controlador deje de estar disponible, se desregistran las funciones
     void OnDisable()
     {
         // Note: If this script is on your Dialogue Manager & the Dialogue Manager is configured
@@ -31,6 +28,7 @@ public class RecogibleController : MonoBehaviour
         Lua.UnregisterFunction(nameof(RecogerObjeto)); // <-- Only if not on Dialogue Manager.
         Lua.UnregisterFunction(nameof(SoltarObjeto)); // <-- Only if not on Dialogue Manager.
         Lua.UnregisterFunction(nameof(EnablearObjeto)); // <-- Only if not on Dialogue Manager.
+        Lua.UnregisterFunction(nameof(DisablearObjeto)); // <-- Only if not on Dialogue Manager.
     }
 
     // Este método recoge el objeto y lo pone encima del coche
@@ -64,7 +62,7 @@ public class RecogibleController : MonoBehaviour
         // Inabilita los colliders del objeto
         recogibleObject.transform.GetComponent<BoxCollider>().enabled = false;
 
-        // Hace que no sea usable para no seguir recogiéndola
+        // Hace que no sea usable para no poder accionar el dialog system
         recogibleObject.transform.GetComponent<Usable>().enabled = false;
     }
 
@@ -83,17 +81,11 @@ public class RecogibleController : MonoBehaviour
                                                         objetoSoltar.transform.localScale.y * EscalaReduccion,
                                                         objetoSoltar.transform.localScale.z * EscalaReduccion);
 
-        // Le quita lo de kinematic para que le afecte la fuerza
-        objetoSoltar.transform.GetComponent<Rigidbody>().isKinematic = false;
-
         // Habilita los colliders del objeto
         objetoSoltar.transform.GetComponent<BoxCollider>().enabled = true;
 
         // Le cambia el padre para que sea el mundo
         objetoSoltar.transform.SetParent(null);
-
-        // Hace que sea kinematic para no poder moverla
-        objetoSoltar.transform.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     public void EnablearObjeto(string enableObjectName)
@@ -103,5 +95,14 @@ public class RecogibleController : MonoBehaviour
 
         // Hace que sea usable para poder recogerlo
         objetoEnablear.transform.GetComponent<Usable>().enabled = true;
+    }
+
+    public void DisablearObjeto(string enableObjectName)
+    {
+        // Busca al objeto con ese nombre
+        GameObject objetoEnablear = GameObject.Find(enableObjectName);
+
+        // Hace que sea usable para poder recogerlo
+        objetoEnablear.transform.GetComponent<Usable>().enabled = false;
     }
 }
