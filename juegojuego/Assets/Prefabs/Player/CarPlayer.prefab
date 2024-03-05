@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &890973572091026542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5400939658967681068}
+  - component: {fileID: 4958607775382944743}
+  - component: {fileID: 3271391335263239038}
+  m_Layer: 0
+  m_Name: carTurnAround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5400939658967681068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890973572091026542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 1.18, z: -0.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5787976464604457316}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4958607775382944743
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890973572091026542}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.73
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3271391335263239038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890973572091026542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c69fd94bd544ea6a6bc36735732ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTurnAroundVelocity: 4
+  minTurnAroundAngle: 45
+  turnAroundForce: 30000
 --- !u!1 &2093624138289743370
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,23 +284,24 @@ MonoBehaviour:
   wheelFrontRight: 0
   wheelRearLeft: 0
   wheelRearRight: 1
-  restLength: 1.5
-  springTravel: 1.5
-  springStiffness: 13000
-  damperStiffness: 1000
+  restLength: 2.2
+  springTravel: 2.2
+  springStiffness: 10000
+  damperStiffness: 900
   steerAngle: 0
   steerTime: 0
   wheelRadius: 0.3
-  maxGripSidewaysVelocity: 16
+  maxGripSidewaysVelocity: 20
+  maxGroundAngleToGrip: 60
   maxForwardVelocity: 20
   motorForce: 8000
-  breakForce: 10000
-  forceVectorLength: 3000
+  breakForce: 14000
+  forceVectorLength: 0
   autoBreakMaxVelocity: 4
   autoBreakForce: 100
   driftMaxGripSidewaysMultiplier: 0.5
   driftMaxForwardVelocityMultiplier: 1.5
-  driftMotorForceMultiplier: 2
+  driftMotorForceMultiplier: 3
   sidewaysGripCurve:
     serializedVersion: 2
     m_Curve:
@@ -278,17 +348,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.00042662024
-      value: 0.7722881
-      inSlope: 0.67886245
-      outSlope: 0.67886245
+      time: -0.015032612
+      value: 2.4649928
+      inSlope: 0.020416828
+      outSlope: 0.020416828
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.08618242
+      outWeight: 1
     - serializedVersion: 3
-      time: 0.5065923
-      value: 0.8364689
+      time: 0.18807445
+      value: 1.9087383
+      inSlope: -9.953659
+      outSlope: -9.953659
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.12176616
+    - serializedVersion: 3
+      time: 0.49726915
+      value: 0.99141806
       inSlope: -0.020131646
       outSlope: -0.020131646
       tangentMode: 0
@@ -320,8 +399,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.6684911
-      value: 0.6979398
+      time: 0.8351629
+      value: 0.78505224
       inSlope: 3.2180915
       outSlope: 3.2180915
       tangentMode: 0
@@ -338,6 +417,39 @@ MonoBehaviour:
       inWeight: 0.53805333
       outWeight: 0
     m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  inclinationToGripCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.011154175
+      value: 0.8238778
+      inSlope: 0.018185925
+      outSlope: 0.018185925
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.17495362
+    - serializedVersion: 3
+      time: 0.5305643
+      value: 0.5070794
+      inSlope: -1.4292555
+      outSlope: -1.4292555
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14708443
+    - serializedVersion: 3
+      time: 0.9977417
+      value: 0.13912964
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!1 &4990132648576932996
@@ -389,23 +501,24 @@ MonoBehaviour:
   wheelFrontRight: 0
   wheelRearLeft: 1
   wheelRearRight: 0
-  restLength: 1.5
-  springTravel: 1.5
-  springStiffness: 13000
-  damperStiffness: 1000
+  restLength: 2.2
+  springTravel: 2.2
+  springStiffness: 10000
+  damperStiffness: 900
   steerAngle: 0
   steerTime: 0
   wheelRadius: 0.3
-  maxGripSidewaysVelocity: 16
+  maxGripSidewaysVelocity: 20
+  maxGroundAngleToGrip: 60
   maxForwardVelocity: 20
   motorForce: 8000
-  breakForce: 10000
-  forceVectorLength: 3000
+  breakForce: 14000
+  forceVectorLength: 0
   autoBreakMaxVelocity: 4
   autoBreakForce: 100
   driftMaxGripSidewaysMultiplier: 0.5
   driftMaxForwardVelocityMultiplier: 1.5
-  driftMotorForceMultiplier: 2
+  driftMotorForceMultiplier: 3
   sidewaysGripCurve:
     serializedVersion: 2
     m_Curve:
@@ -452,17 +565,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.00042662024
-      value: 0.7722881
-      inSlope: 0.67886245
-      outSlope: 0.67886245
+      time: -0.015032612
+      value: 2.4649928
+      inSlope: 0.020416828
+      outSlope: 0.020416828
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.08618242
+      outWeight: 1
     - serializedVersion: 3
-      time: 0.5065923
-      value: 0.8364689
+      time: 0.18807445
+      value: 1.9087383
+      inSlope: -9.953659
+      outSlope: -9.953659
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.12176616
+    - serializedVersion: 3
+      time: 0.49726915
+      value: 0.99141806
       inSlope: -0.020131646
       outSlope: -0.020131646
       tangentMode: 0
@@ -494,8 +616,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.6684911
-      value: 0.6979398
+      time: 0.8351629
+      value: 0.78505224
       inSlope: 3.2180915
       outSlope: 3.2180915
       tangentMode: 0
@@ -512,6 +634,39 @@ MonoBehaviour:
       inWeight: 0.53805333
       outWeight: 0
     m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  inclinationToGripCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.011154175
+      value: 0.8238778
+      inSlope: 0.018185925
+      outSlope: 0.018185925
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.17495362
+    - serializedVersion: 3
+      time: 0.5305643
+      value: 0.5070794
+      inSlope: -1.4292555
+      outSlope: -1.4292555
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14708443
+    - serializedVersion: 3
+      time: 0.9977417
+      value: 0.13912964
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!1 &5990480186367616241
@@ -563,22 +718,23 @@ MonoBehaviour:
   wheelFrontRight: 0
   wheelRearLeft: 0
   wheelRearRight: 0
-  restLength: 1.5
-  springTravel: 1.5
-  springStiffness: 13000
-  damperStiffness: 1000
+  restLength: 2.2
+  springTravel: 2.2
+  springStiffness: 10000
+  damperStiffness: 900
   steerAngle: 0
-  steerTime: 600
+  steerTime: 100
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 20
-  maxForwardVelocity: 35
-  motorForce: 0
-  breakForce: 10000
-  forceVectorLength: 2000
+  maxGroundAngleToGrip: 60
+  maxForwardVelocity: 20
+  motorForce: 8000
+  breakForce: 14000
+  forceVectorLength: 0
   autoBreakMaxVelocity: 3
   autoBreakForce: 100
   driftMaxGripSidewaysMultiplier: 1
-  driftMaxForwardVelocityMultiplier: 1
+  driftMaxForwardVelocityMultiplier: 0.1
   driftMotorForceMultiplier: 0
   sidewaysGripCurve:
     serializedVersion: 2
@@ -626,31 +782,40 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0012849271
-      value: 0.9376509
-      inSlope: 0.67886245
-      outSlope: 0.67886245
+      time: -0.015032612
+      value: 2.4649928
+      inSlope: 0.020416828
+      outSlope: 0.020416828
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.08618242
+      outWeight: 1
     - serializedVersion: 3
-      time: 0.27426195
-      value: 0.9444782
-      inSlope: -0.57632136
-      outSlope: -0.57632136
+      time: 0.18807445
+      value: 1.9087383
+      inSlope: -9.953659
+      outSlope: -9.953659
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.2519393
+      outWeight: 0.12176616
+    - serializedVersion: 3
+      time: 0.49726915
+      value: 0.99141806
+      inSlope: -0.020131646
+      outSlope: -0.020131646
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.97854614
       value: -0.0070495605
-      inSlope: -0.03569754
-      outSlope: -0.03569754
+      inSlope: -3.9066753
+      outSlope: -3.9066753
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.45701575
+      inWeight: 0.19343972
       outWeight: 0
     m_PreInfinity: 0
     m_PostInfinity: 2
@@ -668,8 +833,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.6684911
-      value: 0.6979398
+      time: 0.8351629
+      value: 0.78505224
       inSlope: 3.2180915
       outSlope: 3.2180915
       tangentMode: 0
@@ -686,6 +851,39 @@ MonoBehaviour:
       inWeight: 0.53805333
       outWeight: 0
     m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  inclinationToGripCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.011154175
+      value: 0.8238778
+      inSlope: 0.018185925
+      outSlope: 0.018185925
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.17495362
+    - serializedVersion: 3
+      time: 0.5305643
+      value: 0.5070794
+      inSlope: -1.4292555
+      outSlope: -1.4292555
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14708443
+    - serializedVersion: 3
+      time: 0.9977417
+      value: 0.13912964
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!1 &6418204401669672272
@@ -903,22 +1101,23 @@ MonoBehaviour:
   wheelFrontRight: 1
   wheelRearLeft: 0
   wheelRearRight: 0
-  restLength: 1.5
-  springTravel: 1.5
-  springStiffness: 13000
-  damperStiffness: 1000
+  restLength: 2.2
+  springTravel: 2.2
+  springStiffness: 10000
+  damperStiffness: 900
   steerAngle: 0
-  steerTime: 600
+  steerTime: 300
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 20
-  maxForwardVelocity: 35
-  motorForce: 0
-  breakForce: 10000
-  forceVectorLength: 2000
+  maxGroundAngleToGrip: 60
+  maxForwardVelocity: 20
+  motorForce: 8000
+  breakForce: 14000
+  forceVectorLength: 0
   autoBreakMaxVelocity: 3
   autoBreakForce: 100
   driftMaxGripSidewaysMultiplier: 1
-  driftMaxForwardVelocityMultiplier: 1
+  driftMaxForwardVelocityMultiplier: 0.1
   driftMotorForceMultiplier: 0
   sidewaysGripCurve:
     serializedVersion: 2
@@ -966,31 +1165,40 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0012849271
-      value: 0.9376509
-      inSlope: 0.67886245
-      outSlope: 0.67886245
+      time: -0.015032612
+      value: 2.4649928
+      inSlope: 0.020416828
+      outSlope: 0.020416828
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.08618242
+      outWeight: 1
     - serializedVersion: 3
-      time: 0.27426195
-      value: 0.9444782
-      inSlope: -0.57632136
-      outSlope: -0.57632136
+      time: 0.18807445
+      value: 1.9087383
+      inSlope: -9.953659
+      outSlope: -9.953659
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.2519393
+      outWeight: 0.12176616
+    - serializedVersion: 3
+      time: 0.49726915
+      value: 0.99141806
+      inSlope: -0.020131646
+      outSlope: -0.020131646
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.97854614
       value: -0.0070495605
-      inSlope: -0.03569754
-      outSlope: -0.03569754
+      inSlope: -3.9066753
+      outSlope: -3.9066753
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.45701575
+      inWeight: 0.19343972
       outWeight: 0
     m_PreInfinity: 0
     m_PostInfinity: 2
@@ -1008,8 +1216,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.6684911
-      value: 0.6979398
+      time: 0.8351629
+      value: 0.78505224
       inSlope: 3.2180915
       outSlope: 3.2180915
       tangentMode: 0
@@ -1028,6 +1236,39 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  inclinationToGripCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.011154175
+      value: 0.8238778
+      inSlope: 0.018185925
+      outSlope: 0.018185925
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.17495362
+    - serializedVersion: 3
+      time: 0.5305643
+      value: 0.5070794
+      inSlope: -1.4292555
+      outSlope: -1.4292555
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14708443
+    - serializedVersion: 3
+      time: 0.9977417
+      value: 0.13912964
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &6330298081324338831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1038,23 +1279,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -152.6
+      value: -52.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.46
+      value: 5.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.8
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.999567
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1062,7 +1303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.029427182
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1074,7 +1315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -356.627
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_Name
@@ -1095,6 +1336,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2021475164602208511}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5400939658967681068}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       insertIndex: -1
@@ -1154,10 +1398,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6564230932841214942}
   serializedVersion: 4
-  m_Mass: 1400
-  m_Drag: 0.04
+  m_Mass: 2000
+  m_Drag: 0.05
   m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_CenterOfMass: {x: 0, y: 0.1, z: 0.1}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
@@ -1192,7 +1436,7 @@ MonoBehaviour:
   - {fileID: 3214778020240422195}
   wheelBase: 3.4
   rearTrack: 3.2
-  turnRadius: 8
+  turnRadius: 6
   steerInput: 0
   ackermannAngleLeft: 0
   ackermannAngleRight: 0
@@ -1203,7 +1447,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6564230932841214942}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 35bd7315b48ac4f8793a3480d2b7d370, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1226,7 +1470,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6564230932841214942}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 35bd7315b48ac4f8793a3480d2b7d370, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1249,7 +1493,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6564230932841214942}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 35bd7315b48ac4f8793a3480d2b7d370, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1272,7 +1516,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6564230932841214942}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 35bd7315b48ac4f8793a3480d2b7d370, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1295,7 +1539,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6564230932841214942}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 35bd7315b48ac4f8793a3480d2b7d370, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1310,7 +1554,7 @@ CapsuleCollider:
   m_Radius: 1.36
   m_Height: 4.07
   m_Direction: 2
-  m_Center: {x: 0, y: 0.84, z: -0.54}
+  m_Center: {x: 0, y: 0.51, z: -0.54}
 --- !u!114 &1952303591553400415
 MonoBehaviour:
   m_ObjectHideFlags: 0
