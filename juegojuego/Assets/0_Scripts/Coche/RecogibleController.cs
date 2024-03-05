@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,86 +10,66 @@ public class RecogibleController : MonoBehaviour
     private float EscalaReduccion = 2f;
     private float AlturaDelCoche = 2.5f;
     private float LongitudDelCoche = 6.0f;
-    private Vector3 FuerzaLanzar = new Vector3(0.0f, 5.0f, 20.0f);
 
-    private List<GameObject> ObjetosRecogidos;
-
-    private void Start()
+    // Cuando el controlador esté disponible, se registran en código Lua las funciones que se van a llamar desde el dialog system
+    void OnEnable()
     {
-        RecogibleObject = null;
-        ObjetosRecogidos = new List<GameObject>();
+        Lua.RegisterFunction(nameof(RecogerObjeto), this, SymbolExtensions.GetMethodInfo(() => RecogerObjeto(string.Empty)));
+        Lua.RegisterFunction(nameof(SoltarObjeto), this, SymbolExtensions.GetMethodInfo(() => SoltarObjeto(string.Empty)));
+        Lua.RegisterFunction(nameof(EnablearObjeto), this, SymbolExtensions.GetMethodInfo(() => EnablearObjeto(string.Empty)));
+        Lua.RegisterFunction(nameof(DisablearObjeto), this, SymbolExtensions.GetMethodInfo(() => DisablearObjeto(string.Empty)));
     }
 
-    private void Update()
+    // Cuando el controlador deje de estar disponible, se desregistran las funciones
+    void OnDisable()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && RecogibleObject != null)
-        {
-            RecogerObjeto();
-        }
-
-        if(Input.GetKeyDown(KeyCode.E) && ObjetosRecogidos.Count > 0)
-        {
-            SoltarObjeto();
-        }
-    }
-
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.transform.tag == "Recogible" && RecogibleObject == null)
-        {
-            RecogibleObject = collision.gameObject;
-        }
-    }
-
-    private void OnTriggerExit(Collider collision)
-    {
-        if (collision.transform.tag == "Recogible" && RecogibleObject != null)
-        {
-            RecogibleObject = null;
-        }
+        // Note: If this script is on your Dialogue Manager & the Dialogue Manager is configured
+        // as Don't Destroy On Load (on by default), don't unregister Lua functions.
+        Lua.UnregisterFunction(nameof(RecogerObjeto)); // <-- Only if not on Dialogue Manager.
+        Lua.UnregisterFunction(nameof(SoltarObjeto)); // <-- Only if not on Dialogue Manager.
+        Lua.UnregisterFunction(nameof(EnablearObjeto)); // <-- Only if not on Dialogue Manager.
+        Lua.UnregisterFunction(nameof(DisablearObjeto)); // <-- Only if not on Dialogue Manager.
     }
 
     // Este método recoge el objeto y lo pone encima del coche
-    private void RecogerObjeto()
+    public void RecogerObjeto(string recogibleObjectName)
     {
+        // Busca al objeto con ese nombre
+        GameObject recogibleObject = GameObject.Find(recogibleObjectName);
+
         // Lo hace kinematic para que no se mueva
-        RecogibleObject.transform.GetComponent<Rigidbody>().isKinematic = true;
+        recogibleObject.transform.GetComponent<Rigidbody>().isKinematic = true;
 
         // Reduce el objeto a la mitad
-        RecogibleObject.transform.localScale = new Vector3(RecogibleObject.transform.localScale.x / EscalaReduccion,
-                                                           RecogibleObject.transform.localScale.y / EscalaReduccion,
-                                                           RecogibleObject.transform.localScale.z / EscalaReduccion);
+        recogibleObject.transform.localScale = new Vector3(recogibleObject.transform.localScale.x / EscalaReduccion,
+                                                           recogibleObject.transform.localScale.y / EscalaReduccion,
+                                                           recogibleObject.transform.localScale.z / EscalaReduccion);
 
         // Le cambia el padre para que sea el coche
-        RecogibleObject.transform.parent = this.transform;
+        recogibleObject.transform.parent = this.transform;
 
         // Lo pone encima del coche
-        RecogibleObject.transform.position = new Vector3(this.transform.position.x,
+        recogibleObject.transform.position = new Vector3(this.transform.position.x,
                                                          this.transform.position.y + AlturaDelCoche,
                                                          this.transform.position.z);
 
         // Lo pone la rotación del coche
-        RecogibleObject.transform.rotation = new Quaternion(this.transform.rotation.x,
+        recogibleObject.transform.rotation = new Quaternion(this.transform.rotation.x,
                                                             this.transform.rotation.y,
                                                             this.transform.rotation.z,
                                                             this.transform.rotation.w);
 
         // Inabilita los colliders del objeto
-        RecogibleObject.transform.GetComponent<SphereCollider>().enabled = false;
-        RecogibleObject.transform.GetComponent<BoxCollider>().enabled = false;
+        recogibleObject.transform.GetComponent<BoxCollider>().enabled = false;
 
-        // Mete el objeto en la lista
-        ObjetosRecogidos.Add(RecogibleObject);
-
-        // Pone la variable a null para que no pueda seguir recogiéndolo una vez ya recogida
-        RecogibleObject = null;
+        // Hace que no sea usable para no poder accionar el dialog system
+        recogibleObject.transform.GetComponent<Usable>().enabled = false;
     }
 
-    private void SoltarObjeto()
+    public void SoltarObjeto(string soltableObjectName)
     {
-        int totalObjetos = ObjetosRecogidos.Count;
-
-        GameObject objetoSoltar = ObjetosRecogidos[totalObjetos - 1];
+        // Busca al objeto con ese nombre
+        GameObject objetoSoltar = GameObject.Find(soltableObjectName);
 
         // Lo pone delante del coche
         objetoSoltar.transform.localPosition = new Vector3(0.0f,
@@ -100,25 +81,28 @@ public class RecogibleController : MonoBehaviour
                                                         objetoSoltar.transform.localScale.y * EscalaReduccion,
                                                         objetoSoltar.transform.localScale.z * EscalaReduccion);
 
-        // Le quita lo de kinematic para que le afecte la fuerza
-        objetoSoltar.transform.GetComponent<Rigidbody>().isKinematic = false;
-
-        /*
-
-        // Le da velocidad para que salga disparado
-        objetoSoltar.transform.GetComponent<Rigidbody>().AddRelativeForce(FuerzaLanzar);
-
-        */
-
         // Habilita los colliders del objeto
-        objetoSoltar.transform.GetComponent<SphereCollider>().enabled = true;
         objetoSoltar.transform.GetComponent<BoxCollider>().enabled = true;
-
-        // Elimino el objeto de la lista
-        ObjetosRecogidos.Remove(objetoSoltar);
 
         // Le cambia el padre para que sea el mundo
         objetoSoltar.transform.SetParent(null);
-        
+    }
+
+    public void EnablearObjeto(string enableObjectName)
+    {
+        // Busca al objeto con ese nombre
+        GameObject objetoEnablear = GameObject.Find(enableObjectName);
+
+        // Hace que sea usable para poder recogerlo
+        objetoEnablear.transform.GetComponent<Usable>().enabled = true;
+    }
+
+    public void DisablearObjeto(string enableObjectName)
+    {
+        // Busca al objeto con ese nombre
+        GameObject objetoEnablear = GameObject.Find(enableObjectName);
+
+        // Hace que sea usable para poder recogerlo
+        objetoEnablear.transform.GetComponent<Usable>().enabled = false;
     }
 }
