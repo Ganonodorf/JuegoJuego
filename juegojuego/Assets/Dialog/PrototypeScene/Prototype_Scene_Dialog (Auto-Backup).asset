@@ -182,6 +182,10 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+    - title: Abandonable
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
   - id: 2
     fields:
     - title: Name
@@ -715,8 +719,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 66
-        y: 70
+        x: 60.11766
+        y: 74.41177
         width: 160
         height: 30
     - id: 2
@@ -770,8 +774,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 120
+        x: 34.82347
+        y: 124.41177
         width: 160
         height: 30
     - id: 3
@@ -825,8 +829,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 120
+        x: 205.2046
+        y: 127.67264
         width: 160
         height: 30
     - id: 4
@@ -874,8 +878,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 170
+        x: 34.82347
+        y: 174.41177
         width: 160
         height: 30
     - id: 5
@@ -923,8 +927,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 170
+        x: 204.11766
+        y: 174.41177
         width: 160
         height: 30
     - id: 6
@@ -984,8 +988,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 442.99957
-        y: 72.272705
+        x: 475.60822
+        y: 74.44661
         width: 160
         height: 30
     - id: 7
@@ -1910,8 +1914,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 524.99805, y: 0}
-    canvasZoom: 0.44000143
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.68000126
   - id: 3
     fields:
     - title: Title
@@ -2020,6 +2024,12 @@ MonoBehaviour:
         destinationDialogueID: 37
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -2027,8 +2037,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 57.990234
-        y: 933.26776
+        x: 286.00345
+        y: 940.54486
         width: 160
         height: 30
     - id: 1
@@ -2088,16 +2098,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: "CurrentQuestState(\"Radio peque\xF1a\") == \"unassigned\"
-        and (CurrentQuestState(\"Robo radio\") == \"unassigned\") and (CurrentQuestState(\"Radio
-        verde y azul\") == \"unassigned\")"
+        and (CurrentQuestState(\"Robo radio\") == \"unassigned\")"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 91.454025
-        y: 770.5575
+        x: 319.46725
+        y: 777.8346
         width: 160
         height: 30
     - id: 4
@@ -2152,8 +2161,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 893.9396
-        y: 835.4586
+        x: 1121.9529
+        y: 842.7357
         width: 160
         height: 30
     - id: 6
@@ -2207,8 +2216,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 95.28699
-        y: 678.7152
+        x: 323.30023
+        y: 685.9923
         width: 160
         height: 30
     - id: 7
@@ -2262,8 +2271,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 294.34705
-        y: 680.0767
+        x: 522.3599
+        y: 687.3538
         width: 160
         height: 30
     - id: 8
@@ -2311,8 +2320,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 93.65968
-        y: 611.5494
+        x: 321.6729
+        y: 618.8265
         width: 160
         height: 30
     - id: 9
@@ -2360,8 +2369,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 296.8041
-        y: 611.54944
+        x: 524.8171
+        y: 618.82654
         width: 160
         height: 30
     - id: 10
@@ -2421,8 +2430,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1073.9395
-        y: 835.4586
+        x: 1301.9539
+        y: 842.7357
         width: 160
         height: 30
     - id: 11
@@ -2480,8 +2489,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1252.6804
-        y: 796.0957
+        x: 1480.6948
+        y: 803.3728
         width: 160
         height: 30
     - id: 12
@@ -2584,8 +2593,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1251.4216
-        y: 857.99146
+        x: 1479.436
+        y: 865.26855
         width: 160
         height: 30
     - id: 14
@@ -2660,7 +2669,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Como vas?
+        value: "Qu\xE9 quieres?"
         type: 0
         typeString: 
       - title: Sequence
@@ -2732,8 +2741,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 573.24457
-        y: 947.5948
+        x: 802.4704
+        y: 954.8719
         width: 160
         height: 30
     - id: 16
@@ -2788,8 +2797,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 893.9396
-        y: 885.4585
+        x: 1121.9529
+        y: 892.7356
         width: 160
         height: 30
     - id: 17
@@ -2844,8 +2853,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 893.9396
-        y: 935.4587
+        x: 1121.9529
+        y: 942.7358
         width: 160
         height: 30
     - id: 18
@@ -2900,8 +2909,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 893.9396
-        y: 985.4596
+        x: 1121.9529
+        y: 992.7367
         width: 160
         height: 30
     - id: 19
@@ -2955,8 +2964,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 893.9396
-        y: 1035.46
+        x: 1121.9529
+        y: 1042.737
         width: 160
         height: 30
     - id: 20
@@ -3004,8 +3013,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1073.9395
-        y: 1035.46
+        x: 1301.9539
+        y: 1042.737
         width: 160
         height: 30
     - id: 21
@@ -3062,8 +3071,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1073.9395
-        y: 985.4596
+        x: 1301.9539
+        y: 992.7367
         width: 160
         height: 30
     - id: 23
@@ -3117,8 +3126,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 893.9396
-        y: 1085.46
+        x: 1121.9529
+        y: 1092.737
         width: 160
         height: 30
     - id: 26
@@ -3167,8 +3176,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1073.9395
-        y: 1085.46
+        x: 1301.9539
+        y: 1092.737
         width: 160
         height: 30
     - id: 28
@@ -3222,8 +3231,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 55.101334
-        y: 1096.7169
+        x: 283.11456
+        y: 1103.994
         width: 160
         height: 30
     - id: 29
@@ -3278,8 +3287,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1073.9395
-        y: 885.4585
+        x: 1301.9539
+        y: 892.7356
         width: 160
         height: 30
     - id: 30
@@ -3334,8 +3343,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1073.9395
-        y: 935.4587
+        x: 1301.9539
+        y: 942.7358
         width: 160
         height: 30
     - id: 31
@@ -3391,8 +3400,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 55.08571
-        y: 1038.82
+        x: 283.09894
+        y: 1046.097
         width: 160
         height: 30
     - id: 32
@@ -3441,8 +3450,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 53.860245
-        y: 1153.3555
+        x: 281.87347
+        y: 1160.6326
         width: 160
         height: 30
     - id: 34
@@ -3490,8 +3499,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 238.88791
-        y: 1268.0159
+        x: 466.90094
+        y: 1275.293
         width: 160
         height: 30
     - id: 35
@@ -3545,8 +3554,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 437.28815
-        y: 1265.864
+        x: 665.3012
+        y: 1273.1411
         width: 160
         height: 30
     - id: 36
@@ -3599,8 +3608,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 438.6215
-        y: 1324.2858
+        x: 666.6346
+        y: 1331.5629
         width: 160
         height: 30
     - id: 37
@@ -3666,18 +3675,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: '(CurrentQuestState("Radio verde y azul") == "returnToNPC")
-        or (CurrentQuestState("Radio verde y azul") == "success") or
+        or
 
-        (CurrentQuestState("Radio
-        verde y azul") == "active")'
+        (CurrentQuestState("Radio verde y azul") == "active")'
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 469.13623
-        y: 1120.8997
+        x: 662.04156
+        y: 1132.8579
         width: 160
         height: 30
     - id: 39
@@ -3731,8 +3739,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 432.77155
-        y: 866.984
+        x: 660.7846
+        y: 874.2611
         width: 160
         height: 30
     - id: 40
@@ -3792,8 +3800,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 310.71194
-        y: 771.955
+        x: 538.7249
+        y: 779.2321
         width: 160
         height: 30
     - id: 41
@@ -3847,13 +3855,64 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 894.44037
-        y: 1143.3367
+        x: 1122.4536
+        y: 1150.6138
+        width: 160
+        height: 30
+    - id: 42
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Gracias por todo!
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: "(CurrentQuestState(\"Radio peque\xF1a\") == \"success\")
+        and (CurrentQuestState(\"Robo radio\") == \"success\") and (CurrentQuestState(\"Radio
+        verde y azul\") == \"success\")"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 38.584824
+        y: 1085.146
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 481.95187}
-    canvasZoom: 0.7045136
+    canvasScrollPosition: {x: 0, y: 556.794}
+    canvasZoom: 0.8245135
   - id: 4
     fields:
     - title: Title
