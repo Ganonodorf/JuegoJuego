@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        UpdateGameState(GameState.Playing);
+    }
+
     // Para devolver el GameState
     public GameState GetGameState()
     {
@@ -45,9 +50,14 @@ public class GameManager : MonoBehaviour
         switch(newState)
         {
             case GameState.Playing:
-                //Hacer algo
+                Debug.Log("Estado de juego: Playing");
+                break;
             case GameState.Conversation:
-                //Hacer algo
+                Debug.Log("Estado de juego: Conversation");
+                break;
+            case GameState.Inventario:
+                Debug.Log("Estado de juego: Inventario");
+                break;
             default:
                 break;
         }
@@ -60,5 +70,6 @@ public class GameManager : MonoBehaviour
 public enum GameState
 {
     Playing,
-    Conversation
+    Conversation,
+    Inventario
 }
