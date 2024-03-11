@@ -84,72 +84,80 @@ public class WheelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        wheelAngle = Mathf.Lerp(wheelAngle, steerAngle, steerTime * Time.deltaTime);
-        transform.localRotation = Quaternion.Euler(Vector3.up * wheelAngle);
+        if(GameManager.Instance.GetGameState() == GameState.Conduciendo)
+        {
+            wheelAngle = Mathf.Lerp(wheelAngle, steerAngle, steerTime * Time.deltaTime);
+            transform.localRotation = Quaternion.Euler(Vector3.up * wheelAngle);
 
-        Debug.DrawRay(transform.position, -transform.up * (springLength + wheelRadius), Color.green);
+            Debug.DrawRay(transform.position, -transform.up * (springLength + wheelRadius), Color.green);
+        }
     }
 
     void FixedUpdate()
     {
-        if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, restLength + wheelRadius))
+        if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
         {
-            lastLength = springLength;
-            springLength = hit.distance - wheelRadius;
-            springLength = Mathf.Clamp(springLength, minLength, restLength);
-            springVelocity = (lastLength - springLength) / Time.fixedDeltaTime;
-            springForce = springStiffness * stiffnessCurve.Evaluate((restLength - springLength)/restLength);
-            damperForce = damperStiffness * springVelocity;
-
-            suspensionForce = (springForce + damperForce) * transform.up;
-
-            wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
-
-            // if drifting button
-
-            if (Input.GetKey("space"))
+            if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, restLength + wheelRadius))
             {
-                maxForwardVelocityFactor = maxForwardVelocity * driftMaxForwardVelocityMultiplier;
-                maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity * driftMaxGripSidewaysMultiplier;
-                motorForceFactor = motorForce * driftMotorForceMultiplier;
-            }else
-            {
-                maxForwardVelocityFactor = maxForwardVelocity;
-                maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
-                motorForceFactor = motorForce;
-            }
+                lastLength = springLength;
+                springLength = hit.distance - wheelRadius;
+                springLength = Mathf.Clamp(springLength, minLength, restLength);
+                springVelocity = (lastLength - springLength) / Time.fixedDeltaTime;
+                springForce = springStiffness * stiffnessCurve.Evaluate((restLength - springLength) / restLength);
+                damperForce = damperStiffness * springVelocity;
 
-            // calculate inclination angle of the floor hit
-            hitGroundAngle = Vector3.Angle(Vector3.up, hit.normal);
+                suspensionForce = (springForce + damperForce) * transform.up;
 
-            // motor acceleration force
-            if ((Input.GetAxis("Vertical") > 0 && wheelVelocityLS.z > 0) || (Input.GetAxis("Vertical") < 0 && wheelVelocityLS.z < 0))
-            {
-                fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocityFactor) * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * motorForceFactor;
-            }else
-            {
-                fx = Input.GetAxis("Vertical") * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * breakForce;
-            }
+                wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
 
-            //auto break force if low velocity and no input
-            if((Input.GetAxis("Vertical") == 0) &&
-                wheelVelocityLS.z > 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
-            {
-                fx = -autoBreakForce;
-            } else if ((Input.GetAxis("Vertical") == 0) &&
-                wheelVelocityLS.z < 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
-            {
-                fx = autoBreakForce;
-            }
+                // if drifting button
+
+                if (Input.GetKey("space"))
+                {
+                    maxForwardVelocityFactor = maxForwardVelocity * driftMaxForwardVelocityMultiplier;
+                    maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity * driftMaxGripSidewaysMultiplier;
+                    motorForceFactor = motorForce * driftMotorForceMultiplier;
+                }
+                else
+                {
+                    maxForwardVelocityFactor = maxForwardVelocity;
+                    maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
+                    motorForceFactor = motorForce;
+                }
+
+                // calculate inclination angle of the floor hit
+                hitGroundAngle = Vector3.Angle(Vector3.up, hit.normal);
+
+                // motor acceleration force
+                if ((Input.GetAxis("Vertical") > 0 && wheelVelocityLS.z > 0) || (Input.GetAxis("Vertical") < 0 && wheelVelocityLS.z < 0))
+                {
+                    fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocityFactor) * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * motorForceFactor;
+                }
+                else
+                {
+                    fx = Input.GetAxis("Vertical") * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * breakForce;
+                }
+
+                //auto break force if low velocity and no input
+                if ((Input.GetAxis("Vertical") == 0) &&
+                    wheelVelocityLS.z > 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
+                {
+                    fx = -autoBreakForce;
+                }
+                else if ((Input.GetAxis("Vertical") == 0) &&
+                    wheelVelocityLS.z < 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
+                {
+                    fx = autoBreakForce;
+                }
 
                 // Sideways grip
                 fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocityFactor) * springForce;
 
-            rb.AddForceAtPosition(suspensionForce + (fx * transform.forward) + (fy * -transform.right), transform.position);
+                rb.AddForceAtPosition(suspensionForce + (fx * transform.forward) + (fy * -transform.right), transform.position);
 
-            Debug.DrawRay(transform.position, (suspensionForce + (fx * transform.forward) + (fy * -transform.right)) / forceVectorLength, Color.red);
-            Debug.DrawRay(transform.position, suspensionForce / forceVectorLength, Color.yellow);
-
+                Debug.DrawRay(transform.position, (suspensionForce + (fx * transform.forward) + (fy * -transform.right)) / forceVectorLength, Color.red);
+                Debug.DrawRay(transform.position, suspensionForce / forceVectorLength, Color.yellow);
+            }
         }
     }
 }

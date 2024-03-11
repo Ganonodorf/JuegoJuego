@@ -20,30 +20,33 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        steerInput = Input.GetAxis("Horizontal");
-
-        if (steerInput > 0)
-        {        // is turning right
-            ackermannAngleLeft = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
-            ackermannAngleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput;
-        }
-        else if (steerInput < 0)
-        { // is turning left
-            ackermannAngleLeft = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput;
-            ackermannAngleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
-        }
-        else
+        if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
         {
-            ackermannAngleLeft = 0;
-            ackermannAngleRight = 0;
-        }
+            steerInput = Input.GetAxis("Horizontal");
 
-        foreach (WheelController w in wheels)
-        {
-            if (w.wheelFrontLeft)
-                w.steerAngle = ackermannAngleLeft;
-            if (w.wheelFrontRight)
-                w.steerAngle = ackermannAngleRight;
+            if (steerInput > 0)
+            {        // is turning right
+                ackermannAngleLeft = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
+                ackermannAngleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput;
+            }
+            else if (steerInput < 0)
+            { // is turning left
+                ackermannAngleLeft = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput;
+                ackermannAngleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
+            }
+            else
+            {
+                ackermannAngleLeft = 0;
+                ackermannAngleRight = 0;
+            }
+
+            foreach (WheelController w in wheels)
+            {
+                if (w.wheelFrontLeft)
+                    w.steerAngle = ackermannAngleLeft;
+                if (w.wheelFrontRight)
+                    w.steerAngle = ackermannAngleRight;
+            }
         }
     }
 }

@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateGameState(GameState.Playing);
+        UpdateGameState(GameState.Conduciendo);
     }
 
     // Para devolver el GameState
@@ -49,8 +49,8 @@ public class GameManager : MonoBehaviour
 
         switch(newState)
         {
-            case GameState.Playing:
-                Debug.Log("Estado de juego: Playing");
+            case GameState.Conduciendo:
+                Debug.Log("Estado de juego: Conduciendo");
                 break;
             case GameState.Conversation:
                 Debug.Log("Estado de juego: Conversation");
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
 // Enumerado que contiene los diferentes estados de juego
 public enum GameState
 {
-    Playing,
+    Conduciendo,
     Conversation,
     Inventario
 }
