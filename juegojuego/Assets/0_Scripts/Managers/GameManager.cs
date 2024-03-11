@@ -10,9 +10,10 @@ public class GameManager : MonoBehaviour
 
     // Este va a ser el estado actual de juego
     private GameState state;
+    private GameState previousState;
 
-    // Aquí declaramos el evento, su nombre y que recive un GameState
-    public static event Action<GameState> OnGameStateChanged;
+    // Aquí declaramos el evento, su nombre y que recibe un GameState
+    public static event Action<GameState, GameState> OnGameStateChanged;
 
     // En el awake decimos que si cuando el GameObject que tenga este script es creado
     // no existe ya un GameManager, asignamos Instance a ese GameObject.
@@ -41,19 +42,26 @@ public class GameManager : MonoBehaviour
         return state;
     }
 
+    // Para devolver el GameState
+    public GameState GetPreviousGameState()
+    {
+        return previousState;
+    }
+
     // Este método se usa para cambiar el estado de juego por otros scripts y actualiza el estado actual.
     // Lo bueno que tiene es que si se hace, se manda una señal que indica cuál es el nuevo estado.
     public void UpdateGameState(GameState newState)
     {
+        previousState = state;
         state = newState;
 
-        switch(newState)
+        switch (newState)
         {
             case GameState.Conduciendo:
                 Debug.Log("Estado de juego: Conduciendo");
                 break;
-            case GameState.Conversation:
-                Debug.Log("Estado de juego: Conversation");
+            case GameState.Dialogo:
+                Debug.Log("Estado de juego: Dialogo");
                 break;
             case GameState.Inventario:
                 Debug.Log("Estado de juego: Inventario");
@@ -62,7 +70,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        OnGameStateChanged?.Invoke(newState);
+        OnGameStateChanged?.Invoke(newState, previousState);
     }
 }
 
@@ -70,6 +78,6 @@ public class GameManager : MonoBehaviour
 public enum GameState
 {
     Conduciendo,
-    Conversation,
+    Dialogo,
     Inventario
 }
