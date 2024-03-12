@@ -1,5 +1,6 @@
 using Cinemachine;
 using PixelCrushers.DialogueSystem;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +9,9 @@ public class InventarioManager : MonoBehaviour
     // Variables públicas
     public static InventarioManager Instance;
 
+    public static event Action<InventarioMensajes> OnInventarioChanged;
+
     // Variables privadas
-    [SerializeField]
     private List<GameObject> inventario;
     private GameObject jugador;
     private GameObject camaraInventario;
@@ -102,7 +104,9 @@ public class InventarioManager : MonoBehaviour
 
         if (inventario.Count >= Constantes.CAPACIDAD_INVENTARIO)
         {
-            Debug.Log("No se pueden agregar más objetos");
+            // Lanza el evento
+            OnInventarioChanged?.Invoke(InventarioMensajes.InventarioLleno);
+
             return;
         }
 
@@ -137,6 +141,9 @@ public class InventarioManager : MonoBehaviour
 
         // Añade el objeto a la lista del inventario
         inventario.Add(objetoAgregar);
+
+        // Lanza el evento
+        OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoAgregado);
     }
 
     public void SoltarDelInventario()
@@ -179,6 +186,9 @@ public class InventarioManager : MonoBehaviour
 
         // Reordenar inventario
         ReordenarInventario();
+
+        // Lanza el evento
+        OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoSoltado);
     }
 
     private void AbrirInventario()
@@ -195,9 +205,7 @@ public class InventarioManager : MonoBehaviour
 
         if (inventario.Count > 0)
         {
-            MiraAlObjeto(inventario[indexObjetoResaltado]);
-
-            IluminarObjeto(inventario[indexObjetoResaltado]);
+            FocusearObjeto(inventario[indexObjetoResaltado]);
         }
     }
 
@@ -220,12 +228,7 @@ public class InventarioManager : MonoBehaviour
             indexObjetoResaltado = 0;
         }
     }
-
-    private void MiraAlObjeto(GameObject objetoAMirar)
-    {
-        camaraInventario.GetComponent<CinemachineVirtualCamera>().LookAt = objetoAMirar.transform;
-    }
-
+    
     private void MoverInventarioHoriz()
     {
         int indexSiguienteObjeto;
@@ -249,11 +252,9 @@ public class InventarioManager : MonoBehaviour
             }
         }
 
-        MiraAlObjeto(inventario[indexSiguienteObjeto]);
-
         DesIluminarObjeto(inventario[indexObjetoResaltado]);
 
-        IluminarObjeto(inventario[indexSiguienteObjeto]);
+        FocusearObjeto(inventario[indexSiguienteObjeto]);
 
         indexObjetoResaltado = indexSiguienteObjeto;
     }
@@ -288,25 +289,11 @@ public class InventarioManager : MonoBehaviour
             }
         }
 
-        MiraAlObjeto(inventario[indexSiguienteObjeto]);
-
         DesIluminarObjeto(inventario[indexObjetoResaltado]);
 
-        IluminarObjeto(inventario[indexSiguienteObjeto]);
+        FocusearObjeto(inventario[indexSiguienteObjeto]);
 
         indexObjetoResaltado = indexSiguienteObjeto;
-    }
-
-    private void IluminarObjeto(GameObject objetoAIluminar)
-    {
-        objetoAIluminar.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-        
-        objetoAIluminar.GetComponent<Renderer>().material.SetColor("_EmissionColor", Constantes.COLOR_ILUMINADO);
-    }
-
-    private void DesIluminarObjeto(GameObject objetoADesIluminar)
-    {
-        objetoADesIluminar.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
     }
 
     private void ReordenarInventario()
@@ -321,15 +308,41 @@ public class InventarioManager : MonoBehaviour
         {
             indexObjetoResaltado = 0;
 
-            MiraAlObjeto(inventario[indexObjetoResaltado]);
-
-            IluminarObjeto(inventario[indexObjetoResaltado]);
+            FocusearObjeto(inventario[indexObjetoResaltado]);
         }
+    }
+
+    private void FocusearObjeto(GameObject objetoAFocusear)
+    {
+        MiraAlObjeto(objetoAFocusear);
+
+        IluminarObjeto(objetoAFocusear);
+
+        OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoFocuseado);
+    }
+
+    private void MiraAlObjeto(GameObject objetoAMirar)
+    {
+        camaraInventario.GetComponent<CinemachineVirtualCamera>().LookAt = objetoAMirar.transform;
+    }
+
+    private void IluminarObjeto(GameObject objetoAIluminar)
+    {
+        objetoAIluminar.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        
+        objetoAIluminar.GetComponent<Renderer>().material.SetColor("_EmissionColor", Constantes.COLOR_ILUMINADO);
+    }
+
+    private void DesIluminarObjeto(GameObject objetoADesIluminar)
+    {
+        objetoADesIluminar.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
     }
 }
 
-public enum InventarioState
+public enum InventarioMensajes
 {
-    ConHueco,
-    Lleno
+    ObjetoAgregado,
+    ObjetoSoltado,
+    ObjetoFocuseado,
+    InventarioLleno
 }
