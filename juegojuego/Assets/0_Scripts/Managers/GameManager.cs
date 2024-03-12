@@ -20,15 +20,7 @@ public class GameManager : MonoBehaviour
     // Si no es así y ya existe un GameManager, el que se acaba de crear se borra.
     private void Awake()
     {
-        if(Instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }
-        else if(Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        HacerloInmortal();
     }
 
     private void Start()
@@ -71,6 +63,19 @@ public class GameManager : MonoBehaviour
         }
 
         OnGameStateChanged?.Invoke(newState, previousState);
+    }
+
+    private void HacerloInmortal()
+    {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 }
 

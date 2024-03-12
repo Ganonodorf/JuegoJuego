@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Constantes;
 
 public class UIManager : MonoBehaviour
 {
@@ -40,8 +41,8 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        botonInventarioGO = GameObject.Find(Constantes.NOMBRE_BOTON_INV_GO);
-        notificacionInventarioGO = GameObject.Find(Constantes.NOMBRE_NOTIFICACION_INV_GO);
+        botonInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_BOTON_GO);
+        notificacionInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_NOTIFICACION_GO);
     }
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstado, GameState anteriorEstado)
@@ -76,16 +77,16 @@ public class UIManager : MonoBehaviour
         switch (mensaje)
         {
             case InventarioMensajes.ObjetoAgregado:
-                EjecutarNotificacion(Constantes.TEXTO_NOTIFICACION_OBJETO_RECOGIDO, MostrarYOcultarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.ObjetoSoltado:
-                EjecutarNotificacion(Constantes.TEXTO_NOTIFICACION_OBJETO_SOLTADO, MostrarYOcultarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.ObjetoFocuseado:
-                EjecutarNotificacion(Constantes.TEXTO_NOTIFICACION_OBJ_FOCUSEADO, MostrarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO, MostrarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.InventarioLleno:
-                EjecutarNotificacion(Constantes.TEXTO_NOTIFICACION_INV_LLENO, MostrarYOcultarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             default:
                 break;
@@ -95,11 +96,11 @@ public class UIManager : MonoBehaviour
     private IEnumerator MostrarBotonInventarioCoroutine()
     {
         float posLocalActualBotonInv_Y = botonInventarioGO.transform.localPosition.y;
-        float posFinalBotonInv_Y = Constantes.POSICION_BOTON_INV_MOSTRAR.y;
+        float posFinalBotonInv_Y = Inventario.UI.POSICION_BOTON_MOSTRAR.y;
 
         while (posLocalActualBotonInv_Y < posFinalBotonInv_Y)
         {
-            posLocalActualBotonInv_Y += Constantes.CANTIDAD_MOVIMIENTO_BOTON_INV;
+            posLocalActualBotonInv_Y += Inventario.UI.CANTIDAD_MOVIMIENTO_BOTON;
             botonInventarioGO.transform.localPosition = new Vector3(botonInventarioGO.transform.localPosition.x,
                                                              posLocalActualBotonInv_Y,
                                                              botonInventarioGO.transform.localPosition.z);
@@ -110,11 +111,11 @@ public class UIManager : MonoBehaviour
     private IEnumerator OcultarBotonInventarioCoroutine()
     {
         float posLocalActualBotonInv_Y = botonInventarioGO.transform.localPosition.y;
-        float posFinalBotonInv_Y = Constantes.POSICION_BOTON_INV_OCULTAR.y;
+        float posFinalBotonInv_Y = Inventario.UI.POSICION_BOTON_OCULTAR.y;
 
         while (posLocalActualBotonInv_Y > posFinalBotonInv_Y)
         {
-            posLocalActualBotonInv_Y -= Constantes.CANTIDAD_MOVIMIENTO_BOTON_INV;
+            posLocalActualBotonInv_Y -= Inventario.UI.CANTIDAD_MOVIMIENTO_BOTON;
             botonInventarioGO.transform.localPosition = new Vector3(botonInventarioGO.transform.localPosition.x,
                                                              posLocalActualBotonInv_Y,
                                                              botonInventarioGO.transform.localPosition.z);
@@ -138,11 +139,11 @@ public class UIManager : MonoBehaviour
     private IEnumerator MostrarNotificacionInventarioCoroutine()
     {
         float posLocalActualNotificacionInv_Y = notificacionInventarioGO.transform.localPosition.y;
-        float posFinalNotificacionInv_Y = Constantes.POSICION_NOTIFICACION_INV_MOSTRAR.y;
+        float posFinalNotificacionInv_Y = Inventario.UI.POSICION_NOTIFICACION_MOSTRAR.y;
 
         while (posLocalActualNotificacionInv_Y < posFinalNotificacionInv_Y)
         {
-            posLocalActualNotificacionInv_Y += Constantes.CANTIDAD_MOVIMIENTO_NOTIFICACION_INV;
+            posLocalActualNotificacionInv_Y += Inventario.UI.CANTIDAD_MOVIMIENTO_NOTIFICACION;
             notificacionInventarioGO.transform.localPosition = new Vector3(notificacionInventarioGO.transform.localPosition.x,
                                                                            posLocalActualNotificacionInv_Y,
                                                                            notificacionInventarioGO.transform.localPosition.z);
@@ -153,11 +154,11 @@ public class UIManager : MonoBehaviour
     private IEnumerator OcultarNotificacionInventarioCoroutine()
     {
         float posLocalActualNotificacionInv_Y = notificacionInventarioGO.transform.localPosition.y;
-        float posFinalNotificacionInv_Y = Constantes.POSICION_NOTIFICACION_INV_OCULTAR.y;
+        float posFinalNotificacionInv_Y = Inventario.UI.POSICION_NOTIFICACION_OCULTAR.y;
 
         while (posLocalActualNotificacionInv_Y > posFinalNotificacionInv_Y)
         {
-            posLocalActualNotificacionInv_Y -= Constantes.CANTIDAD_MOVIMIENTO_NOTIFICACION_INV;
+            posLocalActualNotificacionInv_Y -= Inventario.UI.CANTIDAD_MOVIMIENTO_NOTIFICACION;
             notificacionInventarioGO.transform.localPosition = new Vector3(notificacionInventarioGO.transform.localPosition.x,
                                                                            posLocalActualNotificacionInv_Y,
                                                                            notificacionInventarioGO.transform.localPosition.z);
@@ -185,7 +186,7 @@ public class UIManager : MonoBehaviour
 
         float temporizador = 0.0f;
 
-        while (temporizador < Constantes.CANTIDAD_TIEMPO_NOTIFICACION_INV)
+        while (temporizador < Inventario.UI.CANTIDAD_TIEMPO_NOTIFICACION)
         {
             temporizador += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
