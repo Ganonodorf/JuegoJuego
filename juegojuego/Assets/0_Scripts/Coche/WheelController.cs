@@ -19,7 +19,6 @@ public class WheelController : MonoBehaviour
     public float damperStiffness;
 
     private float minLength;
-    private float maxLength;
     private float lastLength;
     private float springLength;
     private float springVelocity;
@@ -87,21 +86,27 @@ public class WheelController : MonoBehaviour
         wheelAngle = Mathf.Lerp(wheelAngle, steerAngle, steerTime * Time.deltaTime);
         transform.localRotation = Quaternion.Euler(Vector3.up * wheelAngle);
 
-        Debug.DrawRay(transform.position, -transform.up * (springLength + wheelRadius), Color.green);
+        Debug.DrawRay(transform.position, -transform.up * (springLength), Color.green);
     }
 
     void FixedUpdate()
     {
-        if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, restLength + wheelRadius))
+        if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, restLength))
         {
             lastLength = springLength;
-            springLength = hit.distance - wheelRadius;
+            springLength = hit.distance;
             springLength = Mathf.Clamp(springLength, minLength, restLength);
             springVelocity = (lastLength - springLength) / Time.fixedDeltaTime;
             springForce = springStiffness * stiffnessCurve.Evaluate((restLength - springLength)/restLength);
             damperForce = damperStiffness * springVelocity;
 
             suspensionForce = (springForce + damperForce) * transform.up;
+
+            // comprobar que la fuerza de suspensión siempre es hacia arriba
+            if ((springForce + damperForce) < 0)
+            {
+                suspensionForce = new Vector3(0,0,0);
+            }
 
             wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
 
