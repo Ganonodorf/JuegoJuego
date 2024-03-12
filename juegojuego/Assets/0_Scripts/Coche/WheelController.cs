@@ -19,7 +19,6 @@ public class WheelController : MonoBehaviour
     public float damperStiffness;
 
     private float minLength;
-    private float maxLength;
     private float lastLength;
     private float springLength;
     private float springVelocity;
@@ -102,6 +101,8 @@ public class WheelController : MonoBehaviour
             damperForce = damperStiffness * springVelocity;
 
             suspensionForce = (springForce + damperForce) * transform.up;
+
+            // comprobar que la fuerza de suspensión siempre es hacia arriba
             if ((springForce + damperForce) < 0)
             {
                 suspensionForce = new Vector3(0,0,0);

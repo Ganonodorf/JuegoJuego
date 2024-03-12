@@ -17,12 +17,13 @@ public class CarFrontLights : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("f") && breaklight.GetComponent<Light>().enabled == false)
+
+        if (Input.GetKeyDown(KeyCode.F) && breaklight.GetComponent<Light>().enabled == false)
         {
             breaklight.GetComponent<Light>().enabled = true;
 
         }
-        else if(Input.GetKeyDown("f") && breaklight.GetComponent<Light>().enabled == true)
+        else if(Input.GetKeyDown(KeyCode.F) && breaklight.GetComponent<Light>().enabled == true)
         {
             breaklight.GetComponent<Light>().enabled = false;
         }
