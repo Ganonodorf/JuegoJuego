@@ -7,7 +7,7 @@ using Constantes;
 
 public class InventarioManager : MonoBehaviour
 {
-    // Variables públicas
+    // Variables p?blicas
     public static InventarioManager Instance;
     public static event Action<InventarioMensajes> OnInventarioChanged;
 
@@ -17,7 +17,7 @@ public class InventarioManager : MonoBehaviour
     private GameObject camaraInventario;
     private int indexObjetoResaltado;
 
-    // Método usado para obtener el inventario
+    // M?todo usado para obtener el inventario
     public List<GameObject> GetInventario()
     {
         return inventario;
@@ -28,7 +28,7 @@ public class InventarioManager : MonoBehaviour
         HacerloInmortal();
     }
 
-    // Cuando el controlador esté disponible, se registran en código Lua las funciones que se van a llamar desde el dialog system
+    // Cuando el controlador est? disponible, se registran en c?digo Lua las funciones que se van a llamar desde el dialog system
     void OnEnable()
     {
         Lua.RegisterFunction(nameof(AgregarAlInventario), this, SymbolExtensions.GetMethodInfo(() => AgregarAlInventario(string.Empty)));
@@ -61,7 +61,7 @@ public class InventarioManager : MonoBehaviour
 
             MeterObjetoAlCoche(objetoAgregar);
 
-            // Añade el objeto a la lista del inventario
+            // A?ade el objeto a la lista del inventario
             inventario.Add(objetoAgregar);
 
             // Lanza el evento
@@ -93,10 +93,10 @@ public class InventarioManager : MonoBehaviour
                                                          objetoAgregar.transform.localScale.y / Inventario.Manager.ESCALA_REDUCCION,
                                                          objetoAgregar.transform.localScale.z / Inventario.Manager.ESCALA_REDUCCION);
 
-        // Lo pone en la posición que le toque
+        // Lo pone en la posici?n que le toque
         objetoAgregar.transform.localPosition = Inventario.Manager.POSICIONES[inventario.Count];
 
-        // Lo pone una rotación estándar para todos
+        // Lo pone una rotaci?n est?ndar para todos
         objetoAgregar.transform.rotation = new Quaternion(0.0f,
                                                           0.0f,
                                                           0.0f,
@@ -135,7 +135,7 @@ public class InventarioManager : MonoBehaviour
                                                            0.0f,
                                                            Inventario.Manager.LONGITUD_COCHE);
 
-        // Amplía el objeto al doble
+        // Ampl?a el objeto al doble
         objetoSoltar.transform.localScale = new Vector3(objetoSoltar.transform.localScale.x * Inventario.Manager.ESCALA_REDUCCION,
                                                         objetoSoltar.transform.localScale.y * Inventario.Manager.ESCALA_REDUCCION,
                                                         objetoSoltar.transform.localScale.z * Inventario.Manager.ESCALA_REDUCCION);
@@ -271,6 +271,10 @@ public class InventarioManager : MonoBehaviour
             indexObjetoResaltado = 0;
 
             FocusearObjeto(inventario[indexObjetoResaltado]);
+        }
+        else
+        {
+            camaraInventario.GetComponent<CinemachineVirtualCamera>().LookAt = null;
         }
     }
 

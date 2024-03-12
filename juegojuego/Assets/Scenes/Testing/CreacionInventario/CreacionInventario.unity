@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657886, g: 0.49641275, b: 0.5748176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -333,10 +333,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OR_Test_Normal_Azul
       objectReference: {fileID: 0}
-    - target: {fileID: 2915271081467122802, guid: 5427e2fafea7bfc499b1602f3a580373, type: 3}
-      propertyPath: luaCode
-      value: AgregarAlInventario("OR_Test_Normal_Azul")
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -446,10 +442,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2261038693004349286, guid: 80b818cb7be7b0540b710aebdedbedac, type: 3}
-      propertyPath: luaCode
-      value: AgregarAlInventario("OR_Test_Normal_Verde")
-      objectReference: {fileID: 0}
     - target: {fileID: 8565376987410921648, guid: 80b818cb7be7b0540b710aebdedbedac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.74
@@ -1010,7 +1002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08054715, y: 0.71850854, z: -0.08440566, w: 0.6856627}
+  m_LocalRotation: {x: 0.08054713, y: 0.71850854, z: -0.084405646, w: 0.6856627}
   m_LocalPosition: {x: -40.466717, y: 11.1, z: 0.9954714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1343,10 +1335,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8372192310223047485, guid: 3f0a02672181619479054cad63241a13, type: 3}
-      propertyPath: luaCode
-      value: AgregarAlInventario("OR_Test_Pequena")
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1360,10 +1348,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1646048112436242672, guid: 3e2e47494dd9cb54aa5f68432029f800, type: 3}
-      propertyPath: luaCode
-      value: AgregarAlInventario("OR_Test_Normal")
-      objectReference: {fileID: 0}
     - target: {fileID: 7067769712380928524, guid: 3e2e47494dd9cb54aa5f68432029f800, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1464,10 +1448,6 @@ PrefabInstance:
     - target: {fileID: 1980525454859571931, guid: 5427e2fafea7bfc499b1602f3a580373, type: 3}
       propertyPath: m_Name
       value: OR_Test_Normal_Azul_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915271081467122802, guid: 5427e2fafea7bfc499b1602f3a580373, type: 3}
-      propertyPath: luaCode
-      value: AgregarAlInventario("OR_Test_Normal_Azul_2")
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1874,7 +1854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848326283}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08054715, y: 0.71850854, z: -0.08440566, w: 0.6856627}
+  m_LocalRotation: {x: 0.08054713, y: 0.71850854, z: -0.084405646, w: 0.6856627}
   m_LocalPosition: {x: -40.466717, y: 11.1, z: 0.9954714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
