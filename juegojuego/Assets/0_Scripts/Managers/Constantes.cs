@@ -20,14 +20,14 @@ namespace Constantes
             public const float CAPACIDAD = 5.0f;
             public static readonly List<Vector3> POSICIONES = new List<Vector3>
             {
-                new Vector3(-1.3f, 3.7f, -0.8f),
-                new Vector3(0.0f, 3.7f, -0.8f),
-                new Vector3(1.3f, 3.7f, -0.8f),
-                new Vector3(-0.6f, 4.5f, -1.3f),
-                new Vector3(0.6f, 4.5f, -1.3f)
+                new Vector3(0.872f,0.486f,-1.185f),
+                new Vector3(-0.028f,0.423f,-0.994f),
+                new Vector3(-0.832f,0.422f,-1.092f),
+                new Vector3(0.453f,1.237f,-1.694f),
+                new Vector3(-0.486f,1.232f,-1.694f)
             };
             public const float LONGITUD_COCHE = 6.0f;
-            public const float ESCALA_REDUCCION = 2.0f;
+            public const float ESCALA_REDUCCION = 5.0f;
             public const string NOMBRE_CAMARA_GO = "CamaraInventario";
             public static readonly Color COLOR_ILUMINADO = new Color(0.98f, 1.0f, 0.78f, 0.01f);
         }
