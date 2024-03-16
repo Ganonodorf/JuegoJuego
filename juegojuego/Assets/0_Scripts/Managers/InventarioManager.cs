@@ -64,6 +64,9 @@ public class InventarioManager : MonoBehaviour
             // A?ade el objeto a la lista del inventario
             inventario.Add(objetoAgregar);
 
+            // Pone la Variable del objeto en true <---<<
+            DialogueLua.SetVariable(nombreObjetoAgregar, true);
+
             // Lanza el evento
             OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoAgregado);
         }
@@ -123,6 +126,10 @@ public class InventarioManager : MonoBehaviour
         inventario.Remove(objetoSoltar);
 
         ReordenarInventario();
+
+        // Recoge el nombre del objeto y pone su Variable en false <---<<
+        string nombreObjetoSoltar = objetoSoltar.name;
+        DialogueLua.SetVariable(nombreObjetoSoltar, false);
 
         // Lanza el evento
         OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoSoltado);
