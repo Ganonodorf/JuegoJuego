@@ -29,7 +29,7 @@ namespace Constantes
             public const float LONGITUD_COCHE = 6.0f;
             public const float ESCALA_REDUCCION = 5.0f;
             public const string NOMBRE_CAMARA_GO = "CamaraInventario";
-            public static readonly Color COLOR_ILUMINADO = new Color(0.98f, 1.0f, 0.78f, 0.01f);
+            public static readonly Color COLOR_ILUMINADO = new Color(0.2f, 0.2f, 0.2f, 1f);
         }
 
         /*
