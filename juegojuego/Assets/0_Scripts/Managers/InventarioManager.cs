@@ -80,7 +80,12 @@ public class InventarioManager : MonoBehaviour
         objetoAgregar.transform.SetParent(jugador.transform);
 
         // Inabilita los colliders del objeto
-        foreach (Collider collider in objetoAgregar.transform)
+
+        Collider[] collidersObjetos;
+
+        collidersObjetos = objetoAgregar.GetComponents<Collider>();
+
+        foreach (Collider collider in collidersObjetos)
         {
             collider.enabled = false;
         }
@@ -144,7 +149,11 @@ public class InventarioManager : MonoBehaviour
         objetoSoltar.transform.GetComponent<Rigidbody>().isKinematic = false;
 
         // Habilita los colliders del objeto
-        foreach (Collider collider in objetoSoltar.transform)
+        Collider[] collidersObjetos;
+
+        collidersObjetos = objetoSoltar.GetComponents<Collider>();
+
+        foreach (Collider collider in collidersObjetos)
         {
             collider.enabled = true;
         }
