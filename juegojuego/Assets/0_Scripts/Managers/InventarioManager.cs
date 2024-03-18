@@ -171,8 +171,8 @@ public class InventarioManager : MonoBehaviour
 
         // Ampl?a el objeto al doble
         objetoEntregar.transform.localScale = new Vector3(objetoEntregar.transform.localScale.x * Inventario.Manager.ESCALA_REDUCCION,
-                                                        objetoEntregar.transform.localScale.y * Inventario.Manager.ESCALA_REDUCCION,
-                                                        objetoEntregar.transform.localScale.z * Inventario.Manager.ESCALA_REDUCCION);
+                                                          objetoEntregar.transform.localScale.y * Inventario.Manager.ESCALA_REDUCCION,
+                                                          objetoEntregar.transform.localScale.z * Inventario.Manager.ESCALA_REDUCCION);
 
     }
 
