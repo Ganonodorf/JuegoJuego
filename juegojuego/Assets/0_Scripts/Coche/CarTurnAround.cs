@@ -10,6 +10,8 @@ public class CarTurnAround : MonoBehaviour
     [SerializeField] private float minTurnAroundAngle;
     [SerializeField] private float turnAroundForce;
 
+    [SerializeField] private AnimationCurve forceAccordingToInclination;
+
 
 
     // Start is called before the first frame update
@@ -28,7 +30,8 @@ public class CarTurnAround : MonoBehaviour
     {
         if (rb.velocity.magnitude < maxTurnAroundVelocity && Vector3.Angle(Vector3.up, transform.up) > minTurnAroundAngle)
         {
-            rb.AddForceAtPosition(Input.GetAxis("Horizontal") * transform.right * turnAroundForce, transform.position);
+            float inclinationForceFactor = forceAccordingToInclination.Evaluate(Vector3.Angle(Vector3.up, -transform.up) / 180);
+            rb.AddForceAtPosition(Input.GetAxis("Horizontal") * transform.right * turnAroundForce * inclinationForceFactor , transform.position);
         }
     }
 }

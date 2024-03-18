@@ -32,6 +32,8 @@ public class InventarioManager : MonoBehaviour
     void OnEnable()
     {
         Lua.RegisterFunction(nameof(AgregarAlInventario), this, SymbolExtensions.GetMethodInfo(() => AgregarAlInventario(string.Empty)));
+        Lua.RegisterFunction(nameof(EntregarObjeto), this, SymbolExtensions.GetMethodInfo(() => EntregarObjeto(string.Empty, string.Empty)));
+
     }
 
     // Cuando el controlador deje de estar disponible, se desregistran las funciones
@@ -40,6 +42,8 @@ public class InventarioManager : MonoBehaviour
         // Note: If this script is on your Dialogue Manager & the Dialogue Manager is configured
         // as Don't Destroy On Load (on by default), don't unregister Lua functions.
         Lua.UnregisterFunction(nameof(AgregarAlInventario)); // <-- Only if not on Dialogue Manager.
+        Lua.UnregisterFunction(nameof(EntregarObjeto)); // <-- Only if not on Dialogue Manager.
+
     }
 
     private void Start()
@@ -63,6 +67,9 @@ public class InventarioManager : MonoBehaviour
 
             // A?ade el objeto a la lista del inventario
             inventario.Add(objetoAgregar);
+
+            // Pone la Variable del objeto en true <---<<
+            DialogueLua.SetVariable(nombreObjetoAgregar, true);
 
             // Lanza el evento
             OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoAgregado);
@@ -124,8 +131,49 @@ public class InventarioManager : MonoBehaviour
 
         ReordenarInventario();
 
+        // Recoge el nombre del objeto y pone su Variable en false <---<<
+        string nombreObjetoSoltar = objetoSoltar.name;
+        DialogueLua.SetVariable(nombreObjetoSoltar, false);
+
         // Lanza el evento
         OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoSoltado);
+    }
+
+    public void EntregarObjeto(string nombreObjetoEntregar, string nombrePersonajeReceptor)
+    {
+        // Encuentra ese GameObject
+        GameObject objetoEntregar = GameObject.Find(nombreObjetoEntregar);
+
+        // Lo saca del inventario
+        inventario.Remove(objetoEntregar);
+        ReordenarInventario();
+
+        // Desactiva el Look At de la cámara del inventario
+        camaraInventario.GetComponent<CinemachineVirtualCamera>().LookAt = null;
+
+        // Pone su Variable en false
+        DialogueLua.SetVariable(nombreObjetoEntregar, false);
+
+        // Lanza el evento ---?
+        OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoSoltado);
+
+        // Encontrar el personaje receptor
+        GameObject personajeReceptor = GameObject.Find(nombrePersonajeReceptor);
+
+        // Encontrar el punto receptor adecuado
+        string rutaPuntoReceptor = "puntosReceptores/punto" + nombreObjetoEntregar;
+        Transform puntoReceptor = personajeReceptor.transform.Find(rutaPuntoReceptor);
+
+        //Hacer objeto hijo de ese punto y colocarlo allí
+        objetoEntregar.transform.SetParent(puntoReceptor);
+        objetoEntregar.transform.localPosition = new Vector3(0, 0, 0);
+
+
+        // Ampl?a el objeto al doble
+        objetoEntregar.transform.localScale = new Vector3(objetoEntregar.transform.localScale.x * Inventario.Manager.ESCALA_REDUCCION,
+                                                        objetoEntregar.transform.localScale.y * Inventario.Manager.ESCALA_REDUCCION,
+                                                        objetoEntregar.transform.localScale.z * Inventario.Manager.ESCALA_REDUCCION);
+
     }
 
     private void SacarObjetoDelCoche(GameObject objetoSoltar)
