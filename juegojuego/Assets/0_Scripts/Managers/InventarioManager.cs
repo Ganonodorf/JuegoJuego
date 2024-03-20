@@ -26,24 +26,20 @@ public class InventarioManager : MonoBehaviour
     private void Awake()
     {
         HacerloInmortal();
+
+        GestionarInputs();
     }
 
-    // Cuando el controlador est? disponible, se registran en c?digo Lua las funciones que se van a llamar desde el dialog system
     void OnEnable()
     {
-        Lua.RegisterFunction(nameof(AgregarAlInventario), this, SymbolExtensions.GetMethodInfo(() => AgregarAlInventario(string.Empty)));
-        Lua.RegisterFunction(nameof(EntregarObjeto), this, SymbolExtensions.GetMethodInfo(() => EntregarObjeto(string.Empty, string.Empty)));
-
+        // Cuando el controlador est? disponible, se registran en c?digo Lua las funciones que se van a llamar desde el dialog system
+        RegistrarFuncionesLua();
     }
 
-    // Cuando el controlador deje de estar disponible, se desregistran las funciones
     void OnDisable()
     {
-        // Note: If this script is on your Dialogue Manager & the Dialogue Manager is configured
-        // as Don't Destroy On Load (on by default), don't unregister Lua functions.
-        Lua.UnregisterFunction(nameof(AgregarAlInventario)); // <-- Only if not on Dialogue Manager.
-        Lua.UnregisterFunction(nameof(EntregarObjeto)); // <-- Only if not on Dialogue Manager.
-
+        // Cuando el controlador deje de estar disponible, se desregistran las funciones
+        DesregistrarFuncionesLua();
     }
 
     private void Start()
@@ -52,9 +48,107 @@ public class InventarioManager : MonoBehaviour
         BuscarGO();
     }
 
-    private void Update()
+    private void GestionarInputs()
     {
-        ObtenerInputs();
+        InputManager.Instance.controles.Conduciendo.AbrirInventario.performed += contexto => AbrirInventario();
+        InputManager.Instance.controles.Inventario.CerrarInventario.performed += contexto => CerrarInventario();
+        InputManager.Instance.controles.Inventario.MovimientoDer.performed += contexto => { if (inventario.Count > 0) NavegarInventarioDer(); };
+        InputManager.Instance.controles.Inventario.MovimientoIzq.performed += contexto => { if (inventario.Count > 0) NavegarInventarioIzq(); };
+        InputManager.Instance.controles.Inventario.MovimientoArriba.performed += contexto => { if (inventario.Count > 3) NavegarInventarioArriba(); };
+        InputManager.Instance.controles.Inventario.MovimientoAbajo.performed += contexto => { if (inventario.Count > 3) NavegarInventarioAbajo(); };
+        InputManager.Instance.controles.Inventario.SoltarDelInventario.performed += contexto => SoltarDelInventario();
+    }
+
+    private void RegistrarFuncionesLua()
+    {
+        Lua.RegisterFunction(nameof(AgregarAlInventario), this, SymbolExtensions.GetMethodInfo(() => AgregarAlInventario(string.Empty)));
+        Lua.RegisterFunction(nameof(EntregarObjeto), this, SymbolExtensions.GetMethodInfo(() => EntregarObjeto(string.Empty, string.Empty)));
+    }
+
+    private void DesregistrarFuncionesLua()
+    {
+        // Note: If this script is on your Dialogue Manager & the Dialogue Manager is configured
+        // as Don't Destroy On Load (on by default), don't unregister Lua functions.
+        Lua.UnregisterFunction(nameof(AgregarAlInventario)); // <-- Only if not on Dialogue Manager.
+        Lua.UnregisterFunction(nameof(EntregarObjeto)); // <-- Only if not on Dialogue Manager.
+    }
+
+    private void NavegarInventarioDer()
+    {
+        int indexSiguienteObjeto;
+
+        indexSiguienteObjeto = indexObjetoResaltado + 1;
+
+        if (indexSiguienteObjeto >= inventario.Count || inventario[indexSiguienteObjeto] == null)
+        {
+            indexSiguienteObjeto = 0;
+        }
+
+        DesIluminarObjeto(inventario[indexObjetoResaltado]);
+
+        FocusearObjeto(inventario[indexSiguienteObjeto]);
+
+        indexObjetoResaltado = indexSiguienteObjeto;
+    }
+
+    private void NavegarInventarioIzq()
+    {
+        int indexSiguienteObjeto;
+
+        indexSiguienteObjeto = indexObjetoResaltado - 1;
+
+        if (indexSiguienteObjeto < 0)
+        {
+            indexSiguienteObjeto = inventario.Count - 1;
+        }
+
+        DesIluminarObjeto(inventario[indexObjetoResaltado]);
+
+        FocusearObjeto(inventario[indexSiguienteObjeto]);
+
+        indexObjetoResaltado = indexSiguienteObjeto;
+    }
+
+    private void NavegarInventarioArriba()
+    {
+        int indexSiguienteObjeto;
+
+        if ((indexObjetoResaltado == 0 || indexObjetoResaltado == 1 || indexObjetoResaltado == 2) &&
+            inventario.Count >= 5 && indexObjetoResaltado == 2)
+        {
+            indexSiguienteObjeto = 4;
+        }
+        else
+        {
+            indexSiguienteObjeto = 3;
+        }
+
+        DesIluminarObjeto(inventario[indexObjetoResaltado]);
+
+        FocusearObjeto(inventario[indexSiguienteObjeto]);
+
+        indexObjetoResaltado = indexSiguienteObjeto;
+    }
+
+    private void NavegarInventarioAbajo()
+    {
+        int indexSiguienteObjeto;
+
+        if ((indexObjetoResaltado == 3 || indexObjetoResaltado == 4) &&
+            indexObjetoResaltado == 3)
+        {
+            indexSiguienteObjeto = 0;
+        }
+        else
+        {
+            indexSiguienteObjeto = 2;
+        }
+
+        DesIluminarObjeto(inventario[indexObjetoResaltado]);
+
+        FocusearObjeto(inventario[indexSiguienteObjeto]);
+
+        indexObjetoResaltado = indexSiguienteObjeto;
     }
 
     public void AgregarAlInventario(string nombreObjetoAgregar)
@@ -120,6 +214,11 @@ public class InventarioManager : MonoBehaviour
 
     public void SoltarDelInventario()
     {
+        if(inventario.Count <= 0)
+        {
+            return;
+        }
+
         // Recoge ese GameObject del inventario
         GameObject objetoSoltar = inventario[indexObjetoResaltado];
 
@@ -247,73 +346,6 @@ public class InventarioManager : MonoBehaviour
             indexObjetoResaltado = 0;
         }
     }
-    
-    private void MoverInventarioHoriz()
-    {
-        int indexSiguienteObjeto;
-
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            indexSiguienteObjeto = indexObjetoResaltado + 1;
-
-            if (indexSiguienteObjeto >= inventario.Count || inventario[indexSiguienteObjeto] == null)
-            {
-                indexSiguienteObjeto = 0;
-            }
-        }
-        else
-        {
-            indexSiguienteObjeto = indexObjetoResaltado - 1;
-
-            if (indexSiguienteObjeto < 0)
-            {
-                indexSiguienteObjeto = inventario.Count - 1;
-            }
-        }
-
-        DesIluminarObjeto(inventario[indexObjetoResaltado]);
-
-        FocusearObjeto(inventario[indexSiguienteObjeto]);
-
-        indexObjetoResaltado = indexSiguienteObjeto;
-    }
-
-    private void MoverInventarioVert()
-    {
-        int indexSiguienteObjeto = 0;
-
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) &&
-            (indexObjetoResaltado == 0 || indexObjetoResaltado == 1 || indexObjetoResaltado == 2))
-        {
-            if (inventario.Count >= 5 && indexObjetoResaltado == 2)
-            {
-                indexSiguienteObjeto = 4;
-            }
-            else
-            {
-                indexSiguienteObjeto = 3;
-            }
-        }
-
-        if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) &&
-            (indexObjetoResaltado == 3 || indexObjetoResaltado == 4))
-        {
-            if (indexObjetoResaltado == 3)
-            {
-                indexSiguienteObjeto = 0;
-            }
-            else
-            {
-                indexSiguienteObjeto = 2;
-            }
-        }
-
-        DesIluminarObjeto(inventario[indexObjetoResaltado]);
-
-        FocusearObjeto(inventario[indexSiguienteObjeto]);
-
-        indexObjetoResaltado = indexSiguienteObjeto;
-    }
 
     private void ReordenarInventario()
     {
@@ -384,48 +416,6 @@ public class InventarioManager : MonoBehaviour
     {
         jugador = GameObject.Find(Player.NOMBRE_GO);
         camaraInventario = GameObject.Find(Inventario.Manager.NOMBRE_CAMARA_GO);
-    }
-
-    private void ObtenerInputs()
-    {
-        if (GameManager.Instance.GetGameState() == GameState.Conduciendo && Input.GetKeyDown(KeyCode.I))
-        {
-            AbrirInventario();
-        }
-
-        else if (GameManager.Instance.GetGameState() == GameState.Inventario)
-        {
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                CerrarInventario();
-            }
-
-            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) ||
-                     Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                if (inventario.Count > 0)
-                {
-                    MoverInventarioHoriz();
-                }
-            }
-
-            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) ||
-                     Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                if (inventario.Count > 3)
-                {
-                    MoverInventarioVert();
-                }
-            }
-
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (inventario.Count > 0)
-                {
-                    SoltarDelInventario();
-                }
-            }
-        }
     }
 }
 

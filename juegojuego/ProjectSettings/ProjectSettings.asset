@@ -158,7 +158,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.juegojuego
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -644,7 +645,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Server: PROBUILDER_EXPERIMENTAL_FEATURES
-    Standalone: TMP_PRESENT;USE_TWINE;USE_TWINE;USE_TWINE;PROBUILDER_EXPERIMENTAL_FEATURES
+    Standalone: TMP_PRESENT;USE_TWINE;USE_TWINE;USE_TWINE;PROBUILDER_EXPERIMENTAL_FEATURES;USE_NEW_INPUT
     WebGL: TMP_PRESENT;USE_TWINE;USE_TWINE;USE_TWINE;PROBUILDER_EXPERIMENTAL_FEATURES
   additionalCompilerArguments: {}
   platformArchitecture: {}
@@ -751,7 +752,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: a119d078-e372-4ff3-808f-bb04d24a458c
   framebufferDepthMemorylessMode: 0

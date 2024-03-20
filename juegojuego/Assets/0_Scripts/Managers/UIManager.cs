@@ -18,31 +18,19 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        HacerloInmortal();
 
-        // Nos suscribimos a los eventos
-        GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
-        InventarioManager.OnInventarioChanged += InventarioManager_OnInventarioChanged;
+        SuscribirseEventos();
     }
 
     private void OnDestroy()
     {
-        GameManager.OnGameStateChanged -= GameManager_OnGameStateChanged;
-        InventarioManager.OnInventarioChanged -= InventarioManager_OnInventarioChanged;
+        DesuscribirseEventos();
     }
 
     private void Start()
     {
-        botonInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_BOTON_GO);
-        notificacionInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_NOTIFICACION_GO);
+        BuscarGO();
     }
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstado, GameState anteriorEstado)
@@ -193,5 +181,37 @@ public class UIManager : MonoBehaviour
         }
 
         yield return StartCoroutine(OcultarNotificacionInventarioCoroutine());
+    }
+
+    private void HacerloInmortal()
+    {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void SuscribirseEventos()
+    {
+        // Nos suscribimos a los eventos
+        GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
+        InventarioManager.OnInventarioChanged += InventarioManager_OnInventarioChanged;
+    }
+
+    private void DesuscribirseEventos()
+    {
+        GameManager.OnGameStateChanged -= GameManager_OnGameStateChanged;
+        InventarioManager.OnInventarioChanged -= InventarioManager_OnInventarioChanged;
+    }
+
+    private void BuscarGO()
+    {
+        botonInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_BOTON_GO);
+        notificacionInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_NOTIFICACION_GO);
     }
 }
