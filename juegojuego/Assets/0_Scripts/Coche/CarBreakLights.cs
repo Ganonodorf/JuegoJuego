@@ -1,27 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CarBreakLights : MonoBehaviour
 {
-    [SerializeField] private GameObject breaklight;
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        breaklight = this.gameObject;
+        InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => EncenderLuces(true);
+        InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => EncenderLuces(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EncenderLuces(bool estado)
     {
-        if (Input.GetKey("space"))
-        {
-            breaklight.GetComponent<Light>().enabled = true;
-
-        }
-        else
-        {
-            breaklight.GetComponent<Light>().enabled = false;
-        }
+        this.gameObject.GetComponent<Light>().enabled = estado;
     }
 }
