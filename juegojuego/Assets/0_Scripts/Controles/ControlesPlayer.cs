@@ -71,6 +71,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mirar"",
+                    ""type"": ""Value"",
+                    ""id"": ""7c156966-00d0-4779-9b97-3d66ee215cd5"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -280,6 +289,17 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Derrape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27caf529-d152-4e83-b8c6-c57df5d0d623"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mirar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -722,6 +742,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_Conduciendo_AbrirInventario = m_Conduciendo.FindAction("AbrirInventario", throwIfNotFound: true);
         m_Conduciendo_Luces = m_Conduciendo.FindAction("Luces", throwIfNotFound: true);
         m_Conduciendo_Derrape = m_Conduciendo.FindAction("Derrape", throwIfNotFound: true);
+        m_Conduciendo_Mirar = m_Conduciendo.FindAction("Mirar", throwIfNotFound: true);
         // Inventario
         m_Inventario = asset.FindActionMap("Inventario", throwIfNotFound: true);
         m_Inventario_MovimientoDer = m_Inventario.FindAction("MovimientoDer", throwIfNotFound: true);
@@ -801,6 +822,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Conduciendo_AbrirInventario;
     private readonly InputAction m_Conduciendo_Luces;
     private readonly InputAction m_Conduciendo_Derrape;
+    private readonly InputAction m_Conduciendo_Mirar;
     public struct ConduciendoActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -810,6 +832,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @AbrirInventario => m_Wrapper.m_Conduciendo_AbrirInventario;
         public InputAction @Luces => m_Wrapper.m_Conduciendo_Luces;
         public InputAction @Derrape => m_Wrapper.m_Conduciendo_Derrape;
+        public InputAction @Mirar => m_Wrapper.m_Conduciendo_Mirar;
         public InputActionMap Get() { return m_Wrapper.m_Conduciendo; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -834,6 +857,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Derrape.started += instance.OnDerrape;
             @Derrape.performed += instance.OnDerrape;
             @Derrape.canceled += instance.OnDerrape;
+            @Mirar.started += instance.OnMirar;
+            @Mirar.performed += instance.OnMirar;
+            @Mirar.canceled += instance.OnMirar;
         }
 
         private void UnregisterCallbacks(IConduciendoActions instance)
@@ -853,6 +879,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Derrape.started -= instance.OnDerrape;
             @Derrape.performed -= instance.OnDerrape;
             @Derrape.canceled -= instance.OnDerrape;
+            @Mirar.started -= instance.OnMirar;
+            @Mirar.performed -= instance.OnMirar;
+            @Mirar.canceled -= instance.OnMirar;
         }
 
         public void RemoveCallbacks(IConduciendoActions instance)
@@ -1025,6 +1054,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnAbrirInventario(InputAction.CallbackContext context);
         void OnLuces(InputAction.CallbackContext context);
         void OnDerrape(InputAction.CallbackContext context);
+        void OnMirar(InputAction.CallbackContext context);
     }
     public interface IInventarioActions
     {
