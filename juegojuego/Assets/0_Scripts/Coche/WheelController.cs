@@ -13,40 +13,33 @@ public class WheelController : MonoBehaviour
 
 
     [Header("Suspension")]
-    public float restLength;
-    public float springTravel;
-    public float springStiffness;
-    public float damperStiffness;
+    [SerializeField] private float restLength;
+    [SerializeField] private float springTravel;
+    [SerializeField] private float springStiffness;
+    [SerializeField] private float damperStiffness;
 
-    private float minLength;
-    private float lastLength;
     private float springLength;
-    private float springVelocity;
-    private float springForce;
-    private float damperForce;
 
-    private Vector3 suspensionForce;
-    private Vector3 wheelVelocityLS; // Local Space
     private float fx;
     private float fy;
 
     [Header("Wheel")]
     public float steerAngle;
-    public float steerTime;
-    public float wheelRadius;
-    public float maxGripSidewaysVelocity;
+    [SerializeField] private float steerTime;
+    [SerializeField] private float wheelRadius;
+    [SerializeField] private float maxGripSidewaysVelocity;
     private float maxGripSidewaysVelocityFactor;
     [SerializeField] private float maxGroundAngleToGrip;
     private float hitGroundAngle;
 
 
     [Header("Motor")]
-    public float maxForwardVelocity;
+    [SerializeField] private float maxForwardVelocity;
     private float maxForwardVelocityFactor;
     [SerializeField] private float motorForce;
     private float motorForceFactor;
     [SerializeField] private float breakForce;
-    public float forceVectorLength;
+    [SerializeField] private float forceVectorLength;
 
     [Header("Automatic Break")]
     [SerializeField] private float autoBreakMaxVelocity;
@@ -76,7 +69,7 @@ public class WheelController : MonoBehaviour
     {
         rb = transform.root.GetComponent<Rigidbody>();
 
-        minLength = restLength - springTravel;
+        
 
     }
 
@@ -98,22 +91,11 @@ public class WheelController : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, restLength))
             {
-                lastLength = springLength;
-                springLength = hit.distance;
-                springLength = Mathf.Clamp(springLength, minLength, restLength);
-                springVelocity = (lastLength - springLength) / Time.fixedDeltaTime;
-                springForce = springStiffness * stiffnessCurve.Evaluate((restLength - springLength) / restLength);
-                damperForce = damperStiffness * springVelocity;
+                Vector3 suspensionForce = SuspensionForce(hit.distance);
 
-                suspensionForce = (springForce + damperForce) * transform.up;
-
-                // comprobar que la fuerza de suspensión siempre es hacia arriba
-                if ((springForce + damperForce) < 0)
-                {
-                    suspensionForce = new Vector3(0, 0, 0);
-                }
-
-                wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
+                
+                // Get the velocity (Local Space) of the hitpoint of the wheels
+                Vector3 wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
 
                 // if drifting button
                 if (Input.GetKey("space"))
@@ -155,7 +137,7 @@ public class WheelController : MonoBehaviour
                 }
 
                 // Sideways grip
-                fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocityFactor) * springForce;
+                fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocityFactor) * suspensionForce.magnitude;
 
                 rb.AddForceAtPosition(suspensionForce + (fx * transform.forward) + (fy * -transform.right), transform.position);
 
@@ -163,5 +145,28 @@ public class WheelController : MonoBehaviour
                 Debug.DrawRay(transform.position, suspensionForce / forceVectorLength, Color.yellow);
             }
         }
+    }
+
+
+    private Vector3 SuspensionForce(float distanciaHit)
+    {
+        float minLength = restLength - springTravel;
+
+        float lastLength = springLength;
+        springLength = distanciaHit;
+        springLength = Mathf.Clamp(springLength, minLength, restLength);
+        float springVelocity = (lastLength - springLength) / Time.fixedDeltaTime;
+        float springForce = springStiffness * stiffnessCurve.Evaluate((restLength - springLength) / restLength);
+        float damperForce = damperStiffness * springVelocity;
+
+        Vector3 fuerzaSuspension = (springForce + damperForce) * transform.up;
+
+        // comprobar que la fuerza de suspensión siempre es hacia arriba
+        if ((springForce + damperForce) < 0)
+        {
+            fuerzaSuspension = new Vector3(0, 0, 0);
+        }
+
+        return fuerzaSuspension;
     }
 }
