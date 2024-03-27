@@ -26,8 +26,6 @@ public class InventarioManager : MonoBehaviour
     private void Awake()
     {
         HacerloInmortal();
-
-        GestionarInputs();
     }
 
     void OnEnable()
@@ -46,6 +44,8 @@ public class InventarioManager : MonoBehaviour
     {
         InicializarVariables();
         BuscarGO();
+
+        GestionarInputs();
     }
 
     private void GestionarInputs()

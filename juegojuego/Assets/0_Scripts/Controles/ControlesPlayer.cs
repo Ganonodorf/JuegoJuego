@@ -28,9 +28,18 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             ""id"": ""437411e2-d970-4ea3-9ed9-f193b03f91d7"",
             ""actions"": [
                 {
-                    ""name"": ""Movimiento"",
+                    ""name"": ""MovimientoLateral"",
                     ""type"": ""Value"",
                     ""id"": ""6f730f9f-9a9c-48fa-9db4-8bfcf407640d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MovimientoFrontal"",
+                    ""type"": ""Value"",
+                    ""id"": ""34c4901d-6076-431c-9753-5852d4e23f96"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -90,7 +99,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movimiento"",
+                    ""action"": ""MovimientoLateral"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -101,31 +110,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movimiento"",
+                    ""action"": ""MovimientoLateral"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""349c4cfb-6e48-48a3-bafa-73f6646a1d08"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movimiento"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""9fe49fbc-2f6e-4da0-a737-6d3fa3b06229"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movimiento"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -134,7 +121,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movimiento"",
+                    ""action"": ""MovimientoLateral"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -145,7 +132,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movimiento"",
+                    ""action"": ""MovimientoLateral"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -156,31 +143,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movimiento"",
+                    ""action"": ""MovimientoLateral"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""ddad799b-5d54-467c-971d-c379fddc0988"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movimiento"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""a4f6f0ac-311b-409e-b299-e8be0d7a153c"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movimiento"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -189,7 +154,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movimiento"",
+                    ""action"": ""MovimientoLateral"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -200,7 +165,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movimiento"",
+                    ""action"": ""MovimientoLateral"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -302,6 +267,83 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""action"": ""Mirar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95cf120a-959b-4a56-9fac-fc98f97d34d9"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""fcfe8c81-d055-4be8-a170-b098470024ea"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""0ada1a01-20c3-4e36-addb-ad847be10302"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""c461b88a-0772-4093-9b16-3e7f6088fb39"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Flechas"",
+                    ""id"": ""d96c7b30-f26d-4601-8beb-29ff0dd55af7"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""ce88943e-a403-4761-bf89-9dc6857d72c9"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""6816f038-54bd-4b22-9f44-1a7980869e7a"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -737,7 +779,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
 }");
         // Conduciendo
         m_Conduciendo = asset.FindActionMap("Conduciendo", throwIfNotFound: true);
-        m_Conduciendo_Movimiento = m_Conduciendo.FindAction("Movimiento", throwIfNotFound: true);
+        m_Conduciendo_MovimientoLateral = m_Conduciendo.FindAction("MovimientoLateral", throwIfNotFound: true);
+        m_Conduciendo_MovimientoFrontal = m_Conduciendo.FindAction("MovimientoFrontal", throwIfNotFound: true);
         m_Conduciendo_Accion = m_Conduciendo.FindAction("Accion", throwIfNotFound: true);
         m_Conduciendo_AbrirInventario = m_Conduciendo.FindAction("AbrirInventario", throwIfNotFound: true);
         m_Conduciendo_Luces = m_Conduciendo.FindAction("Luces", throwIfNotFound: true);
@@ -817,7 +860,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     // Conduciendo
     private readonly InputActionMap m_Conduciendo;
     private List<IConduciendoActions> m_ConduciendoActionsCallbackInterfaces = new List<IConduciendoActions>();
-    private readonly InputAction m_Conduciendo_Movimiento;
+    private readonly InputAction m_Conduciendo_MovimientoLateral;
+    private readonly InputAction m_Conduciendo_MovimientoFrontal;
     private readonly InputAction m_Conduciendo_Accion;
     private readonly InputAction m_Conduciendo_AbrirInventario;
     private readonly InputAction m_Conduciendo_Luces;
@@ -827,7 +871,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     {
         private @ControlesPlayer m_Wrapper;
         public ConduciendoActions(@ControlesPlayer wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movimiento => m_Wrapper.m_Conduciendo_Movimiento;
+        public InputAction @MovimientoLateral => m_Wrapper.m_Conduciendo_MovimientoLateral;
+        public InputAction @MovimientoFrontal => m_Wrapper.m_Conduciendo_MovimientoFrontal;
         public InputAction @Accion => m_Wrapper.m_Conduciendo_Accion;
         public InputAction @AbrirInventario => m_Wrapper.m_Conduciendo_AbrirInventario;
         public InputAction @Luces => m_Wrapper.m_Conduciendo_Luces;
@@ -842,9 +887,12 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_ConduciendoActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_ConduciendoActionsCallbackInterfaces.Add(instance);
-            @Movimiento.started += instance.OnMovimiento;
-            @Movimiento.performed += instance.OnMovimiento;
-            @Movimiento.canceled += instance.OnMovimiento;
+            @MovimientoLateral.started += instance.OnMovimientoLateral;
+            @MovimientoLateral.performed += instance.OnMovimientoLateral;
+            @MovimientoLateral.canceled += instance.OnMovimientoLateral;
+            @MovimientoFrontal.started += instance.OnMovimientoFrontal;
+            @MovimientoFrontal.performed += instance.OnMovimientoFrontal;
+            @MovimientoFrontal.canceled += instance.OnMovimientoFrontal;
             @Accion.started += instance.OnAccion;
             @Accion.performed += instance.OnAccion;
             @Accion.canceled += instance.OnAccion;
@@ -864,9 +912,12 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IConduciendoActions instance)
         {
-            @Movimiento.started -= instance.OnMovimiento;
-            @Movimiento.performed -= instance.OnMovimiento;
-            @Movimiento.canceled -= instance.OnMovimiento;
+            @MovimientoLateral.started -= instance.OnMovimientoLateral;
+            @MovimientoLateral.performed -= instance.OnMovimientoLateral;
+            @MovimientoLateral.canceled -= instance.OnMovimientoLateral;
+            @MovimientoFrontal.started -= instance.OnMovimientoFrontal;
+            @MovimientoFrontal.performed -= instance.OnMovimientoFrontal;
+            @MovimientoFrontal.canceled -= instance.OnMovimientoFrontal;
             @Accion.started -= instance.OnAccion;
             @Accion.performed -= instance.OnAccion;
             @Accion.canceled -= instance.OnAccion;
@@ -1049,7 +1100,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     public DialogoActions @Dialogo => new DialogoActions(this);
     public interface IConduciendoActions
     {
-        void OnMovimiento(InputAction.CallbackContext context);
+        void OnMovimientoLateral(InputAction.CallbackContext context);
+        void OnMovimientoFrontal(InputAction.CallbackContext context);
         void OnAccion(InputAction.CallbackContext context);
         void OnAbrirInventario(InputAction.CallbackContext context);
         void OnLuces(InputAction.CallbackContext context);

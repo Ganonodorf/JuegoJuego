@@ -1,30 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WheelController : MonoBehaviour
 {
-    private Rigidbody rb;
-
-    public bool wheelFrontLeft;
-    public bool wheelFrontRight;
-    public bool wheelRearLeft;
-    public bool wheelRearRight;
-
+    private Rigidbody carRigidbody;
 
     [Header("Suspension")]
-    [SerializeField] private float restLength;
-    [SerializeField] private float springTravel;
+    [SerializeField] private float springRestLength;
+    [SerializeField] private float springMaxCompression;
     [SerializeField] private float springStiffness;
-    [SerializeField] private float damperStiffness;
+    [SerializeField] private float springDamper;
 
-    private float springLength;
+    private float lastFrameSpringLength;
 
-    private float fx;
-    private float fy;
+    private Vector3 wheelVelocityLocalSpace;
+
+    private float valorMovimientoFrontal;
 
     [Header("Wheel")]
-    public float steerAngle;
+    [SerializeField] private float steerAngle;
     [SerializeField] private float steerTime;
     [SerializeField] private float wheelRadius;
     [SerializeField] private float maxGripSidewaysVelocity;
@@ -67,10 +60,44 @@ public class WheelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = transform.root.GetComponent<Rigidbody>();
+        carRigidbody = transform.root.GetComponent<Rigidbody>();
 
-        
+        GestionarInputs();
 
+        InicializarVariables();
+    }
+
+    private void InicializarVariables()
+    {
+        maxForwardVelocityFactor = maxForwardVelocity;
+        maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
+        motorForceFactor = motorForce;
+    }
+
+    private void GestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.performed += contexto => RecogerValorMovimientoFrontal(contexto.ReadValue<Vector2>().y);
+        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled += contexto => ResetValorMovimientoFrontal();
+        InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => AplicarModificadoresDerrape();
+        InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => InicializarVariables();
+    }
+
+    private void AplicarModificadoresDerrape()
+    {
+        maxForwardVelocityFactor = maxForwardVelocity * driftMaxForwardVelocityMultiplier;
+        maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity * driftMaxGripSidewaysMultiplier;
+        motorForceFactor = motorForce * driftMotorForceMultiplier;
+    }
+
+    private void ResetValorMovimientoFrontal()
+    {
+        valorMovimientoFrontal = 0.0f;
+    }
+
+
+    private void RecogerValorMovimientoFrontal(float valorYMovimientoFrontal)
+    {
+        valorMovimientoFrontal = valorYMovimientoFrontal;
     }
 
     // Update is called once per frame
@@ -78,10 +105,8 @@ public class WheelController : MonoBehaviour
     {
         if(GameManager.Instance.GetGameState() == GameState.Conduciendo)
         {
-            wheelAngle = Mathf.Lerp(wheelAngle, steerAngle, steerTime * Time.deltaTime);
-            transform.localRotation = Quaternion.Euler(Vector3.up * wheelAngle);
-
-            Debug.DrawRay(transform.position, -transform.up * (springLength), Color.green);
+            ActualizarGiroRueda();
+            Debug.DrawRay(transform.position, -transform.up * (lastFrameSpringLength), Color.green);
         }
     }
 
@@ -89,75 +114,99 @@ public class WheelController : MonoBehaviour
     {
         if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
         {
-            if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, restLength))
+            if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, springRestLength))
             {
-                Vector3 suspensionForce = SuspensionForce(hit.distance);
-
-                
-                // Get the velocity (Local Space) of the hitpoint of the wheels
-                Vector3 wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
-
-                // if drifting button
-                if (Input.GetKey("space"))
-                {
-                    maxForwardVelocityFactor = maxForwardVelocity * driftMaxForwardVelocityMultiplier;
-                    maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity * driftMaxGripSidewaysMultiplier;
-                    motorForceFactor = motorForce * driftMotorForceMultiplier;
-                }
-                else
-                {
-                    maxForwardVelocityFactor = maxForwardVelocity;
-                    maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
-                    motorForceFactor = motorForce;
-                }
-
-                // calculate inclination angle of the floor hit
-                hitGroundAngle = Vector3.Angle(Vector3.up, hit.normal);
-
-                // motor acceleration force
-                if ((Input.GetAxis("Vertical") > 0 && wheelVelocityLS.z > 0) || (Input.GetAxis("Vertical") < 0 && wheelVelocityLS.z < 0))
-                {
-                    fx = Input.GetAxis("Vertical") * torqueCurve.Evaluate(wheelVelocityLS.z / maxForwardVelocityFactor) * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * motorForceFactor;
-                }
-                else
-                {
-                    fx = Input.GetAxis("Vertical") * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * breakForce;
-                }
-
-                //auto break force if low velocity and no input
-                if ((Input.GetAxis("Vertical") == 0) &&
-                    wheelVelocityLS.z > 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
-                {
-                    fx = -autoBreakForce;
-                }
-                else if ((Input.GetAxis("Vertical") == 0) &&
-                    wheelVelocityLS.z < 0 && wheelVelocityLS.magnitude < autoBreakMaxVelocity)
-                {
-                    fx = autoBreakForce;
-                }
-
-                // Sideways grip
-                fy = wheelVelocityLS.x * sidewaysGripCurve.Evaluate(wheelVelocityLS.x / maxGripSidewaysVelocityFactor) * suspensionForce.magnitude;
-
-                rb.AddForceAtPosition(suspensionForce + (fx * transform.forward) + (fy * -transform.right), transform.position);
-
-                Debug.DrawRay(transform.position, (suspensionForce + (fx * transform.forward) + (fy * -transform.right)) / forceVectorLength, Color.red);
-                Debug.DrawRay(transform.position, suspensionForce / forceVectorLength, Color.yellow);
+                WheelForceCalculations(hit);
             }
         }
     }
 
-
-    private Vector3 SuspensionForce(float distanciaHit)
+    private void WheelForceCalculations(RaycastHit hit)
     {
-        float minLength = restLength - springTravel;
+        float fuerzaFrontalRueda;
+        float fuerzaLateralRueda;
 
-        float lastLength = springLength;
-        springLength = distanciaHit;
-        springLength = Mathf.Clamp(springLength, minLength, restLength);
-        float springVelocity = (lastLength - springLength) / Time.fixedDeltaTime;
-        float springForce = springStiffness * stiffnessCurve.Evaluate((restLength - springLength) / restLength);
-        float damperForce = damperStiffness * springVelocity;
+        wheelVelocityLocalSpace = HitPointVelocityWheelLocaLSpace(hit.point);
+
+        hitGroundAngle = GroundInclinationWorldSpace(hit.normal);
+
+        fuerzaFrontalRueda = MotorAccelerationForce();
+
+        fuerzaFrontalRueda = AutoBreak(fuerzaFrontalRueda);
+
+        Vector3 suspensionForce = SuspensionForce(hit.distance);
+        fuerzaLateralRueda = GripForce(suspensionForce.magnitude);
+
+        AplicarFuerzas(suspensionForce, fuerzaFrontalRueda, fuerzaLateralRueda);
+
+        Debug.DrawRay(transform.position, (suspensionForce + (fuerzaFrontalRueda * transform.forward) + (fuerzaLateralRueda * -transform.right)) / forceVectorLength, Color.red);
+        Debug.DrawRay(transform.position, suspensionForce / forceVectorLength, Color.yellow);
+    }
+
+    private void AplicarFuerzas(Vector3 _suspensionForce, float _fuerzaFrontal, float _fuerzaLateral)
+    {
+        carRigidbody.AddForceAtPosition(_suspensionForce +
+                                       (_fuerzaFrontal * transform.forward) +
+                                       (_fuerzaLateral * -transform.right),
+                                       transform.position);
+    }
+
+    private float GripForce(float suspensionForceMagnitude)
+    {
+        return wheelVelocityLocalSpace.x *
+               sidewaysGripCurve.Evaluate(wheelVelocityLocalSpace.x / maxGripSidewaysVelocityFactor) *
+               suspensionForceMagnitude;
+    }
+
+    private float MotorAccelerationForce()
+    {
+        float fuerza;
+
+        if ((valorMovimientoFrontal > 0 && wheelVelocityLocalSpace.z > 0) || (valorMovimientoFrontal < 0 && wheelVelocityLocalSpace.z < 0))
+        {
+            fuerza = valorMovimientoFrontal * torqueCurve.Evaluate(wheelVelocityLocalSpace.z / maxForwardVelocityFactor) * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * motorForceFactor;
+        }
+        else
+        {
+            fuerza = valorMovimientoFrontal * inclinationToGripCurve.Evaluate(hitGroundAngle / maxGroundAngleToGrip) * breakForce;
+        }
+
+        return fuerza;
+    }
+
+    private float AutoBreak(float fuerza)
+    {
+        if (valorMovimientoFrontal == 0 && wheelVelocityLocalSpace.z > 0 && wheelVelocityLocalSpace.magnitude < autoBreakMaxVelocity)
+        {
+            return -autoBreakForce;
+        }
+        else if (valorMovimientoFrontal == 0 && wheelVelocityLocalSpace.z < 0 && wheelVelocityLocalSpace.magnitude < autoBreakMaxVelocity)
+        {
+            return autoBreakForce;
+        }
+
+        return fuerza;
+    }
+
+    private float GroundInclinationWorldSpace(Vector3 hitNormal)
+    {
+        return Vector3.Angle(Vector3.up, hitNormal);
+    }
+
+    private Vector3 HitPointVelocityWheelLocaLSpace(Vector3 hitPoint)
+    {
+        return transform.InverseTransformDirection(carRigidbody.GetPointVelocity(hitPoint));
+    }
+
+    private Vector3 SuspensionForce(float distanceToFloor)
+    {
+        float springMinLength = springRestLength - springMaxCompression;
+
+        // Te delimita el valor si se sale de los limites
+        float currentSpringLength = Mathf.Clamp(distanceToFloor, springMinLength, springRestLength);
+        float springVelocity = (lastFrameSpringLength - currentSpringLength) / Time.fixedDeltaTime;
+        float springForce = springStiffness * stiffnessCurve.Evaluate((springRestLength - currentSpringLength) / springRestLength);
+        float damperForce = springDamper * springVelocity;
 
         Vector3 fuerzaSuspension = (springForce + damperForce) * transform.up;
 
@@ -167,6 +216,25 @@ public class WheelController : MonoBehaviour
             fuerzaSuspension = new Vector3(0, 0, 0);
         }
 
+        // Guardar el valor de la springLength para el siguiente frame
+        lastFrameSpringLength = currentSpringLength;
+
         return fuerzaSuspension;
+    }
+
+    private void ActualizarGiroRueda()
+    {
+        wheelAngle = Mathf.Lerp(wheelAngle, steerAngle, steerTime * Time.deltaTime);
+        transform.localRotation = Quaternion.Euler(Vector3.up * wheelAngle);
+    }
+
+    public float GetSteerAngle()
+    {
+        return steerAngle;
+    }
+
+    public void SetSteerAngle(float newSteerAngle)
+    {
+        steerAngle = newSteerAngle;
     }
 }

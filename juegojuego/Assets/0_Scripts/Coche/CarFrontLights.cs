@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CarFrontLights : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
         InputManager.Instance.controles.Conduciendo.Luces.performed += contexto => TriggerLuces();
     }

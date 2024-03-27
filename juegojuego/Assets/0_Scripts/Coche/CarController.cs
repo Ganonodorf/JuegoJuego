@@ -1,53 +1,92 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CarController : MonoBehaviour
 {
-    public WheelController[] wheels;
+    [SerializeField]
+    private GameObject RuedaDerechaGO;
+    [SerializeField]
+    private GameObject RuedaIzquierdaGO;
 
     [Header("Car Specs")]
+    // Distancia entre los ejes de las ruedas
     public float wheelBase;
-    public float rearTrack;
-    public float turnRadius;
 
-    [Header("Inputs")]
-    public float steerInput;
+    // Distancia entre las ruedas de atras
+    public float rearTrack;
+
+    // El radio de la circunferencía mínima que necesita un coche para
+    // dar una vuelta de 180º
+    public float turnRadius;
 
     public float ackermannAngleLeft;
     public float ackermannAngleRight;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
+        GestionarInputs();
+    }
+
+    private void GestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => CentrarRuedas();
+    }
+
+    private void GirarRuedas(float valorMovimientoHorizontal)
+    {
+        if (valorMovimientoHorizontal > 0)
         {
-            steerInput = Input.GetAxis("Horizontal");
+            ackermannAngleLeft = ExteriorWheelAckermann(valorMovimientoHorizontal);
+            ackermannAngleRight = InteriorWheelAckermann(valorMovimientoHorizontal);
+        }
+        else
+        {
+            ackermannAngleLeft = InteriorWheelAckermann(valorMovimientoHorizontal);
+            ackermannAngleRight = ExteriorWheelAckermann(valorMovimientoHorizontal);
+        }
 
-            if (steerInput > 0)
-            {        // is turning right
-                ackermannAngleLeft = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
-                ackermannAngleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput;
-            }
-            else if (steerInput < 0)
-            { // is turning left
-                ackermannAngleLeft = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput;
-                ackermannAngleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
-            }
-            else
-            {
-                ackermannAngleLeft = 0;
-                ackermannAngleRight = 0;
-            }
+        AplicarValoresDeGiro();
 
-            foreach (WheelController w in wheels)
-            {
-                if (w.wheelFrontLeft)
-                    w.steerAngle = ackermannAngleLeft;
-                if (w.wheelFrontRight)
-                    w.steerAngle = ackermannAngleRight;
-            }
+    }
+
+    private void CentrarRuedas()
+    {
+        ackermannAngleLeft = 0.0f;
+        ackermannAngleRight = 0.0f;
+
+        AplicarValoresDeGiro();
+    }
+
+    private void AplicarValoresDeGiro()
+    {
+        if(RuedaDerechaGO.TryGetComponent(out WheelController rightWheelController))
+        {
+            rightWheelController.SetSteerAngle(ackermannAngleRight);
+        }
+
+        if (RuedaIzquierdaGO.TryGetComponent(out WheelController leftWheelController))
+        {
+            leftWheelController.SetSteerAngle(ackermannAngleLeft);
         }
     }
+
+    private float ExteriorWheelAckermann(float steerInput)
+    {
+        float ackermannValue;
+
+        ackermannValue = Mathf.Rad2Deg* Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
+
+        return ackermannValue;
+    }
+
+    private float InteriorWheelAckermann(float steerInput)
+    {
+        float ackermannValue;
+
+        ackermannValue = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput;
+
+        return ackermannValue;
+    }
+
+    
 }
