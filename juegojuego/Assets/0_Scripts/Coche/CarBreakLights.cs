@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CarBreakLights : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
         InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => EncenderLuces(true);
         InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => EncenderLuces(false);

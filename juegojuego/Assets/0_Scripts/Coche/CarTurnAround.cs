@@ -1,37 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class CarTurnAround : MonoBehaviour
 {
-    private Rigidbody rb;
+    private Rigidbody carRigidbody;
+    private float turnAroundValue;
 
     [SerializeField] private float maxTurnAroundVelocity;
     [SerializeField] private float minTurnAroundAngle;
     [SerializeField] private float turnAroundForce;
-
     [SerializeField] private AnimationCurve forceAccordingToInclination;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        rb = transform.root.GetComponent<Rigidbody>();
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ResetTurnAroundValue()
     {
-        
+        turnAroundValue = 0.0f;
+    }
+
+    private void SetTurnAroundValue(float ValorXMovimientoLateral)
+    {
+        turnAroundValue = ValorXMovimientoLateral;
+    }
+
+    void Start()
+    {
+        carRigidbody = transform.root.GetComponent<Rigidbody>();
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (rb.velocity.magnitude < maxTurnAroundVelocity && Vector3.Angle(Vector3.up, transform.up) > minTurnAroundAngle)
+        if (carRigidbody.velocity.magnitude < maxTurnAroundVelocity && Vector3.Angle(Vector3.up, transform.up) > minTurnAroundAngle)
         {
             float inclinationForceFactor = forceAccordingToInclination.Evaluate(Vector3.Angle(Vector3.up, -transform.up) / 180);
-            rb.AddForceAtPosition(Input.GetAxis("Horizontal") * transform.right * turnAroundForce * inclinationForceFactor , transform.position);
+            carRigidbody.AddForceAtPosition(turnAroundValue * transform.right * turnAroundForce * inclinationForceFactor , transform.position);
         }
     }
 }
