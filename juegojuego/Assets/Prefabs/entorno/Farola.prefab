@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 393126248421651675}
   - component: {fileID: 916822958714132190}
   - component: {fileID: 4076147590538781254}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7844570861142703789}
   - component: {fileID: 3435784145878140495}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,15 +221,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 43333e9a95237425496450bdb5f34e9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.518814
+      value: -81.035
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 43333e9a95237425496450bdb5f34e9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5652952
+      value: 14.606889
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 43333e9a95237425496450bdb5f34e9f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -34.793194
+      value: -12.362396
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 43333e9a95237425496450bdb5f34e9f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -262,6 +262,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 43333e9a95237425496450bdb5f34e9f, type: 3}
       propertyPath: m_Name
       value: Farola
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 43333e9a95237425496450bdb5f34e9f, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

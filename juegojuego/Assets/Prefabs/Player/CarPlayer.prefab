@@ -1,74 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &11046288505341413
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1133721597835220343}
-  - component: {fileID: 6936286378233516022}
-  - component: {fileID: 6041926216041303872}
-  m_Layer: 0
-  m_Name: carTurnAround
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1133721597835220343
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11046288505341413}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 1.18, z: -0.66}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5787976464604457316}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &6936286378233516022
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11046288505341413}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.73
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6041926216041303872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11046288505341413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c69fd94bd544ea6a6bc36735732ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxTurnAroundVelocity: 4
-  minTurnAroundAngle: 45
-  turnAroundForce: 30000
 --- !u!1 &115800989064139470
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,12 +40,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115800989064139470}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8867924, g: 0, b: 0.07972096, a: 1}
-  m_Intensity: 1.01
+  m_Intensity: 1
   m_Range: 1.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -156,7 +87,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -176,7 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f265e2a9adf3641be9844dc455b43b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breaklight: {fileID: 0}
 --- !u!1 &581801462767262613
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,12 +147,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581801462767262613}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8867924, g: 0, b: 0.07972096, a: 1}
-  m_Intensity: 1.01
+  m_Intensity: 1
   m_Range: 1.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -264,7 +194,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -284,7 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f265e2a9adf3641be9844dc455b43b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breaklight: {fileID: 0}
 --- !u!1 &890973572091026542
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,10 +223,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5400939658967681068}
-  - component: {fileID: 4958607775382944743}
   - component: {fileID: 3271391335263239038}
+  - component: {fileID: 6351085856233091538}
   m_Layer: 0
-  m_Name: carTurnAround
+  m_Name: CarTurnAround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,14 +241,53 @@ Transform:
   m_GameObject: {fileID: 890973572091026542}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 1.18, z: -0.66}
+  m_LocalPosition: {x: 0.02, y: 2.38, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5787976464604457316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4958607775382944743
-SphereCollider:
+--- !u!114 &3271391335263239038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890973572091026542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c69fd94bd544ea6a6bc36735732ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTurnAroundVelocity: 2
+  minTurnAroundAngle: 40
+  turnAroundForce: 10000
+  forceAccordingToInclination:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.039741516
+      value: 1.0101776
+      inSlope: -0.9412553
+      outSlope: -0.9412553
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0198975
+      value: 0.012786865
+      inSlope: -0.9412553
+      outSlope: -0.9412553
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &6351085856233091538
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -337,23 +305,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.73
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3271391335263239038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890973572091026542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c69fd94bd544ea6a6bc36735732ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxTurnAroundVelocity: 4
-  minTurnAroundAngle: 45
-  turnAroundForce: 30000
+  m_Size: {x: 3.48, y: 3.28, z: 7.4}
+  m_Center: {x: 0, y: -1.2, z: 0}
 --- !u!1 &1612535613082811257
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +320,7 @@ GameObject:
   - component: {fileID: 7627038254696136672}
   - component: {fileID: 5958929260354239645}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: RightBreakLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,7 +507,7 @@ GameObject:
   - component: {fileID: 3100641673382385461}
   - component: {fileID: 5364702130946289181}
   m_Layer: 0
-  m_Name: carInteriorLight
+  m_Name: CarInteriorLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,14 +898,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4489513759833165689}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.016859576, y: 0.9900156, z: -0.13993491, w: 0.0017529321}
-  m_LocalPosition: {x: 0.04397347, y: 1.3698041, z: 1.0900493}
+  m_LocalRotation: {x: 0.008455097, y: -0.9765624, z: 0.21494624, w: 0.0072457185}
+  m_LocalPosition: {x: 0.10000509, y: 1.5863086, z: 1.0531317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3263835539118852338}
   m_Father: {fileID: 5787976464604457316}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45.3, y: -178.27, z: -1.175}
 --- !u!114 &7038243035536943563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,7 +957,7 @@ GameObject:
   - component: {fileID: 7655325478943869184}
   - component: {fileID: 1270980612952233097}
   m_Layer: 0
-  m_Name: car Light
+  m_Name: RightCarLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,7 +1053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f1b3fdb9661471b8ce019433188c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breaklight: {fileID: 0}
 --- !u!1 &4709419061518933836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,14 +1098,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acdfc953ffe14dd8b0642b6aa748caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelFrontLeft: 0
-  wheelFrontRight: 0
-  wheelRearLeft: 0
-  wheelRearRight: 1
-  restLength: 2.2
-  springTravel: 2.2
+  springRestLength: 2.2
+  springMaxCompression: 2
   springStiffness: 25000
-  damperStiffness: 1400
+  springDamper: 1400
   steerAngle: 0
   steerTime: 0
   wheelRadius: 0.3
@@ -1363,14 +1311,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acdfc953ffe14dd8b0642b6aa748caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelFrontLeft: 0
-  wheelFrontRight: 0
-  wheelRearLeft: 1
-  wheelRearRight: 0
-  restLength: 2.2
-  springTravel: 2.2
+  springRestLength: 2.2
+  springMaxCompression: 2
   springStiffness: 25000
-  damperStiffness: 1400
+  springDamper: 1400
   steerAngle: 0
   steerTime: 0
   wheelRadius: 0.3
@@ -1547,7 +1491,7 @@ GameObject:
   - component: {fileID: 3336123295634815689}
   - component: {fileID: 7607278760321519830}
   m_Layer: 0
-  m_Name: car Light (1)
+  m_Name: LeftCarLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1643,7 +1587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f1b3fdb9661471b8ce019433188c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breaklight: {fileID: 0}
 --- !u!1 &5990480186367616241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,16 +1632,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acdfc953ffe14dd8b0642b6aa748caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelFrontLeft: 1
-  wheelFrontRight: 0
-  wheelRearLeft: 0
-  wheelRearRight: 0
-  restLength: 2.2
-  springTravel: 2.2
+  springRestLength: 2.2
+  springMaxCompression: 2
   springStiffness: 25000
-  damperStiffness: 1400
+  springDamper: 1400
   steerAngle: 0
-  steerTime: 100
+  steerTime: 15
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 20
   maxGroundAngleToGrip: 60
@@ -1874,7 +1813,7 @@ GameObject:
   - component: {fileID: 3111087520314223794}
   - component: {fileID: 177216117794636882}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: LeftBreakLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2178,16 +2117,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acdfc953ffe14dd8b0642b6aa748caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelFrontLeft: 0
-  wheelFrontRight: 1
-  wheelRearLeft: 0
-  wheelRearRight: 0
-  restLength: 2.2
-  springTravel: 2.2
+  springRestLength: 2.2
+  springMaxCompression: 2
   springStiffness: 25000
-  damperStiffness: 1400
+  springDamper: 1400
   steerAngle: 0
-  steerTime: 300
+  steerTime: 15
   wheelRadius: 0.3
   maxGripSidewaysVelocity: 20
   maxGroundAngleToGrip: 60
@@ -2231,8 +2166,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.35530245
     - serializedVersion: 3
-      time: 0.9977417
-      value: 0.13912964
+      time: 0.9977324
+      value: 0.09951782
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2505,7 +2440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b061533c11c70409a97165b1583367a8, type: 3}
       propertyPath: m_Name
-      value: carInterior
+      value: CarInterior
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b061533c11c70409a97165b1583367a8, type: 3}
       propertyPath: m_Layer
@@ -2531,43 +2466,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.29
+      value: 186.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 4.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3
+      value: -10.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9998023
+      value: 0.49877366
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.013045526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.8661878
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0198846
+      value: 0.027809039
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 3.508
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -120.122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -362.279
+      value: -719.705
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       propertyPath: m_Name
@@ -2591,9 +2526,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5400939658967681068}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1133721597835220343}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2c67c5540b45496e952fc552112b660, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5593206283700543623}
@@ -2702,15 +2634,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5161604259504815a26394cf32bbe72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheels:
-  - {fileID: 4641286769806200809}
-  - {fileID: 824338058352613477}
-  - {fileID: 2734426503539666860}
-  - {fileID: 3214778020240422195}
+  RuedaDerechaGO: {fileID: 7983888366813740613}
+  RuedaIzquierdaGO: {fileID: 5990480186367616241}
   wheelBase: 3.4
   rearTrack: 3.2
   turnRadius: 6
-  steerInput: 0
   ackermannAngleLeft: 0
   ackermannAngleRight: 0
 --- !u!136 &9042702018059073581
@@ -2884,7 +2812,7 @@ MonoBehaviour:
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
   defaultUseMessage: (Press E to talk)
   useKey: 101
-  useButton: Fire2
+  useButton: Accion
   enableTouch: 0
   touchArea:
     origin: 0
