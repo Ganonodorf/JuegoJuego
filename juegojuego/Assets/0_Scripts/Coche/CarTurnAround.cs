@@ -11,13 +11,6 @@ public class CarTurnAround : MonoBehaviour
     [SerializeField] private float turnAroundForce;
     [SerializeField] private AnimationCurve forceAccordingToInclination;
 
-    private void Awake()
-    {
-        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
-        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
-
-    }
-
     private void ResetTurnAroundValue()
     {
         turnAroundValue = 0.0f;
@@ -30,6 +23,9 @@ public class CarTurnAround : MonoBehaviour
 
     void Start()
     {
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
+
         carRigidbody = transform.root.GetComponent<Rigidbody>();
     }
 
