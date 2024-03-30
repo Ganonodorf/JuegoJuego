@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CarTurnAround : MonoBehaviour
 {
-    private Rigidbody carRigidbody;
+    [SerializeField]private Rigidbody carRigidbody;
     private float turnAroundValue;
 
     [SerializeField] private float maxTurnAroundVelocity;
