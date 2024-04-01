@@ -3,20 +3,13 @@ using UnityEngine;
 
 public class CarTurnAround : MonoBehaviour
 {
-    private Rigidbody carRigidbody;
+    [SerializeField]private Rigidbody carRigidbody;
     private float turnAroundValue;
 
     [SerializeField] private float maxTurnAroundVelocity;
     [SerializeField] private float minTurnAroundAngle;
     [SerializeField] private float turnAroundForce;
     [SerializeField] private AnimationCurve forceAccordingToInclination;
-
-    private void Awake()
-    {
-        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
-        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
-
-    }
 
     private void ResetTurnAroundValue()
     {
@@ -30,6 +23,9 @@ public class CarTurnAround : MonoBehaviour
 
     void Start()
     {
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
+
         carRigidbody = transform.root.GetComponent<Rigidbody>();
     }
 
