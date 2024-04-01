@@ -23,10 +23,9 @@ public class CarTurnAround : MonoBehaviour
 
     void Start()
     {
-        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
-        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
+        GestionarInputs();
 
-        carRigidbody = transform.root.GetComponent<Rigidbody>();
+        InicializarVariables();
     }
 
     private void OnTriggerStay(Collider other)
@@ -36,5 +35,15 @@ public class CarTurnAround : MonoBehaviour
             float inclinationForceFactor = forceAccordingToInclination.Evaluate(Vector3.Angle(Vector3.up, -transform.up) / 180);
             carRigidbody.AddForceAtPosition(turnAroundValue * transform.right * turnAroundForce * inclinationForceFactor , transform.position);
         }
+    }
+
+    private void GestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
+    }
+    private void InicializarVariables()
+    {
+        carRigidbody = transform.root.GetComponent<Rigidbody>();
     }
 }

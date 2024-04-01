@@ -247,15 +247,37 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "95cf120a-959b-4a56-9fac-fc98f97d34d9",
-                    "path": "<Gamepad>/leftStick",
+                    "name": "Gatillos",
+                    "id": "de19e6e3-4669-413c-befe-fb17490d933d",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovimientoFrontal",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "e2114db8-224e-4e91-baac-6f9272522ad1",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MovimientoFrontal",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "494f1392-18a0-4a1a-bdd3-a91f809e6e50",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovimientoFrontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "WASD",
