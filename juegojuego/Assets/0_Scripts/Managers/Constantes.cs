@@ -61,4 +61,12 @@ namespace Constantes
     {
         public const string NOMBRE_GO = "CarPlayer";
     }
+
+    /*
+     * Variables relacionadas con el juego
+     */
+    public static class Juego
+    {
+        public const string TAG_RESPAWN = "Respawn";
+    }
 }
