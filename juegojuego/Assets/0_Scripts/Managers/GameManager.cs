@@ -58,11 +58,20 @@ public class GameManager : MonoBehaviour
             case GameState.Inventario:
                 Debug.Log("Estado de juego: Inventario");
                 break;
+            case GameState.FinJuego:
+                Debug.Log("Estado de juego: FinJuego");
+                FinJuego();
+                break;
             default:
                 break;
         }
 
         OnGameStateChanged?.Invoke(newState, previousState);
+    }
+
+    private void FinJuego()
+    {
+        Debug.Log("Gracias por jugar!");
     }
 
     private void HacerloInmortal()
@@ -84,5 +93,6 @@ public enum GameState
 {
     Conduciendo,
     Dialogo,
-    Inventario
+    Inventario,
+    FinJuego
 }
