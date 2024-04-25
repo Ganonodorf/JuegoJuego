@@ -61,4 +61,13 @@ namespace Constantes
     {
         public const string NOMBRE_GO = "CarPlayer";
     }
+
+    /*
+     * Variables relacionadas con las camaras
+     */
+    public static class Camaras
+    {
+        public const string CAMARA_EXTERIORES_NOMBRE_GO = "CamaraExteriores";
+        public const string CAMARA_INTERIORES_NOMBRE_GO = "CamaraInteriores";
+    }
 }
