@@ -42,6 +42,10 @@ public class InputManager : MonoBehaviour
                 Debug.Log("Controles: Dialogo");
                 ControlesDialogo();
                 break;
+            case GameState.FinJuego:
+                Debug.Log("Controles: FinJuego. A CAMBIAR CUANDO DECIDAMOS QUÉ HACER");
+                ControlesFinJuego();
+                break;
             default:
                 break;
         }
@@ -66,6 +70,13 @@ public class InputManager : MonoBehaviour
         controles.Conduciendo.Disable();
         controles.Inventario.Disable();
         controles.Dialogo.Enable();
+    }
+
+    private void ControlesFinJuego()
+    {
+        controles.Conduciendo.Enable();
+        controles.Inventario.Disable();
+        controles.Dialogo.Disable();
     }
 
     private void HacerloInmortal()
