@@ -273,6 +273,10 @@ public class InventarioManager : MonoBehaviour
                                                           objetoEntregar.transform.localScale.y * Inventario.Manager.ESCALA_REDUCCION,
                                                           objetoEntregar.transform.localScale.z * Inventario.Manager.ESCALA_REDUCCION);
 
+        // Hace que deje de ser usable y triggereable para que no se vuelva a recoger
+        objetoEntregar.transform.GetComponent<Usable>().enabled = false;
+        objetoEntregar.transform.GetComponent<DialogueSystemTrigger>().enabled = false;
+
     }
 
     private void SacarObjetoDelCoche(GameObject objetoSoltar)
@@ -284,7 +288,7 @@ public class InventarioManager : MonoBehaviour
 
         // Lo pone delante del coche
         objetoSoltar.transform.localPosition = new Vector3(0.0f,
-                                                           0.0f,
+                                                           Inventario.Manager.LONGITUD_COCHE + 50.0f,
                                                            Inventario.Manager.LONGITUD_COCHE);
 
         // Ampl?a el objeto al doble
