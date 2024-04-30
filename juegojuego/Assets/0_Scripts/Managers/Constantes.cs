@@ -63,6 +63,15 @@ namespace Constantes
     }
 
     /*
+     * Variables relacionadas con las camaras
+     */
+    public static class Camaras
+    {
+        public const string CAMARA_EXTERIORES_NOMBRE_GO = "CamaraExteriores";
+        public const string CAMARA_INTERIORES_NOMBRE_GO = "CamaraInteriores";
+    }
+
+    /*
      * Variables relacionadas con el juego
      */
     public static class Juego
