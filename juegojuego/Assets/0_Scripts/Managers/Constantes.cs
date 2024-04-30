@@ -70,4 +70,12 @@ namespace Constantes
         public const string CAMARA_EXTERIORES_NOMBRE_GO = "CamaraExteriores";
         public const string CAMARA_INTERIORES_NOMBRE_GO = "CamaraInteriores";
     }
+
+    /*
+     * Variables relacionadas con el juego
+     */
+    public static class Juego
+    {
+        public const string TAG_RESPAWN = "Respawn";
+    }
 }
