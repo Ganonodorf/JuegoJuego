@@ -136,19 +136,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5877440771650679779}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3717272327651667148}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3138001719355227805}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2450457676431586373}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1581616961460475148}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1808370961721972787}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2866622374846274791}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8709118878136409618}
   m_SourcePrefab: {fileID: 100100000, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
 --- !u!4 &5166668819378206935 stripped
 Transform:
@@ -160,7 +160,50 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
   m_PrefabInstance: {fileID: 4627739539914530620}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5877440771650679779
+--- !u!135 &2450457676431586373
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546289895887053421}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4.7
+  m_Center: {x: 0.01, y: -0.08, z: 5.04}
+--- !u!64 &1581616961460475148
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546289895887053421}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3005139963346465471, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
+--- !u!114 &1808370961721972787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,31 +212,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5546289895887053421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Paco
-  persistentDataName: 
-  portrait: {fileID: 0}
-  spritePortrait: {fileID: 0}
-  barkUISettings:
-    barkUI: {fileID: 0}
-    barkUIOffset: {x: 0, y: 2, z: 0}
-  standardDialogueUISettings:
-    subtitlePanelNumber: 0
-    customSubtitlePanel: {fileID: 0}
-    customSubtitlePanelOffset: {x: 0, y: 0, z: 0}
-    menuPanelNumber: 0
-    customMenuPanel: {fileID: 0}
-    customMenuPanelOffset: {x: 0, y: 0, z: 0}
-    useMenuPanelFor: 0
-    portraitAnimatorController: {fileID: 0}
-    setSubtitleColor: 0
-    applyColorToPrependedName: 0
-    prependActorNameSeparator: ': '
-    prependActorNameFormat: '{0}{1}'
-    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &3717272327651667148
+  overrideName: Pulsa E para hablar con er Paco
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &2866622374846274791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,7 +279,7 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: Paco
-  conversationConversant: {fileID: 5166668819378206935}
+  conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
   startConversationEntryTitle: 
@@ -269,7 +304,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: a0b41defe5f5891489a007750f9ad356, type: 2}
---- !u!114 &3138001719355227805
+--- !u!114 &8709118878136409618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,62 +313,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 5546289895887053421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Pulsa E para hablar con Paco
-  overrideUseMessage: 
-  maxUseDistance: 100
-  events:
-    onSelect:
-      m_PersistentCalls:
-        m_Calls: []
-    onDeselect:
-      m_PersistentCalls:
-        m_Calls: []
-    onUse:
-      m_PersistentCalls:
-        m_Calls: []
---- !u!135 &2450457676431586373
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546289895887053421}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 4.7
-  m_Center: {x: 0.01, y: -0.08, z: 5.04}
---- !u!64 &1581616961460475148
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546289895887053421}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3005139963346465471, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
+  actor: Paco
+  persistentDataName: 
+  portrait: {fileID: 0}
+  spritePortrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    customSubtitlePanelOffset: {x: 0, y: 0, z: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    customMenuPanelOffset: {x: 0, y: 0, z: 0}
+    useMenuPanelFor: 0
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    prependActorNameFormat: '{0}{1}'
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
