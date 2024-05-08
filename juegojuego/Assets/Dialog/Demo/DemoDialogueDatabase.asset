@@ -1082,6 +1082,12 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 0
         destinationConversationID: 2
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 0
+        destinationConversationID: 2
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
@@ -1129,7 +1135,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetActive(BurbujaInteraccion,false)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
@@ -1159,8 +1165,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 21
+        y: 153
         width: 160
         height: 30
     - id: 2
@@ -1214,8 +1220,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 57
-        y: 136
+        x: 14
+        y: 221
         width: 160
         height: 30
     - id: 3
@@ -1269,8 +1275,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 260
-        y: 138
+        x: 217
+        y: 223
         width: 160
         height: 30
     - id: 4
@@ -1318,8 +1324,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 260
-        y: 188
+        x: 217
+        y: 273
         width: 160
         height: 30
     - id: 5
@@ -1367,8 +1373,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 57
-        y: 187
+        x: 14
+        y: 272
         width: 160
         height: 30
     - id: 6
@@ -1428,8 +1434,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 529
-        y: 96
+        x: 531
+        y: 69
         width: 160
         height: 30
     - id: 7
@@ -1483,8 +1489,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 455
-        y: 148
+        x: 457
+        y: 121
         width: 160
         height: 30
     - id: 8
@@ -1538,8 +1544,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 636
-        y: 145
+        x: 638
+        y: 118
         width: 160
         height: 30
     - id: 9
@@ -1587,8 +1593,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 455
-        y: 198
+        x: 457
+        y: 171
         width: 160
         height: 30
     - id: 10
@@ -1641,8 +1647,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 636
-        y: 194
+        x: 638
+        y: 167
         width: 160
         height: 30
     - id: 11
@@ -1696,8 +1702,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 858
-        y: 108
+        x: 862
+        y: 80
         width: 160
         height: 30
     - id: 12
@@ -1745,8 +1751,69 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 857
-        y: 155
+        x: 859
+        y: 128
+        width: 160
+        height: 30
+    - id: 13
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Sigues necesitando una matr\xEDcula"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 13
+        destinationConversationID: 2
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 13
+        destinationConversationID: 2
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: "CurrentQuestState(\"Consigue una matr\xEDcula\") == \"unassigned\""
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 215.04346
+        y: 151
         width: 160
         height: 30
     entryGroups: []
