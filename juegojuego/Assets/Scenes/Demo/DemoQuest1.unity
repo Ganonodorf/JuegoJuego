@@ -3102,15 +3102,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a1b941c59f9cc426bae358f41fa31fff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 658.72
+      value: 1017.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a1b941c59f9cc426bae358f41fa31fff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -58.67
+      value: -79.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a1b941c59f9cc426bae358f41fa31fff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1032.04
+      value: -1157.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a1b941c59f9cc426bae358f41fa31fff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3244,7 +3244,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 74db1bee9a0e8460699b44f33d9cd670, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 438fe3b62056e4cb9946f3970aaea59b, type: 2}
 --- !u!114 &335492153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6476,6 +6476,174 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &737539252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737539253}
+  - component: {fileID: 737539254}
+  - component: {fileID: 737539255}
+  - component: {fileID: 737539256}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737539253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737539252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.25, y: 6.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5635367178745700496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &737539254
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737539252}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.42503184, g: 1, b: 0.3820755, a: 1}
+  m_Intensity: 1
+  m_Range: 9.4
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!95 &737539255
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737539252}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4a48692a29944960a81543a333cef41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &737539256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737539252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4037ac5ccebb7425da01519cea5a400b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 90587640}
+  minRange: 1
+  maxRange: 14
+  minIntensity: 0.3
+  maxIntensity: 4
+  maxDistanceToTarget: 800
+  lightPowerCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.011154175
+      value: 0.8238778
+      inSlope: 0.018185925
+      outSlope: 0.018185925
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.17495362
+    - serializedVersion: 3
+      time: 0.1445053
+      value: 0.6681283
+      inSlope: -1.6069161
+      outSlope: -1.6069161
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3834652
+      outWeight: 0.08957928
+    - serializedVersion: 3
+      time: 0.9977417
+      value: 0.13912964
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &743110506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5995137153924921850, guid: e288be648ca624ab49602d278e3bfecb, type: 3}
@@ -22786,7 +22954,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: 
+  conversation: Chatarrero Viajero
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -22811,7 +22979,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 74db1bee9a0e8460699b44f33d9cd670, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 438fe3b62056e4cb9946f3970aaea59b, type: 2}
 --- !u!114 &2015284599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24097,7 +24265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1624562278285383690, guid: 40772021c39ec4ba49cf29445136e4b9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3894257
+      value: 0.38942575
       objectReference: {fileID: 0}
     - target: {fileID: 1624562278285383690, guid: 40772021c39ec4ba49cf29445136e4b9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -24189,7 +24357,7 @@ PrefabInstance:
       objectReference: {fileID: 536686954}
     - target: {fileID: 9090476113846793906, guid: 40772021c39ec4ba49cf29445136e4b9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3920263
+      value: 0.39202628
       objectReference: {fileID: 0}
     - target: {fileID: 9090476113846793906, guid: 40772021c39ec4ba49cf29445136e4b9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -24225,8 +24393,8 @@ Transform:
   m_GameObject: {fileID: 3322205022931151969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.92, y: -0.81, z: 0.24}
+  m_LocalScale: {x: 1.741982, y: 1.741982, z: 1.741982}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6407216292723587903}
@@ -24251,7 +24419,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 62b489443741b42b3bf20aa33acf2879, type: 3}
+  - {fileID: 2100000, guid: 53602cd49ca7d47198246d6411ed0e19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24396,10 +24564,11 @@ Transform:
   m_GameObject: {fileID: 2619329868280473347}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.92005706, y: -0.8099973, z: 0.23999089}
+  m_LocalScale: {x: 1.741982, y: 1.741982, z: 1.741982}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 737539253}
   m_Father: {fileID: 6407216292723587903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6258756463001672228
