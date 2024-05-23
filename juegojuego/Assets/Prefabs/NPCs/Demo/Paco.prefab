@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4778373765852511375}
   - component: {fileID: 4951637393280880053}
   m_Layer: 0
-  m_Name: CamaraManu
+  m_Name: CamaraPaco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,14 +120,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3012066513782951604}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.8275848, y: 0.56069887, z: -0.021494761, w: 0.01607339}
-  m_LocalPosition: {x: 0.09, y: 0.26, z: 5.12}
+  m_LocalRotation: {x: -0.6504513, y: -0.65262055, z: -0.3625528, w: 0.13983957}
+  m_LocalPosition: {x: -1.9, y: -3.4, z: 5.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3284665992168209331}
   m_Father: {fileID: 5166668819378206935}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -40.93, y: 157.5, z: -261.7}
 --- !u!114 &4951637393280880053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,10 +146,10 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 12
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 5166668819378206935}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 48
+    FieldOfView: 36.67
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
