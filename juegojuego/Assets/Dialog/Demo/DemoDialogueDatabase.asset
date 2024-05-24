@@ -1464,7 +1464,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 7
         destinationConversationID: 1
-        destinationDialogueID: 50
+        destinationDialogueID: 10
         isConnector: 0
         priority: 2
       conditionsString: Variable["BicifijoArreglado"] == true
@@ -1501,8 +1501,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xA1INCRE\xCDBLE! \xA1QU\xC9 ALEGR\xCDA! \xA1QU\xC9 AMOR! Gracias
-          hija, lo colocar\xE9 en el lugar que le corresponde."
+        value: "\xA1INCRE\xCDBLE! \xA1QU\xC9 ALEGR\xCDA! \xA1QU\xC9 AMOR!"
         type: 0
         typeString: 
       - title: Sequence
@@ -1510,7 +1509,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 9be24037-b8b0-4ff5-8370-572200bc4b97
+        value: 66169e5b-949c-49fc-a65e-a59c12a902d0
         type: 0
         typeString: 
       conversationID: 1
@@ -1524,21 +1523,18 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 10
         destinationConversationID: 1
-        destinationDialogueID: 34
+        destinationDialogueID: 53
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'EntregarObjeto("BicifijoArreglado","Cura");
-
-        SetQuestState("Arregla
-        el bicifijo", "success")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 986.818
-        y: 251.8182
+        x: 983.4088
+        y: 204.09094
         width: 160
         height: 30
     - id: 12
@@ -1732,7 +1728,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "\xA1INCRE\xCDBLE! \xA1QU\xC9 ALEGR\xCDA! \xA1QU\xC9 AMOR! Las se\xF1ales
-          del Amado son claras. Ll\xE9vate el bicifijo roto y arr\xE9glalo para contentarlo.\r"
+          del Amado son claras."
         type: 0
         typeString: 
       - title: Sequence
@@ -1754,20 +1750,18 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 16
         destinationConversationID: 1
-        destinationDialogueID: 49
+        destinationDialogueID: 52
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("Arregla el bicifijo", "active");
-
-        AgregarAlInventario("BicifijoRoto")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 395.90903
-        y: 201.8182
+        x: 394.77267
+        y: 202.95459
         width: 160
         height: 30
     - id: 17
@@ -2944,7 +2938,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 37
         destinationConversationID: 1
-        destinationDialogueID: 51
+        destinationDialogueID: 38
         isConnector: 0
         priority: 2
       conditionsString: Variable["Brazo"] == true
@@ -2955,7 +2949,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1169.7727
-        y: 154.0909
+        y: 152.95454
         width: 160
         height: 30
     - id: 38
@@ -2981,10 +2975,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xA1INCRE\xCDBLE! \xA1QU\xC9 ALEGR\xCDA! \xA1QU\xC9 AMOR! \xA1Enhorabuena
-          por dar el paso! Ya eres una miembra de nuestra iglesia, aunque no se si
-          tu sacrificio es tan bueno como el de los dem\xE1s... Tienes mucha carne
-          ah\xED dentro..."
+        value: "\xA1INCRE\xCDBLE! \xA1QU\xC9 ALEGR\xCDA! \xA1QU\xC9 AMOR!"
         type: 0
         typeString: 
       - title: Sequence
@@ -3006,7 +2997,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 38
         destinationConversationID: 1
-        destinationDialogueID: 39
+        destinationDialogueID: 54
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3016,8 +3007,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1173.1819
-        y: 262.04538
+        x: 1170.9092
+        y: 207.49991
         width: 160
         height: 30
     - id: 39
@@ -3310,8 +3301,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFConoces a Paco el fabricante? \xBFSabes qui\xE9n es su pareja?
-          [Ense\xF1ar la comida]"
+        value: "\xBFConoces a Paco el fabricante? \xBFSabes qui\xE9n es su pareja?"
         type: 0
         typeString: 
       - title: Sequence
@@ -3609,10 +3599,10 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 395.90903
-        y: 252.95456
+        y: 307.5
         width: 160
         height: 30
-    - id: 50
+    - id: 52
       fields:
       - title: Title
         value: 
@@ -3635,7 +3625,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "Toma, ll\xE9vate el bicifijo roto y tr\xE1emelo arreglado para contentarlo.\r"
         type: 0
         typeString: 
       - title: Sequence
@@ -3643,7 +3633,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: f7738d72-5fae-4190-95f6-d23e7ba27e50
+        value: 03cc6a5d-6ecc-455d-bdc5-8ac0eb20bc71
         type: 0
         typeString: 
       conversationID: 1
@@ -3655,23 +3645,25 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 50
+        originDialogueID: 52
         destinationConversationID: 1
-        destinationDialogueID: 10
+        destinationDialogueID: 49
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("Arregla el bicifijo", "active");
+
+        AgregarAlInventario("BicifijoRoto")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 986.818
-        y: 201.8182
+        x: 395.90903
+        y: 251.8182
         width: 160
         height: 30
-    - id: 51
+    - id: 53
       fields:
       - title: Title
         value: 
@@ -3694,15 +3686,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "Gracias hija, lo colocar\xE9 en el lugar que le corresponde."
         type: 0
         typeString: 
       - title: Sequence
         value: 
-        type: 0
-        typeString: 
-      - title: EventGuid
-        value: a4ddafcd-6361-432b-b96d-5d78c2da1427
         type: 0
         typeString: 
       conversationID: 1
@@ -3714,9 +3702,73 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 51
+        originDialogueID: 53
         destinationConversationID: 1
-        destinationDialogueID: 38
+        destinationDialogueID: 34
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'EntregarObjeto("BicifijoArreglado","Cura");
+
+        SetQuestState("Arregla
+        el bicifijo", "success")'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 983.4088
+        y: 254.09094
+        width: 160
+        height: 30
+    - id: 54
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\xA1Enhorabuena por dar el paso! Ya eres una miembra de nuestra iglesia,
+          aunque no se si tu sacrificio es tan bueno como el de los dem\xE1s... Tienes
+          mucha carne ah\xED dentro..."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 9710251f-f305-4e50-a61b-9787083fb6be
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 54
+        destinationConversationID: 1
+        destinationDialogueID: 39
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3726,12 +3778,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1169.7727
-        y: 204.0909
+        x: 1170.9093
+        y: 255.22717
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 347.72723, y: 0}
+    canvasScrollPosition: {x: 329.5454, y: 0}
     canvasZoom: 0.88
   - id: 10
     fields:
@@ -4842,16 +4894,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Brazo"] == true
-      userScript: 'SetQuestState("Consigue un brazo", "success");
-
-        EntregarObjeto("Brazo","Feligresa");'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 610
-        y: 124
+        y: 122.66667
         width: 160
         height: 30
     - id: 19
@@ -5077,7 +5127,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 610
-        y: 374
+        y: 372.6667
         width: 160
         height: 30
     - id: 23
@@ -5103,7 +5153,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Joder, no s\xE9 como agradec\xE9rtelo. \xA1\xA1Muchas gracias!!"
+        value: "\xA1\xA1Muchas gracias!! Joder, no s\xE9 como agradec\xE9rtelo."
         type: 0
         typeString: 
       - title: Sequence
@@ -5117,15 +5167,23 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 23
+        destinationConversationID: 10
+        destinationDialogueID: 40
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("Consigue un brazo", "success");
+
+        EntregarObjeto("Brazo","Feligresa");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 610
+        x: 608.6667
         y: 424
         width: 160
         height: 30
@@ -5510,7 +5568,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1166
+        x: 1162.0001
         y: 70
         width: 160
         height: 30
@@ -5565,67 +5623,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1166
-        y: 121.33334
-        width: 160
-        height: 30
-    - id: 32
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 11
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Dios... Que rico por favor...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: EventGuid
-        value: a252a567-1551-48cd-8de8-76d95ed4a4ea
-        type: 0
-        typeString: 
-      conversationID: 10
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 10
-        originDialogueID: 32
-        destinationConversationID: 10
-        destinationDialogueID: 33
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1166
-        y: 220.66664
+        x: 1162.0001
+        y: 120
         width: 160
         height: 30
     - id: 33
@@ -5679,8 +5678,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1166
-        y: 270.66666
+        x: 1162.0001
+        y: 220
         width: 160
         height: 30
     - id: 34
@@ -5738,8 +5737,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1166
-        y: 320.66663
+        x: 1162.0001
+        y: 270
         width: 160
         height: 30
     - id: 35
@@ -5793,8 +5792,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1166
-        y: 370.66663
+        x: 1162.0001
+        y: 320
         width: 160
         height: 30
     - id: 36
@@ -5842,8 +5841,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1166
-        y: 420.66663
+        x: 1162.0001
+        y: 370
         width: 160
         height: 30
     - id: 37
@@ -5869,7 +5868,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "\xBFC\xF3mo? [La Feligresa asoma la cabeza al interior del veh\xEDculo]"
         type: 0
         typeString: 
       - title: Sequence
@@ -5928,7 +5927,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "\xBFEl qu\xE9? A ver..."
         type: 0
         typeString: 
       - title: Sequence
@@ -5987,7 +5986,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Dios... Que rico por favor...
         type: 0
         typeString: 
       - title: Sequence
@@ -6009,7 +6008,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 39
         destinationConversationID: 10
-        destinationDialogueID: 32
+        destinationDialogueID: 33
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6019,8 +6018,57 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1164.6666
-        y: 168.6667
+        x: 1162.0001
+        y: 170
+        width: 160
+        height: 30
+    - id: 40
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: No es nada, es un placer poder ayudar.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 608.6667
+        y: 474
         width: 160
         height: 30
     entryGroups: []
@@ -9477,7 +9525,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ...
+        value: "Ah\xED tienes."
         type: 0
         typeString: 
       - title: Sequence
@@ -9700,14 +9748,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Pff... La verdad es que no, esa gente no me cae nada bien. Creo que
-          s\xF3lo est\xE1n trayendo problemas a <b>La Mugre</b>. Van por ah\xED de
-          salvadores pero es solo una puta secta. A lo mejor Paco te echa una mano,
-          pero conmigo no cont\xE9is."
+        value: "A lo mejor Paco te echa una mano, pero conmigo no cont\xE9is."
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: d82361c4-0030-4797-a41f-1623baf53373
         type: 0
         typeString: 
       conversationID: 2
@@ -9732,7 +9781,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1165.4427
-        y: 181.39244
+        y: 168.7342
         width: 160
         height: 30
     - id: 72
@@ -9785,7 +9834,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1165.4427
-        y: 231.39244
+        y: 218.7342
         width: 160
         height: 30
     - id: 73
@@ -10200,10 +10249,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Un brazo muy bonito, creo que me suena de algo... Bueno, da igual,
-          \xBFquieres que te lo pongamos o que? Desde aqu\xED cuento que tienes 1,
-          2, 3... \xBF4? \xBFPara que quieres otro? Espera... \xBFEse \xFAltimo creo
-          que era un pie?"
+        value: "Bueno, da igual, \xBFquieres que te lo pongamos o que? Desde aqu\xED
+          cuento que tienes 1, 2, 3... \xBF4? \xBFPara que quieres otro? Espera...
+          \xBFEse \xFAltimo creo que era un pie?"
         type: 0
         typeString: 
       - title: Sequence
@@ -10231,8 +10279,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1533.7968
-        y: 175.06332
+        x: 1529.9993
+        y: 172.53168
         width: 160
         height: 30
     - id: 81
@@ -10477,7 +10525,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "Pff... La verdad es que no, esa gente no me cae nada bien. Creo que
+          s\xF3lo est\xE1n trayendo problemas a <b>La Mugre</b>. Van por ah\xED de
+          salvadores pero es solo una puta secta."
         type: 0
         typeString: 
       - title: Sequence
@@ -10536,7 +10586,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Un brazo muy bonito, creo que me suena de algo...
         type: 0
         typeString: 
       - title: Sequence
@@ -10573,7 +10623,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 601.2656, y: 0}
+    canvasScrollPosition: {x: 502.5315, y: 0}
     canvasZoom: 0.7900002
   - id: 5
     fields:
@@ -11115,8 +11165,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFQu\xE9? [Mira la bandeja con las croquetas y el gazpacho y se
-          le agrandan las pupilas]. \xA1Que rico!"
+        value: "\xA1Trae aqu\xED! \xA1Que rico!"
         type: 0
         typeString: 
       - title: Sequence
@@ -11419,10 +11468,7 @@ MonoBehaviour:
       conditionsString: "((CurrentQuestState(\"Ll\xE9vale la comida a la pareja de
         Paco\") == \"returnToNPC\") or (CurrentQuestState(\"Ll\xE9vale la comida
         a la pareja de Paco\") == \"success\"))"
-      userScript: 'AgregarAlInventario("Brazo");
-
-        SetQuestState("Consigue
-        un brazo", "returnToNPC")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11516,6 +11562,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: aac64a22-7f02-4763-b2a7-c51e5cab9f77
         type: 0
         typeString: 
       conversationID: 5
@@ -13261,7 +13311,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'AgregarAlInventario("Brazo");
+
+        SetQuestState("Consigue
+        un brazo", "returnToNPC")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13720,11 +13773,10 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 66
         destinationConversationID: 5
-        destinationDialogueID: 67
+        destinationDialogueID: 74
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["BicifijoRoto"] == true) or (Variable["BicifijoArreglado"]
-        == true)
+      conditionsString: Variable["BicifijoRoto"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13732,7 +13784,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 556.08405
-        y: 475.22467
+        y: 474.0752
         width: 160
         height: 30
     - id: 67
@@ -13768,6 +13820,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -13789,8 +13845,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 556.08405
-        y: 525.2247
+        x: 558.38293
+        y: 584.99475
         width: 160
         height: 30
     - id: 68
@@ -13823,6 +13879,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 9c081268-240d-4b96-9b92-ba66d7cda6c8
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -13844,8 +13904,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 556.08405
-        y: 575.2247
+        x: 558.38293
+        y: 634.99475
         width: 160
         height: 30
     - id: 69
@@ -13893,8 +13953,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 556.08405
-        y: 625.2247
+        x: 558.38293
+        y: 684.99475
         width: 160
         height: 30
     - id: 70
@@ -14083,7 +14143,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "\xBFQu\xE9? [Mira la bandeja con las croquetas y el gazpacho y se
+          le agrandan las pupilas]."
         type: 0
         typeString: 
       - title: Sequence
@@ -14119,8 +14180,67 @@ MonoBehaviour:
         y: 159.75964
         width: 160
         height: 30
+    - id: 74
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\xBFCon qu\xE9? \xBFA ver?"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 81a1b8ca-d910-4eae-9cb8-b1e6777fbb90
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 74
+        destinationConversationID: 5
+        destinationDialogueID: 67
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 556.08405
+        y: 525.2247
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 365.51727, y: 0}
+    canvasScrollPosition: {x: 188.50577, y: 49.425323}
     canvasZoom: 0.87
   - id: 4
     fields:
@@ -14380,7 +14500,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Estuve hablando con la cura y necesito que me arregles una cosa.
+        value: "Estuve hablando con la cura y necesito arreglar una cosa. \xBFMe
+          podr\xEDas ayudar?"
         type: 0
         typeString: 
       - title: Sequence
@@ -14656,12 +14777,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Mmm, es algo bastante trabajoso. \xBFQu\xE9 te parece si primero
-          le llevas la comida a mi pareja?"
+        value: "\xBFQu\xE9 te parece si primero le llevas la comida a mi pareja?"
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: a15675ef-eac7-4a5f-80cf-8040be8f2d03
         type: 0
         typeString: 
       conversationID: 4
@@ -14886,12 +15010,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Me haces un favor. Est\xE1 jugando al mus por ah\xED, creo que desde
-          aqu\xED podr\xE1s verlas."
+        value: Me haces un favor la verdad, toma.
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 39ceef76-0d7a-4919-b4ec-e8955eed4cba
         type: 0
         typeString: 
       conversationID: 4
@@ -14901,7 +15028,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 39
+        destinationConversationID: 4
+        destinationDialogueID: 57
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: "AgregarAlInventario(\"Comida\");\nSetQuestState(\"Ll\xE9vale la
         comida a la pareja de Paco\", \"active\")"
@@ -14910,8 +15043,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 488.08212
-        y: 450.8218
+        x: 489.452
+        y: 449.452
         width: 160
         height: 30
     - id: 40
@@ -15495,7 +15628,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xA1Pero bueno! \xBFYa se ha vuelto a arrancar un brazo Manoli?"
+        value: "No me digas m\xE1s, \xBFya se ha vuelto a arrancar un brazo Manoli?"
         type: 0
         typeString: 
       - title: Sequence
@@ -15764,7 +15897,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Mmm, es algo bastante trabajoso.
         type: 0
         typeString: 
       - title: Sequence
@@ -15823,7 +15956,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "\xA1Pero bueno!"
         type: 0
         typeString: 
       - title: Sequence
@@ -15859,8 +15992,62 @@ MonoBehaviour:
         y: 178.21918
         width: 160
         height: 30
+    - id: 57
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Est\xE1 jugando al mus por ah\xED, creo que desde aqu\xED podr\xE1s
+          verlas."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 97089080-3613-4c31-a26b-c94aaffeb5af
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 489.452
+        y: 499.45197
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 187.6712, y: 0}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.7300002
   - id: 7
     fields:
@@ -17496,13 +17683,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oh vaya, conseguiste un brazo. \xBFY d\xF3nde te lleva eso? \xBFNo
-          parece que tienes ya suficientes? \xBFO es que no eres plenamente consciente
-          de tu ser? \xBFTe falta propiocepci\xF3n?"
+        value: "\xBFY d\xF3nde te lleva eso? \xBFNo parece que tienes ya suficientes?
+          \xBFO es que no eres plenamente consciente de tu ser? \xBFTe falta propiocepci\xF3n?"
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: b2828ef6-093a-4f69-98ef-3fd213f453bf
         type: 0
         typeString: 
       conversationID: 11
@@ -18876,7 +19066,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Oh vaya, conseguiste un brazo.
         type: 0
         typeString: 
       - title: Sequence
@@ -18935,7 +19125,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Vaya...
         type: 0
         typeString: 
       - title: Sequence
