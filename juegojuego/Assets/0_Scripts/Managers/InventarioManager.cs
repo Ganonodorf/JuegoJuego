@@ -167,6 +167,12 @@ public class InventarioManager : MonoBehaviour
 
             // Lanza el evento
             OnInventarioChanged?.Invoke(InventarioMensajes.ObjetoAgregado);
+
+            // Hace que deje de ser usable y triggereable para que no se vuelva a recoger
+            objetoAgregar.transform.GetComponent<Usable>().enabled = true;
+            objetoAgregar.transform.GetComponent<DialogueSystemTrigger>().enabled = true;
+
+            
         }
         else
         {
@@ -273,6 +279,12 @@ public class InventarioManager : MonoBehaviour
                                                           objetoEntregar.transform.localScale.y * Inventario.Manager.ESCALA_REDUCCION,
                                                           objetoEntregar.transform.localScale.z * Inventario.Manager.ESCALA_REDUCCION);
 
+        // Hace que deje de ser usable y triggereable para que no se vuelva a recoger
+        objetoEntregar.transform.GetComponent<Usable>().enabled = false;
+        objetoEntregar.transform.GetComponent<DialogueSystemTrigger>().enabled = false;
+
+        // Kinematiquiza el rigidbody para que se quede quieto
+        objetoEntregar.transform.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     private void SacarObjetoDelCoche(GameObject objetoSoltar)

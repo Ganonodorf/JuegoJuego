@@ -971,7 +971,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 12
         destinationConversationID: 1
-        destinationDialogueID: 13
+        destinationDialogueID: 16
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -981,8 +981,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 405.71634
-        y: 428.2659
+        x: 404.23367
+        y: 430.48978
         width: 160
         height: 30
     - id: 13
@@ -1008,8 +1008,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Toma, ll\xE9vate esta cosa suya y la dejas all\xED. No quiero tenerla
-          aqu\xED.\n"
+        value: "Toma, te lo pongo en los asientos de atr\xE1s. Para ver las cosas
+          que llevas, pulsa la tecla I"
         type: 0
         typeString: 
       - title: Sequence
@@ -1041,8 +1041,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 406.56882
-        y: 476.59576
+        x: 405.21115
+        y: 545.84283
         width: 160
         height: 30
     - id: 14
@@ -1143,13 +1143,73 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 406.56882
-        y: 526.59576
+        x: 405.21115
+        y: 597.2006
+        width: 160
+        height: 30
+    - id: 16
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Porfa, ll\xE9vate esta cosa suya y la dejas all\xED. No quiero tenerla
+          aqu\xED."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 8f4deb21-7163-40ff-9392-7c264e229b2d
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 16
+        destinationConversationID: 1
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 405.5914
+        y: 487.9576
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1344957
+    canvasScrollPosition: {x: 63.85635, y: 153.24727}
+    canvasZoom: 1.2819885
   - id: 2
     fields:
     - title: Title
@@ -1770,7 +1830,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 429
-        y: 331
+        y: 330
         width: 160
         height: 30
     - id: 10
@@ -1861,6 +1921,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: a1f56b7c-fa27-4e3f-b885-754cf3205131
         type: 0
         typeString: 
       conversationID: 2
@@ -4279,6 +4343,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 62b73445-3150-435f-9814-6a88067fe99d
+        type: 0
+        typeString: 
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -4293,7 +4361,8 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: Variable["ORRadDetector"] == true
+      conditionsString: Variable["ORRadDetector"] == true and (Variable["RadDetectorEncendido"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4387,6 +4456,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: d0230beb-e2d9-4a83-acbb-9ea7dd7cc756
         type: 0
         typeString: 
       conversationID: 4
@@ -4905,6 +4978,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: d6055b6c-1354-4769-a08d-02873b020347
+        type: 0
+        typeString: 
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -4978,6 +5055,12 @@ MonoBehaviour:
         originDialogueID: 18
         destinationConversationID: 4
         destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 18
+        destinationConversationID: 4
+        destinationDialogueID: 5
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5692,8 +5775,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.64150494
+    canvasScrollPosition: {x: 95.8922, y: 0}
+    canvasZoom: 0.9885178
   - id: 5
     fields:
     - title: Title
@@ -6539,11 +6622,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 4
         type: 5
@@ -6555,14 +6638,18 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "S\xED. Mira. [Te ense\xF1a el traje de cocodrilo que tiene pegado
           en el lateral]"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 2dec2664-47c4-4b2b-9c3a-b6aed1db55b5
         type: 0
         typeString: 
       conversationID: 5
@@ -6620,6 +6707,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: dbf3a21b-f62c-4742-a0c0-cee7859004d1
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -6673,6 +6764,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 53f96f3a-10ea-471b-92e7-892438142303
         type: 0
         typeString: 
       conversationID: 5
@@ -6734,6 +6829,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 78f50566-8368-4fd4-bc43-a4b004c057b5
         type: 0
         typeString: 
       conversationID: 5
@@ -6814,7 +6913,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 644.9831
-        y: 253.65393
+        y: 252.77905
         width: 160
         height: 30
     - id: 19
@@ -6840,11 +6939,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Toma, ll\xE9valo a su sitio."
+        value: "Anda, ll\xE9valo a su sitio."
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: a91fbe20-8900-4100-b3a8-5801d31654e9
         type: 0
         typeString: 
       conversationID: 5
@@ -6867,8 +6970,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 100.36508, y: 0}
-    canvasZoom: 0.95050484
+    canvasScrollPosition: {x: 170.84715, y: 102.150215}
+    canvasZoom: 1.143003
   - id: 6
     fields:
     - title: Title
