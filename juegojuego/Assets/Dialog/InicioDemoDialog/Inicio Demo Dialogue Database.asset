@@ -642,6 +642,12 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 4
+        destinationConversationID: 1
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -691,7 +697,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: Variable["Intro_Chatarrero_Agua"] == false
       userScript: Variable["Intro_Juan_El_Pipo"] = true
       onExecute:
         m_PersistentCalls:
@@ -1267,8 +1273,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 179.64857, y: 120.92616}
-    canvasZoom: 0.97548616
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8034855
   - id: 2
     fields:
     - title: Title
@@ -2929,11 +2935,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -2945,13 +2951,17 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Se\xF1ora. \xBFUsted sabe lo que es esto? [Ense\xF1ar el malino]"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 0b85f5ed-6f44-4a5e-a552-6f5b053abf75
         type: 0
         typeString: 
       conversationID: 3
@@ -3119,6 +3129,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 8bc616ba-895f-4ef6-89eb-ce534d295d1a
         type: 0
         typeString: 
       conversationID: 3
