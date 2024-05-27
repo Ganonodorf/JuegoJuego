@@ -6073,11 +6073,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000016746089
+      value: -0.000000016746096
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000039532155
+      value: 0.0000000039532173
       objectReference: {fileID: 0}
     - target: {fileID: 3868807839614905530, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6129,11 +6129,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018870892
+      value: 0.000000018870892
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000037368117
+      value: -0.0000000037368117
       objectReference: {fileID: 0}
     - target: {fileID: 5760978350698776369, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_BindingMode
@@ -80491,7 +80491,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1549753447}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -80503,7 +80503,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 90587648}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: Play
           m_Mode: 5
@@ -80519,7 +80519,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1549753447}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -80563,7 +80563,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1392132558}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -80579,7 +80579,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1392132558}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -80591,7 +80591,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1444997691}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -80603,12 +80603,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1444997691}
           m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
           m_MethodName: set_LookAt
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 288414878}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -80619,7 +80619,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1444997691}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -80735,7 +80735,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1444997691}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -80747,12 +80747,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1444997691}
           m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
           m_MethodName: set_LookAt
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 1905490379}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -80763,7 +80763,7 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1444997691}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -80958,6 +80958,50 @@ MonoBehaviour:
         - m_Target: {fileID: 1727929049}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: cc076b15-2826-447e-a7b4-17fe269088fa
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1444997691}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1444997691}
+          m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+          m_MethodName: set_LookAt
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6407216292723587903}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - guid: b3840e89-0064-4ef8-80fa-5e5b171e6761
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1444997691}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -83786,11 +83830,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000016746089
+      value: 0.000000016746096
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000039532155
+      value: -0.0000000039532173
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -86416,7 +86460,7 @@ GameObject:
   - component: {fileID: 1392132559}
   - component: {fileID: 1392132560}
   m_Layer: 0
-  m_Name: CamORMalino
+  m_Name: CamORCrocoCostumeFolded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
