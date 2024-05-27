@@ -10623,7 +10623,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 502.5315, y: 0}
+    canvasScrollPosition: {x: 350.6328, y: 0}
     canvasZoom: 0.7900002
   - id: 5
     fields:
@@ -11172,6 +11172,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 75bc2208-633f-4ae4-a2f0-126990d1dfe6
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -11449,6 +11453,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 07bc5f7d-3ab7-4a4e-8037-01ce447efd60
         type: 0
         typeString: 
       conversationID: 5
@@ -13252,14 +13260,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'AgregarAlInventario("Brazo");
+
+        SetQuestState("Consigue
+        un brazo", "returnToNPC")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 923.18164
-        y: 210.90909
+        x: 924.33105
+        y: 209.75967
         width: 160
         height: 30
     - id: 58
@@ -13311,17 +13322,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'AgregarAlInventario("Brazo");
-
-        SetQuestState("Consigue
-        un brazo", "returnToNPC")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 923.18164
-        y: 262.04547
+        y: 260.89603
         width: 160
         height: 30
     - id: 59
@@ -13380,7 +13388,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1114.1299
-        y: 264.93207
+        y: 261.4838
         width: 160
         height: 30
     - id: 60
@@ -13406,8 +13414,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Fuaaah, \xA1\xA1que rico!! \xA1\xA1Dile que estaba buen\xEDsimo!!
-          Ahora s\xED que os voy a reventar chavalas, me sobra la energ\xEDa."
+        value: "Fuaaah, \xA1\xA1que rico!!"
         type: 0
         typeString: 
       - title: Sequence
@@ -13425,7 +13432,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 60
+        destinationConversationID: 5
+        destinationDialogueID: 75
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -13434,7 +13447,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1114.1299
-        y: 314.9321
+        y: 310.33438
         width: 160
         height: 30
     - id: 61
@@ -14239,8 +14252,62 @@ MonoBehaviour:
         y: 525.2247
         width: 160
         height: 30
+    - id: 75
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\xA1\xA1Dile que estaba buen\xEDsimo!! Ahora s\xED que os voy a reventar
+          chavalas, me sobra la energ\xEDa."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: f74f4fc6-0706-460e-b2cd-c430575412b0
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1114.1299
+        y: 362.63324
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 188.50577, y: 49.425323}
+    canvasScrollPosition: {x: 135.6322, y: 0}
     canvasZoom: 0.87
   - id: 4
     fields:
@@ -15293,6 +15360,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: afdb49e0-b65d-4d42-91f1-0f9caf10598a
+        type: 0
+        typeString: 
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -15421,14 +15492,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'AgregarAlInventario("BicifijoArreglado");
+
+        SetQuestState("Arregla
+        el bicifijo", "returnToNPC")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 857.3971
-        y: 226.84932
+        y: 229.58904
         width: 160
         height: 30
     - id: 47
@@ -15481,10 +15555,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'AgregarAlInventario("BicifijoArreglado");
-
-        SetQuestState("Arregla
-        el bicifijo", "returnToNPC")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
