@@ -104,10 +104,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5838680741251382702}
-  - component: {fileID: 1915599184049979867}
+  - component: {fileID: 1660462716281661161}
   m_Layer: 0
   m_Name: PuertaLevadiza
-  m_TagString: Untagged
+  m_TagString: PuertaLevadiza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2789385429269339210}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6616173, y: -0.68480146, z: 0.2489655, w: -0.17699108}
+  m_LocalRotation: {x: 0.6616183, y: -0.684801, z: 0.2489653, w: -0.17698933}
   m_LocalPosition: {x: 147.6, y: 18.4, z: -712.9}
   m_LocalScale: {x: 10.82, y: 16.007671, z: 10.82}
   m_ConstrainProportionsScale: 1
@@ -130,7 +130,7 @@ Transform:
   - {fileID: 3774652106954714811}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 6.13, y: -215.109, z: -89.968}
---- !u!95 &1915599184049979867
+--- !u!95 &1660462716281661161
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ Animator:
   m_GameObject: {fileID: 2789385429269339210}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6e7f4c41863894f3c9f7c441f11ed855, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3a58e2d7db0cec44995caf1d40deaa3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -231,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3774652106954714811
 Transform:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8623874298850378246}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 

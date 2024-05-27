@@ -1483,11 +1483,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 0
@@ -1499,19 +1499,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\xA1INCRE\xCDBLE! \xA1QU\xC9 ALEGR\xCDA! \xA1QU\xC9 AMOR!"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
         value: 66169e5b-949c-49fc-a65e-a59c12a902d0
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -1754,9 +1754,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("Arregla el bicifijo", "active");
-
-        AgregarAlInventario("BicifijoRoto")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2032,7 +2030,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 32.272736
-        y: 150.68182
+        y: 149.54546
         width: 160
         height: 30
     - id: 22
@@ -2063,7 +2061,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraCura,false);
+
+          SetActive(CamaraPersonajeHistoria_1,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -2092,7 +2092,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 32.272736
-        y: 200.68182
+        y: 199.54547
         width: 160
         height: 30
     - id: 23
@@ -2123,7 +2123,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraPersonajeHistoria_1,false);
+
+          SetActive(CamaraPersonajeHistoria_2,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -2182,7 +2184,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraPersonajeHistoria_2,false);
+
+          SetActive(CamaraPersonajeHistoria_3,true)'
         type: 0
         typeString: 
       - title: EventGuid
@@ -2242,11 +2246,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraPersonajeHistoria_3,false);
+
+          SetActive(CamaraCura,true)'
         type: 0
         typeString: 
       - title: EventGuid
         value: 4c8bfbef-c075-4de8-936d-d4cf20090c82
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -2759,7 +2769,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -2951,7 +2961,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1169.7727
-        y: 154.0909
+        y: 152.95454
         width: 160
         height: 30
     - id: 38
@@ -2981,7 +2991,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -3469,7 +3479,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xA1\xA1PERD\xD3NALO OH MI <b>AMADO</b>!! No sabe lo que hace...
+        value: "\xA1\xA1PERD\xD3NALA OH MI <b>AMADO</b>!! No sabe lo que hace...
           [Se pone a rezar por lo bajo]"
         type: 0
         typeString: 
@@ -3499,7 +3509,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1533.409
-        y: 305.22726
+        y: 302.95453
         width: 160
         height: 30
     - id: 48
@@ -3578,7 +3588,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -3631,7 +3641,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -3653,14 +3663,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("Arregla el bicifijo", "active");
+
+        AgregarAlInventario("BicifijoRoto")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 395.90903
-        y: 251.8182
+        y: 250.68182
         width: 160
         height: 30
     - id: 53
@@ -3750,7 +3762,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -3783,7 +3795,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 329.5454, y: 0}
+    canvasScrollPosition: {x: 510.22723, y: 0}
     canvasZoom: 0.88
   - id: 10
     fields:
@@ -4894,16 +4906,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Brazo"] == true
-      userScript: 'SetQuestState("Consigue un brazo", "success");
-
-        EntregarObjeto("Brazo","Feligresa");'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 610
-        y: 124
+        y: 122.66667
         width: 160
         height: 30
     - id: 19
@@ -4934,7 +4944,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,flase)
         type: 0
         typeString: 
       - title: EventGuid
@@ -4963,7 +4973,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 610
-        y: 224
+        y: 222.66666
         width: 160
         height: 30
     - id: 20
@@ -5129,7 +5139,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 610
-        y: 374
+        y: 372.6667
         width: 160
         height: 30
     - id: 23
@@ -5155,7 +5165,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Joder, no s\xE9 como agradec\xE9rtelo. \xA1\xA1Muchas gracias!!"
+        value: "\xA1\xA1Muchas gracias!! Joder, no s\xE9 como agradec\xE9rtelo."
         type: 0
         typeString: 
       - title: Sequence
@@ -5169,15 +5179,23 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 23
+        destinationConversationID: 10
+        destinationDialogueID: 40
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("Consigue un brazo", "success");
+
+        EntregarObjeto("Brazo","Feligresa");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 610
+        x: 608.6667
         y: 424
         width: 160
         height: 30
@@ -5484,7 +5502,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -5703,7 +5721,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -5866,7 +5884,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -5925,7 +5943,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -5984,7 +6002,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -6014,6 +6032,55 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1162.0001
         y: 170
+        width: 160
+        height: 30
+    - id: 40
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: No es nada, es un placer poder ayudar.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 608.6667
+        y: 474
         width: 160
         height: 30
     entryGroups: []
@@ -6493,6 +6560,12 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 13
         destinationConversationID: 2
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 13
+        destinationConversationID: 2
         destinationDialogueID: 24
         isConnector: 0
         priority: 2
@@ -6504,8 +6577,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 70
+        x: 40.169525
+        y: 119.15259
         width: 160
         height: 30
     - id: 15
@@ -6943,7 +7016,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: FadeToBlack()
         type: 0
         typeString: 
       - title: EventGuid
@@ -7027,8 +7100,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 980.6325
-        y: 385.18994
+        x: 978.93756
+        y: 382.2078
         width: 160
         height: 30
     - id: 24
@@ -7082,8 +7155,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 120
+        x: 40.169525
+        y: 169.1525
         width: 160
         height: 30
     - id: 25
@@ -7139,8 +7212,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 170
+        x: 40.169525
+        y: 219.15253
         width: 160
         height: 30
     - id: 26
@@ -7194,8 +7267,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 220
+        x: 40.169525
+        y: 269.15234
         width: 160
         height: 30
     - id: 27
@@ -7250,8 +7323,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 270
+        x: 40.169525
+        y: 319.15228
         width: 160
         height: 30
     - id: 28
@@ -7305,8 +7378,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28.734177
-        y: 320
+        x: 38.903656
+        y: 369.1524
         width: 160
         height: 30
     - id: 29
@@ -7360,8 +7433,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 370
+        x: 40.169525
+        y: 419.1526
         width: 160
         height: 30
     - id: 30
@@ -7417,8 +7490,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 420
+        x: 40.169525
+        y: 469.15253
         width: 160
         height: 30
     - id: 31
@@ -7474,8 +7547,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 470
+        x: 40.169525
+        y: 519.15234
         width: 160
         height: 30
     - id: 32
@@ -7531,8 +7604,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 520
+        x: 40.169525
+        y: 569.152
         width: 160
         height: 30
     - id: 33
@@ -7588,8 +7661,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 570
+        x: 40.169525
+        y: 619.152
         width: 160
         height: 30
     - id: 34
@@ -7645,8 +7718,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 620
+        x: 40.169525
+        y: 669.152
         width: 160
         height: 30
     - id: 35
@@ -7700,8 +7773,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 670
+        x: 40.169525
+        y: 719.152
         width: 160
         height: 30
     - id: 36
@@ -7757,8 +7830,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 720
+        x: 40.169525
+        y: 769.1522
         width: 160
         height: 30
     - id: 37
@@ -7813,8 +7886,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 770
+        x: 40.169525
+        y: 819.15186
         width: 160
         height: 30
     - id: 38
@@ -7868,8 +7941,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 820
+        x: 40.169525
+        y: 869.15173
         width: 160
         height: 30
     - id: 39
@@ -7923,8 +7996,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 71.26596
+        x: 226.24545
+        y: 120.41852
         width: 160
         height: 30
     - id: 40
@@ -7981,8 +8054,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 121.26596
+        x: 226.24545
+        y: 170.41849
         width: 160
         height: 30
     - id: 41
@@ -8038,8 +8111,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 171.26596
+        x: 226.24545
+        y: 220.4184
         width: 160
         height: 30
     - id: 42
@@ -8093,8 +8166,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 221.26596
+        x: 226.24545
+        y: 270.41833
         width: 160
         height: 30
     - id: 43
@@ -8148,8 +8221,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 271.26596
+        x: 226.24545
+        y: 320.41827
         width: 160
         height: 30
     - id: 44
@@ -8203,8 +8276,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 321.26596
+        x: 226.24545
+        y: 370.4184
         width: 160
         height: 30
     - id: 45
@@ -8259,8 +8332,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 371.26596
+        x: 226.24545
+        y: 420.41858
         width: 160
         height: 30
     - id: 46
@@ -8314,8 +8387,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 421.26596
+        x: 226.24545
+        y: 470.41852
         width: 160
         height: 30
     - id: 47
@@ -8371,8 +8444,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 471.26596
+        x: 226.24545
+        y: 520.41833
         width: 160
         height: 30
     - id: 48
@@ -8429,8 +8502,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 521.266
+        x: 226.24545
+        y: 570.41797
         width: 160
         height: 30
     - id: 49
@@ -8487,8 +8560,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 571.266
+        x: 226.24545
+        y: 620.41797
         width: 160
         height: 30
     - id: 50
@@ -8542,8 +8615,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.07591
-        y: 621.266
+        x: 226.24545
+        y: 670.41797
         width: 160
         height: 30
     - id: 51
@@ -8598,8 +8671,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 217.34172
-        y: 670.0001
+        x: 227.51126
+        y: 719.152
         width: 160
         height: 30
     - id: 52
@@ -8655,8 +8728,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 217.34172
-        y: 720.0001
+        x: 227.51126
+        y: 769.1522
         width: 160
         height: 30
     - id: 53
@@ -8712,8 +8785,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 217.34172
-        y: 770.0001
+        x: 227.51126
+        y: 819.15186
         width: 160
         height: 30
     - id: 54
@@ -8769,8 +8842,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 217.34172
-        y: 820.0001
+        x: 227.51126
+        y: 869.15173
         width: 160
         height: 30
     - id: 55
@@ -8827,8 +8900,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 70.000305
+        x: 413.5873
+        y: 119.15289
         width: 160
         height: 30
     - id: 56
@@ -8882,8 +8955,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 121.26613
+        x: 413.5873
+        y: 170.41873
         width: 160
         height: 30
     - id: 57
@@ -8937,8 +9010,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 171.26613
+        x: 413.5873
+        y: 220.41864
         width: 160
         height: 30
     - id: 58
@@ -8992,8 +9065,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 221.26613
+        x: 413.5873
+        y: 270.41846
         width: 160
         height: 30
     - id: 59
@@ -9047,8 +9120,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 271.2661
+        x: 413.5873
+        y: 320.4184
         width: 160
         height: 30
     - id: 60
@@ -9104,8 +9177,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 322.53195
+        x: 413.5873
+        y: 371.6844
         width: 160
         height: 30
     - id: 61
@@ -9161,8 +9234,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 371.2661
+        x: 413.5873
+        y: 420.4187
         width: 160
         height: 30
     - id: 62
@@ -9219,8 +9292,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 421.2661
+        x: 413.5873
+        y: 470.41864
         width: 160
         height: 30
     - id: 63
@@ -9276,8 +9349,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 470.0003
+        x: 413.5873
+        y: 519.1527
         width: 160
         height: 30
     - id: 64
@@ -9334,8 +9407,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 522.5319
+        x: 413.5873
+        y: 571.68384
         width: 160
         height: 30
     - id: 65
@@ -9383,8 +9456,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 403.41766
-        y: 568.73444
+        x: 413.5873
+        y: 617.88635
         width: 160
         height: 30
     - id: 66
@@ -9415,11 +9488,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: FadeToWhite()
         type: 0
         typeString: 
       - title: EventGuid
         value: c59f3836-ac37-4846-a171-1cc39e7d20bc
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -9443,8 +9520,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 983.16425
-        y: 216.83551
+        x: 984.8592
+        y: 218.93802
         width: 160
         height: 30
     - id: 67
@@ -9470,11 +9547,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ...
+        value: "Ah\xED tienes."
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetActive(camaraPuertaLevadiza,true);
+
+          BajarPuertas()'
         type: 0
         typeString: 
       - title: EventGuid
@@ -9503,7 +9582,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 983.16425
-        y: 266.8355
+        y: 270.63297
         width: 160
         height: 30
     - id: 68
@@ -9533,11 +9612,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(camaraPuertaLevadiza,false)
         type: 0
         typeString: 
       - title: EventGuid
         value: a0ca7d0c-eac0-4419-8b69-b855c16beced
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -9561,8 +9644,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 981.8984
-        y: 329.4937
+        x: 980.2034
+        y: 326.5115
         width: 160
         height: 30
     - id: 69
@@ -9610,8 +9693,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 980.6325
-        y: 435.18994
+        x: 978.93756
+        y: 432.20767
         width: 160
         height: 30
     - id: 70
@@ -9697,7 +9780,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -9864,7 +9947,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -9979,7 +10062,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -10064,7 +10147,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1345.1893
-        y: 270.633
+        y: 269.36716
         width: 160
         height: 30
     - id: 78
@@ -10112,8 +10195,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1345.1893
-        y: 320.633
+        x: 1343.4944
+        y: 313.8533
         width: 160
         height: 30
     - id: 79
@@ -10168,7 +10251,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1531.2653
-        y: 68.10132
+        y: 66.835495
         width: 160
         height: 30
     - id: 80
@@ -10255,7 +10338,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -10476,7 +10559,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -10535,7 +10618,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(CamaraInventario,true)
         type: 0
         typeString: 
       - title: EventGuid
@@ -10567,9 +10650,17 @@ MonoBehaviour:
         y: 121.89877
         width: 160
         height: 30
-    entryGroups: []
-    canvasScrollPosition: {x: 378.4809, y: 0}
-    canvasZoom: 0.7900002
+    entryGroups:
+    - name: Intro
+      rect:
+        serializedVersion: 2
+        x: 21.33908
+        y: 70.36243
+        width: 575.2711
+        height: 875.2716
+      color: {r: 0, g: 0, b: 0, a: 1}
+    canvasScrollPosition: {x: 10.169495, y: 0}
+    canvasZoom: 0.59
   - id: 5
     fields:
     - title: Title
@@ -11110,11 +11201,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "\xA1Trae aqu\xED! \xA1Que rico!"
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 75bc2208-633f-4ae4-a2f0-126990d1dfe6
         type: 0
         typeString: 
       conversationID: 5
@@ -11396,6 +11491,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 07bc5f7d-3ab7-4a4e-8037-01ce447efd60
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -11413,10 +11512,7 @@ MonoBehaviour:
       conditionsString: "((CurrentQuestState(\"Ll\xE9vale la comida a la pareja de
         Paco\") == \"returnToNPC\") or (CurrentQuestState(\"Ll\xE9vale la comida
         a la pareja de Paco\") == \"success\"))"
-      userScript: 'AgregarAlInventario("Brazo");
-
-        SetQuestState("Consigue
-        un brazo", "returnToNPC")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11510,6 +11606,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: aac64a22-7f02-4763-b2a7-c51e5cab9f77
         type: 0
         typeString: 
       conversationID: 5
@@ -13196,14 +13296,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'AgregarAlInventario("Brazo");
+
+        SetQuestState("Consigue
+        un brazo", "returnToNPC")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 923.18164
-        y: 210.90909
+        x: 924.33105
+        y: 209.75967
         width: 160
         height: 30
     - id: 58
@@ -13262,7 +13365,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 923.18164
-        y: 262.04547
+        y: 260.89603
         width: 160
         height: 30
     - id: 59
@@ -13321,7 +13424,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1114.1299
-        y: 264.93207
+        y: 261.4838
         width: 160
         height: 30
     - id: 60
@@ -13347,8 +13450,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Fuaaah, \xA1\xA1que rico!! \xA1\xA1Dile que estaba buen\xEDsimo!!
-          Ahora s\xED que os voy a reventar chavalas, me sobra la energ\xEDa."
+        value: "Fuaaah, \xA1\xA1que rico!!"
         type: 0
         typeString: 
       - title: Sequence
@@ -13366,7 +13468,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 60
+        destinationConversationID: 5
+        destinationDialogueID: 75
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -13375,7 +13483,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1114.1299
-        y: 314.9321
+        y: 310.33438
         width: 160
         height: 30
     - id: 61
@@ -13717,8 +13825,7 @@ MonoBehaviour:
         destinationDialogueID: 74
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["BicifijoRoto"] == true) or (Variable["BicifijoArreglado"]
-        == true)
+      conditionsString: Variable["BicifijoRoto"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13726,7 +13833,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 556.08405
-        y: 475.22467
+        y: 474.0752
         width: 160
         height: 30
     - id: 67
@@ -13763,7 +13870,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 54173143-d4de-404b-ba17-75dff9c7db95
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13819,6 +13926,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 9c081268-240d-4b96-9b92-ba66d7cda6c8
         type: 0
         typeString: 
       conversationID: 5
@@ -14081,7 +14192,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "\xBFQu\xE9? [Mira la bandeja con las croquetas y el gazpacho y se
+          le agrandan las pupilas]."
         type: 0
         typeString: 
       - title: Sequence
@@ -14140,7 +14252,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFA ver?"
+        value: "\xBFCon qu\xE9? \xBFA ver?"
         type: 0
         typeString: 
       - title: Sequence
@@ -14148,7 +14260,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 14c956ed-9d3e-46f1-a722-d3d9759f6207
+        value: 81a1b8ca-d910-4eae-9cb8-b1e6777fbb90
         type: 0
         typeString: 
       conversationID: 5
@@ -14176,8 +14288,62 @@ MonoBehaviour:
         y: 525.2247
         width: 160
         height: 30
+    - id: 75
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\xA1\xA1Dile que estaba buen\xEDsimo!! Ahora s\xED que os voy a reventar
+          chavalas, me sobra la energ\xEDa."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: f74f4fc6-0706-460e-b2cd-c430575412b0
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1114.1299
+        y: 362.63324
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 294.2529, y: 0}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.87
   - id: 4
     fields:
@@ -14437,7 +14603,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Estuve hablando con la cura y necesito que me arregles una cosa.
+        value: "Estuve hablando con la cura y necesito arreglar una cosa. \xBFMe
+          podr\xEDas ayudar?"
         type: 0
         typeString: 
       - title: Sequence
@@ -14713,12 +14880,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Mmm, es algo bastante trabajoso. \xBFQu\xE9 te parece si primero
-          le llevas la comida a mi pareja?"
+        value: "\xBFQu\xE9 te parece si primero le llevas la comida a mi pareja?"
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: a15675ef-eac7-4a5f-80cf-8040be8f2d03
         type: 0
         typeString: 
       conversationID: 4
@@ -14951,7 +15121,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 35a18366-7b29-4b8f-b03d-3b82e6461f06
+        value: 39ceef76-0d7a-4919-b4ec-e8955eed4cba
         type: 0
         typeString: 
       conversationID: 4
@@ -15226,6 +15396,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: afdb49e0-b65d-4d42-91f1-0f9caf10598a
+        type: 0
+        typeString: 
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -15354,14 +15528,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'AgregarAlInventario("BicifijoArreglado");
+
+        SetQuestState("Arregla
+        el bicifijo", "returnToNPC")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 857.3971
-        y: 226.84932
+        y: 229.58904
         width: 160
         height: 30
     - id: 47
@@ -15414,10 +15591,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'AgregarAlInventario("BicifijoArreglado");
-
-        SetQuestState("Arregla
-        el bicifijo", "returnToNPC")'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15561,7 +15735,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xA1Pero bueno! \xBFYa se ha vuelto a arrancar un brazo Manoli?"
+        value: "No me digas m\xE1s, \xBFya se ha vuelto a arrancar un brazo Manoli?"
         type: 0
         typeString: 
       - title: Sequence
@@ -15830,7 +16004,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Mmm, es algo bastante trabajoso.
         type: 0
         typeString: 
       - title: Sequence
@@ -15889,7 +16063,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "\xA1Pero bueno!"
         type: 0
         typeString: 
       - title: Sequence
@@ -15957,7 +16131,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 208531d2-e2a7-427c-bb1a-a7f1c19090c1
+        value: 97089080-3613-4c31-a26b-c94aaffeb5af
         type: 0
         typeString: 
       conversationID: 4
@@ -17616,13 +17790,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oh vaya, conseguiste un brazo. \xBFY d\xF3nde te lleva eso? \xBFNo
-          parece que tienes ya suficientes? \xBFO es que no eres plenamente consciente
-          de tu ser? \xBFTe falta propiocepci\xF3n?"
+        value: "\xBFY d\xF3nde te lleva eso? \xBFNo parece que tienes ya suficientes?
+          \xBFO es que no eres plenamente consciente de tu ser? \xBFTe falta propiocepci\xF3n?"
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: b2828ef6-093a-4f69-98ef-3fd213f453bf
         type: 0
         typeString: 
       conversationID: 11
@@ -18996,7 +19173,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Oh vaya, conseguiste un brazo.
         type: 0
         typeString: 
       - title: Sequence
@@ -19055,7 +19232,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Vaya...
         type: 0
         typeString: 
       - title: Sequence

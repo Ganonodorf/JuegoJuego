@@ -69,6 +69,7 @@ namespace Constantes
     {
         public const string CAMARA_EXTERIORES_NOMBRE_GO = "CamaraExteriores";
         public const string CAMARA_INTERIORES_NOMBRE_GO = "CamaraInteriores";
+        public const string TAG_CAMARA_CORTES = "CamaraCortes";
     }
 
     /*
@@ -77,5 +78,10 @@ namespace Constantes
     public static class Juego
     {
         public const string TAG_RESPAWN = "Respawn";
+    }
+
+    public static class Objetos
+    {
+        public const string TAG_PUERTA_LEVADIZA = "PuertaLevadiza";
     }
 }
