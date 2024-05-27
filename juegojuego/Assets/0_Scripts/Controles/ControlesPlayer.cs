@@ -238,7 +238,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a08489a9-5a04-4a55-8f64-a41042c9670d"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

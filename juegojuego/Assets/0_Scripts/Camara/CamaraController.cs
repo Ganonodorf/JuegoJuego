@@ -30,14 +30,14 @@ public class CamaraController : MonoBehaviour
 
     private void DesactivarExteriorActivarInterior()
     {
-        CamaraExterioresGO.GetComponent<CinemachineFreeLook>().Priority = 10;
-        CamaraInterioresGO.GetComponent<CinemachineFreeLook>().Priority = 100;
+        CamaraExterioresGO.GetComponent<CinemachineFreeLook>().enabled = false;
+        CamaraInterioresGO.GetComponent<CinemachineFreeLook>().enabled = true;
     }
 
     private void ActivarExteriorDesactivarInterior()
     {
-        CamaraExterioresGO.GetComponent<CinemachineFreeLook>().Priority = 100;
-        CamaraInterioresGO.GetComponent<CinemachineFreeLook>().Priority = 10;
+        CamaraExterioresGO.GetComponent<CinemachineFreeLook>().enabled = true;
+        CamaraInterioresGO.GetComponent<CinemachineFreeLook>().enabled = false;
     }
 
     private void BuscarGO()
