@@ -296,7 +296,7 @@ public class InventarioManager : MonoBehaviour
 
         // Lo pone delante del coche
         objetoSoltar.transform.localPosition = new Vector3(0.0f,
-                                                           0.0f,
+                                                           Inventario.Manager.LONGITUD_COCHE + 50.0f,
                                                            Inventario.Manager.LONGITUD_COCHE);
 
         // Ampl?a el objeto al doble
