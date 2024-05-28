@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36baaa8bdcb9d8b49b9199833965d2c3, type: 3}
+  m_Name: NuestraMainCameraBlends
+  m_EditorClassIdentifier: 
+  m_CustomBlends:
+  - m_From: CamaraExteriores
+    m_To: CamaraInteriores
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraInteriores
+    m_To: CamaraExteriores
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManu
+    m_To: CamaraPaco
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraPaco
+    m_To: CamaraManu
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoli
+    m_To: CamaraManoliQue
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoliQue
+    m_To: CamaraManoliTe
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoliTe
+    m_To: CamaraManoliFalta
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoliFalta
+    m_To: CamaraManoliMedia
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoliMedia
+    m_To: CamaraManoliCara
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoliCara
+    m_To: CamaraPaqui
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoli
+    m_To: CamaraAnamari
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoli
+    m_To: CamaraPaqui
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoli
+    m_To: CamaraConcha
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraManoli
+    m_To: CamaraMarianto
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraAnamari
+    m_To: CamaraManoli
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraAnamari
+    m_To: CamaraPaqui
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraAnamari
+    m_To: CamaraConcha
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraPaqui
+    m_To: CamaraManoli
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraPaqui
+    m_To: CamaraAnamari
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraPaqui
+    m_To: CamaraConcha
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraConcha
+    m_To: CamaraManoli
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraConcha
+    m_To: CamaraAnamari
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraConcha
+    m_To: CamaraPaqui
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraMarianto
+    m_To: CamaraManoli
+    m_Blend:
+      m_Style: 2
+      m_Time: 0.2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0

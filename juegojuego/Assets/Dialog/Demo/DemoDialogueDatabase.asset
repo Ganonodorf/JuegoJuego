@@ -1626,8 +1626,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 50.681824
+        x: 31.182816
+        y: 31.063255
         width: 160
         height: 30
     - id: 1
@@ -1711,8 +1711,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 610.6818
-        y: 99.54544
+        x: 609.5919
+        y: 79.92687
         width: 160
         height: 30
     - id: 7
@@ -1766,8 +1766,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 983.40906
-        y: 152.95454
+        x: 982.31915
+        y: 133.33598
         width: 160
         height: 30
     - id: 10
@@ -1797,11 +1797,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 66169e5b-949c-49fc-a65e-a59c12a902d0
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -1819,14 +1819,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("BicifijoArreglado")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 983.4088
-        y: 204.09094
+        x: 982.3189
+        y: 184.47237
         width: 160
         height: 30
     - id: 12
@@ -1882,8 +1882,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 100.68182
+        x: 31.182816
+        y: 81.063255
         width: 160
         height: 30
     - id: 14
@@ -1937,8 +1937,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 395.90903
-        y: 154.09091
+        x: 394.8191
+        y: 134.47234
         width: 160
         height: 30
     - id: 15
@@ -1992,8 +1992,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.95456
-        y: 152.95456
+        x: 211.86464
+        y: 133.33598
         width: 160
         height: 30
     - id: 16
@@ -2028,7 +2028,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: e796bd94-1b00-4f41-a70c-51cd21cf67ea
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -2052,8 +2052,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 394.77267
-        y: 202.95459
+        x: 393.68274
+        y: 183.33601
         width: 160
         height: 30
     - id: 17
@@ -2102,8 +2102,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.95456
-        y: 202.95456
+        x: 211.86464
+        y: 183.33598
         width: 160
         height: 30
     - id: 18
@@ -2157,8 +2157,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 612.9545
-        y: 149.54544
+        x: 611.8646
+        y: 129.92686
         width: 160
         height: 30
     - id: 19
@@ -2212,8 +2212,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 799.3182
-        y: 151.81819
+        x: 798.2283
+        y: 132.19963
         width: 160
         height: 30
     - id: 20
@@ -2261,8 +2261,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 799.3182
-        y: 201.81819
+        x: 798.2283
+        y: 182.19963
         width: 160
         height: 30
     - id: 21
@@ -2297,7 +2297,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: d8f2e961-1713-4338-bfc1-307f19c534e0
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -2321,8 +2321,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 149.54546
+        x: 31.182816
+        y: 128.83696
         width: 160
         height: 30
     - id: 22
@@ -2355,11 +2355,13 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraCura,false);
 
-          SetActive(CamaraPersonajeHistoria_1,true)'
+          SetActive(CamaraPersonajeHistoria_1,true);
+
+          AnimatorPlay(AnimacionCamaraCura1,CamaraPersonajeHistoria_1)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 0a339f31-1e17-4a70-9ba6-234dc6a7a233
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -2383,8 +2385,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 199.54547
+        x: 31.182816
+        y: 179.9269
         width: 160
         height: 30
     - id: 23
@@ -2417,11 +2419,13 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPersonajeHistoria_1,false);
 
-          SetActive(CamaraPersonajeHistoria_2,true)'
+          SetActive(CamaraPersonajeHistoria_2,true);
+
+          AnimatorPlay(AnimacionCamaraCura2,CamaraPersonajeHistoria_2)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 48aeb848-a5ea-4590-bb5c-04760d948dc5
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -2445,8 +2449,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 250.68182
+        x: 31.182816
+        y: 231.06325
         width: 160
         height: 30
     - id: 24
@@ -2478,11 +2482,13 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPersonajeHistoria_2,false);
 
-          SetActive(CamaraPersonajeHistoria_3,true)'
+          SetActive(CamaraPersonajeHistoria_3,true);
+
+          AnimatorPlay(AnimacionCamaraCura3,CamaraPersonajeHistoria_3)'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 31971520-1a69-496f-b555-088cc133a131
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -2506,8 +2512,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 300.68152
+        x: 31.182816
+        y: 281.06317
         width: 160
         height: 30
     - id: 25
@@ -2544,7 +2550,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 4c8bfbef-c075-4de8-936d-d4cf20090c82
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -2572,8 +2578,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 349.54514
+        x: 31.182816
+        y: 329.92676
         width: 160
         height: 30
     - id: 26
@@ -2629,8 +2635,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 400.68152
+        x: 31.182816
+        y: 381.06317
         width: 160
         height: 30
     - id: 27
@@ -2685,8 +2691,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 450.68152
+        x: 31.182816
+        y: 431.06317
         width: 160
         height: 30
     - id: 28
@@ -2741,8 +2747,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 500.68152
+        x: 31.182816
+        y: 481.06317
         width: 160
         height: 30
     - id: 29
@@ -2798,8 +2804,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 550.6815
+        x: 31.182816
+        y: 531.06323
         width: 160
         height: 30
     - id: 30
@@ -2854,8 +2860,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 600.6815
+        x: 31.182816
+        y: 581.06323
         width: 160
         height: 30
     - id: 31
@@ -2911,8 +2917,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 650.6815
+        x: 31.182816
+        y: 631.06323
         width: 160
         height: 30
     - id: 32
@@ -2967,8 +2973,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.272736
-        y: 700.6815
+        x: 31.182816
+        y: 681.06323
         width: 160
         height: 30
     - id: 33
@@ -3028,8 +3034,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.95456
-        y: 102.95456
+        x: 211.86464
+        y: 83.33599
         width: 160
         height: 30
     - id: 34
@@ -3061,11 +3067,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 5e376fae-0f3a-46b4-8216-50519d698769
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -3083,14 +3089,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 986.818
-        y: 301.8182
+        x: 985.7281
+        y: 282.19983
         width: 160
         height: 30
     - id: 35
@@ -3148,8 +3154,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 986.818
-        y: 351.8182
+        x: 985.7281
+        y: 332.19983
         width: 160
         height: 30
     - id: 36
@@ -3197,8 +3203,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 986.818
-        y: 401.8182
+        x: 985.7281
+        y: 382.19983
         width: 160
         height: 30
     - id: 37
@@ -3252,8 +3258,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1169.7727
-        y: 152.95454
+        x: 1168.6829
+        y: 132.24606
         width: 160
         height: 30
     - id: 38
@@ -3283,11 +3289,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: a5f70cb0-d472-483e-979c-fbe5ab1b0e66
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -3305,14 +3311,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Brazo")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1170.9092
-        y: 207.49991
+        x: 1169.8193
+        y: 186.79143
         width: 160
         height: 30
     - id: 39
@@ -3360,8 +3366,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1173.1819
-        y: 312.0454
+        x: 1169.9122
+        y: 284.79752
         width: 160
         height: 30
     - id: 40
@@ -3417,8 +3423,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1351.591
-        y: 155.22726
+        x: 1350.5011
+        y: 134.51878
         width: 160
         height: 30
     - id: 41
@@ -3472,8 +3478,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1351.591
-        y: 205.22726
+        x: 1350.5011
+        y: 184.51878
         width: 160
         height: 30
     - id: 42
@@ -3529,8 +3535,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1350.4546
-        y: 254.09088
+        x: 1349.3647
+        y: 233.3824
         width: 160
         height: 30
     - id: 43
@@ -3578,8 +3584,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1350.4546
-        y: 304.09088
+        x: 1349.3647
+        y: 283.3825
         width: 160
         height: 30
     - id: 44
@@ -3633,8 +3639,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1533.409
-        y: 155.22726
+        x: 1532.3192
+        y: 134.51878
         width: 160
         height: 30
     - id: 45
@@ -3689,8 +3695,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1533.409
-        y: 205.22726
+        x: 1532.3192
+        y: 184.51878
         width: 160
         height: 30
     - id: 46
@@ -3744,8 +3750,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1533.409
-        y: 255.22726
+        x: 1532.3192
+        y: 234.5188
         width: 160
         height: 30
     - id: 47
@@ -3800,8 +3806,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1533.409
-        y: 302.95453
+        x: 1532.3192
+        y: 282.24615
         width: 160
         height: 30
     - id: 48
@@ -3849,8 +3855,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1533.409
-        y: 355.22726
+        x: 1532.3192
+        y: 334.51892
         width: 160
         height: 30
     - id: 49
@@ -3880,11 +3886,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 6a0f8dc7-acf7-4d83-b387-e31af0bd5899
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -3896,14 +3902,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 395.90903
-        y: 307.5
+        x: 394.8191
+        y: 287.88165
         width: 160
         height: 30
     - id: 52
@@ -3933,11 +3939,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 03cc6a5d-6ecc-455d-bdc5-8ac0eb20bc71
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -3957,14 +3963,16 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("Arregla el bicifijo", "active");
 
-        AgregarAlInventario("BicifijoRoto")'
+        AgregarAlInventario("BicifijoRoto");
+
+        MirarObjetoInventario("BicifijoRoto")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 395.90903
-        y: 250.68182
+        x: 394.8191
+        y: 229.97331
         width: 160
         height: 30
     - id: 53
@@ -4021,8 +4029,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 983.4088
-        y: 254.09094
+        x: 982.3189
+        y: 234.47237
         width: 160
         height: 30
     - id: 54
@@ -4054,11 +4062,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 9710251f-f305-4e50-a61b-9787083fb6be
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -4076,18 +4084,18 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1170.9093
-        y: 255.22717
+        x: 1169.8195
+        y: 234.51868
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 125.4805, y: 17.185898}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.9174984
   - id: 10
     fields:
@@ -5236,11 +5244,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,flase)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 36a1423d-558f-4fc9-9273-7463ad2d5f74
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -5258,7 +5266,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5794,11 +5802,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 50bcf6ac-f43e-4478-890c-ff9bc4285860
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -5810,7 +5818,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5921,7 +5929,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Comida")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6013,11 +6021,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: a5fd20b4-2e91-4a04-8cd6-f4c85e7e98f6
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -6035,14 +6043,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 1162.0001
-        y: 270
+        y: 268.8764
         width: 160
         height: 30
     - id: 35
@@ -6176,11 +6184,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 633b9ed7-27c4-4c9c-8afc-0088fe9adb6d
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -6198,7 +6206,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Brazo")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6235,11 +6243,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 2bd4c4d2-3458-408e-80b8-e9309714105d
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -6257,14 +6265,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("BicifijoRoto")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 981.6666
-        y: 171
+        y: 169.8764
         width: 160
         height: 30
     - id: 39
@@ -6294,11 +6302,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 23f9b45f-8a6d-405e-9efd-16a4db1102e8
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -6377,7 +6385,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.75
+    canvasZoom: 0.89
   - id: 6
     fields:
     - title: Title
@@ -6838,7 +6846,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: a1ca28f2-f697-4bc0-8661-b060100fca13
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -6849,12 +6857,6 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 13
-        destinationConversationID: 2
-        destinationDialogueID: 15
-        isConnector: 0
-        priority: 2
       - originConversationID: 2
         originDialogueID: 13
         destinationConversationID: 2
@@ -7252,7 +7254,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(MatriculaCoche,true)
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -7308,11 +7310,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: FadeToBlack()
+        value: SetActive(MatriculaCoche,true)
         type: 0
         typeString: 
       - title: EventGuid
-        value: be6b184a-3da3-48e5-9fba-0ee3bc9d4f00
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -7331,7 +7333,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: 
       userScript: "SetQuestState(\"Consigue una matr\xEDcula\", \"success\");\nEntregarObjeto(\"Matricula\",
-        \"Manu\")"
+        \"Manu\");\nFadeToBlack()"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9780,11 +9782,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: FadeToWhite()
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: c59f3836-ac37-4846-a171-1cc39e7d20bc
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -9806,7 +9808,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: FadeToWhite()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9845,11 +9847,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(camaraPuertaLevadiza,true);
 
-          BajarPuertas()'
+          AnimatorPlay(Bajar,PuertaLevadiza)'
         type: 0
         typeString: 
       - title: EventGuid
-        value: bce48e05-8a3c-4669-b79e-39cdea6366f6
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -9908,7 +9910,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: a0ca7d0c-eac0-4419-8b69-b855c16beced
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -9936,7 +9938,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 980.2034
+        x: 981.8984
         y: 326.5115
         width: 160
         height: 30
@@ -10072,11 +10074,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: d82361c4-0030-4797-a41f-1623baf53373
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10094,7 +10096,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10135,7 +10137,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 7e1936b5-9a51-47dc-8b50-96a84dcab2c7
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10239,11 +10241,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 7e21ccfa-91b6-40de-9943-4b56f0470b3a
+        value: 
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10261,7 +10267,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Comida")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10354,11 +10360,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 080cd2a9-8c95-43fb-8629-6585998a5aa8
+        value: 
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10376,7 +10386,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10630,11 +10640,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,false)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 151371de-f763-41a7-944d-f75dd25cbd6e
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10652,7 +10662,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10851,11 +10861,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 9a0347e4-59ba-45a4-8895-f759cd930b13
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10873,7 +10883,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("BicifijoRoto")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10910,11 +10920,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CamaraInventario,true)
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
-        value: 52ecdbc5-4a45-4d78-9b0c-ab08ef0b9580
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10932,7 +10942,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Brazo")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10951,7 +10961,7 @@ MonoBehaviour:
         width: 575.2711
         height: 875.2716
       color: {r: 0, g: 0, b: 0, a: 1}
-    canvasScrollPosition: {x: 10.169495, y: 0}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.59
   - id: 5
     fields:
@@ -11501,7 +11511,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 75bc2208-633f-4ae4-a2f0-126990d1dfe6
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -11784,7 +11794,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 07bc5f7d-3ab7-4a4e-8037-01ce447efd60
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -11810,8 +11820,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 924.318
-        y: 162.04547
+        x: 925.4674
+        y: 160.89603
         width: 160
         height: 30
     - id: 24
@@ -11860,7 +11870,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: FadeToWhite()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11901,7 +11911,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: aac64a22-7f02-4763-b2a7-c51e5cab9f77
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -11913,7 +11923,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13500,13 +13510,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(CamaraManoli,false);
+        value: 'SetActive(CamaraManoliCara,false);
 
           SetActive(CamaraPaqui,true)'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 2e4f2d20-2ea2-47a3-8970-b230eae75202
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -13570,7 +13580,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: ad9666dd-3ea6-4345-9a4b-8f57e1138acb
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13588,10 +13598,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'AgregarAlInventario("Brazo");
+      userScript: 'SetQuestState("Consigue un brazo", "returnToNPC");
 
-        SetQuestState("Consigue
-        un brazo", "returnToNPC")'
+        FadeToBlack()'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13632,7 +13641,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: f09e4b27-9a85-43af-b44f-c0a9ba497126
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13650,7 +13659,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'AgregarAlInventario("Brazo");
+
+        MirarObjetoInventario("Brazo")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13691,7 +13702,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 0e9b56a4-b3ad-4dbb-9bac-ac4325a91fdd
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13709,7 +13720,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: FadeToBlack()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13750,7 +13761,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 136d4102-a487-4e44-a79d-ff8275715e71
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13768,13 +13779,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: FadeToWhite()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1114.1299
+        x: 1115.2793
         y: 310.33438
         width: 160
         height: 30
@@ -13805,11 +13816,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Continue()@0.5
+        value: 'SetActive(CamaraManoli,false);
+
+          SetActive(CamaraManoliQue,true);
+
+          Continue()@0.5'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 0a17d5c8-fbbd-49ad-b516-e6f100a9b55c
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13864,11 +13879,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Continue()@0.5
+        value: 'SetActive(CamaraManoliQue,false);
+
+          SetActive(CamaraManoliTe,true);
+
+          Continue()@0.5'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 0e55eaec-4a1f-40c9-9613-e478635d9abd
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13923,11 +13942,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Continue()@0.5
+        value: 'SetActive(CamaraManoliTe,false);
+
+          SetActive(CamaraManoliFalta,true);
+
+          Continue()@0.5'
         type: 0
         typeString: 
       - title: EventGuid
-        value: fcd8822b-0e45-4cb4-b1b7-0b3378c02ba0
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -13982,11 +14005,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Continue()@0.5
+        value: 'SetActive(CamaraManoliFalta,false);
+
+          SetActive(CamaraManoliMedia,true);
+
+          Continue()@0.5'
         type: 0
         typeString: 
       - title: EventGuid
-        value: 3ffcafe0-391e-4639-bdd3-c640c2a12ec8
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -14041,11 +14068,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraManoliMedia,false);
+
+          SetActive(CamaraManoliCara,true)'
         type: 0
         typeString: 
       - title: EventGuid
-        value: d75e6b13-eecd-46d1-b71b-0e3d635c8cba
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -14180,7 +14209,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14221,7 +14250,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 9c081268-240d-4b96-9b92-ba66d7cda6c8
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -14493,7 +14522,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: c33f2d80-a203-4320-9ea6-bcd3adfc0545
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -14511,7 +14540,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Comida")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14552,7 +14581,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 81a1b8ca-d910-4eae-9cb8-b1e6777fbb90
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -14570,7 +14599,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("BicifijoRoto")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14612,7 +14641,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: f74f4fc6-0706-460e-b2cd-c430575412b0
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -14624,7 +14653,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15180,7 +15209,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: a15675ef-eac7-4a5f-80cf-8040be8f2d03
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15204,7 +15233,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15245,7 +15274,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 3d88e73b-a011-4544-a2d1-412d48afed46
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15354,7 +15383,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 9b6aecc4-1c91-4c9d-bf45-7531ce5d10ad
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15413,7 +15442,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 39ceef76-0d7a-4919-b4ec-e8955eed4cba
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15431,8 +15460,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: "AgregarAlInventario(\"Comida\");\nSetQuestState(\"Ll\xE9vale la
-        comida a la pareja de Paco\", \"active\")"
+      userScript: "SetQuestState(\"Ll\xE9vale la comida a la pareja de Paco\", \"active\");\nAgregarAlInventario(\"Comida\");\nMirarObjetoInventario(\"Comida\")"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15689,7 +15717,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: afdb49e0-b65d-4d42-91f1-0f9caf10598a
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15748,7 +15776,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 34545115-ca95-4e03-87ab-c17db87b9750
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15760,7 +15788,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15802,7 +15830,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 059ac04d-6e96-43cf-8844-75a229ade657
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15823,7 +15851,11 @@ MonoBehaviour:
       userScript: 'AgregarAlInventario("BicifijoArreglado");
 
         SetQuestState("Arregla
-        el bicifijo", "returnToNPC")'
+        el bicifijo", "returnToNPC");
+
+        MirarObjetoInventario("BicifijoArreglado");
+
+        FadeToBlack()'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15865,7 +15897,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 621f4993-7a5f-475e-befc-78fc64291032
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -15883,7 +15915,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: FadeToWhite()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16146,7 +16178,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: bda5b9a4-be9c-40d5-8fb6-8d5eb577e251
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -16164,7 +16196,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16304,7 +16336,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: ba32334a-37aa-4760-9f9e-f15116b5214f
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -16322,7 +16354,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("BicifijoRoto")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16363,7 +16395,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: da41a5b0-2613-4123-8899-1a16a4e05eaf
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -16381,7 +16413,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Brazo")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16423,7 +16455,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 97089080-3613-4c31-a26b-c94aaffeb5af
+        value: 
         type: 0
         typeString: 
       conversationID: 4
@@ -16435,7 +16467,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18091,7 +18123,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: b2828ef6-093a-4f69-98ef-3fd213f453bf
+        value: 
         type: 0
         typeString: 
       conversationID: 11
@@ -18109,7 +18141,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18207,7 +18239,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: da70f35e-84c8-4fc7-b243-3ff7683448be
+        value: 
         type: 0
         typeString: 
       conversationID: 11
@@ -18261,7 +18293,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 154d426a-ff8f-4570-b40d-e29fe747ffd5
+        value: 
         type: 0
         typeString: 
       conversationID: 11
@@ -18279,7 +18311,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19473,7 +19505,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 2d0e0a82-76c1-4d9d-a8ef-11b9e036ae55
+        value: 
         type: 0
         typeString: 
       conversationID: 11
@@ -19491,7 +19523,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("Brazo")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19532,7 +19564,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 7175bab9-f51a-42bd-aa4f-0e03ef59c31d
+        value: 
         type: 0
         typeString: 
       conversationID: 11
@@ -19550,7 +19582,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("BicifijoRoto")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19561,7 +19593,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.25}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.8
   - id: 12
     fields:

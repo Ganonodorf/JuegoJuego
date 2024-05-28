@@ -59,6 +59,7 @@ namespace Constantes
      */
     public static class Player
     {
+        public const string TAG_PLAYER = "Player";
         public const string NOMBRE_GO = "CarPlayer";
     }
 
@@ -67,9 +68,13 @@ namespace Constantes
      */
     public static class Camaras
     {
-        public const string CAMARA_EXTERIORES_NOMBRE_GO = "CamaraExteriores";
-        public const string CAMARA_INTERIORES_NOMBRE_GO = "CamaraInteriores";
+        public const string TAG_CAMARA_EXTERIORES = "CamaraExteriores";
+        public const string TAG_CAMARA_INTERIORES = "CamaraInteriores";
         public const string TAG_CAMARA_CORTES = "CamaraCortes";
+        public const string TAG_CAMARA_INVENTARIO = "CamaraInventario";
+
+        public const string ANIMACION_FADE_TO_BLACK = "FadeToBlack";
+        public const string ANIMACION_FADE_TO_WHITE = "FadeToWhite";
     }
 
     /*
@@ -82,6 +87,7 @@ namespace Constantes
 
     public static class Objetos
     {
+        public const string TAG_OBJETO_RECOGIBLE = "Recogible";
         public const string TAG_PUERTA_LEVADIZA = "PuertaLevadiza";
     }
 }
