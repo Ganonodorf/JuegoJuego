@@ -24030,10 +24030,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 11046288505341413, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 890973572091026542, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1706459762}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
 --- !u!1 &1444089568 stripped
 GameObject:
@@ -26800,32 +26797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1706459759 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 890973572091026542, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
-  m_PrefabInstance: {fileID: 1439588324}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1706459762
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706459759}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.48, y: 3.28, z: 7.4}
-  m_Center: {x: 0, y: -1.2, z: 0}
 --- !u!1 &1710141001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4304945355531682896, guid: e288be648ca624ab49602d278e3bfecb, type: 3}
@@ -33536,7 +33507,7 @@ PrefabInstance:
       objectReference: {fileID: 536686954}
     - target: {fileID: 9090476113846793906, guid: 40772021c39ec4ba49cf29445136e4b9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.39202628
+      value: 0.39202625
       objectReference: {fileID: 0}
     - target: {fileID: 9090476113846793906, guid: 40772021c39ec4ba49cf29445136e4b9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -33548,7 +33519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090476113846793906, guid: 40772021c39ec4ba49cf29445136e4b9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.14891437
+      value: -0.1489144
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
