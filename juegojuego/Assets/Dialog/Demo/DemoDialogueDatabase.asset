@@ -20694,7 +20694,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Pero igualmente ser\xEDa divertido."
+        value: "Igualmente ser\xEDa divertido."
         type: 0
         typeString: 
       - title: Sequence
@@ -20708,7 +20708,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 21
+        destinationConversationID: 12
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20743,7 +20749,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFQuieres que te traiga otros cacharros para hacer eso?"
+        value: "Pero claro. Ser\xEDa mejor hacerlo con cacharros que ya est\xE9n
+          rotos o no sirvan."
         type: 0
         typeString: 
       - title: Sequence
@@ -20765,13 +20772,62 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 944.48553
-        y: 290.0353
+        x: 972.1231
+        y: 326.8851
+        width: 160
+        height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 13
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 717.5207
+        y: 345.8549
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 140.26648, y: 0}
-    canvasZoom: 1.0309967
+    canvasScrollPosition: {x: 168.60573, y: 15.53304}
+    canvasZoom: 1.085491
   - id: 13
     fields:
     - title: Title
