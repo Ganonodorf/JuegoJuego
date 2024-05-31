@@ -27,9 +27,9 @@ RenderSettings:
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.05685045, g: 0.33962262, b: 0.036845855, a: 1}
   m_SkyboxMaterial: {fileID: 0}
-  m_HaloStrength: 0.51
-  m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
+  m_HaloStrength: 0
+  m_FlareStrength: 0
+  m_FlareFadeSpeed: 0
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
@@ -5227,11 +5227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000042715236
+      value: -0.0000000042715227
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -5.07752e-10
+      value: 5.077519e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1473409532707863855, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Name
@@ -58487,11 +58487,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008543047
+      value: -0.000000008543047
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000010155041
+      value: 0.0000000010155041
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70425,11 +70425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018870892
+      value: 0.000000018870892
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000037368117
+      value: -0.0000000037368117
       objectReference: {fileID: 0}
     - target: {fileID: 3229794659023920547, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70505,11 +70505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000016746096
+      value: -0.000000016746089
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000039532173
+      value: 0.0000000039532155
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74475,8 +74475,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 457969948277275984, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Flare
+      value: 
+      objectReference: {fileID: 12100000, guid: 507baf44d3895488e8f00aa511f7d980, type: 2}
+    - target: {fileID: 457969948277275984, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Range
+      value: 4.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 457969948277275984, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Cookie
+      value: 
+      objectReference: {fileID: 8900000, guid: e16f6f3cfb18645678088ee007790938, type: 3}
+    - target: {fileID: 457969948277275984, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 457969948277275984, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_DrawHalo
@@ -74484,7 +74496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 457969948277275984, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_Intensity
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 457969948277275984, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_RenderMode
@@ -74526,9 +74538,41 @@ PrefabInstance:
       propertyPath: sidewaysGripCurve.m_Curve.Array.data[3].value
       value: 0.09951782
       objectReference: {fileID: 0}
+    - target: {fileID: 1281318652122649270, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281318652122649270, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281318652122649270, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348713118325859190, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348713118325859190, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727208124479263680, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Flare
+      value: 
+      objectReference: {fileID: 12100000, guid: 507baf44d3895488e8f00aa511f7d980, type: 2}
+    - target: {fileID: 2727208124479263680, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Range
+      value: 4.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727208124479263680, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Cookie
+      value: 
+      objectReference: {fileID: 8900000, guid: e16f6f3cfb18645678088ee007790938, type: 3}
     - target: {fileID: 2727208124479263680, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2727208124479263680, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_DrawHalo
@@ -74536,7 +74580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2727208124479263680, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_Intensity
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2727208124479263680, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_RenderMode
@@ -91567,7 +91611,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6133531584122230075, guid: c317d7081aea28e47b03db24092ec9b9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133531584122230075, guid: c317d7081aea28e47b03db24092ec9b9, type: 3}
       propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133531584122230075, guid: c317d7081aea28e47b03db24092ec9b9, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7950440669643234919, guid: c317d7081aea28e47b03db24092ec9b9, type: 3}
@@ -91806,6 +91858,10 @@ PrefabInstance:
     - target: {fileID: 1556243983205528504, guid: 7ff22168e600a4da6afd628e2aa541bf, type: 3}
       propertyPath: m_BounceIntensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556243983205528504, guid: 7ff22168e600a4da6afd628e2aa541bf, type: 3}
+      propertyPath: m_Shadows.m_Resolution
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1952172239857107131, guid: 7ff22168e600a4da6afd628e2aa541bf, type: 3}
       propertyPath: m_Name
