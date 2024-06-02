@@ -14,6 +14,9 @@ public class RadDetectorLight : MonoBehaviour
 
     [SerializeField] private float maxDistanceToTarget;
 
+    [SerializeField] private float animSpeedFactor;
+
+
     [SerializeField] AnimationCurve lightPowerCurve;
 
 
@@ -31,10 +34,13 @@ public class RadDetectorLight : MonoBehaviour
             float lightPower = lightPowerCurve.Evaluate(DistanceToTarget(target) / maxDistanceToTarget);
             SetLightIntensity(minIntensity + lightPower * maxIntensity);
             SetLightRange(minRange + lightPower * maxRange);
+            float lightAnimSpeed = 1 + lightPower * animSpeedFactor;
+            SetAnimSpeed(lightAnimSpeed);
         } else
         {
             SetLightIntensity(minIntensity);
             SetLightRange(minRange);
+            SetAnimSpeed(1);
         }
     }
 
@@ -52,6 +58,11 @@ public class RadDetectorLight : MonoBehaviour
     private void SetLightRange (float lightRangeValue)
     {
         GetComponent<Light>().range = lightRangeValue;
+    }
+
+    private void SetAnimSpeed (float lightAnimSpeedValue)
+    {
+        GetComponent<Animator>().speed = lightAnimSpeedValue;
     }
 
 
