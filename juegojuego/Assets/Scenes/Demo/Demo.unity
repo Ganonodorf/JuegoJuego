@@ -5481,11 +5481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000042715227
+      value: 0.0000000042715236
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 5.077519e-10
+      value: -5.07752e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1473409532707863855, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Name
@@ -5589,11 +5589,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001762873
+      value: 0.000000017628716
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000001947142
+      value: -0.0000000019471404
       objectReference: {fileID: 0}
     - target: {fileID: 5760978350698776369, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_BindingMode
@@ -59216,11 +59216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008543047
+      value: 0.000000008543047
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000010155041
+      value: -0.0000000010155041
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -71271,11 +71271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000016746096
+      value: -0.000000016746089
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000039532173
+      value: 0.0000000039532155
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -75624,8 +75624,48 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 11046288505341413, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 581801462767262613, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1439588328}
+    - targetCorrespondingSourceObject: {fileID: 115800989064139470, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1439588327}
   m_SourcePrefab: {fileID: 100100000, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+--- !u!1 &1439588325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 115800989064139470, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+  m_PrefabInstance: {fileID: 1439588324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1439588326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 581801462767262613, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+  m_PrefabInstance: {fileID: 1439588324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!122 &1439588327
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439588325}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4279501026
+  m_Size: 0.7
+--- !u!122 &1439588328
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439588326}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 0.7
 --- !u!1001 &1439913491
 PrefabInstance:
   m_ObjectHideFlags: 0
