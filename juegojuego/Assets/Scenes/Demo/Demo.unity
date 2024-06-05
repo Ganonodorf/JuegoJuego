@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.9254902, g: 0.76217747, b: 0.30980393, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.015
+  m_FogDensity: 0.008
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.09433961, g: 0.077335574, b: 0.01735493, a: 1}
@@ -5764,11 +5764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.06331311
+      value: -0.06331308
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.04043953
+      value: 0.04043951
       objectReference: {fileID: 0}
     - target: {fileID: 2882686189905894493, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_TrackedObjectOffset.y
@@ -59521,7 +59521,7 @@ PrefabInstance:
     - target: {fileID: 1661512793734883094, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8400000, guid: 6f06fe6d8790b400cbe993a01811ebe9, type: 2}
     - target: {fileID: 1661512793734883094, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: near clip plane
       value: 0.01
@@ -71558,7 +71558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.327113
+      value: 0.32711297
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
@@ -71566,7 +71566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.048164494
+      value: -0.048164498
       objectReference: {fileID: 0}
     - target: {fileID: 3229794659023920547, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91027,7 +91027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2040356133
 RectTransform:
   m_ObjectHideFlags: 0
