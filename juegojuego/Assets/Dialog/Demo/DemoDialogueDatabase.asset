@@ -532,6 +532,38 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+  - id: 5
+    fields:
+    - title: Name
+      value: Lleva el Malino a la casa de la amiga artista
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: "Juan El Pipo ten\xEDa una amiga con la que hac\xEDa proyectos art\xEDsticos
+        pero ha desaparecido. Quiere que lleves esta escultura de la amiga a su casa
+        ahora deshabitada."
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
   locations:
   - id: 1
     fields:
@@ -19771,8 +19803,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 157.20929
-        y: 95.873886
+        x: 169.10129
+        y: 77.495346
         width: 160
         height: 30
     - id: 3
@@ -19820,14 +19852,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Intro_Chatarrero_Agua"] == false
-      userScript: 
+      userScript: Variable["Intro_Juan_El_Pipo"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 154
-        y: 156
+        x: 168.05423
+        y: 292.2174
         width: 160
         height: 30
     - id: 4
@@ -19887,8 +19919,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 157.83508
-        y: 226
+        x: 171.88931
+        y: 363.2985
         width: 160
         height: 30
     - id: 5
@@ -19942,14 +19974,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Intro_Chatarrero_Agua"] == false
-      userScript: Variable["Intro_Juan_El_Pipo"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 93.91345
-        y: 288.95895
+        x: 221.09404
+        y: 424.53033
         width: 160
         height: 30
     - id: 9
@@ -20004,8 +20036,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 406.6342
-        y: 278.26602
+        x: 559.1477
+        y: 341.82635
         width: 160
         height: 30
     - id: 10
@@ -20060,8 +20092,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 405.71634
-        y: 327.25232
+        x: 558.22986
+        y: 391.9968
         width: 160
         height: 30
     - id: 11
@@ -20115,8 +20147,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 405.71634
-        y: 378.266
+        x: 558.22986
+        y: 441.82632
         width: 160
         height: 30
     - id: 12
@@ -20168,6 +20200,12 @@ MonoBehaviour:
         destinationDialogueID: 16
         isConnector: 0
         priority: 2
+      - originConversationID: 12
+        originDialogueID: 12
+        destinationConversationID: 12
+        destinationDialogueID: 31
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20175,8 +20213,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 404.23367
-        y: 424.51065
+        x: 556.7472
+        y: 488.07098
         width: 160
         height: 30
     - id: 13
@@ -20184,11 +20222,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 13
         type: 0
@@ -20200,20 +20238,20 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Toma, te lo pongo en los asientos de atr\xE1s. Para ver las cosas
           que llevas, pulsa la tecla I"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
         value: 57c8fe7a-1d04-4c35-ad22-319d912d3149
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -20235,8 +20273,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 405.21115
-        y: 567.76654
+        x: 553.4096
+        y: 660.4538
         width: 160
         height: 30
     - id: 14
@@ -20329,7 +20367,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 15
+        destinationConversationID: 12
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20337,8 +20381,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 405.21115
-        y: 618.32794
+        x: 553.4096
+        y: 711.0152
         width: 160
         height: 30
     - id: 16
@@ -20390,15 +20434,17 @@ MonoBehaviour:
         destinationDialogueID: 17
         isConnector: 0
         priority: 2
-      conditionsString: 
-      userScript: 
+      conditionsString: CurrentQuestState("Lleva el Malino a la casa de la amiga
+        artista") == "unassigned"
+      userScript: SetQuestState("Lleva el Malino a la casa de la amiga artista",
+        "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 405.5914
-        y: 472.01315
+        x: 554.8386
+        y: 564.7004
         width: 160
         height: 30
     - id: 17
@@ -20456,8 +20502,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 531.15344
-        y: 522.0132
+        x: 554.81415
+        y: 611.44763
         width: 160
         height: 30
     - id: 18
@@ -20512,8 +20558,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1234.0878
-        y: 117.73341
+        x: 1440.2607
+        y: 111.71379
         width: 160
         height: 30
     - id: 19
@@ -20568,8 +20614,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1234.0878
-        y: 167.73341
+        x: 1440.2607
+        y: 161.71379
         width: 160
         height: 30
     - id: 20
@@ -20629,8 +20675,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1235.3339
-        y: 221.47176
+        x: 1441.5068
+        y: 215.45213
         width: 160
         height: 30
     - id: 21
@@ -20684,8 +20730,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1070.1687
-        y: 287.13214
+        x: 1447.9016
+        y: 266.06348
         width: 160
         height: 30
     - id: 22
@@ -20734,8 +20780,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1324.771
-        y: 318.16235
+        x: 1624.2485
+        y: 262.4807
         width: 160
         height: 30
     - id: 23
@@ -20783,8 +20829,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1070.1687
-        y: 337.13214
+        x: 1447.9016
+        y: 316.06348
         width: 160
         height: 30
     - id: 24
@@ -20824,7 +20870,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 24
+        destinationConversationID: 12
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20832,8 +20884,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1
-        y: 343.39252
+        x: 305.84323
+        y: 479.39246
         width: 160
         height: 30
     - id: 25
@@ -20887,8 +20939,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 93.5533
-        y: 395.86072
+        x: 220.73389
+        y: 531.4321
         width: 160
         height: 30
     - id: 26
@@ -20942,8 +20994,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159.27586
-        y: 455.3992
+        x: 173.3301
+        y: 592.69763
         width: 160
         height: 30
     - id: 27
@@ -20998,8 +21050,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159.27586
-        y: 505.3992
+        x: 173.3301
+        y: 642.69763
         width: 160
         height: 30
     - id: 28
@@ -21025,7 +21077,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oh... Bueno voy a ver qu\xE9 hay fuera. Adi\xF3s."
+        value: Oh... Bueno me voy.
         type: 0
         typeString: 
       - title: Sequence
@@ -21041,14 +21093,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Intro_Juan_El_Pipo"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 595.5721
-        y: 233.50964
+        x: 993.26074
+        y: 292.74567
         width: 160
         height: 30
     - id: 29
@@ -21103,8 +21155,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 407.02054
-        y: 227.14607
+        x: 558.4853
+        y: 289.6576
         width: 160
         height: 30
     - id: 30
@@ -21158,13 +21210,70 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 216.35054
-        y: 563.9713
+        x: 213.13359
+        y: 702.9968
+        width: 160
+        height: 30
+    - id: 31
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 13
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Eso que llevas dentro. El malino ese. Es suyo. Porfa, ll\xE9vaselo
+          a su casa y lo dejas all\xED, aunque est\xE9 vac\xEDa. No quiero tenerlo
+          aqu\xED."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 31
+        destinationConversationID: 12
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 736.72687
+        y: 565.0401
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 78.031075}
-    canvasZoom: 1.1579981
+    canvasScrollPosition: {x: 125.38681, y: 90.16256}
+    canvasZoom: 1.1044883
   - id: 13
     fields:
     - title: Title
