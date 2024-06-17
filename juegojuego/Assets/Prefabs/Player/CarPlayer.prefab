@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 5400939658967681068}
   - component: {fileID: 3271391335263239038}
   - component: {fileID: 6351085856233091538}
-  - component: {fileID: 8239123695826566924}
   m_Layer: 0
   m_Name: CarTurnAround
   m_TagString: Untagged
@@ -298,28 +297,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.48, y: 3.28, z: 7.4}
-  m_Center: {x: 0, y: -1.2, z: 0}
---- !u!65 &8239123695826566924
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890973572091026542}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
