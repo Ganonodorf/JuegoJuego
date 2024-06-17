@@ -5724,11 +5724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.01541289
+      value: 0.015412938
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0043189838
+      value: -0.0043189973
       objectReference: {fileID: 0}
     - target: {fileID: 1473409532707863855, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Name
@@ -59354,11 +59354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.015412893
+      value: 0.01541294
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0043189856
+      value: -0.0043189987
       objectReference: {fileID: 0}
     - target: {fileID: 230399308031340123, guid: 9cd353932c9144cf3aa209d37197a327, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70168,7 +70168,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2813848560885969247, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2027222231}
   m_SourcePrefab: {fileID: 100100000, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
 --- !u!1 &1237256840
 GameObject:
@@ -76642,6 +76645,30 @@ PrefabInstance:
     - target: {fileID: 4641286769806200809, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: maxGripSidewaysVelocity
       value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: actor
+      value: Jugador
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: standardDialogueUISettings.subtitleColor.b
+      value: 0.18823424
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: standardDialogueUISettings.subtitleColor.g
+      value: 0.5319047
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: standardDialogueUISettings.subtitleColor.r
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: standardDialogueUISettings.prependActorNameFormat
+      value: '{1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: standardDialogueUISettings.applyColorToPrependedName
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4958607775382944743, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_Radius
@@ -92286,6 +92313,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025705040}
   m_Mesh: {fileID: 1969476169269212006, guid: e288be648ca624ab49602d278e3bfecb, type: 3}
+--- !u!1 &2027222225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2813848560885969247, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
+  m_PrefabInstance: {fileID: 1230453326}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2027222231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027222225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794a8c00492a04eec9a20f616034541b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029804993
 GameObject:
   m_ObjectHideFlags: 0
