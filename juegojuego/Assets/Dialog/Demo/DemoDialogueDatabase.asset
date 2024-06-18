@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Dialogos de la demo del juegojuego
   globalUserScript: 
   emphasisSettings:
-  - color: {r: 1, g: 1, b: 1, a: 1}
+  - color: {r: 0.31132078, g: 0.2712483, b: 0.14244395, a: 1}
     bold: 0
     italic: 0
     underline: 0
@@ -20506,15 +20506,15 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["ORRadDetector"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1184.3475
-        y: 200.54979
+        x: 1245.4733
+        y: 376.59183
         width: 160
         height: 30
     - id: 19
@@ -20569,8 +20569,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1184.3475
-        y: 250.54977
+        x: 1246.2883
+        y: 426.5918
         width: 160
         height: 30
     - id: 20
@@ -20617,12 +20617,6 @@ MonoBehaviour:
         destinationDialogueID: 21
         isConnector: 0
         priority: 2
-      - originConversationID: 12
-        originDialogueID: 20
-        destinationConversationID: 12
-        destinationDialogueID: 22
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20630,8 +20624,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1185.5936
-        y: 304.28815
+        x: 1247.5344
+        y: 480.33023
         width: 160
         height: 30
     - id: 21
@@ -20685,58 +20679,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1191.9884
-        y: 354.89948
-        width: 160
-        height: 30
-    - id: 22
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 13
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "Pero claro. Ser\xEDa mejor hacerlo con cacharros que ya est\xE9n
-          rotos o no sirvan."
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1368.3353
-        y: 351.3167
+        x: 1253.9292
+        y: 530.9415
         width: 160
         height: 30
     - id: 23
@@ -20762,7 +20706,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Ya ves.
         type: 0
         typeString: 
       - title: Sequence
@@ -20776,7 +20720,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 23
+        destinationConversationID: 12
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20784,8 +20734,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1191.9884
-        y: 404.89948
+        x: 1253.1138
+        y: 577.6816
         width: 160
         height: 30
     - id: 24
