@@ -5760,15 +5760,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.32755607
+      value: 0.3275561
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.008212394
+      value: 0.008212368
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0028472089
+      value: -0.0028471998
       objectReference: {fileID: 0}
     - target: {fileID: 2882686189905894493, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_TrackedObjectOffset.y
@@ -5832,11 +5832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.012626799
+      value: 0.012626832
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00352931
+      value: -0.0035293195
       objectReference: {fileID: 0}
     - target: {fileID: 5760978350698776369, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_BindingMode
@@ -8577,6 +8577,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a9d00aed8ab694527b9b853d100320e9, type: 3}
       propertyPath: m_Name
       value: ORCrocodileCostumeFolded
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9d00aed8ab694527b9b853d100320e9, type: 3}
+      propertyPath: m_TagString
+      value: Recogible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -69819,6 +69823,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: 4f174218-f95b-4420-a212-9ca36c89dcff
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1936310001}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1216399559
 Transform:
   m_ObjectHideFlags: 0
@@ -72420,15 +72440,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2325687
+      value: 0.23256868
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00009231098
+      value: 0.000092281756
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00002207391
+      value: -0.00002206692
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -96462,7 +96482,7 @@ GameObject:
   - component: {fileID: 7049984224516566603}
   m_Layer: 0
   m_Name: ORRadDetector
-  m_TagString: Untagged
+  m_TagString: Recogible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96675,6 +96695,10 @@ PrefabInstance:
     - target: {fileID: 2602881597246635254, guid: d2268b4f2ebb94468b6438267aadefa8, type: 3}
       propertyPath: m_Name
       value: ORMalino
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602881597246635254, guid: d2268b4f2ebb94468b6438267aadefa8, type: 3}
+      propertyPath: m_TagString
+      value: Recogible
       objectReference: {fileID: 0}
     - target: {fileID: 5694148077782757775, guid: d2268b4f2ebb94468b6438267aadefa8, type: 3}
       propertyPath: m_Enabled

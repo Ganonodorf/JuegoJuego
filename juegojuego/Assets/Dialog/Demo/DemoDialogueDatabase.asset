@@ -20330,7 +20330,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21151,6 +21151,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 4f174218-f95b-4420-a212-9ca36c89dcff
+        type: 0
+        typeString: 
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -21166,7 +21170,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MirarObjetoInventario("ORMalino")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21199,7 +21203,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFQu\xE9 hago con la cosa esta? [Le ense\xF1as el malino]"
+        value: "\xBFQu\xE9 hago con la cosa esta, entonces? [Le ense\xF1as el malino]"
         type: 0
         typeString: 
       - title: Sequence
@@ -21288,8 +21292,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.2269797
+    canvasScrollPosition: {x: 12.484783, y: 172.2903}
+    canvasZoom: 1.018991
   - id: 13
     fields:
     - title: Title
