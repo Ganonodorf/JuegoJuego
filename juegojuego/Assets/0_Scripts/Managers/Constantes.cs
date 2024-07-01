@@ -61,6 +61,8 @@ namespace Constantes
     {
         public const string TAG_PLAYER = "Player";
         public const string NOMBRE_GO = "CarPlayer";
+
+        public const string TAG_REAR_WHEELS = "RearWheel";
     }
 
     /*
@@ -89,5 +91,10 @@ namespace Constantes
     {
         public const string TAG_OBJETO_RECOGIBLE = "Recogible";
         public const string TAG_PUERTA_LEVADIZA = "PuertaLevadiza";
+    }
+
+    public static class Debug
+    {
+        public const string TAG_DEBUG_UI = "Debug";
     }
 }
