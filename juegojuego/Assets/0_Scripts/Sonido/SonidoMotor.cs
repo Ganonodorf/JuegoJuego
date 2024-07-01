@@ -29,7 +29,7 @@ public class SonidoMotor : MonoBehaviour
     private void AcutalizarSonido()
     {
         actualVel = jugadorRigidBody.velocity.magnitude;
-        actualPitch = actualVel / 50.0f;
+        actualPitch = actualVel / 20.0f;
 
         if(actualVel < minVel)
         {
