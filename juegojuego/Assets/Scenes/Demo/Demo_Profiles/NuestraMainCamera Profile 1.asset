@@ -52,81 +52,6 @@ MonoBehaviour:
   quality:
     overrideState: 0
     value: 2
---- !u!114 &-1411584423654026305
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
-  m_Name: Grain
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  colored:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 0.289
-  size:
-    overrideState: 1
-    value: 1
-  lumContrib:
-    overrideState: 1
-    value: 1
---- !u!114 &-745064247684203466
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 4.05
-  threshold:
-    overrideState: 1
-    value: 0.49
-  softKnee:
-    overrideState: 1
-    value: 0.53
-  clamp:
-    overrideState: 0
-    value: 65472
-  diffusion:
-    overrideState: 1
-    value: 8.5
-  anamorphicRatio:
-    overrideState: 1
-    value: 1
-  color:
-    overrideState: 1
-    value: {r: 0.95773786, g: 0.8345746, b: 0.99622643, a: 1}
-  fastMode:
-    overrideState: 1
-    value: 0
-  dirtTexture:
-    overrideState: 0
-    value: {fileID: 2800000, guid: 3d3b4b1d32565c944b0452176b513899, type: 3}
-    defaultState: 1
-  dirtIntensity:
-    overrideState: 0
-    value: 2.18
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +67,6 @@ MonoBehaviour:
   settings:
   - {fileID: 5047751527349420488}
   - {fileID: 4712628717243910008}
-  - {fileID: -745064247684203466}
-  - {fileID: -1411584423654026305}
   - {fileID: -6341128062360369480}
   - {fileID: 5224692572335235571}
   - {fileID: 1222419464595815927}
@@ -174,7 +97,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.445
+    value: 0.458
   smoothness:
     overrideState: 1
     value: 1
