@@ -75,10 +75,15 @@ crashlytics-build.properties
 
 # PixelCrushers ThirdPartySupport
 
-[Aa]ssets/Plugins/Pixel\ Crushers/Common/Third\ Party\ Support
-[Aa]ssets/Plugins/Pixel\ Crushers/Dialogue\ System/Third\ Party\ Support
+[Aa]ssets/Plugins/Pixel*Crushers/Common/Third*Party*Support
+[Aa]ssets/Plugins/Pixel*Crushers/Dialogue*System/Third*Party*Support
 
 # -----
 
 # Mac specific ignores:
 *.DS_Store
+
+# -----
+
+# Probuilder:
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
