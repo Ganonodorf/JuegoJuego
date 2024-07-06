@@ -568,6 +568,36 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+  - id: 6
+    fields:
+    - title: Name
+      value: Encontrar la Cabeza Perdida
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Encuentra la Cabeza nuclear perdida en la costa.
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
   locations:
   - id: 1
     fields:
@@ -21845,7 +21875,7 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["ORMalino"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -22253,8 +22283,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 732.1002
-        y: 219.81955
+        x: 1027.0171
+        y: 151.17513
         width: 160
         height: 30
     - id: 16
@@ -22312,8 +22342,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 732.1002
-        y: 269.81955
+        x: 1027.0171
+        y: 201.17513
         width: 160
         height: 30
     - id: 17
@@ -22367,8 +22397,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 733.1002
-        y: 318.84106
+        x: 1028.0171
+        y: 250.19662
         width: 160
         height: 30
     - id: 18
@@ -22422,8 +22452,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 732.1002
-        y: 368.841
+        x: 1027.0171
+        y: 300.19656
         width: 160
         height: 30
     - id: 19
@@ -22477,8 +22507,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 732.1002
-        y: 418.84082
+        x: 1027.0171
+        y: 350.19638
         width: 160
         height: 30
     - id: 20
@@ -22642,7 +22672,7 @@ MonoBehaviour:
       - originConversationID: 13
         originDialogueID: 22
         destinationConversationID: 13
-        destinationDialogueID: 1
+        destinationDialogueID: 23
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -22652,8 +22682,176 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 191.0932
-        y: 201.21384
+        x: 698.72296
+        y: 357.99435
+        width: 160
+        height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Se ha sabido desde siempre que aqu\xED se enterraron tesoros."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 23
+        destinationConversationID: 13
+        destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 698.72296
+        y: 407.99435
+        width: 160
+        height: 30
+    - id: 24
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Hubo cosas que calleron y se olvidaron o perdieron y que a\xFAn ahora
+          permanecen."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 24
+        destinationConversationID: 13
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 698.72296
+        y: 457.99435
+        width: 160
+        height: 30
+    - id: 25
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Un acontecimiento en el cielo dej\xF3 caer la calaca incandescente
+          que busco. Una cabeza poderosa que descansa en alg\xFAn lugar de por aqu\xED,
+          estoy seguro."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 25
+        destinationConversationID: 13
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 698.72296
+        y: 507.99435
         width: 160
         height: 30
     entryGroups: []
