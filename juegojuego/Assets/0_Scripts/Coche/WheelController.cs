@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class WheelController : MonoBehaviour
@@ -43,12 +45,6 @@ public class WheelController : MonoBehaviour
     [SerializeField] private float driftMaxForwardVelocityMultiplier;
     [SerializeField] private float driftMotorForceMultiplier;
 
-
-
-
-
-
-
     private float wheelAngle;
 
     [Header("Curvas")]
@@ -57,53 +53,23 @@ public class WheelController : MonoBehaviour
     [SerializeField] private AnimationCurve stiffnessCurve;
     [SerializeField] private AnimationCurve inclinationToGripCurve;
 
-    // Start is called before the first frame update
+
+    public AudioClip InicioDerrape;
+    public AudioClip BucleDerrape;
+    public AudioClip FinDerrape;
+
+
     void Start()
     {
         carRigidbody = transform.root.GetComponent<Rigidbody>();
 
-        GestionarInputs();
-
         InicializarVariables();
+
+        GestionarInputs();
     }
-
-    private void InicializarVariables()
-    {
-        maxForwardVelocityFactor = maxForwardVelocity;
-        maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
-        motorForceFactor = motorForce;
-    }
-
-    private void GestionarInputs()
-    {
-        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.performed += contexto => RecogerValorMovimientoFrontal(contexto.ReadValue<Vector2>().y);
-        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled += contexto => ResetValorMovimientoFrontal();
-        InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => AplicarModificadoresDerrape();
-        InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => InicializarVariables();
-    }
-
-    private void AplicarModificadoresDerrape()
-    {
-        maxForwardVelocityFactor = maxForwardVelocity * driftMaxForwardVelocityMultiplier;
-        maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity * driftMaxGripSidewaysMultiplier;
-        motorForceFactor = motorForce * driftMotorForceMultiplier;
-    }
-
-    private void ResetValorMovimientoFrontal()
-    {
-        valorMovimientoFrontal = 0.0f;
-    }
-
-
-    private void RecogerValorMovimientoFrontal(float valorYMovimientoFrontal)
-    {
-        valorMovimientoFrontal = valorYMovimientoFrontal;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if(GameManager.Instance.GetGameState() == GameState.Conduciendo)
+        if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
         {
             ActualizarGiroRueda();
             Debug.DrawRay(transform.position, -transform.up * (lastFrameSpringLength), Color.green);
@@ -119,6 +85,97 @@ public class WheelController : MonoBehaviour
                 WheelForceCalculations(hit);
             }
         }
+    }
+
+    private void Derrapar()
+    {
+        AplicarModificadoresDerrape();
+
+        SonidoDerrape();
+
+        HacerMarcasSuelo(true);
+
+        HacerHumo(true);
+    }
+
+    private void DejarDerrapar()
+    {
+        InicializarVariables();
+
+        SonidoFinDerrape();
+
+        HacerMarcasSuelo(false);
+
+        HacerHumo(false);
+    }
+
+    private void AplicarModificadoresDerrape()
+    {
+        maxForwardVelocityFactor = maxForwardVelocity * driftMaxForwardVelocityMultiplier;
+        maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity * driftMaxGripSidewaysMultiplier;
+        motorForceFactor = motorForce * driftMotorForceMultiplier;
+    }
+
+    private void SonidoDerrape()
+    {
+        if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
+        {
+            AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
+            StartCoroutine(SonidoDerrapeCoroutine(audioSourceRueda));
+        }
+    }
+
+    IEnumerator SonidoDerrapeCoroutine(AudioSource audioSourceRueda)
+    {
+        audioSourceRueda.clip = InicioDerrape;
+        audioSourceRueda.Play();
+        yield return new WaitForSeconds(audioSourceRueda.clip.length);
+        audioSourceRueda.clip = BucleDerrape;
+        audioSourceRueda.Play();
+    }
+
+    private void SonidoFinDerrape()
+    {
+        if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
+        {
+            Debug.Log("A");
+            AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
+            audioSourceRueda.clip = FinDerrape;
+            audioSourceRueda.Play();
+        }
+    }
+
+    private void HacerMarcasSuelo(bool hacerMarcas)
+    {
+        if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
+        {
+            GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
+        }
+    }
+
+    private void HacerHumo(bool hacerHumo)
+    {
+        if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
+        {
+            if(hacerHumo)
+            {
+                GetComponentInChildren<ParticleSystem>().Play();
+            }
+            else
+            {
+                GetComponentInChildren<ParticleSystem>().Stop();
+            }
+        }
+    }
+
+    private void ResetValorMovimientoFrontal()
+    {
+        valorMovimientoFrontal = 0.0f;
+    }
+
+    private void RecogerValorMovimientoFrontal(float valorYMovimientoFrontal)
+    {
+        valorMovimientoFrontal = valorYMovimientoFrontal;
     }
 
     private void WheelForceCalculations(RaycastHit hit)
@@ -236,5 +293,20 @@ public class WheelController : MonoBehaviour
     public void SetSteerAngle(float newSteerAngle)
     {
         steerAngle = newSteerAngle;
+    }
+
+    private void InicializarVariables()
+    {
+        maxForwardVelocityFactor = maxForwardVelocity;
+        maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
+        motorForceFactor = motorForce;
+    }
+
+    private void GestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.performed += contexto => RecogerValorMovimientoFrontal(contexto.ReadValue<Vector2>().y);
+        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled += contexto => ResetValorMovimientoFrontal();
+        InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => Derrapar();
+        InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => DejarDerrapar();
     }
 }
