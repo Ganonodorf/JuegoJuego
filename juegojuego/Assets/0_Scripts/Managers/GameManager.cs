@@ -97,18 +97,6 @@ public class GameManager : MonoBehaviour
     {
         UpdateGameState(GameState.Conduciendo);
     }
-
-    private void RegistrarFuncionesLua()
-    {
-        Lua.RegisterFunction(nameof(UpdateGameStateDialogo), this, SymbolExtensions.GetMethodInfo(() => UpdateGameStateDialogo()));
-    }
-
-    private void DesregistrarFuncionesLua()
-    {
-        // Note: If this script is on your Dialogue Manager & the Dialogue Manager is configured
-        // as Don't Destroy On Load (on by default), don't unregister Lua functions.
-        Lua.UnregisterFunction(nameof(UpdateGameStateDialogo)); // <-- Only if not on Dialogue Manager.
-    }
 }
 
 // Enumerado que contiene los diferentes estados de juego
