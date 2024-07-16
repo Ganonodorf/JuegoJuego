@@ -130,6 +130,7 @@ public class WheelController : MonoBehaviour
         audioSourceRueda.clip = InicioDerrape;
         audioSourceRueda.Play();
         yield return new WaitForSeconds(audioSourceRueda.clip.length);
+        audioSourceRueda.loop = true;
         audioSourceRueda.clip = BucleDerrape;
         audioSourceRueda.Play();
     }
@@ -138,18 +139,23 @@ public class WheelController : MonoBehaviour
     {
         if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
         {
-            Debug.Log("A");
             AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
             audioSourceRueda.clip = FinDerrape;
+            audioSourceRueda.loop = false;
             audioSourceRueda.Play();
         }
     }
 
     private void HacerMarcasSuelo(bool hacerMarcas)
     {
-        if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
+        if(Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, springRestLength))
         {
-            GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
+            Debug.Log("Layer que está tocando: " + hit.transform.gameObject.layer);
+
+            if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS && hit.transform.gameObject.layer == 10)
+            {
+                GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
+            }
         }
     }
 
