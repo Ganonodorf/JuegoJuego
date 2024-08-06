@@ -4483,7 +4483,7 @@ GameObject:
   - component: {fileID: 108796308}
   - component: {fileID: 108796309}
   - component: {fileID: 108796310}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: 3objetoSoltarFront
   m_TagString: PuntoSacarObjetos
   m_Icon: {fileID: 0}
@@ -4518,7 +4518,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32887
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -7713,19 +7713,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14220111
+      value: 0.14220114
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008515764
+      value: -1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000012233834
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1473409532707863855, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Name
       value: CamaraExteriores
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7737,7 +7741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
@@ -7793,11 +7797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017073113
+      value: -0.000000017073113
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000021373876
+      value: 0.0000000021373876
       objectReference: {fileID: 0}
     - target: {fileID: 8673178956274309359, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Follow
@@ -13038,7 +13042,7 @@ GameObject:
   - component: {fileID: 370830316}
   - component: {fileID: 370830317}
   - component: {fileID: 370830318}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: 1objetoSoltarLeft
   m_TagString: PuntoSacarObjetos
   m_Icon: {fileID: 0}
@@ -13073,7 +13077,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32887
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -61133,7 +61137,7 @@ GameObject:
   - component: {fileID: 792849276}
   - component: {fileID: 792849277}
   - component: {fileID: 792849278}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: 2objetoSoltarRight
   m_TagString: PuntoSacarObjetos
   m_Icon: {fileID: 0}
@@ -61168,7 +61172,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32887
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -61527,7 +61531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810311979}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: puntosSoltarObjetos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80089,7 +80093,7 @@ GameObject:
   - component: {fileID: 1316109428}
   - component: {fileID: 1316109429}
   - component: {fileID: 1316109430}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: 5objetoSoltarBack
   m_TagString: PuntoSacarObjetos
   m_Icon: {fileID: 0}
@@ -80124,7 +80128,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32887
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -85352,6 +85356,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 115800989064139470, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 581801462767262613, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 890973572091026542, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1105394507221553457, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -85480,17 +85496,57 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 32768
       objectReference: {fileID: 0}
+    - target: {fileID: 1612535613082811257, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1817663183786688118, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093624138289743370, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290934319630967754, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317532046751036208, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502098974274943597, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969843677502411765, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3132771152651951249, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 32768
       objectReference: {fileID: 0}
+    - target: {fileID: 3223695591891581137, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3352460974172702359, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489513759833165689, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605311796654579801, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709419061518933836, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: standardDialogueUISettings.setSubtitleColor
@@ -85503,6 +85559,18 @@ PrefabInstance:
     - target: {fileID: 4852250009563872151, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: standardDialogueUISettings.applyColorToPrependedName
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990132648576932996, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198917948807186515, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717909864730567485, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5787976464604457316, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -85544,21 +85612,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5990480186367616241, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6057764392356199621, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075520732473722231, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197777975282720334, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6351085856233091538, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 32887
       objectReference: {fileID: 0}
+    - target: {fileID: 6418204401669672272, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6564230932841214942, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_Name
       value: CarPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6564230932841214942, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564788551854190600, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 7188659413750790875, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983888366813740613, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8396242770118852539, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9042702018059073581, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -105738,7 +105838,7 @@ GameObject:
   - component: {fileID: 2090311424}
   - component: {fileID: 2090311425}
   - component: {fileID: 2090311426}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: 4objetoSoltarUp
   m_TagString: PuntoSacarObjetos
   m_Icon: {fileID: 0}
@@ -105773,7 +105873,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32887
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -110331,19 +110431,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8407039358619469458, guid: 43f3bfbc1463541cb88551d2bafe9406, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9898378
+      value: 0.98983777
       objectReference: {fileID: 0}
     - target: {fileID: 8407039358619469458, guid: 43f3bfbc1463541cb88551d2bafe9406, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14220113
+      value: 0.14220116
       objectReference: {fileID: 0}
     - target: {fileID: 8407039358619469458, guid: 43f3bfbc1463541cb88551d2bafe9406, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000030704015
+      value: -0.000000014749734
       objectReference: {fileID: 0}
     - target: {fileID: 8407039358619469458, guid: 43f3bfbc1463541cb88551d2bafe9406, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000044109707
+      value: 0.0000000021189626
       objectReference: {fileID: 0}
     - target: {fileID: 8407039358619469458, guid: 43f3bfbc1463541cb88551d2bafe9406, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
