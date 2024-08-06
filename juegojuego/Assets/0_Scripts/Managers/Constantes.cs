@@ -93,7 +93,7 @@ namespace Constantes
         public const string TAG_PUERTA_LEVADIZA = "PuertaLevadiza";
     }
 
-    public static class Debug
+    public static class DebugUI
     {
         public const string TAG_DEBUG_UI = "Debug";
     }

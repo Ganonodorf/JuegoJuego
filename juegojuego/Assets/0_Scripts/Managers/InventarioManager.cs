@@ -196,17 +196,33 @@ public class InventarioManager : MonoBehaviour
         {
             collider.enabled = false;
         }
-        
-        
-        // Inabilita el groundCheck
-        objetoAgregar.transform.Find("groundCheck").gameObject.SetActive(false);
-        
-        //Inabilita la animación del objeto
-        objetoAgregar.GetComponent<Animation>().enabled = false;
-        objetoAgregar.GetComponent<Animator>().enabled = false;
 
+        Debug.Log(objetoAgregar.transform.Find("groundCheck"));
+
+        // Inabilita el groundCheck
+        if (objetoAgregar.transform.Find("groundCheck") != null)
+        {
+            objetoAgregar.transform.Find("groundCheck").gameObject.SetActive(false);
+        }
+        
+
+        //Inabilita la animación del objeto
+        if (objetoAgregar.TryGetComponent<Animator>(out Animator animator))
+        {
+            animator.enabled = false;
+        }
+
+        if (objetoAgregar.TryGetComponent<Animation>(out Animation animation))
+        {
+            animation.enabled = false;
+        }
+     
         //Inabilita las luces
-        objetoAgregar.transform.Find("luzObjeto").gameObject.SetActive(false);
+        if (objetoAgregar.transform.Find("luzObjeto") != null)
+        {
+            objetoAgregar.transform.Find("luzObjeto").gameObject.SetActive(false);
+        }
+        
         
 
         // Lo hace kinematic para que no se mueva
@@ -330,7 +346,10 @@ public class InventarioManager : MonoBehaviour
         }
 
         // Abilita el groundCheck que activará las animationces y las luces cuando toque el suelo
-        objetoSoltar.transform.Find("groundCheck").gameObject.SetActive(true);
+        if (objetoSoltar.transform.Find("groundCheck") != null)
+        {
+            objetoSoltar.transform.Find("groundCheck").gameObject.SetActive(true);
+        }
 
         // Le cambia el padre para que sea el mundo
         objetoSoltar.transform.SetParent(null);
