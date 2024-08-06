@@ -952,6 +952,34 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 24
+    fields:
+    - title: Name
+      value: PuertaInteriorAbierta
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 25
+    fields:
+    - title: Name
+      value: PuertaPlayaAbierta
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 8
     fields:
@@ -25691,8 +25719,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 416.9705
-        y: 527.4962
+        x: 416.04327
+        y: 523.78723
         width: 160
         height: 30
     - id: 18
@@ -25718,7 +25746,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xA1De nada!"
+        value: "\xA1De nada! Ahora que tienes eso para guiarte, te podr\xEDa abrir
+          la puerta de la playa para que la explores."
         type: 0
         typeString: 
       - title: Sequence
@@ -26497,6 +26526,12 @@ MonoBehaviour:
         destinationDialogueID: 35
         isConnector: 0
         priority: 2
+      - originConversationID: 15
+        originDialogueID: 32
+        destinationConversationID: 15
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -26656,7 +26691,7 @@ MonoBehaviour:
         destinationDialogueID: 36
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["PuertaInteriorAbierta"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -26716,7 +26751,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["PuertaInteriorAbierta"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26957,9 +26992,184 @@ MonoBehaviour:
         y: 570.6839
         width: 160
         height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\xBFMe abres la puerta de la playa, porfa?"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 41
+        destinationConversationID: 15
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["PuertaPlayaAbierta"] == false and (Variable["RadDetectorEncendido"]
+        == true)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1456.5104
+        y: 320.1025
+        width: 160
+        height: 30
+    - id: 42
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Claro... Pero recuerda que es un sitio peligroso. Intenta encontrar
+          lo que necesites all\xED y volver cuanto antes."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: e9230c0f-4615-481f-b7c3-521eb17dd63a
+        type: 0
+        typeString: 
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 42
+        destinationConversationID: 15
+        destinationDialogueID: 43
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["PuertaPlayaAbierta"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1456.5104
+        y: 370.1025
+        width: 160
+        height: 30
+    - id: 43
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 664fd48f-a4c3-4d23-9e98-11e22ee4e2ca
+        type: 0
+        typeString: 
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 43
+        destinationConversationID: 15
+        destinationDialogueID: 32
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1456.5104
+        y: 420.1025
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 781.8839, y: 149.81519}
-    canvasZoom: 1.2299775
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.2114704
   - id: 16
     fields:
     - title: Title
