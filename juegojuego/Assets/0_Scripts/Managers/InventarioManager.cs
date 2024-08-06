@@ -322,7 +322,7 @@ public class InventarioManager : MonoBehaviour
 
         // La rotacion no se la toca
 
-        // Encontrar punto libre para soltar el coche y ponerlo ahí
+        // Encontrar punto libre para soltar el objeto y ponerlo ahí
         objetoSoltar.transform.localPosition = EncontrarPuntoSacarObjetoLibre();
 
         // Ampl?a el objeto al doble
@@ -370,6 +370,7 @@ public class InventarioManager : MonoBehaviour
                 return punto.transform.localPosition;
             }
         }
+        // si no encuentra ninguno, la posición de entrega de siempre. Se podría ajustar.
         return new Vector3(0.0f,
                                 Inventario.Manager.LONGITUD_COCHE + 3.0f,
                                 Inventario.Manager.LONGITUD_COCHE);
