@@ -21290,6 +21290,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 5a1c03a5-f37d-4f06-99e7-9d962b895f1a
+        type: 0
+        typeString: 
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -21305,7 +21309,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Lleva el Malino a la casa de la amiga
-        artista") == "active"
+        artista") == "active" and (Variable["ORMalino"] == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21372,8 +21376,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 518.4221, y: 73.53088}
-    canvasZoom: 1.0474887
+    canvasScrollPosition: {x: 338.19214, y: 0}
+    canvasZoom: 0.8584864
   - id: 13
     fields:
     - title: Title
