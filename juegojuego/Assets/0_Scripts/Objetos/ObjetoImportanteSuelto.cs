@@ -12,6 +12,7 @@ public class ObjetoImportanteSuelto : MonoBehaviour
     void Start()
     {
         objeto = this.transform.parent.gameObject;
+        luzObjeto = objeto.transform.Find("luzObjeto").gameObject;
     }
 
     // Update is called once per frame
