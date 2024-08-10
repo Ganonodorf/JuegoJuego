@@ -25,7 +25,6 @@ public class ObjetoImportanteSuelto : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("ground"))
         {
             objeto.GetComponent<Rigidbody>().isKinematic = true;
-            objeto.GetComponent<Animation>().enabled = true;
             objeto.GetComponent<Animator>().enabled = true;
             luzObjeto.gameObject.SetActive(true);
 
@@ -37,7 +36,6 @@ public class ObjetoImportanteSuelto : MonoBehaviour
         //if (other.gameObject.tag == "ground")
         {
             objeto.GetComponent<Rigidbody>().isKinematic = false;
-            objeto.GetComponent<Animation>().enabled = false;
             objeto.GetComponent<Animator>().enabled = false;
             luzObjeto.gameObject.SetActive(false);
 

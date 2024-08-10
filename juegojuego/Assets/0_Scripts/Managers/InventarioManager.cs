@@ -206,17 +206,12 @@ public class InventarioManager : MonoBehaviour
         }
         
 
-        //Inabilita la animación del objeto
+        //Inabilita el animator del objeto
         if (objetoAgregar.TryGetComponent<Animator>(out Animator animator))
         {
             animator.enabled = false;
         }
-
-        if (objetoAgregar.TryGetComponent<Animation>(out Animation animation))
-        {
-            animation.enabled = false;
-        }
-     
+        
         //Inabilita las luces
         if (objetoAgregar.transform.Find("luzObjeto") != null)
         {
@@ -343,7 +338,7 @@ public class InventarioManager : MonoBehaviour
             collider.enabled = true;
         }
 
-        // Abilita el groundCheck que activará las animationces y las luces cuando toque el suelo
+        // Abilita el groundCheck que activará el animator y las luces cuando toque el suelo
         if (objetoSoltar.transform.Find("groundCheck") != null)
         {
             objetoSoltar.transform.Find("groundCheck").gameObject.SetActive(true);
