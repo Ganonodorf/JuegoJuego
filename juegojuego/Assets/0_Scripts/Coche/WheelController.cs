@@ -53,10 +53,11 @@ public class WheelController : MonoBehaviour
     [SerializeField] private AnimationCurve stiffnessCurve;
     [SerializeField] private AnimationCurve inclinationToGripCurve;
 
-
     public AudioClip InicioDerrape;
     public AudioClip BucleDerrape;
     public AudioClip FinDerrape;
+
+    private IEnumerator sonidoCoroutine;
 
 
     void Start()
@@ -121,7 +122,15 @@ public class WheelController : MonoBehaviour
         if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
         {
             AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
-            StartCoroutine(SonidoDerrapeCoroutine(audioSourceRueda));
+
+            if (sonidoCoroutine != null)
+            {
+                StopCoroutine(sonidoCoroutine);
+            }
+
+            sonidoCoroutine = SonidoDerrapeCoroutine(audioSourceRueda);
+
+            StartCoroutine(sonidoCoroutine);
         }
     }
 
@@ -139,6 +148,8 @@ public class WheelController : MonoBehaviour
     {
         if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
         {
+            StopCoroutine(sonidoCoroutine);
+
             AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
             audioSourceRueda.clip = FinDerrape;
             audioSourceRueda.loop = false;
@@ -148,11 +159,16 @@ public class WheelController : MonoBehaviour
 
     private void HacerMarcasSuelo(bool hacerMarcas)
     {
-        if(Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, springRestLength))
+        if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
         {
-            Debug.Log("Layer que está tocando: " + hit.transform.gameObject.layer);
-
-            if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS && hit.transform.gameObject.layer == 10)
+            if (hacerMarcas)
+            {
+                if (Physics.Raycast(transform.position, -transform.up, springRestLength))
+                {
+                    GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
+                }
+            }
+            else
             {
                 GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
             }
