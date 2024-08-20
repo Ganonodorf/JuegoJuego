@@ -37,6 +37,6 @@ public class DebugManager : MonoBehaviour
 
     private void BuscarGO()
     {
-        DebugUIGO = GameObject.FindGameObjectWithTag(Constantes.Debug.TAG_DEBUG_UI);
+        DebugUIGO = GameObject.FindGameObjectWithTag(Constantes.DebugUI.TAG_DEBUG_UI);
     }
 }

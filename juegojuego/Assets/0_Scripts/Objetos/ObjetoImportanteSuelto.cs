@@ -12,6 +12,7 @@ public class ObjetoImportanteSuelto : MonoBehaviour
     void Start()
     {
         objeto = this.transform.parent.gameObject;
+        luzObjeto = objeto.transform.Find("luzObjeto").gameObject;
     }
 
     // Update is called once per frame
@@ -25,8 +26,6 @@ public class ObjetoImportanteSuelto : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("ground"))
         {
             objeto.GetComponent<Rigidbody>().isKinematic = true;
-            objeto.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            objeto.GetComponent<Animation>().enabled = true;
             objeto.GetComponent<Animator>().enabled = true;
             luzObjeto.gameObject.SetActive(true);
 
@@ -38,8 +37,6 @@ public class ObjetoImportanteSuelto : MonoBehaviour
         //if (other.gameObject.tag == "ground")
         {
             objeto.GetComponent<Rigidbody>().isKinematic = false;
-            objeto.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            objeto.GetComponent<Animation>().enabled = false;
             objeto.GetComponent<Animator>().enabled = false;
             luzObjeto.gameObject.SetActive(false);
 

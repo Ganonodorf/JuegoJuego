@@ -196,17 +196,28 @@ public class InventarioManager : MonoBehaviour
         {
             collider.enabled = false;
         }
-        
-        
-        // Inabilita el groundCheck
-        objetoAgregar.transform.Find("groundCheck").gameObject.SetActive(false);
-        
-        //Inabilita la animación del objeto
-        objetoAgregar.GetComponent<Animation>().enabled = false;
-        objetoAgregar.GetComponent<Animator>().enabled = false;
 
+        Debug.Log(objetoAgregar.transform.Find("groundCheck"));
+
+        // Inabilita el groundCheck
+        if (objetoAgregar.transform.Find("groundCheck") != null)
+        {
+            objetoAgregar.transform.Find("groundCheck").gameObject.SetActive(false);
+        }
+        
+
+        //Inabilita el animator del objeto
+        if (objetoAgregar.TryGetComponent<Animator>(out Animator animator))
+        {
+            animator.enabled = false;
+        }
+        
         //Inabilita las luces
-        objetoAgregar.transform.Find("luzObjeto").gameObject.SetActive(false);
+        if (objetoAgregar.transform.Find("luzObjeto") != null)
+        {
+            objetoAgregar.transform.Find("luzObjeto").gameObject.SetActive(false);
+        }
+        
         
 
         // Lo hace kinematic para que no se mueva
@@ -306,10 +317,8 @@ public class InventarioManager : MonoBehaviour
 
         // La rotacion no se la toca
 
-        // Lo pone delante del coche
-        objetoSoltar.transform.localPosition = new Vector3(0.0f,
-                                                           Inventario.Manager.LONGITUD_COCHE + 3.0f,
-                                                           Inventario.Manager.LONGITUD_COCHE);
+        // Encontrar punto libre para soltar el objeto y ponerlo ahí
+        objetoSoltar.transform.localPosition = EncontrarPuntoSacarObjetoLibre();
 
         // Ampl?a el objeto al doble
         objetoSoltar.transform.localScale = new Vector3(objetoSoltar.transform.localScale.x * Inventario.Manager.ESCALA_REDUCCION,
@@ -329,11 +338,37 @@ public class InventarioManager : MonoBehaviour
             collider.enabled = true;
         }
 
-        // Abilita el groundCheck que activará las animationces y las luces cuando toque el suelo
-        objetoSoltar.transform.Find("groundCheck").gameObject.SetActive(true);
+        // Abilita el groundCheck que activará el animator y las luces cuando toque el suelo
+        if (objetoSoltar.transform.Find("groundCheck") != null)
+        {
+            objetoSoltar.transform.Find("groundCheck").gameObject.SetActive(true);
+        }
 
         // Le cambia el padre para que sea el mundo
         objetoSoltar.transform.SetParent(null);
+    }
+
+    private Vector3 EncontrarPuntoSacarObjetoLibre()
+    {
+        //Meter los puntos en un array
+        GameObject[] puntosSacarObjetos = GameObject.FindGameObjectsWithTag("PuntoSacarObjetos");
+
+        //Ordenar por nombre
+        Array.Sort(puntosSacarObjetos,
+             (a, b) => { return a.name.CompareTo(b.name); });
+
+        //ir comprobando hasta encontrar uno disponible y devolver su posición local
+        foreach (GameObject punto in puntosSacarObjetos)
+        {
+            if (punto.GetComponent<ComprobarPuntoSoltarObjetoDisponible>().puntoDisponible == true)
+            {
+                return punto.transform.localPosition;
+            }
+        }
+        // si no encuentra ninguno, la posición de entrega de siempre. Se podría ajustar.
+        return new Vector3(0.0f,
+                                Inventario.Manager.LONGITUD_COCHE + 3.0f,
+                                Inventario.Manager.LONGITUD_COCHE);
     }
 
     private void AbrirInventario()
