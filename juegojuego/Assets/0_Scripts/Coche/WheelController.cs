@@ -53,10 +53,11 @@ public class WheelController : MonoBehaviour
     [SerializeField] private AnimationCurve stiffnessCurve;
     [SerializeField] private AnimationCurve inclinationToGripCurve;
 
-
     public AudioClip InicioDerrape;
     public AudioClip BucleDerrape;
     public AudioClip FinDerrape;
+
+    private IEnumerator sonidoCoroutine;
 
 
     void Start()
@@ -121,7 +122,15 @@ public class WheelController : MonoBehaviour
         if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
         {
             AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
-            StartCoroutine(SonidoDerrapeCoroutine(audioSourceRueda));
+
+            if (sonidoCoroutine != null)
+            {
+                StopCoroutine(sonidoCoroutine);
+            }
+
+            sonidoCoroutine = SonidoDerrapeCoroutine(audioSourceRueda);
+
+            StartCoroutine(sonidoCoroutine);
         }
     }
 
@@ -130,6 +139,7 @@ public class WheelController : MonoBehaviour
         audioSourceRueda.clip = InicioDerrape;
         audioSourceRueda.Play();
         yield return new WaitForSeconds(audioSourceRueda.clip.length);
+        audioSourceRueda.loop = true;
         audioSourceRueda.clip = BucleDerrape;
         audioSourceRueda.Play();
     }
@@ -138,9 +148,11 @@ public class WheelController : MonoBehaviour
     {
         if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
         {
-            Debug.Log("A");
+            StopCoroutine(sonidoCoroutine);
+
             AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
             audioSourceRueda.clip = FinDerrape;
+            audioSourceRueda.loop = false;
             audioSourceRueda.Play();
         }
     }
@@ -149,7 +161,17 @@ public class WheelController : MonoBehaviour
     {
         if (this.transform.tag == Constantes.Player.TAG_REAR_WHEELS)
         {
-            GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
+            if (hacerMarcas)
+            {
+                if (Physics.Raycast(transform.position, -transform.up, springRestLength))
+                {
+                    GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
+                }
+            }
+            else
+            {
+                GetComponentInChildren<TrailRenderer>().emitting = hacerMarcas;
+            }
         }
     }
 
