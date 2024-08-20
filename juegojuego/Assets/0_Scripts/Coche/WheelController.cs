@@ -53,11 +53,14 @@ public class WheelController : MonoBehaviour
     [SerializeField] private AnimationCurve stiffnessCurve;
     [SerializeField] private AnimationCurve inclinationToGripCurve;
 
+    [Header("Drifting")]
     public AudioClip InicioDerrape;
     public AudioClip BucleDerrape;
     public AudioClip FinDerrape;
 
     private IEnumerator sonidoCoroutine;
+    [SerializeField] private float umbralFuerzaLateralDerrapar;
+    private bool estoyDerrapando;
 
 
     void Start()
@@ -91,23 +94,11 @@ public class WheelController : MonoBehaviour
     private void Derrapar()
     {
         AplicarModificadoresDerrape();
-
-        SonidoDerrape();
-
-        HacerMarcasSuelo(true);
-
-        HacerHumo(true);
     }
 
     private void DejarDerrapar()
     {
         InicializarVariables();
-
-        SonidoFinDerrape();
-
-        HacerMarcasSuelo(false);
-
-        HacerHumo(false);
     }
 
     private void AplicarModificadoresDerrape()
@@ -218,6 +209,27 @@ public class WheelController : MonoBehaviour
 
         AplicarFuerzas(suspensionForce, fuerzaFrontalRueda, fuerzaLateralRueda);
 
+        if((wheelVelocityLocalSpace.x > umbralFuerzaLateralDerrapar || wheelVelocityLocalSpace.x < -umbralFuerzaLateralDerrapar) && !estoyDerrapando)
+        {
+            estoyDerrapando = true;
+
+            SonidoDerrape();
+
+            HacerMarcasSuelo(true);
+
+            HacerHumo(true);
+        }
+        else if (!(wheelVelocityLocalSpace.x > umbralFuerzaLateralDerrapar || wheelVelocityLocalSpace.x < -umbralFuerzaLateralDerrapar) && estoyDerrapando)
+        {
+            estoyDerrapando = false;
+
+            SonidoFinDerrape();
+
+            HacerMarcasSuelo(false);
+
+            HacerHumo(false);
+        }
+
         Debug.DrawRay(transform.position, (suspensionForce + (fuerzaFrontalRueda * transform.forward) + (fuerzaLateralRueda * -transform.right)) / forceVectorLength, Color.red);
         Debug.DrawRay(transform.position, suspensionForce / forceVectorLength, Color.yellow);
     }
@@ -322,6 +334,7 @@ public class WheelController : MonoBehaviour
         maxForwardVelocityFactor = maxForwardVelocity;
         maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
         motorForceFactor = motorForce;
+        estoyDerrapando = false;
     }
 
     private void GestionarInputs()
