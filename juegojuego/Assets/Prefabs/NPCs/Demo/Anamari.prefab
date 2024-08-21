@@ -370,7 +370,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: a0b41defe5f5891489a007750f9ad356, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 04914120240129e4da43125008c7c2d2, type: 2}
 --- !u!114 &147053057526195550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,11 +399,11 @@ MonoBehaviour:
     customMenuPanelOffset: {x: 0, y: 0, z: 0}
     useMenuPanelFor: 0
     portraitAnimatorController: {fileID: 0}
-    setSubtitleColor: 0
-    applyColorToPrependedName: 0
+    setSubtitleColor: 1
+    applyColorToPrependedName: 1
     prependActorNameSeparator: ': '
-    prependActorNameFormat: '{0}{1}'
-    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+    prependActorNameFormat: \>{0}\<{1}
+    subtitleColor: {r: 0.10840159, g: 0.7924528, b: 0.39439744, a: 1}
 --- !u!114 &3965043771257873171
 MonoBehaviour:
   m_ObjectHideFlags: 0
