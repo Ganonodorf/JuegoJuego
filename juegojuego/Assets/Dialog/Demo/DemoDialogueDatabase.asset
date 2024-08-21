@@ -2479,7 +2479,11 @@ MonoBehaviour:
 
           SetActive(CamaraPersonajeHistoria_1,true);
 
-          AnimatorPlay(AnimacionCamaraCura1,CamaraPersonajeHistoria_1)'
+          AnimatorPlay(AnimacionCamaraCura1,CamaraPersonajeHistoria_1);
+
+          Continue()@1.5;
+
+          SetContinueMode(false)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -2543,7 +2547,11 @@ MonoBehaviour:
 
           SetActive(CamaraPersonajeHistoria_2,true);
 
-          AnimatorPlay(AnimacionCamaraCura2,CamaraPersonajeHistoria_2)'
+          AnimatorPlay(AnimacionCamaraCura2,CamaraPersonajeHistoria_2);
+
+          Continue()@1.5;
+
+          SetContinueMode(false)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -2606,7 +2614,11 @@ MonoBehaviour:
 
           SetActive(CamaraPersonajeHistoria_3,true);
 
-          AnimatorPlay(AnimacionCamaraCura3,CamaraPersonajeHistoria_3)'
+          AnimatorPlay(AnimacionCamaraCura3,CamaraPersonajeHistoria_3);
+
+          Continue()@1.5;
+
+          SetContinueMode(false)'
         type: 0
         typeString: 
       - title: EventGuid
@@ -2668,7 +2680,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPersonajeHistoria_3,false);
 
-          SetActive(CamaraCura,true)'
+          SetActive(CamaraCura,true);
+
+          SetContinueMode(true)'
         type: 0
         typeString: 
       - title: EventGuid
@@ -4320,8 +4334,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 32.359997, y: 22.850908}
-    canvasZoom: 0.8014988
+    canvasScrollPosition: {x: 2.6396213, y: 0}
+    canvasZoom: 0.8914987
   - id: 10
     fields:
     - title: Title
@@ -11571,8 +11585,8 @@ MonoBehaviour:
         width: 570.12976
         height: 852.9923
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 0, y: 38.20729}
-    canvasZoom: 0.70349896
+    canvasScrollPosition: {x: 207.36963, y: 0}
+    canvasZoom: 0.5834991
   - id: 5
     fields:
     - title: Title
@@ -14448,7 +14462,9 @@ MonoBehaviour:
 
           SetActive(CamaraManoliQue,true);
 
-          Continue()@0.5'
+          Continue()@0.5;
+
+          SetContinueMode(false)'
         type: 0
         typeString: 
       - title: EventGuid
@@ -14698,7 +14714,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraManoliMedia,false);
 
-          SetActive(CamaraManoliCara,true)'
+          SetActive(CamaraManoliCara,true);
+
+          SetContinueMode(true)'
         type: 0
         typeString: 
       - title: EventGuid
