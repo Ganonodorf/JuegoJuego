@@ -2195,8 +2195,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "S\xE9 que ahora no est\xE1s seguro, pero lo estar\xE1s, lo veo en
-          tu futuro"
+        value: "S\xE9 que ahora no est\xE1s segura de tu destino, pero lo estar\xE1s,
+          lo veo en tu futuro."
         type: 0
         typeString: 
       - title: Sequence
@@ -2481,7 +2481,7 @@ MonoBehaviour:
 
           AnimatorPlay(AnimacionCamaraCura1,CamaraPersonajeHistoria_1);
 
-          Continue()@1.5;
+          Continue()@2.5;
 
           SetContinueMode(false)'
         type: 0
@@ -2549,7 +2549,7 @@ MonoBehaviour:
 
           AnimatorPlay(AnimacionCamaraCura2,CamaraPersonajeHistoria_2);
 
-          Continue()@1.5;
+          Continue()@2.5;
 
           SetContinueMode(false)'
         type: 0
@@ -2616,7 +2616,7 @@ MonoBehaviour:
 
           AnimatorPlay(AnimacionCamaraCura3,CamaraPersonajeHistoria_3);
 
-          Continue()@1.5;
+          Continue()@2.0;
 
           SetContinueMode(false)'
         type: 0
@@ -3280,7 +3280,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 35
         destinationConversationID: 1
-        destinationDialogueID: 36
+        destinationDialogueID: 55
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3292,55 +3292,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1077.0686
         y: 496.699
-        width: 160
-        height: 30
-    - id: 36
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[Irte]'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1080.5508
-        y: 546.6992
         width: 160
         height: 30
     - id: 37
@@ -4334,8 +4285,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2.6396213, y: 0}
-    canvasZoom: 0.8914987
+    canvasScrollPosition: {x: 306.13666, y: 13.486176}
+    canvasZoom: 0.7414988
   - id: 10
     fields:
     - title: Title
@@ -6646,7 +6597,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 40
+        destinationConversationID: 10
+        destinationDialogueID: 45
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -6894,6 +6851,61 @@ MonoBehaviour:
         serializedVersion: 2
         x: 805.57275
         y: 409.11996
+        width: 160
+        height: 30
+    - id: 45
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Que maja eres....
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 45
+        destinationConversationID: 10
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 617.5725
+        y: 610.5138
         width: 160
         height: 30
     entryGroups: []
@@ -7915,8 +7927,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 980.3009
-        y: 511.72397
+        x: 985.77435
+        y: 510.62927
         width: 160
         height: 30
     - id: 24
@@ -9962,7 +9974,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Y que lo digas. Qu\xE9 vamos a tener si no tenemos ni pa pipas aqu\xED."
+        value: "Y que lo digas. Qu\xE9 va, tendr\xE1s que ir a buscarla por ah\xED."
         type: 0
         typeString: 
       - title: Sequence
@@ -10459,7 +10471,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 983.2617
+        x: 986.5458
         y: 456.0277
         width: 160
         height: 30
@@ -10508,8 +10520,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 980.3009
-        y: 561.724
+        x: 985.77435
+        y: 560.62933
         width: 160
         height: 30
     - id: 70
@@ -11585,8 +11597,8 @@ MonoBehaviour:
         width: 570.12976
         height: 852.9923
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 207.36963, y: 0}
-    canvasZoom: 0.5834991
+    canvasScrollPosition: {x: 141.0545, y: 0}
+    canvasZoom: 0.673499
   - id: 5
     fields:
     - title: Title
@@ -15055,7 +15067,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "Hace mucho que no nos movemos de aqu\xED, pero es probable que en
-          el sitio donde haya m\xE1s seres como t\xFA encuentres la soluci\xF3n."
+          el sitio donde haya m\xE1s seres como t\xFA encuentres algo."
         type: 0
         typeString: 
       - title: Sequence
@@ -15285,7 +15297,8 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "\xA1\xA1Dile que estaba buen\xEDsimo!! Ahora s\xED que os voy a reventar
-          chavalas, me sobra la energ\xEDa."
+          chavalas, me sobra la energ\xEDa y los brazos para ganaros todas las manos,
+          \xA1ja!."
         type: 0
         typeString: 
       - title: Sequence
@@ -15358,7 +15371,37 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 76
+        destinationConversationID: 5
+        destinationDialogueID: 14
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 76
+        destinationConversationID: 5
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 76
+        destinationConversationID: 5
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 76
+        destinationConversationID: 5
+        destinationDialogueID: 66
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 76
+        destinationConversationID: 5
+        destinationDialogueID: 70
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -15420,8 +15463,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7500001
+    canvasScrollPosition: {x: 61.355217, y: 105.311165}
+    canvasZoom: 0.7800001
   - id: 4
     fields:
     - title: Title
@@ -16434,7 +16477,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Ya le di la comida, \xA1le encant\xF3!"
+        value: "Ya le di la comida a Manoli, \xA1le encant\xF3!"
         type: 0
         typeString: 
       - title: Sequence
@@ -16790,7 +16833,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFSabes donde podr\xEDa conseguir una matr\xEDcula?"
+        value: "\xBFSabes donde podr\xEDa conseguir la matr\xEDcula?"
         type: 0
         typeString: 
       - title: Sequence
@@ -17348,7 +17391,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[Ves que hace un adem\xE1s de seguir escribiendo y te mira] \xBFAlgo
+        value: "[Ves que hace un adem\xE1n de seguir escribiendo y te mira] \xBFAlgo
           m\xE1s?"
         type: 0
         typeString: 
@@ -17412,8 +17455,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.74650156
+    canvasScrollPosition: {x: 152.67947, y: 45.451347}
+    canvasZoom: 0.86650145
   - id: 7
     fields:
     - title: Title
