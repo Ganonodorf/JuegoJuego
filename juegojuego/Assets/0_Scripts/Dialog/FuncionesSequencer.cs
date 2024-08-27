@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace PixelCrushers.DialogueSystem.SequencerCommands
 {
+    /*
     public class SequencerCommandBajarPuertas : SequencerCommand
     {
         public void Start()
@@ -39,4 +40,5 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
             Stop();
         }
     }
+    */
 }

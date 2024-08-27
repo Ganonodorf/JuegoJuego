@@ -270,7 +270,7 @@ MonoBehaviour:
     luaConditions: []
     questConditions: []
     acceptedTags:
-    - Coche
+    - Player
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: a0b41defe5f5891489a007750f9ad356, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 04914120240129e4da43125008c7c2d2, type: 2}
 --- !u!1 &9213690598708296970
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,15 +383,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 191.93
+      value: 199
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.9
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -737.79
+      value: -750.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Pulsa E para hablar con er Manu
+  overrideName: Hablar con Manu El Fabricante
   overrideUseMessage: 
   maxUseDistance: 5
   events:
@@ -610,7 +610,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: a0b41defe5f5891489a007750f9ad356, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 438fe3b62056e4cb9946f3970aaea59b, type: 2}
 --- !u!114 &9113227993122569630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,11 +639,11 @@ MonoBehaviour:
     customMenuPanelOffset: {x: 0, y: 0, z: 0}
     useMenuPanelFor: 0
     portraitAnimatorController: {fileID: 0}
-    setSubtitleColor: 0
-    applyColorToPrependedName: 0
+    setSubtitleColor: 1
+    applyColorToPrependedName: 1
     prependActorNameSeparator: ': '
-    prependActorNameFormat: '{0}{1}'
-    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+    prependActorNameFormat: \>{0}\<{1}
+    subtitleColor: {r: 0.6037736, g: 0.116767526, b: 0.20724516, a: 1}
 --- !u!114 &597304309219756640
 MonoBehaviour:
   m_ObjectHideFlags: 0

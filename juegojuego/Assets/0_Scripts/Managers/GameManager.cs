@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     // Aqu? declaramos el evento, su nombre y que recibe un GameState
     public static event Action<GameState, GameState> OnGameStateChanged;
 
+    [SerializeField] private GameState initialGameState;
+
     // En el awake decimos que si cuando el GameObject que tenga este script es creado
     // no existe ya un GameManager, asignamos Instance a ese GameObject.
     // Si no es as? y ya existe un GameManager, el que se acaba de crear se borra.
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateGameState(GameState.Conduciendo);
+        UpdateGameState(initialGameState);
     }
 
     // Para devolver el GameState
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.PantallaInicio:
+                PantallaInicio();
                 Debug.Log("Estado de juego: PantallaInicio");
                 break;
             case GameState.PantallaPausa:
@@ -74,6 +77,11 @@ public class GameManager : MonoBehaviour
         }
 
         OnGameStateChanged?.Invoke(newState, previousState);
+    }
+
+    private void PantallaInicio()
+    {
+        DialogueManager.StartConversation("Intro cutscene");
     }
 
     private void FinJuego()

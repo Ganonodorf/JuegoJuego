@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Pulsa E para hablar con el cura
+  overrideName: Hablar con La Cura
   overrideUseMessage: 
   maxUseDistance: 100
   events:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: a0b41defe5f5891489a007750f9ad356, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 04914120240129e4da43125008c7c2d2, type: 2}
 --- !u!114 &691693348693827385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,11 +1060,11 @@ MonoBehaviour:
     customMenuPanelOffset: {x: 0, y: 0, z: 0}
     useMenuPanelFor: 0
     portraitAnimatorController: {fileID: 0}
-    setSubtitleColor: 0
-    applyColorToPrependedName: 0
+    setSubtitleColor: 1
+    applyColorToPrependedName: 1
     prependActorNameSeparator: ': '
-    prependActorNameFormat: '{0}{1}'
-    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+    prependActorNameFormat: \>{0}\<{1}
+    subtitleColor: {r: 0.5510791, g: 0.18160377, b: 0.7264151, a: 1}
 --- !u!114 &4158627169082042182
 MonoBehaviour:
   m_ObjectHideFlags: 0

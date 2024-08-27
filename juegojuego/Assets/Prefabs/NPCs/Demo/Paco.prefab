@@ -252,15 +252,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 204.97
+      value: 212.04001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.564
+      value: 28.663998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -761.02
+      value: -773.83
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d19c68190df0d40af7fa348ec6fdc0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Pulsa E para hablar con er Paco
+  overrideName: Hablar con Paco El Fabricante
   overrideUseMessage: 
   maxUseDistance: 5
   events:
@@ -476,7 +476,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: a0b41defe5f5891489a007750f9ad356, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 04914120240129e4da43125008c7c2d2, type: 2}
 --- !u!114 &8709118878136409618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,11 +505,11 @@ MonoBehaviour:
     customMenuPanelOffset: {x: 0, y: 0, z: 0}
     useMenuPanelFor: 0
     portraitAnimatorController: {fileID: 0}
-    setSubtitleColor: 0
-    applyColorToPrependedName: 0
+    setSubtitleColor: 1
+    applyColorToPrependedName: 1
     prependActorNameSeparator: ': '
-    prependActorNameFormat: '{0}{1}'
-    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+    prependActorNameFormat: \>{0}\<{1}
+    subtitleColor: {r: 0.1273585, g: 0.509434, b: 0.46087202, a: 1}
 --- !u!114 &7852926480273690878
 MonoBehaviour:
   m_ObjectHideFlags: 0
