@@ -58,6 +58,11 @@ public class WheelController : MonoBehaviour
     public AudioClip BucleDerrape;
     public AudioClip FinDerrape;
 
+    [SerializeField] private GameObject efectosObjeto;
+    [SerializeField] private GameObject ruedaObjeto;
+    [SerializeField] private float ruedaRadio;
+    [SerializeField] private float distanciaVerticalRuedaPorDefecto;
+
     private IEnumerator sonidoCoroutine;
     [SerializeField] private float umbralFuerzaLateralDerrapar;
     private bool estoyDerrapando;
@@ -70,6 +75,7 @@ public class WheelController : MonoBehaviour
         InicializarVariables();
 
         GestionarInputs();
+
     }
     void Update()
     {
@@ -87,18 +93,70 @@ public class WheelController : MonoBehaviour
             if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, springRestLength))
             {
                 WheelForceCalculations(hit);
+                PosicionarEfectos(hit.point);
+                PosicionarRueda(hit.distance);
             }
+            else
+            {
+                ReposicionarRueda();
+
+                estoyDerrapando = false;
+
+                AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
+                audioSourceRueda.Stop();
+
+                HacerMarcasSuelo(false);
+
+                HacerHumo(false);
+            }
+
+        }else
+        {
+            ReposicionarRueda();
+
+            estoyDerrapando = false;
+
+            AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
+            audioSourceRueda.Stop();
+
+            HacerMarcasSuelo(false);
+
+            HacerHumo(false);
         }
     }
 
-    private void Derrapar()
+    private void ReposicionarRueda()
+    {
+        ruedaObjeto.transform.localPosition = new Vector3 (0,-distanciaVerticalRuedaPorDefecto,0);
+    }
+
+    private void PosicionarRueda(float distanciaHitPoint)
+    { 
+        float posicionVerticalRueda = distanciaHitPoint - ruedaRadio;
+        if (posicionVerticalRueda < distanciaVerticalRuedaPorDefecto)
+        {
+            ruedaObjeto.transform.localPosition = new Vector3 (0,-posicionVerticalRueda,0);
+        }
+        else
+        {
+            ruedaObjeto.transform.localPosition = new Vector3(0,-distanciaVerticalRuedaPorDefecto,0);
+        }
+    }
+
+    private void PosicionarEfectos(Vector3 posicionHitPoint)
+    {
+        if(efectosObjeto != null)
+        efectosObjeto.transform.position = posicionHitPoint;
+    }
+
+    private void AccionJugadorDerrapar()
     {
         AplicarModificadoresDerrape();
     }
 
-    private void DejarDerrapar()
+    private void AccionJugadorDejarDeDerrapar()
     {
-        InicializarVariables();
+        ResetearValoresFisicasRuedas();
     }
 
     private void AplicarModificadoresDerrape()
@@ -337,11 +395,18 @@ public class WheelController : MonoBehaviour
         estoyDerrapando = false;
     }
 
+    private void ResetearValoresFisicasRuedas()
+    {
+        maxForwardVelocityFactor = maxForwardVelocity;
+        maxGripSidewaysVelocityFactor = maxGripSidewaysVelocity;
+        motorForceFactor = motorForce;
+    }
+
     private void GestionarInputs()
     {
         InputManager.Instance.controles.Conduciendo.MovimientoFrontal.performed += contexto => RecogerValorMovimientoFrontal(contexto.ReadValue<Vector2>().y);
         InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled += contexto => ResetValorMovimientoFrontal();
-        InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => Derrapar();
-        InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => DejarDerrapar();
+        InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => AccionJugadorDerrapar();
+        InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => AccionJugadorDejarDeDerrapar();
     }
 }
