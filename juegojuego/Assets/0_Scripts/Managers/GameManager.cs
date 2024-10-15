@@ -50,6 +50,12 @@ public class GameManager : MonoBehaviour
         previousState = state;
         state = newState;
 
+        if(previousState == GameState.FinJuego)
+        {
+            Debug.Log("Fin del juego señores");
+            return;
+        }
+
         switch (newState)
         {
             case GameState.PantallaInicio:
@@ -86,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     private void FinJuego()
     {
-        Debug.Log("Gracias por jugar!");
+        DialogueManager.StartConversation("Fin Cutscene");
     }
 
     private void HacerloInmortal()
