@@ -35,54 +35,6 @@ MonoBehaviour:
     underline: 0
   baseID: 1
   actors:
-  - id: 4
-    fields:
-    - title: Name
-      value: Jugador
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: El jugador
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: IsPlayer
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Display Name
-      value: Carmen
-      type: 0
-      typeString: CustomFieldType_Text
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
-  - id: 1
-    fields:
-    - title: Name
-      value: Cura
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: El cura de la parroquia
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
   - id: 2
     fields:
     - title: Name
@@ -439,6 +391,54 @@ MonoBehaviour:
       value: '#cabc6bff'
       type: 0
       typeString: 
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 4
+    fields:
+    - title: Name
+      value: Jugador
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: El jugador
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Display Name
+      value: Carmen
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 1
+    fields:
+    - title: Name
+      value: Cura
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: El cura de la parroquia
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -2332,8 +2332,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 81.063255
+        x: 31.467354
+        y: 89.07559
         width: 160
         height: 30
     - id: 14
@@ -2777,8 +2777,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 128.83696
+        x: 31.467354
+        y: 139.07559
         width: 160
         height: 30
     - id: 22
@@ -2845,8 +2845,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 179.9269
+        x: 31.467354
+        y: 189.07559
         width: 160
         height: 30
     - id: 23
@@ -2913,8 +2913,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 231.06325
+        x: 31.467354
+        y: 239.07559
         width: 160
         height: 30
     - id: 24
@@ -2980,8 +2980,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 281.06317
+        x: 31.467354
+        y: 289.07556
         width: 160
         height: 30
     - id: 25
@@ -3048,8 +3048,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 329.92676
+        x: 31.467354
+        y: 339.07556
         width: 160
         height: 30
     - id: 26
@@ -3105,8 +3105,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 381.06317
+        x: 31.467354
+        y: 389.07556
         width: 160
         height: 30
     - id: 27
@@ -3161,8 +3161,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 431.06317
+        x: 31.467354
+        y: 439.07556
         width: 160
         height: 30
     - id: 28
@@ -3189,11 +3189,13 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "Por eso este s\xEDmbolo de amor y nuestro sacrificio convierte a
-          esta parroquia en el santo lugar de\u2026 [El bicifijo se rompe un poco]\n"
+          esta parroquia en el santo lugar de\u2026\n"
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Continue()@2.0;
+
+          SetContinueMode(false)'
         type: 0
         typeString: 
       conversationID: 1
@@ -3207,7 +3209,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 28
         destinationConversationID: 1
-        destinationDialogueID: 29
+        destinationDialogueID: 56
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3217,8 +3219,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 481.06317
+        x: 31.467354
+        y: 489.07556
         width: 160
         height: 30
     - id: 29
@@ -3250,7 +3252,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraBicifijo,false);
+
+          SetActive(CamaraCura,true);
+
+          SetContinueMode(true)'
         type: 0
         typeString: 
       conversationID: 1
@@ -3274,8 +3280,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 531.06323
+        x: 31.467354
+        y: 589.0755
         width: 160
         height: 30
     - id: 30
@@ -3330,8 +3336,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 581.06323
+        x: 31.467354
+        y: 639.0755
         width: 160
         height: 30
     - id: 31
@@ -3387,8 +3393,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 631.06323
+        x: 31.467354
+        y: 689.0755
         width: 160
         height: 30
     - id: 32
@@ -3443,8 +3449,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.182816
-        y: 681.06323
+        x: 31.467354
+        y: 739.0755
         width: 160
         height: 30
     - id: 33
@@ -4348,7 +4354,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 397.41144
-        y: 394.16827
+        y: 388.15506
         width: 160
         height: 30
     - id: 52
@@ -4378,7 +4384,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(BicifijoRotoAnimado,false)
         type: 0
         typeString: 
       - title: EventGuid
@@ -4411,7 +4417,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 397.41144
-        y: 336.25992
+        y: 335.1747
         width: 160
         height: 30
     - id: 53
@@ -4441,7 +4447,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(BicifijoArregladoPlaceholder,true)
         type: 0
         typeString: 
       conversationID: 1
@@ -4618,9 +4624,74 @@ MonoBehaviour:
         y: 75.3596
         width: 160
         height: 30
+    - id: 56
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'SetActive(CamaraBicifijo,true);
+
+          SetActive(CamaraCura,false);
+
+          AnimatorPlay(Romperse,BicifijoRotoAnimado);
+
+          Continue()@3.0'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 56
+        destinationConversationID: 1
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 31.467354
+        y: 539.0755
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 238.3061, y: 0}
-    canvasZoom: 0.591499
+    canvasScrollPosition: {x: 0, y: 112.07355}
+    canvasZoom: 0.9814986
   - id: 10
     fields:
     - title: Title
@@ -7701,7 +7772,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(BurbujaInteraccion,false);
+        value: 'SetActive(BurbujaDialogoInicial,false);
 
 '
         type: 0
@@ -8485,7 +8556,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30.796326
-        y: 313.29407
+        y: 314.46573
         width: 160
         height: 30
     - id: 28
@@ -9581,7 +9652,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPaco,false);
 
-          SetActive(CamaraManu,true)'
+          SetActive(CamaraManu,true);
+
+          AnimatorPlay(Armature|ManuEnfadao,Manu_V2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -9639,7 +9712,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraManu,false);
 
-          SetActive(CamaraPaco,true)'
+          SetActive(CamaraPaco,true);
+
+          AnimatorPlay(Armature|PacoEnfadao,Paco_V2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -9808,7 +9883,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorPlay(Armature|ManuIdle,Manu_V2);
+
+          AnimatorPlay(Armature|PacoIdle,Paco_V2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -10486,7 +10563,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPaco,false);
 
-          SetActive(CamaraManu,true)'
+          SetActive(CamaraManu,true);
+
+          AnimatorPlay(Armature|ManuEnfadao,Manu_V2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -10544,7 +10623,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraManu,false);
 
-          SetActive(CamaraPaco,true)'
+          SetActive(CamaraPaco,true);
+
+          AnimatorPlay(Armature|PacoEnfadao,Paco_V2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -10599,7 +10680,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorPlay(Armature|ManuIdle,Manu_V2);
+
+          AnimatorPlay(Armature|PacoIdle,Paco_V2)'
         type: 0
         typeString: 
       conversationID: 2
@@ -10714,7 +10797,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(camaraPuertaLevadiza,true);
 
-          AnimatorPlay(Bajar,PuertaLevadiza)'
+          AnimatorPlay(BajarPuente,Puente);
+
+          SetActive(ColliderSubido,false);
+
+          SetActive(ColliderBajado,true)'
         type: 0
         typeString: 
       - title: EventGuid
@@ -10832,7 +10919,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Espero que te vaya bien y no olvides que vienes de <b>La Mugre</b>.
+        value: "Espero que te vaya bien y no olvides que <b>La Mugre</b> estuvo ah\xED
+          y te ayud\xF3 en tu camino."
         type: 0
         typeString: 
       - title: Sequence
@@ -11931,8 +12019,8 @@ MonoBehaviour:
         width: 570.12976
         height: 852.9923
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 141.0545, y: 0}
-    canvasZoom: 0.673499
+    canvasScrollPosition: {x: 0, y: 50.37611}
+    canvasZoom: 0.91349876
   - id: 5
     fields:
     - title: Title
@@ -14625,7 +14713,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetActive(ModeloManoli,false);
+
+          SetActive(ModeloManoliSinBrazo,true)'
         type: 0
         typeString: 
       - title: EventGuid
@@ -14649,7 +14739,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'AgregarAlInventario("Brazo");
 
-        MirarObjetoInventario("Brazo")'
+        MirarObjetoInventario("Brazo");
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15797,8 +15889,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 11.95601, y: 64.92233}
-    canvasZoom: 0.63000023
+    canvasScrollPosition: {x: 26.372986, y: 0}
+    canvasZoom: 0.6600002
   - id: 4
     fields:
     - title: Title
@@ -17789,8 +17881,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 152.67947, y: 45.451347}
-    canvasZoom: 0.86650145
+    canvasScrollPosition: {x: 458.64835, y: 123.80922}
+    canvasZoom: 1.0165014
   - id: 7
     fields:
     - title: Title
@@ -24858,8 +24950,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 7.4958954}
-    canvasZoom: 0.9800357
+    canvasScrollPosition: {x: 43.44186, y: 106.59682}
+    canvasZoom: 1.0055362
   - id: 14
     fields:
     - title: Title
@@ -26053,7 +26145,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1011.88336
-        y: 153.49583
+        y: 151.19876
         width: 160
         height: 30
     - id: 20
@@ -26506,8 +26598,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 179.65372, y: 11.175955}
-    canvasZoom: 1.4260027
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7360034
   - id: 15
     fields:
     - title: Title
@@ -31228,8 +31320,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0.7470398}
-    canvasZoom: 0.94698405
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.85698414
   syncInfo:
     syncActors: 0
     syncItems: 0
