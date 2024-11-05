@@ -21,9 +21,21 @@ public class CarController : MonoBehaviour
     public float ackermannAngleLeft;
     public float ackermannAngleRight;
 
+    // GRAVITY increase
+    private Rigidbody coche;
+    [SerializeField]
+    private float multiplicadorGravedad = 1.0f;
+
     private void Start()
     {
         GestionarInputs();
+        coche = this.GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        // Aumento gravedad
+        coche.AddForce(9.81f * multiplicadorGravedad * -Vector3.up, ForceMode.Acceleration);
     }
 
     private void GestionarInputs()
