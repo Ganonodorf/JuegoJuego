@@ -197,8 +197,6 @@ public class InventarioManager : MonoBehaviour
             collider.enabled = false;
         }
 
-        Debug.Log(objetoAgregar.transform.Find("groundCheck"));
-
         // Inabilita el groundCheck
         if (objetoAgregar.transform.Find("groundCheck") != null)
         {

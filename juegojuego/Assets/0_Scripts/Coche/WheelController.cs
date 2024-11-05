@@ -120,7 +120,10 @@ public class WheelController : MonoBehaviour
             estoyDerrapando = false;
 
             AudioSource audioSourceRueda = GetComponentInChildren<AudioSource>();
-            audioSourceRueda.Stop();
+            if (audioSourceRueda != null)
+            {
+                audioSourceRueda.Stop();
+            }
 
             HacerMarcasSuelo(false);
 
