@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LimiteMapa : MonoBehaviour
 {
-    private GameObject puntoRespawn;
+    private GameObject[] puntosRespawn;
 
     private void Start()
     {
@@ -15,24 +15,44 @@ public class LimiteMapa : MonoBehaviour
     {
         if(collider.transform.name == Constantes.Player.NOMBRE_GO)
         {
-            MoverARespawn(collider.gameObject);
+            MoverARespawnMasCercano(collider.gameObject);
         }
     }
 
-    private void MoverARespawn(GameObject goAMover)
+    private void MoverARespawnMasCercano(GameObject goAMover)
     {
-        goAMover.transform.SetPositionAndRotation(new Vector3(puntoRespawn.transform.position.x,
-                                                              puntoRespawn.transform.position.y,
-                                                              puntoRespawn.transform.position.z),
+        GameObject puntoRespawnMasCercano = BuscarPuntoRespawnMasCercano(goAMover);
 
-                                                  new Quaternion(puntoRespawn.transform.rotation.x,
-                                                                 puntoRespawn.transform.rotation.y,
-                                                                 puntoRespawn.transform.rotation.z,
-                                                                 puntoRespawn.transform.rotation.w));
+        goAMover.transform.SetPositionAndRotation(new Vector3(puntoRespawnMasCercano.transform.position.x,
+                                                              puntoRespawnMasCercano.transform.position.y,
+                                                              puntoRespawnMasCercano.transform.position.z),
+
+                                                  new Quaternion(puntoRespawnMasCercano.transform.rotation.x,
+                                                                 puntoRespawnMasCercano.transform.rotation.y,
+                                                                 puntoRespawnMasCercano.transform.rotation.z,
+                                                                 puntoRespawnMasCercano.transform.rotation.w));
+    }
+
+    private GameObject BuscarPuntoRespawnMasCercano(GameObject goABuscar)
+    {
+        GameObject puntoRespawnMasCercano = puntosRespawn[0];
+        float distanciaMasCorta = Vector3.Distance(puntosRespawn[0].transform.position, goABuscar.transform.position);
+
+        foreach (GameObject respawn in puntosRespawn)
+        {
+            float nuevaDistancia = Vector3.Distance(respawn.transform.position, goABuscar.transform.position);
+            if (nuevaDistancia < distanciaMasCorta)
+            {
+                puntoRespawnMasCercano = respawn;
+                distanciaMasCorta = nuevaDistancia;
+            }
+        }
+
+        return puntoRespawnMasCercano;
     }
 
     private void BuscarGO()
     {
-        puntoRespawn = GameObject.FindGameObjectWithTag(Constantes.Juego.TAG_RESPAWN);
+        puntosRespawn = GameObject.FindGameObjectsWithTag(Constantes.Juego.TAG_RESPAWN);
     }
 }

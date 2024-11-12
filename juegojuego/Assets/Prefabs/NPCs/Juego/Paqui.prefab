@@ -181,7 +181,6 @@ GameObject:
   - component: {fileID: 7743439256415436306}
   - component: {fileID: 736154580908930701}
   - component: {fileID: 1825838238589931977}
-  - component: {fileID: 5249869195807583020}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -381,6 +380,42 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     runOnConversationEndEventsAtEndOfFrame: 0
     onConversationCancelled:
       m_PersistentCalls:
@@ -474,27 +509,6 @@ MonoBehaviour:
   minSeconds: 5
   maxSeconds: 6
   target: {fileID: 0}
---- !u!65 &5249869195807583020
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8507030985138910801}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.6, y: 1.6, z: 1.6}
-  m_Center: {x: 0, y: 0.58, z: -0.51}
 --- !u!1001 &5952906460052888566
 PrefabInstance:
   m_ObjectHideFlags: 0

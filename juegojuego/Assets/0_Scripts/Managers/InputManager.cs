@@ -74,7 +74,7 @@ public class InputManager : MonoBehaviour
 
     private void ControlesFinJuego()
     {
-        controles.Conduciendo.Enable();
+        controles.Conduciendo.Disable();
         controles.Inventario.Disable();
         controles.Dialogo.Disable();
     }
