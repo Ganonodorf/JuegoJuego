@@ -1,6 +1,5 @@
 using Cinemachine;
 using PixelCrushers.DialogueSystem;
-using System;
 using System.Linq;
 using UnityEngine;
 
@@ -21,6 +20,8 @@ public class CamaraManager : MonoBehaviour
     private void Start()
     {
         BuscarGO();
+
+        RecogerInfoInputs();
     }
     void OnEnable()
     {
@@ -47,11 +48,13 @@ public class CamaraManager : MonoBehaviour
     public void FadeToBlack()
     {
         camaraCortesGO.GetComponent<Animator>().Play(Constantes.Camaras.ANIMACION_FADE_TO_BLACK);
+        Debug.Log("black");
     }
 
     public void FadeToWhite()
     {
         camaraCortesGO.GetComponent<Animator>().Play(Constantes.Camaras.ANIMACION_FADE_TO_WHITE);
+        Debug.Log("white");
     }
 
     public void MirarObjetoInventario(string nombreObjetoGO)
@@ -66,6 +69,16 @@ public class CamaraManager : MonoBehaviour
     public void DejarMirarObjeto()
     {
         camaraInventarioGO.GetComponent<CinemachineVirtualCamera>().enabled = false;
+    }
+
+    private void AccionJugadorDerrapar()
+    {
+        //camaraExterioresGO.GetComponent<CinemachineFreeLook>().m_Lens.FieldOfView = 50.0f;
+    }
+
+    private void AccionJugadorDejarDeDerrapar()
+    {
+        //camaraExterioresGO.GetComponent<CinemachineFreeLook>().m_Lens.FieldOfView = 40.0f;
     }
 
     private void HacerloInmortal()
@@ -103,5 +116,11 @@ public class CamaraManager : MonoBehaviour
         Lua.UnregisterFunction(nameof(FadeToWhite));
         Lua.RegisterFunction(nameof(MirarObjetoInventario), this, SymbolExtensions.GetMethodInfo(() => MirarObjetoInventario(string.Empty)));
         Lua.RegisterFunction(nameof(DejarMirarObjeto), this, SymbolExtensions.GetMethodInfo(() => DejarMirarObjeto()));
+    }
+
+    private void RecogerInfoInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => AccionJugadorDerrapar();
+        InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => AccionJugadorDejarDeDerrapar();
     }
 }

@@ -23,10 +23,8 @@ public class ObjetoImportanteSuelto : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("A");
         if(other.gameObject.layer == LayerMask.NameToLayer("ground"))
         {
-            Debug.Log("b");
             objeto.GetComponent<Rigidbody>().isKinematic = true;
             objeto.GetComponent<Animator>().enabled = true;
             luzObjeto.gameObject.SetActive(true);
@@ -37,11 +35,13 @@ public class ObjetoImportanteSuelto : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //if (other.gameObject.tag == "ground")
+        /*
         {
             objeto.GetComponent<Rigidbody>().isKinematic = false;
             objeto.GetComponent<Animator>().enabled = false;
             luzObjeto.gameObject.SetActive(false);
 
         }
+        */
     }
 }

@@ -299,11 +299,66 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: CamaraPersonajeHistoria_3
-    m_To: CamaraCura
+  - m_From: CamaraCartel
+    m_To: CamaraCartel_Pueblo
     m_Blend:
       m_Style: 2
-      m_Time: 0.2
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraCartel_Pueblo
+    m_To: CamaraCartel
+    m_Blend:
+      m_Style: 2
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraCartel
+    m_To: CamaraCartel_Iglesia
+    m_Blend:
+      m_Style: 2
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraCartel_Iglesia
+    m_To: CamaraCartel
+    m_Blend:
+      m_Style: 2
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraCartel
+    m_To: CamaraCartel_Merendero
+    m_Blend:
+      m_Style: 2
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: CamaraCartel_Merendero
+    m_To: CamaraCartel
+    m_Blend:
+      m_Style: 2
+      m_Time: 1
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
