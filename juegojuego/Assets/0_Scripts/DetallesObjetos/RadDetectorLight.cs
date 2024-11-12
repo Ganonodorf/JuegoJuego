@@ -36,11 +36,15 @@ public class RadDetectorLight : MonoBehaviour
             SetLightRange(minRange + lightPower * maxRange);
             float lightAnimSpeed = 1 + lightPower * animSpeedFactor;
             SetAnimSpeed(lightAnimSpeed);
+
+            transform.rotation = Quaternion.LookRotation(DirectionToTarget(target));
         } else
         {
             SetLightIntensity(minIntensity);
             SetLightRange(minRange);
             SetAnimSpeed(1);
+
+            transform.rotation = Quaternion.LookRotation(Vector3.up);
         }
     }
 
@@ -48,6 +52,11 @@ public class RadDetectorLight : MonoBehaviour
     {
         return Vector3.Distance(transform.position, target.transform.position);
          
+    }
+
+    private Vector3 DirectionToTarget (GameObject target)
+    {
+        return Vector3.Normalize(target.transform.position - transform.position);
     }
 
     private void SetLightIntensity (float lightIntensityValue)
