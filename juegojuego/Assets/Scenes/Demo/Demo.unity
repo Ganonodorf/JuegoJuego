@@ -6401,11 +6401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017203536
+      value: -0.000000017203536
       objectReference: {fileID: 0}
     - target: {fileID: 936634610050990262, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.1297526e-10
+      value: -3.1297526e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1473409532707863855, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Name
@@ -57528,10 +57528,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2813848560864293727, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 348081853536780416, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 446026156}
+    - target: {fileID: 348081853536780416, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 446026156}
     - target: {fileID: 2813848560885969247, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
       propertyPath: m_Name
       value: NuestroDialogManager
@@ -57576,56 +57580,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2813848560896148443, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: initialDatabase
-      value: 
-      objectReference: {fileID: 11400000, guid: 04914120240129e4da43125008c7c2d2, type: 2}
-    - target: {fileID: 2813848560896148443, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: includeSimStatus
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2813848560896148443, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: displaySettings.inputSettings.emTagForOldResponses
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925141351273048146, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 602
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925141351273048146, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.10000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925141351273048146, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.10000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925141351273048146, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.10000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925141351273048146, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -406.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925141351273048146, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -262.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925141351273048146, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2813848560885969247, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2027222231}
-    - targetCorrespondingSourceObject: {fileID: 2813848560885969247, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2027222232}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
 --- !u!1 &1230948831 stripped
 GameObject:
@@ -60580,15 +60538,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -4.958229e-16
+      value: 6.1671315e-24
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8296749
+      value: 0.82967496
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 7.368994e-16
+      value: 1.8033865e-23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85036,125 +84994,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.46891502, y: 0.24912758, z: 0.7166432}
   m_Center: {x: -0.008221626, y: 0.100139394, z: 0.0001221026}
---- !u!1 &2027222225 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2813848560885969247, guid: 7814031f31866d9409ce33b69bd90569, type: 3}
-  m_PrefabInstance: {fileID: 1230453326}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2027222231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027222225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 794a8c00492a04eec9a20f616034541b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2027222232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027222225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 446026156}
-          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-          m_MethodName: UpdateGameStateDialogo
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 446026156}
-          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-          m_MethodName: UpdateGameStateConduciendo
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    runOnConversationEndEventsAtEndOfFrame: 0
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &2027988652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4039683888050079703, guid: 26e9f1ef0d7ec4a529b59cd37fba7f72, type: 3}
