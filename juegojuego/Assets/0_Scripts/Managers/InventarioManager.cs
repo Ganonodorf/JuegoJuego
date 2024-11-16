@@ -25,7 +25,9 @@ public class InventarioManager : MonoBehaviour
 
     private void Awake()
     {
-        HacerloInmortal();
+        //HacerloInmortal();
+
+        Instance = this;
     }
 
     void OnEnable()
@@ -387,7 +389,7 @@ public class InventarioManager : MonoBehaviour
         }
     }
 
-    private void CerrarInventario()
+    public void CerrarInventario()
     {
         GameManager.Instance.UpdateGameState(GameState.Conduciendo);
         camaraInventario.GetComponent<CinemachineVirtualCamera>().LookAt = null;

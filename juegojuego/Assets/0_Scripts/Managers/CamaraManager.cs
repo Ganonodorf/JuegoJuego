@@ -14,7 +14,9 @@ public class CamaraManager : MonoBehaviour
 
     private void Awake()
     {
-        HacerloInmortal();
+        //HacerloInmortal();
+
+        Instance = this;
     }
 
     private void Start()

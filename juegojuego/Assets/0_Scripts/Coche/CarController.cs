@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    [SerializeField]
     private GameObject RuedaDerechaGO;
-    [SerializeField]
     private GameObject RuedaIzquierdaGO;
 
     [Header("Car Specs")]
@@ -30,6 +28,9 @@ public class CarController : MonoBehaviour
     {
         GestionarInputs();
         coche = this.GetComponent<Rigidbody>();
+
+        RuedaDerechaGO = GameObject.FindGameObjectWithTag("WheelFrontRight");
+        RuedaIzquierdaGO = GameObject.FindGameObjectWithTag("WheelFrontLeft");
     }
 
     private void FixedUpdate()
@@ -40,6 +41,7 @@ public class CarController : MonoBehaviour
 
     private void GestionarInputs()
     {
+        Debug.Log("A");
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => CentrarRuedas();
     }
@@ -71,14 +73,20 @@ public class CarController : MonoBehaviour
 
     private void AplicarValoresDeGiro()
     {
-        if(RuedaDerechaGO.TryGetComponent(out WheelController rightWheelController))
+        if(RuedaDerechaGO != null)
         {
-            rightWheelController.SetSteerAngle(ackermannAngleRight);
+            if (RuedaDerechaGO.TryGetComponent(out WheelController rightWheelController))
+            {
+                rightWheelController.SetSteerAngle(ackermannAngleRight);
+            }
         }
 
-        if (RuedaIzquierdaGO.TryGetComponent(out WheelController leftWheelController))
+        if(RuedaIzquierdaGO != null)
         {
-            leftWheelController.SetSteerAngle(ackermannAngleLeft);
+            if (RuedaIzquierdaGO.TryGetComponent(out WheelController leftWheelController))
+            {
+                leftWheelController.SetSteerAngle(ackermannAngleLeft);
+            }
         }
     }
 

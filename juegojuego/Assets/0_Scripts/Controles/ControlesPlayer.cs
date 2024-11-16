@@ -89,6 +89,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pausa"",
+                    ""type"": ""Button"",
+                    ""id"": ""db52cd39-06df-46a6-a7c2-9a7f444ad1a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -366,6 +375,28 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""action"": ""MovimientoFrontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""674a5734-a81b-4fd4-a01a-72904227ff5e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b866ae76-12f1-400b-8260-138945fe4824"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -422,6 +453,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""name"": ""CerrarInventario"",
                     ""type"": ""Button"",
                     ""id"": ""f615af67-05a4-4d37-b502-173e71717ea1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pausa"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2b7f24d-c18b-41b3-b885-5f949df79dd3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -648,6 +688,28 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""action"": ""MovimientoIzq"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3fbe47c-adf9-46ba-8264-c0da62922d7b"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11a5e1ba-d342-480d-abc3-1a6a51d1905f"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -795,6 +857,182 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""7650186a-7e94-4203-bde2-8380a520dded"",
+            ""actions"": [
+                {
+                    ""name"": ""MovimientoDer"",
+                    ""type"": ""Button"",
+                    ""id"": ""8fed8cdb-867e-4eda-af21-1e36edd61509"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MovimientoIzq"",
+                    ""type"": ""Button"",
+                    ""id"": ""c35e9715-9d30-4d0a-90d4-2832b4e179a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Accion"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a78a907-5ea7-4284-a7a3-e17b1c007de2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Volver"",
+                    ""type"": ""Button"",
+                    ""id"": ""465c0343-377c-41c0-ac21-9d3c6faeeabb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""2e2ccc52-0578-4421-9942-e5e30e02eab5"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoDer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c8c6b532-7444-4112-ba6b-7c331ea5b963"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoDer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""931dece1-c35d-49c0-8e75-27cec46b05e6"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoDer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d277b2a0-5a4e-4758-8e55-c3d5198387ef"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoDer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""02bdd50b-5ce4-41b7-8c7e-80c071b4a8a5"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoIzq"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8b7f77f-c81b-4c82-8a2f-4e00e335eef2"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoIzq"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8cdaf400-be5d-44f1-b68d-3ccac21454e5"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoIzq"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a3324c7-7a5a-45ab-842d-2f513b112933"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoIzq"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8fa0bf64-1825-499e-896d-ab26eb18bf4b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""578f03b2-9ff3-466f-b9c3-655c4715e5ef"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1eec7411-5150-4a0f-98f2-3cf4a28fcace"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85f4cac3-71ed-4cc2-ab29-2f8efcf74611"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Volver"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -808,6 +1046,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_Conduciendo_Luces = m_Conduciendo.FindAction("Luces", throwIfNotFound: true);
         m_Conduciendo_Derrape = m_Conduciendo.FindAction("Derrape", throwIfNotFound: true);
         m_Conduciendo_Mirar = m_Conduciendo.FindAction("Mirar", throwIfNotFound: true);
+        m_Conduciendo_Pausa = m_Conduciendo.FindAction("Pausa", throwIfNotFound: true);
         // Inventario
         m_Inventario = asset.FindActionMap("Inventario", throwIfNotFound: true);
         m_Inventario_MovimientoDer = m_Inventario.FindAction("MovimientoDer", throwIfNotFound: true);
@@ -816,11 +1055,18 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_Inventario_MovimientoAbajo = m_Inventario.FindAction("MovimientoAbajo", throwIfNotFound: true);
         m_Inventario_SoltarDelInventario = m_Inventario.FindAction("SoltarDelInventario", throwIfNotFound: true);
         m_Inventario_CerrarInventario = m_Inventario.FindAction("CerrarInventario", throwIfNotFound: true);
+        m_Inventario_Pausa = m_Inventario.FindAction("Pausa", throwIfNotFound: true);
         // Dialogo
         m_Dialogo = asset.FindActionMap("Dialogo", throwIfNotFound: true);
         m_Dialogo_Arriba = m_Dialogo.FindAction("Arriba", throwIfNotFound: true);
         m_Dialogo_Abajo = m_Dialogo.FindAction("Abajo", throwIfNotFound: true);
         m_Dialogo_Seleccion = m_Dialogo.FindAction("Seleccion", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_MovimientoDer = m_UI.FindAction("MovimientoDer", throwIfNotFound: true);
+        m_UI_MovimientoIzq = m_UI.FindAction("MovimientoIzq", throwIfNotFound: true);
+        m_UI_Accion = m_UI.FindAction("Accion", throwIfNotFound: true);
+        m_UI_Volver = m_UI.FindAction("Volver", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -889,6 +1135,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Conduciendo_Luces;
     private readonly InputAction m_Conduciendo_Derrape;
     private readonly InputAction m_Conduciendo_Mirar;
+    private readonly InputAction m_Conduciendo_Pausa;
     public struct ConduciendoActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -900,6 +1147,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @Luces => m_Wrapper.m_Conduciendo_Luces;
         public InputAction @Derrape => m_Wrapper.m_Conduciendo_Derrape;
         public InputAction @Mirar => m_Wrapper.m_Conduciendo_Mirar;
+        public InputAction @Pausa => m_Wrapper.m_Conduciendo_Pausa;
         public InputActionMap Get() { return m_Wrapper.m_Conduciendo; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -930,6 +1178,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Mirar.started += instance.OnMirar;
             @Mirar.performed += instance.OnMirar;
             @Mirar.canceled += instance.OnMirar;
+            @Pausa.started += instance.OnPausa;
+            @Pausa.performed += instance.OnPausa;
+            @Pausa.canceled += instance.OnPausa;
         }
 
         private void UnregisterCallbacks(IConduciendoActions instance)
@@ -955,6 +1206,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Mirar.started -= instance.OnMirar;
             @Mirar.performed -= instance.OnMirar;
             @Mirar.canceled -= instance.OnMirar;
+            @Pausa.started -= instance.OnPausa;
+            @Pausa.performed -= instance.OnPausa;
+            @Pausa.canceled -= instance.OnPausa;
         }
 
         public void RemoveCallbacks(IConduciendoActions instance)
@@ -982,6 +1236,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Inventario_MovimientoAbajo;
     private readonly InputAction m_Inventario_SoltarDelInventario;
     private readonly InputAction m_Inventario_CerrarInventario;
+    private readonly InputAction m_Inventario_Pausa;
     public struct InventarioActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -992,6 +1247,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @MovimientoAbajo => m_Wrapper.m_Inventario_MovimientoAbajo;
         public InputAction @SoltarDelInventario => m_Wrapper.m_Inventario_SoltarDelInventario;
         public InputAction @CerrarInventario => m_Wrapper.m_Inventario_CerrarInventario;
+        public InputAction @Pausa => m_Wrapper.m_Inventario_Pausa;
         public InputActionMap Get() { return m_Wrapper.m_Inventario; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1019,6 +1275,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @CerrarInventario.started += instance.OnCerrarInventario;
             @CerrarInventario.performed += instance.OnCerrarInventario;
             @CerrarInventario.canceled += instance.OnCerrarInventario;
+            @Pausa.started += instance.OnPausa;
+            @Pausa.performed += instance.OnPausa;
+            @Pausa.canceled += instance.OnPausa;
         }
 
         private void UnregisterCallbacks(IInventarioActions instance)
@@ -1041,6 +1300,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @CerrarInventario.started -= instance.OnCerrarInventario;
             @CerrarInventario.performed -= instance.OnCerrarInventario;
             @CerrarInventario.canceled -= instance.OnCerrarInventario;
+            @Pausa.started -= instance.OnPausa;
+            @Pausa.performed -= instance.OnPausa;
+            @Pausa.canceled -= instance.OnPausa;
         }
 
         public void RemoveCallbacks(IInventarioActions instance)
@@ -1120,6 +1382,76 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         }
     }
     public DialogoActions @Dialogo => new DialogoActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_MovimientoDer;
+    private readonly InputAction m_UI_MovimientoIzq;
+    private readonly InputAction m_UI_Accion;
+    private readonly InputAction m_UI_Volver;
+    public struct UIActions
+    {
+        private @ControlesPlayer m_Wrapper;
+        public UIActions(@ControlesPlayer wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MovimientoDer => m_Wrapper.m_UI_MovimientoDer;
+        public InputAction @MovimientoIzq => m_Wrapper.m_UI_MovimientoIzq;
+        public InputAction @Accion => m_Wrapper.m_UI_Accion;
+        public InputAction @Volver => m_Wrapper.m_UI_Volver;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @MovimientoDer.started += instance.OnMovimientoDer;
+            @MovimientoDer.performed += instance.OnMovimientoDer;
+            @MovimientoDer.canceled += instance.OnMovimientoDer;
+            @MovimientoIzq.started += instance.OnMovimientoIzq;
+            @MovimientoIzq.performed += instance.OnMovimientoIzq;
+            @MovimientoIzq.canceled += instance.OnMovimientoIzq;
+            @Accion.started += instance.OnAccion;
+            @Accion.performed += instance.OnAccion;
+            @Accion.canceled += instance.OnAccion;
+            @Volver.started += instance.OnVolver;
+            @Volver.performed += instance.OnVolver;
+            @Volver.canceled += instance.OnVolver;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @MovimientoDer.started -= instance.OnMovimientoDer;
+            @MovimientoDer.performed -= instance.OnMovimientoDer;
+            @MovimientoDer.canceled -= instance.OnMovimientoDer;
+            @MovimientoIzq.started -= instance.OnMovimientoIzq;
+            @MovimientoIzq.performed -= instance.OnMovimientoIzq;
+            @MovimientoIzq.canceled -= instance.OnMovimientoIzq;
+            @Accion.started -= instance.OnAccion;
+            @Accion.performed -= instance.OnAccion;
+            @Accion.canceled -= instance.OnAccion;
+            @Volver.started -= instance.OnVolver;
+            @Volver.performed -= instance.OnVolver;
+            @Volver.canceled -= instance.OnVolver;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     public interface IConduciendoActions
     {
         void OnMovimientoLateral(InputAction.CallbackContext context);
@@ -1129,6 +1461,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnLuces(InputAction.CallbackContext context);
         void OnDerrape(InputAction.CallbackContext context);
         void OnMirar(InputAction.CallbackContext context);
+        void OnPausa(InputAction.CallbackContext context);
     }
     public interface IInventarioActions
     {
@@ -1138,11 +1471,19 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnMovimientoAbajo(InputAction.CallbackContext context);
         void OnSoltarDelInventario(InputAction.CallbackContext context);
         void OnCerrarInventario(InputAction.CallbackContext context);
+        void OnPausa(InputAction.CallbackContext context);
     }
     public interface IDialogoActions
     {
         void OnArriba(InputAction.CallbackContext context);
         void OnAbajo(InputAction.CallbackContext context);
         void OnSeleccion(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnMovimientoDer(InputAction.CallbackContext context);
+        void OnMovimientoIzq(InputAction.CallbackContext context);
+        void OnAccion(InputAction.CallbackContext context);
+        void OnVolver(InputAction.CallbackContext context);
     }
 }

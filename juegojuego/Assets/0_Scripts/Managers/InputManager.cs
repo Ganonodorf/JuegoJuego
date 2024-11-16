@@ -42,6 +42,10 @@ public class InputManager : MonoBehaviour
                 Debug.Log("Controles: Dialogo");
                 ControlesDialogo();
                 break;
+            case GameState.PantallaPausa:
+                Debug.Log("Controles: UI");
+                ControlesUI();
+                break;
             case GameState.FinJuego:
                 Debug.Log("Controles: FinJuego. A CAMBIAR CUANDO DECIDAMOS QUÉ HACER");
                 ControlesFinJuego();
@@ -56,6 +60,7 @@ public class InputManager : MonoBehaviour
         controles.Conduciendo.Enable();
         controles.Inventario.Disable();
         controles.Dialogo.Disable();
+        controles.UI.Disable();
     }
 
     private void ControlesInventario()
@@ -63,6 +68,7 @@ public class InputManager : MonoBehaviour
         controles.Conduciendo.Disable();
         controles.Inventario.Enable();
         controles.Dialogo.Disable();
+        controles.UI.Disable();
     }
 
     private void ControlesDialogo()
@@ -70,6 +76,15 @@ public class InputManager : MonoBehaviour
         controles.Conduciendo.Disable();
         controles.Inventario.Disable();
         controles.Dialogo.Enable();
+        controles.UI.Disable();
+    }
+
+    private void ControlesUI()
+    {
+        controles.Conduciendo.Disable();
+        controles.Inventario.Disable();
+        controles.Dialogo.Disable();
+        controles.UI.Enable();
     }
 
     private void ControlesFinJuego()
@@ -77,6 +92,7 @@ public class InputManager : MonoBehaviour
         controles.Conduciendo.Disable();
         controles.Inventario.Disable();
         controles.Dialogo.Disable();
+        controles.UI.Disable();
     }
 
     private void HacerloInmortal()

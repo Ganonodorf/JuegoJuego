@@ -11,7 +11,9 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        HacerloInmortal();
+        //HacerloInmortal();
+
+        Instance = this;
 
         audioSource = GetComponent<AudioSource>();
     }

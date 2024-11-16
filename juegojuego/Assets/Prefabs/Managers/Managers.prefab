@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7265937275709683982}
-  - component: {fileID: 6991441538649758427}
   - component: {fileID: 5288896809508623883}
   - component: {fileID: 6062986176812401246}
   - component: {fileID: 6760724224441363702}
   - component: {fileID: 1250220853468734777}
   - component: {fileID: 3984162950287668036}
+  - component: {fileID: 7614566620856605760}
+  - component: {fileID: 2767589845706714722}
   - component: {fileID: 4189558449815655101}
   m_Layer: 0
   m_Name: Managers
@@ -38,19 +39,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6991441538649758427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7035980050509919414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1905a53e75ea3d54c945a97895c98c55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialGameState: 2
 --- !u!114 &5288896809508623883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +101,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cocheAbriendose: {fileID: 8300000, guid: f8f2355e983cdee4da231ba6fa66a377, type: 3}
   cocheCerrandose: {fileID: 8300000, guid: 877db12e108a7ea498d1163e511ac316, type: 3}
+--- !u!114 &7614566620856605760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035980050509919414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634a5566d504eea42be48a9071e33338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2767589845706714722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035980050509919414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729cfaf9bbb353b4aab809f401df4fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &4189558449815655101
 AudioSource:
   m_ObjectHideFlags: 0

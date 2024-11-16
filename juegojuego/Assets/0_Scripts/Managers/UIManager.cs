@@ -1,7 +1,4 @@
-using PixelCrushers.DialogueSystem;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Constantes;
@@ -18,7 +15,9 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        HacerloInmortal();
+        //HacerloInmortal();
+
+        Instance = this;
 
         SuscribirseEventos();
     }

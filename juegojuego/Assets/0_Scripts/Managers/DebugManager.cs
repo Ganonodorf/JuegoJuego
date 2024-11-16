@@ -11,7 +11,9 @@ public class DebugManager : MonoBehaviour
 
     private void Awake()
     {
-        HacerloInmortal();
+        //HacerloInmortal();
+
+        Instance = this;
 
         BuscarGO();
     }
