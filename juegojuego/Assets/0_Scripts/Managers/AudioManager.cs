@@ -9,8 +9,6 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource audioSource;
 
-    [SerializeField] private GameObject lucesDelanteras;
-
     private void Awake()
     {
         HacerloInmortal();
