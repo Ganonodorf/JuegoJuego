@@ -6096,15 +6096,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.057361163
+      value: 0.057361145
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06105809
+      value: 0.061058123
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0035147408
+      value: -0.0035147415
       objectReference: {fileID: 0}
     - target: {fileID: 3868807839614905530, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16023,6 +16023,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3984162950287668036, guid: ef58691c17289a64a93e782dbdea8d58, type: 3}
+      propertyPath: lucesDelanteras
+      value: 
+      objectReference: {fileID: 1439588325}
     - target: {fileID: 7035980050509919414, guid: ef58691c17289a64a93e782dbdea8d58, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -62569,7 +62573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -8.8616523e-16
+      value: 8.8616523e-16
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
@@ -62577,7 +62581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484938156726804319, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.8498569e-15
+      value: -1.8498569e-15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -67064,6 +67068,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+--- !u!1 &1439588325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605311796654579801, guid: e12fececdb21c4edbac7e30c317cceac, type: 3}
+  m_PrefabInstance: {fileID: 1439588324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439837092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7406276325046009223, guid: 26e9f1ef0d7ec4a529b59cd37fba7f72, type: 3}
