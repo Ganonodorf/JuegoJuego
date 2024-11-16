@@ -3,7 +3,17 @@ guid: dd370642286997f42a7a37fbdb9858b7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.Concha
+    second: {fileID: 2100000, guid: a6e648536949c0c4fa9aa4a383c11b87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.ConchaCara
+    second: {fileID: 2100000, guid: 3f73c92b4d73fb94b8480b2fcd020cfd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
