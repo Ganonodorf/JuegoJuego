@@ -16,7 +16,9 @@ public class InputManager : MonoBehaviour
 
         RegistrarControlesDyalogueSystem();
 
-        HacerloInmortal();
+        //HacerloInmortal();
+
+        Instance = this;
     }
 
     private void OnDestroy()

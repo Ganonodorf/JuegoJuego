@@ -15,17 +15,20 @@ public class CarFrontLights : MonoBehaviour
 
     private void TriggerLuces()
     {
-        bool nuevoEstadoLuces = !this.gameObject.GetComponent<Light>().enabled;
-
-        if (nuevoEstadoLuces)
+        if(this != null)
         {
-            audioSource.PlayOneShot(sonidoEncenderLuces);
-        }
-        else
-        {
-            audioSource.PlayOneShot(sonidoApagarLuces);
-        }
+            bool nuevoEstadoLuces = !this.gameObject.GetComponent<Light>().enabled;
 
-        this.gameObject.GetComponent<Light>().enabled = nuevoEstadoLuces;
+            if (nuevoEstadoLuces)
+            {
+                audioSource.PlayOneShot(sonidoEncenderLuces);
+            }
+            else
+            {
+                audioSource.PlayOneShot(sonidoApagarLuces);
+            }
+
+            this.gameObject.GetComponent<Light>().enabled = nuevoEstadoLuces;
+        }
     }
 }

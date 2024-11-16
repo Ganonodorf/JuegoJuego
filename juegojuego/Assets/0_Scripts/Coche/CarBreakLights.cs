@@ -10,7 +10,6 @@ public class CarBreakLights : MonoBehaviour
 
     private void EncenderLuces(bool estado)
     {
-        Debug.Log(this);
         if (this != null)
         {
             this.transform.GetChild(0).gameObject.SetActive(estado);
