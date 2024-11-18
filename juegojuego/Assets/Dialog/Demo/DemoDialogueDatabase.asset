@@ -8360,7 +8360,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: 
       userScript: "SetQuestState(\"Consigue una matr\xEDcula\", \"success\");\nEntregarObjeto(\"Matricula\",
-        \"Manu\");\nFadeToBlack()"
+        \"Manu\");"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9741,9 +9741,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPaco,false);
 
-          SetActive(CamaraManu,true);
-
-          AnimatorPlay(Armature|ManuEnfadao,Manu_V2)'
+          SetActive(CamaraManu,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -9761,7 +9759,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoManu();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9801,9 +9799,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraManu,false);
 
-          SetActive(CamaraPaco,true);
-
-          AnimatorPlay(Armature|PacoEnfadao,Paco_V2)'
+          SetActive(CamaraPaco,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -9821,7 +9817,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoPaco();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9971,9 +9967,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(Armature|ManuIdle,Manu_V2);
-
-          AnimatorPlay(Armature|PacoIdle,Paco_V2)'
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -9991,7 +9985,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayIdlePaco();
+
+        PlayIdleManu();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10651,9 +10647,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPaco,false);
 
-          SetActive(CamaraManu,true);
-
-          AnimatorPlay(Armature|ManuEnfadao,Manu_V2)'
+          SetActive(CamaraManu,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -10671,7 +10665,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoManu();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10711,9 +10705,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraManu,false);
 
-          SetActive(CamaraPaco,true);
-
-          AnimatorPlay(Armature|PacoEnfadao,Paco_V2)'
+          SetActive(CamaraPaco,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -10731,7 +10723,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoPaco();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10768,9 +10760,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(Armature|ManuIdle,Manu_V2);
-
-          AnimatorPlay(Armature|PacoIdle,Paco_V2)'
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10782,7 +10772,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'PlayIdlePaco();
+
+        PlayIdleManu();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10846,7 +10838,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12107,8 +12099,8 @@ MonoBehaviour:
         width: 570.12976
         height: 852.9923
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 837.4357, y: 64.39}
-    canvasZoom: 0.7634989
+    canvasScrollPosition: {x: 0, y: 357.96426}
+    canvasZoom: 0.91349876
   - id: 5
     fields:
     - title: Title
@@ -14762,9 +14754,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'FadeToBlack();
-
-        SetQuestState("Consigue un brazo", "returnToNPC")'
+      userScript: SetQuestState("Consigue un brazo", "returnToNPC");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14825,7 +14815,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14884,7 +14874,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToBlack()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14943,7 +14933,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15834,7 +15824,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: DejarMirarObjeto()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16030,8 +16020,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.84000003
+    canvasScrollPosition: {x: 529.89417, y: 75.26458}
+    canvasZoom: 0.81000006
   - id: 4
     fields:
     - title: Title
@@ -17250,9 +17240,7 @@ MonoBehaviour:
         SetQuestState("Arregla
         el bicifijo", "returnToNPC");
 
-        MirarObjetoInventario("BicifijoArreglado");
-
-        FadeToBlack()'
+        MirarObjetoInventario("BicifijoArreglado");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17312,7 +17300,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18023,8 +18011,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 380.44122, y: 32.14987}
-    canvasZoom: 0.7465017
+    canvasScrollPosition: {x: 356.24557, y: 80.76301}
+    canvasZoom: 0.8365016
   - id: 7
     fields:
     - title: Title
@@ -32461,9 +32449,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "El texto dice: \"Pueblo de ******\". El nombre del pueblo est\xE1
-          tachado y es ilegible. M\xE1s abajo pone: \"F\xE1brica de coches La Radio
-          Rota\"."
+        value: "El texto dice: \"Pueblo de ****\". El nombre del pueblo est\xE1 tachado
+          y es ilegible. M\xE1s abajo pone: \"F\xE1brica de coches La Radio Rota\"."
         type: 0
         typeString: 
       - title: Sequence

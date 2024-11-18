@@ -41,7 +41,6 @@ public class CarController : MonoBehaviour
 
     private void GestionarInputs()
     {
-        Debug.Log("A");
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => CentrarRuedas();
     }

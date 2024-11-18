@@ -8360,7 +8360,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: 
       userScript: "SetQuestState(\"Consigue una matr\xEDcula\", \"success\");\nEntregarObjeto(\"Matricula\",
-        \"Manu\");\nFadeToBlack()"
+        \"Manu\");"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10846,7 +10846,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12107,8 +12107,8 @@ MonoBehaviour:
         width: 570.12976
         height: 852.9923
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 837.4357, y: 64.39}
-    canvasZoom: 0.7634989
+    canvasScrollPosition: {x: 669.75854, y: 115.39968}
+    canvasZoom: 0.91349876
   - id: 5
     fields:
     - title: Title
@@ -14762,9 +14762,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'FadeToBlack();
-
-        SetQuestState("Consigue un brazo", "returnToNPC")'
+      userScript: SetQuestState("Consigue un brazo", "returnToNPC");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14825,7 +14823,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16030,7 +16028,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 494.04764, y: 95.2381}
     canvasZoom: 0.84000003
   - id: 4
     fields:
@@ -17250,9 +17248,7 @@ MonoBehaviour:
         SetQuestState("Arregla
         el bicifijo", "returnToNPC");
 
-        MirarObjetoInventario("BicifijoArreglado");
-
-        FadeToBlack()'
+        MirarObjetoInventario("BicifijoArreglado");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17312,7 +17308,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18023,8 +18019,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 380.44122, y: 32.14987}
-    canvasZoom: 0.7465017
+    canvasScrollPosition: {x: 356.24557, y: 80.76301}
+    canvasZoom: 0.8365016
   - id: 7
     fields:
     - title: Title
@@ -30742,6 +30738,12 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 17
+        originDialogueID: 0
+        destinationConversationID: 17
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -30749,8 +30751,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 157.83557
+        y: 36.569145
         width: 160
         height: 30
     - id: 1
@@ -30797,15 +30799,16 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Lleva el Malino a la casa de la amiga
+        artista") ~= "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 154.9187
+        y: 115.569145
         width: 160
         height: 30
     - id: 2
@@ -30859,8 +30862,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159
-        y: 129
+        x: 153.9187
+        y: 164.56915
         width: 160
         height: 30
     - id: 3
@@ -30904,12 +30907,6 @@ MonoBehaviour:
       - originConversationID: 17
         originDialogueID: 3
         destinationConversationID: 17
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
-      - originConversationID: 17
-        originDialogueID: 3
-        destinationConversationID: 17
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
@@ -30920,8 +30917,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 159
-        y: 179
+        x: 153.9187
+        y: 214.56915
         width: 160
         height: 30
     - id: 4
@@ -30969,14 +30966,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["ORMalino"] == true
-      userScript: EntregarObjeto("ORMalino", "MesaTrabajo");
+      userScript: 'EntregarObjeto("ORMalino", "MesaTrabajo");
+
+        SetQuestState("Lleva
+        el Malino a la casa de la amiga artista", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 152.19398
-        y: 421.5131
+        x: 147.11269
+        y: 457.0822
         width: 160
         height: 30
     - id: 5
@@ -30990,7 +30990,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 18
+        value: 19
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -31010,7 +31010,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 019644cf-03ad-47c2-8a3c-c6dcce42478a
+        value: 
         type: 0
         typeString: 
       conversationID: 17
@@ -31034,8 +31034,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 150.2494
-        y: 486.09735
+        x: 145.1681
+        y: 521.66675
         width: 160
         height: 30
     - id: 6
@@ -31069,6 +31069,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 1ef50536-66b2-4a2e-b38b-de564691835d
+        type: 0
+        typeString: 
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -31090,8 +31094,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 354.42996
-        y: 247.47348
+        x: 151.97409
+        y: 288.87634
         width: 160
         height: 30
     - id: 7
@@ -31145,8 +31149,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 354.42996
-        y: 297.47348
+        x: 151.97409
+        y: 338.87634
         width: 160
         height: 30
     - id: 8
@@ -31180,6 +31184,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 5fda7498-4f5d-47a0-82ed-bfc835a92893
+        type: 0
+        typeString: 
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -31201,8 +31209,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 354.42996
-        y: 347.47348
+        x: 151.97409
+        y: 388.87634
         width: 160
         height: 30
     - id: 9
@@ -31216,7 +31224,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 18
+        value: 19
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -31260,8 +31268,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 149.27711
-        y: 538.04193
+        x: 144.19582
+        y: 573.6112
         width: 160
         height: 30
     - id: 10
@@ -31309,13 +31317,62 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 149.27713
-        y: 587.06964
+        x: 144.19583
+        y: 622.6389
+        width: 160
+        height: 30
+    - id: 11
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 18
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "La ara\xF1a acompa\xF1a al Malino que has dejado sobre la mesa."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 17
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 449.74194
+        y: 91.667465
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.0285015
+    canvasScrollPosition: {x: 0, y: 5.081299}
+    canvasZoom: 0.9839989
   - id: 18
     fields:
     - title: Title
