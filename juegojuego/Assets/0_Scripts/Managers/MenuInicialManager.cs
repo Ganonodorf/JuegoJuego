@@ -22,7 +22,6 @@ public class MenuInicialManager : MonoBehaviour
     {
         if(nuevoEstadoJuego == GameState.MenuInicio)
         {
-            Debug.Log("a");
             AparecerMenu(true);
 
             camaraMenu.GetComponent<CinemachineVirtualCamera>().enabled = true;
@@ -31,7 +30,6 @@ public class MenuInicialManager : MonoBehaviour
 
     private void LinkearFunciones()
     {
-        Debug.Log("link");
         menuInicialGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().onClick.AddListener(BotonJugar);
         menuInicialGO.transform.GetChild(1).transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
@@ -40,7 +38,7 @@ public class MenuInicialManager : MonoBehaviour
     {
         AparecerMenu(false);
 
-        camaraMenu.GetComponent<CinemachineFreeLook>().enabled = false;
+        camaraMenu.GetComponent<CinemachineVirtualCamera>().enabled = false;
 
         GameManager.Instance.UpdateGameState(GameState.SecuenciaInicial);
     }
@@ -52,10 +50,8 @@ public class MenuInicialManager : MonoBehaviour
 
     private void AparecerMenu(bool estado)
     {
-        menuInicialGO.transform.GetChild(0).GetComponent<Image>().enabled = estado;
-
-        menuInicialGO.transform.GetChild(1).transform.GetChild(0).gameObject.SetActive(estado);
-        menuInicialGO.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(estado);
+        menuInicialGO.transform.GetChild(0).gameObject.SetActive(estado);
+        menuInicialGO.transform.GetChild(1).gameObject.SetActive(estado);
 
         if (estado) { menuInicialGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
     }

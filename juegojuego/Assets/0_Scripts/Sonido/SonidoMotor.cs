@@ -19,6 +19,23 @@ public class SonidoMotor : MonoBehaviour
     {
         motorAudioSource = GetComponent<AudioSource>();
         jugadorRigidBody = GameObject.FindGameObjectWithTag(Constantes.Player.TAG_PLAYER).GetComponent<Rigidbody>();
+
+        GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
+    }
+
+    private void GameManager_OnGameStateChanged(GameState nuevoEstadoJuego, GameState viejoEstadoJuego)
+    {
+        if(nuevoEstadoJuego == GameState.MenuInicio)
+        {
+            motorAudioSource.enabled = false;
+        }
+        else
+        {
+            if(motorAudioSource.isActiveAndEnabled == false)
+            {
+                motorAudioSource.enabled = true;
+            }
+        }
     }
 
     private void Update()
