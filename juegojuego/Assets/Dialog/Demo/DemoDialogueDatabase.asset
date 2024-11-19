@@ -927,7 +927,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -955,7 +955,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -969,7 +969,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -28865,7 +28865,8 @@ MonoBehaviour:
         destinationDialogueID: 36
         isConnector: 0
         priority: 2
-      conditionsString: Variable["PuertaInteriorAbierta"] == false
+      conditionsString: "Variable[\"PuertaInteriorAbierta\"] == false and \n(Variable[\"PuertaPlayaAbierta\"]
+        == false)"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -28918,6 +28919,12 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 36
+        destinationConversationID: 15
+        destinationDialogueID: 44
+        isConnector: 0
+        priority: 2
       - originConversationID: 15
         originDialogueID: 36
         destinationConversationID: 15
@@ -28992,8 +28999,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1214.3868
-        y: 424.67426
+        x: 1215.1113
+        y: 471.03473
         width: 160
         height: 30
     - id: 38
@@ -29047,8 +29054,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1214.3868
-        y: 474.67426
+        x: 1215.1113
+        y: 521.0347
         width: 160
         height: 30
     - id: 39
@@ -29107,8 +29114,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1215.9833
-        y: 520.6839
+        x: 1216.7078
+        y: 567.0443
         width: 160
         height: 30
     - id: 40
@@ -29162,8 +29169,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1215.9833
-        y: 570.6839
+        x: 1216.7078
+        y: 617.0443
         width: 160
         height: 30
     - id: 41
@@ -29210,16 +29217,16 @@ MonoBehaviour:
         destinationDialogueID: 42
         isConnector: 0
         priority: 2
-      conditionsString: Variable["PuertaPlayaAbierta"] == false and (Variable["RadDetectorEncendido"]
-        == true)
+      conditionsString: "Variable[\"PuertaPlayaAbierta\"] == false and \n(Variable[\"RadDetectorEncendido\"]
+        == true) and \n(Variable[\"PuertaInteriorAbierta\"] == true)"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1456.5104
-        y: 320.1025
+        x: 1650.9442
+        y: 336.76852
         width: 160
         height: 30
     - id: 42
@@ -29278,8 +29285,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1456.5104
-        y: 370.1025
+        x: 1650.9442
+        y: 386.76852
         width: 160
         height: 30
     - id: 43
@@ -29337,13 +29344,70 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1456.5104
-        y: 420.1025
+        x: 1650.9442
+        y: 436.76852
+        width: 160
+        height: 30
+    - id: 44
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Y como ya tienes ese cacharro encendido, te puedo abrir la de la
+          playa tambi\xE9n."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 44
+        destinationConversationID: 15
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: "Variable[\"PuertaPlayaAbierta\"] == false and \n(Variable[\"RadDetectorEncendido\"]
+        == true) and \n(Variable[\"PuertaInteriorAbierta\"] == true)"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1443.1216
+        y: 371.114
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 149.383}
-    canvasZoom: 0.87399215
+    canvasScrollPosition: {x: 666.0795, y: 0}
+    canvasZoom: 1.5869924
   - id: 16
     fields:
     - title: Title
