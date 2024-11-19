@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pito",
+                    "type": "Button",
+                    "id": "79376fe9-18c6-4e43-9c01-7368f9b3cc03",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -203,7 +212,7 @@
                 {
                     "name": "",
                     "id": "80a42f37-fa75-4d37-9423-c812db0a1e78",
-                    "path": "<Gamepad>/dpad/up",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -373,6 +382,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa6f7e13-6c41-4064-aff7-3a426e612b19",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pito",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fe07c66-c66a-4368-9727-217fcdebbe68",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pito",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -98,6 +98,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pito"",
+                    ""type"": ""Button"",
+                    ""id"": ""79376fe9-18c6-4e43-9c01-7368f9b3cc03"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -225,7 +234,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""80a42f37-fa75-4d37-9423-c812db0a1e78"",
-                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -395,6 +404,28 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aa6f7e13-6c41-4064-aff7-3a426e612b19"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pito"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4fe07c66-c66a-4368-9727-217fcdebbe68"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pito"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1047,6 +1078,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_Conduciendo_Derrape = m_Conduciendo.FindAction("Derrape", throwIfNotFound: true);
         m_Conduciendo_Mirar = m_Conduciendo.FindAction("Mirar", throwIfNotFound: true);
         m_Conduciendo_Pausa = m_Conduciendo.FindAction("Pausa", throwIfNotFound: true);
+        m_Conduciendo_Pito = m_Conduciendo.FindAction("Pito", throwIfNotFound: true);
         // Inventario
         m_Inventario = asset.FindActionMap("Inventario", throwIfNotFound: true);
         m_Inventario_MovimientoDer = m_Inventario.FindAction("MovimientoDer", throwIfNotFound: true);
@@ -1136,6 +1168,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Conduciendo_Derrape;
     private readonly InputAction m_Conduciendo_Mirar;
     private readonly InputAction m_Conduciendo_Pausa;
+    private readonly InputAction m_Conduciendo_Pito;
     public struct ConduciendoActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -1148,6 +1181,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @Derrape => m_Wrapper.m_Conduciendo_Derrape;
         public InputAction @Mirar => m_Wrapper.m_Conduciendo_Mirar;
         public InputAction @Pausa => m_Wrapper.m_Conduciendo_Pausa;
+        public InputAction @Pito => m_Wrapper.m_Conduciendo_Pito;
         public InputActionMap Get() { return m_Wrapper.m_Conduciendo; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1181,6 +1215,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Pausa.started += instance.OnPausa;
             @Pausa.performed += instance.OnPausa;
             @Pausa.canceled += instance.OnPausa;
+            @Pito.started += instance.OnPito;
+            @Pito.performed += instance.OnPito;
+            @Pito.canceled += instance.OnPito;
         }
 
         private void UnregisterCallbacks(IConduciendoActions instance)
@@ -1209,6 +1246,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Pausa.started -= instance.OnPausa;
             @Pausa.performed -= instance.OnPausa;
             @Pausa.canceled -= instance.OnPausa;
+            @Pito.started -= instance.OnPito;
+            @Pito.performed -= instance.OnPito;
+            @Pito.canceled -= instance.OnPito;
         }
 
         public void RemoveCallbacks(IConduciendoActions instance)
@@ -1462,6 +1502,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnDerrape(InputAction.CallbackContext context);
         void OnMirar(InputAction.CallbackContext context);
         void OnPausa(InputAction.CallbackContext context);
+        void OnPito(InputAction.CallbackContext context);
     }
     public interface IInventarioActions
     {
