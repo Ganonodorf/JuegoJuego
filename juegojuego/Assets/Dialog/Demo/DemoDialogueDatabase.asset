@@ -927,7 +927,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -955,7 +955,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -30007,8 +30007,8 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: "Variable[\"Intro_Siluro\"] == true and (Variable[\"ORRadDetector\"]
-        == true) and (Variable[\"RadDetectorEncendido\"] == true) and \n(Variable[\"SiluroTeHaDadoCrocoCostume\"]
+      conditionsString: "Variable[\"Intro_Siluro\"] == true and \n(Variable[\"ORRadDetector\"]
+        == true) and \n(Variable[\"RadDetectorEncendido\"] == true) and \n(Variable[\"SiluroTeHaDadoCrocoCostume\"]
         == false)"
       userScript: 
       onExecute:
@@ -30958,7 +30958,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.2339882
+    canvasZoom: 1.1994907
   - id: 17
     fields:
     - title: Title
