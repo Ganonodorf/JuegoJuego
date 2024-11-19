@@ -2216,12 +2216,6 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 1
         destinationConversationID: 1
-        destinationDialogueID: 19
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 1
-        destinationConversationID: 1
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
@@ -2241,6 +2235,12 @@ MonoBehaviour:
         originDialogueID: 1
         destinationConversationID: 1
         destinationDialogueID: 44
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 1
+        destinationConversationID: 1
+        destinationDialogueID: 19
         isConnector: 0
         priority: 2
       conditionsString: Variable["HabladoCura"] == true
@@ -4675,12 +4675,6 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 55
         destinationConversationID: 1
-        destinationDialogueID: 19
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 55
-        destinationConversationID: 1
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
@@ -4700,6 +4694,12 @@ MonoBehaviour:
         originDialogueID: 55
         destinationConversationID: 1
         destinationDialogueID: 44
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 55
+        destinationConversationID: 1
+        destinationDialogueID: 19
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4779,8 +4779,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 158.7495, y: 56.686493}
-    canvasZoom: 0.83149874
+    canvasScrollPosition: {x: 611.7247, y: 0}
+    canvasZoom: 0.8614987
   - id: 10
     fields:
     - title: Title
@@ -5102,12 +5102,6 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 4
         destinationConversationID: 10
-        destinationDialogueID: 7
-        isConnector: 0
-        priority: 2
-      - originConversationID: 10
-        originDialogueID: 4
-        destinationConversationID: 10
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
@@ -5127,6 +5121,12 @@ MonoBehaviour:
         originDialogueID: 4
         destinationConversationID: 10
         destinationDialogueID: 28
+        isConnector: 0
+        priority: 2
+      - originConversationID: 10
+        originDialogueID: 4
+        destinationConversationID: 10
+        destinationDialogueID: 7
         isConnector: 0
         priority: 2
       conditionsString: Variable["HabladoFeligresa"] == true and (Variable["Comida"]
@@ -7199,12 +7199,6 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 42
         destinationConversationID: 10
-        destinationDialogueID: 7
-        isConnector: 0
-        priority: 2
-      - originConversationID: 10
-        originDialogueID: 42
-        destinationConversationID: 10
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
@@ -7224,6 +7218,12 @@ MonoBehaviour:
         originDialogueID: 42
         destinationConversationID: 10
         destinationDialogueID: 28
+        isConnector: 0
+        priority: 2
+      - originConversationID: 10
+        originDialogueID: 42
+        destinationConversationID: 10
+        destinationDialogueID: 7
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -7403,7 +7403,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 300.25507, y: 0}
+    canvasScrollPosition: {x: 159.03339, y: 0}
     canvasZoom: 0.7859986
   - id: 6
     fields:
@@ -7937,12 +7937,6 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 15
         destinationConversationID: 2
-        destinationDialogueID: 16
-        isConnector: 0
-        priority: 2
-      - originConversationID: 2
-        originDialogueID: 15
-        destinationConversationID: 2
         destinationDialogueID: 18
         isConnector: 0
         priority: 2
@@ -7968,6 +7962,12 @@ MonoBehaviour:
         originDialogueID: 15
         destinationConversationID: 2
         destinationDialogueID: 79
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 15
+        destinationConversationID: 2
+        destinationDialogueID: 16
         isConnector: 0
         priority: 2
       conditionsString: Variable["HabladoFabricantes"] == true
@@ -9741,9 +9741,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPaco,false);
 
-          SetActive(CamaraManu,true);
-
-          AnimatorPlay(Armature|ManuEnfadao,Manu_V2)'
+          SetActive(CamaraManu,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -9761,7 +9759,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoManu();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9801,9 +9799,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraManu,false);
 
-          SetActive(CamaraPaco,true);
-
-          AnimatorPlay(Armature|PacoEnfadao,Paco_V2)'
+          SetActive(CamaraPaco,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -9821,7 +9817,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoPaco();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9971,9 +9967,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(Armature|ManuIdle,Manu_V2);
-
-          AnimatorPlay(Armature|PacoIdle,Paco_V2)'
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -9991,7 +9985,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayIdlePaco();
+
+        PlayIdleManu();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10651,9 +10647,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraPaco,false);
 
-          SetActive(CamaraManu,true);
-
-          AnimatorPlay(Armature|ManuEnfadao,Manu_V2)'
+          SetActive(CamaraManu,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -10671,7 +10665,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoManu();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10711,9 +10705,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraManu,false);
 
-          SetActive(CamaraPaco,true);
-
-          AnimatorPlay(Armature|PacoEnfadao,Paco_V2)'
+          SetActive(CamaraPaco,true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -10731,7 +10723,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayEnfadaoPaco();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10768,9 +10760,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AnimatorPlay(Armature|ManuIdle,Manu_V2);
-
-          AnimatorPlay(Armature|PacoIdle,Paco_V2)'
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -10782,7 +10772,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'PlayIdlePaco();
+
+        PlayIdleManu();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12054,12 +12046,6 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 87
         destinationConversationID: 2
-        destinationDialogueID: 16
-        isConnector: 0
-        priority: 2
-      - originConversationID: 2
-        originDialogueID: 87
-        destinationConversationID: 2
         destinationDialogueID: 18
         isConnector: 0
         priority: 2
@@ -12087,6 +12073,12 @@ MonoBehaviour:
         destinationDialogueID: 79
         isConnector: 0
         priority: 2
+      - originConversationID: 2
+        originDialogueID: 87
+        destinationConversationID: 2
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -12107,7 +12099,7 @@ MonoBehaviour:
         width: 570.12976
         height: 852.9923
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 669.75854, y: 115.39968}
+    canvasScrollPosition: {x: 550.6303, y: 0}
     canvasZoom: 0.91349876
   - id: 5
     fields:
@@ -12426,12 +12418,6 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 13
         destinationConversationID: 5
-        destinationDialogueID: 14
-        isConnector: 0
-        priority: 2
-      - originConversationID: 5
-        originDialogueID: 13
-        destinationConversationID: 5
         destinationDialogueID: 15
         isConnector: 0
         priority: 2
@@ -12451,6 +12437,12 @@ MonoBehaviour:
         originDialogueID: 13
         destinationConversationID: 5
         destinationDialogueID: 70
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 13
+        destinationConversationID: 5
+        destinationDialogueID: 14
         isConnector: 0
         priority: 2
       conditionsString: "(Variable[\"HabladoMonstruas\"] == true) and (CurrentQuestState(\"Ll\xE9vale
@@ -14882,7 +14874,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToBlack()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14941,7 +14933,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: FadeToWhite()
+      userScript: DejarMirarObjeto()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15832,7 +15824,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: DejarMirarObjeto()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15883,12 +15875,6 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 76
         destinationConversationID: 5
-        destinationDialogueID: 14
-        isConnector: 0
-        priority: 2
-      - originConversationID: 5
-        originDialogueID: 76
-        destinationConversationID: 5
         destinationDialogueID: 15
         isConnector: 0
         priority: 2
@@ -15908,6 +15894,12 @@ MonoBehaviour:
         originDialogueID: 76
         destinationConversationID: 5
         destinationDialogueID: 70
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 76
+        destinationConversationID: 5
+        destinationDialogueID: 14
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -16028,8 +16020,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 494.04764, y: 95.2381}
-    canvasZoom: 0.84000003
+    canvasScrollPosition: {x: 302.7337, y: 0}
+    canvasZoom: 0.81000006
   - id: 4
     fields:
     - title: Title
@@ -16173,12 +16165,6 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 27
         destinationConversationID: 4
-        destinationDialogueID: 28
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 27
-        destinationConversationID: 4
         destinationDialogueID: 30
         isConnector: 0
         priority: 2
@@ -16204,6 +16190,12 @@ MonoBehaviour:
         originDialogueID: 27
         destinationConversationID: 4
         destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 27
+        destinationConversationID: 4
+        destinationDialogueID: 28
         isConnector: 0
         priority: 2
       conditionsString: Variable["HabladoFabricantes"] == true
@@ -17974,12 +17966,6 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 59
         destinationConversationID: 4
-        destinationDialogueID: 28
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 59
-        destinationConversationID: 4
         destinationDialogueID: 30
         isConnector: 0
         priority: 2
@@ -18007,6 +17993,12 @@ MonoBehaviour:
         destinationDialogueID: 49
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 59
+        destinationConversationID: 4
+        destinationDialogueID: 28
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -18019,7 +18011,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 356.24557, y: 80.76301}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.8365016
   - id: 7
     fields:
@@ -18544,12 +18536,6 @@ MonoBehaviour:
       - originConversationID: 11
         originDialogueID: 2
         destinationConversationID: 11
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      - originConversationID: 11
-        originDialogueID: 2
-        destinationConversationID: 11
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
@@ -18575,6 +18561,12 @@ MonoBehaviour:
         originDialogueID: 2
         destinationConversationID: 11
         destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      - originConversationID: 11
+        originDialogueID: 2
+        destinationConversationID: 11
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       conditionsString: Variable["HabladoEnterradora"] == true
@@ -21154,12 +21146,6 @@ MonoBehaviour:
       - originConversationID: 11
         originDialogueID: 49
         destinationConversationID: 11
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      - originConversationID: 11
-        originDialogueID: 49
-        destinationConversationID: 11
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
@@ -21185,6 +21171,12 @@ MonoBehaviour:
         originDialogueID: 49
         destinationConversationID: 11
         destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      - originConversationID: 11
+        originDialogueID: 49
+        destinationConversationID: 11
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21355,12 +21347,6 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 1
         destinationConversationID: 12
-        destinationDialogueID: 28
-        isConnector: 0
-        priority: 2
-      - originConversationID: 12
-        originDialogueID: 1
-        destinationConversationID: 12
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
@@ -21368,6 +21354,12 @@ MonoBehaviour:
         originDialogueID: 1
         destinationConversationID: 12
         destinationDialogueID: 18
+        isConnector: 0
+        priority: 2
+      - originConversationID: 12
+        originDialogueID: 1
+        destinationConversationID: 12
+        destinationDialogueID: 28
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -22866,7 +22858,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 90.544464, y: 18.64151}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.7510122
   - id: 13
     fields:
@@ -27040,8 +27032,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 633.10803, y: 40.411133}
-    canvasZoom: 1.4105009
+    canvasScrollPosition: {x: 101.470764, y: 0}
+    canvasZoom: 0.60050166
   - id: 15
     fields:
     - title: Title
@@ -28670,12 +28662,6 @@ MonoBehaviour:
       - originConversationID: 15
         originDialogueID: 32
         destinationConversationID: 15
-        destinationDialogueID: 34
-        isConnector: 0
-        priority: 2
-      - originConversationID: 15
-        originDialogueID: 32
-        destinationConversationID: 15
         destinationDialogueID: 35
         isConnector: 0
         priority: 2
@@ -28683,6 +28669,12 @@ MonoBehaviour:
         originDialogueID: 32
         destinationConversationID: 15
         destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      - originConversationID: 15
+        originDialogueID: 32
+        destinationConversationID: 15
+        destinationDialogueID: 34
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -29321,8 +29313,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 254.31485, y: 99.27743}
-    canvasZoom: 0.99399203
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.6039924
   - id: 16
     fields:
     - title: Title
@@ -30570,13 +30562,13 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 21
         destinationConversationID: 16
-        destinationDialogueID: 20
+        destinationDialogueID: 22
         isConnector: 0
         priority: 2
       - originConversationID: 16
         originDialogueID: 21
         destinationConversationID: 16
-        destinationDialogueID: 22
+        destinationDialogueID: 20
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -30646,8 +30638,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 67.376915, y: 183.98285}
-    canvasZoom: 1.0014881
+    canvasScrollPosition: {x: 0, y: 57.417206}
+    canvasZoom: 0.73148835
   - id: 17
     fields:
     - title: Title
@@ -31371,7 +31363,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 5.081299}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.9839989
   - id: 18
     fields:
@@ -32457,9 +32449,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "El texto dice: \"Pueblo de ******\". El nombre del pueblo est\xE1
-          tachado y es ilegible. M\xE1s abajo pone: \"F\xE1brica de coches La Radio
-          Rota\"."
+        value: "El texto dice: \"Pueblo de ****\". El nombre del pueblo est\xE1 tachado
+          y es ilegible. M\xE1s abajo pone: \"F\xE1brica de coches La Radio Rota\"."
         type: 0
         typeString: 
       - title: Sequence
