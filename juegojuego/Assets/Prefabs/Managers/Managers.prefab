@@ -16,10 +16,11 @@ GameObject:
   - component: {fileID: 3984162950287668036}
   - component: {fileID: 7614566620856605760}
   - component: {fileID: 2767589845706714722}
+  - component: {fileID: 605707930939341303}
   - component: {fileID: 4189558449815655101}
   m_Layer: 0
   m_Name: Managers
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cocheAbriendose: {fileID: 8300000, guid: f8f2355e983cdee4da231ba6fa66a377, type: 3}
   cocheCerrandose: {fileID: 8300000, guid: 877db12e108a7ea498d1163e511ac316, type: 3}
+  pito: {fileID: 8300000, guid: 66498cb25757f5c4690bd0326b203b11, type: 3}
 --- !u!114 &7614566620856605760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729cfaf9bbb353b4aab809f401df4fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &605707930939341303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035980050509919414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c65f5a3e408134c86f527c8f84cfe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &4189558449815655101
 AudioSource:
   m_ObjectHideFlags: 0
@@ -137,7 +151,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.11
   m_Pitch: 1
   Loop: 0
   Mute: 0

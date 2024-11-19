@@ -22,6 +22,7 @@ public class MenuInicialManager : MonoBehaviour
     {
         if(nuevoEstadoJuego == GameState.MenuInicio)
         {
+            Debug.Log("a");
             AparecerMenu(true);
 
             camaraMenu.GetComponent<CinemachineFreeLook>().enabled = true;
