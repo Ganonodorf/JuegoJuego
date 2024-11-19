@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 2332933073505246713}
   - component: {fileID: 3975433755061384550}
   - component: {fileID: 8307859138691375525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 1
+  m_IsActive: 0
 --- !u!4 &2332933073505246713
 Transform:
   m_ObjectHideFlags: 0
@@ -81,13 +81,13 @@ GameObject:
   - component: {fileID: 5003713452552106516}
   - component: {fileID: 8445936090409756289}
   - component: {fileID: 8332570204804810374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: luzObjeto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 1
+  m_IsActive: 0
 --- !u!4 &5003713452552106516
 Transform:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ Transform:
   m_GameObject: {fileID: 7163232369828251895}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3.46, z: 0}
+  m_LocalPosition: {x: 0, y: 2.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,11 +114,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.5240262, b: 0, a: 1}
-  m_Intensity: 0.71
-  m_Range: 28.72
-  m_SpotAngle: 51.4
-  m_InnerSpotAngle: 1
+  m_Color: {r: 0.8584906, g: 0.83472824, b: 0, a: 1}
+  m_Intensity: 185
+  m_Range: 30
+  m_SpotAngle: 59.100285
+  m_InnerSpotAngle: 19.207592
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -149,7 +149,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 286
+      value: 194.57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -813.2
+      value: -806.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -248,13 +248,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
       propertyPath: m_Name
       value: Comida
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
       propertyPath: m_TagString
       value: Recogible
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -280,7 +292,7 @@ PrefabInstance:
       addedObject: {fileID: 5083817798858644320}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8785872263080269433}
+      addedObject: {fileID: 463675883182165778}
   m_SourcePrefab: {fileID: 100100000, guid: 197b06b870d297c4884d5332ded3018d, type: 3}
 --- !u!4 &7362132815271702059 stripped
 Transform:
@@ -315,7 +327,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
@@ -331,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Recoger la comida
-  overrideUseMessage: 
+  overrideName: Comida de Paco
+  overrideUseMessage: Pulsa E del teclado o A del mando para recoger
   maxUseDistance: 5
   events:
     onSelect:
@@ -428,7 +440,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7881400943490921617}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: aa17d4222951b044b91d2b43786b48f3, type: 2}
   m_CullingMode: 0
@@ -441,8 +453,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &8785872263080269433
-BoxCollider:
+--- !u!135 &463675883182165778
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -456,9 +468,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.40990373, z: 1.382479}
+  m_Radius: 0.93
   m_Center: {x: 0, y: 0.20495187, z: 0}

@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 7511405143159654167}
   - component: {fileID: 8899271379702449164}
   - component: {fileID: 7256816133677984301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: luzObjeto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 1
+  m_IsActive: 0
 --- !u!4 &7511405143159654167
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 434856288934425906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0, z: 0.0544}
+  m_LocalPosition: {x: 0, y: -0, z: 0.219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,11 +44,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.5240262, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 12
-  m_SpotAngle: 51.4
-  m_InnerSpotAngle: 0
+  m_Color: {r: 0.8584906, g: 0.83472824, b: 0, a: 1}
+  m_Intensity: 185
+  m_Range: 30
+  m_SpotAngle: 59.100285
+  m_InnerSpotAngle: 19.207592
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -87,7 +87,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -129,13 +129,13 @@ GameObject:
   - component: {fileID: 130159882938519969}
   - component: {fileID: 469925802765457903}
   - component: {fileID: 9036044249409247318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 1
+  m_IsActive: 0
 --- !u!4 &130159882938519969
 Transform:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 8963225760819837645}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0037, y: 0.0014, z: -0.0503}
+  m_LocalPosition: {x: -0.0247, y: 0.0056, z: -0.2026}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,8 +170,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
-  m_Height: 0.2
+  m_Radius: 0.5
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9036044249409247318
@@ -197,16 +197,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 245.6
+      value: 181.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.79
+      value: 15.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -809
+      value: -823.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       propertyPath: m_LocalRotation.w
@@ -236,13 +248,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 5.3849945
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       propertyPath: m_Name
       value: BicifijoRoto
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       propertyPath: m_TagString
       value: Recogible
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -259,9 +283,6 @@ PrefabInstance:
       addedObject: {fileID: 4222880873500010708}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2324948123407056937}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7487500896874963588}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       insertIndex: -1
@@ -269,6 +290,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2807867995741596104}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3678670927625357282}
   m_SourcePrefab: {fileID: 100100000, guid: c1f3806fbe247cb499985c4f6ea44130, type: 3}
 --- !u!4 &3478841274348153010 stripped
 Transform:
@@ -303,31 +327,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &2324948123407056937
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4254919893667639816}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.015, y: 0.02, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7487500896874963588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Recoger el bicifijo roto
-  overrideUseMessage: 
+  overrideName: Bicifijo roto
+  overrideUseMessage: Pulsa E del teclado o A del mando para recoger
   maxUseDistance: 5
   events:
     onSelect:
@@ -450,3 +453,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &3678670927625357282
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254919893667639816}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.04
+  m_Height: 0.5
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -0.01}

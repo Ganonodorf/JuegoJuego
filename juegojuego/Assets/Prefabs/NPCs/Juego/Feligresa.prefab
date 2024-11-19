@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2874690979270973408}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0005440597, y: -0.9989135, z: 0.045009546, w: 0.012072876}
-  m_LocalPosition: {x: -0.3972795, y: 3.9228172, z: 1.5986311}
+  m_LocalRotation: {x: 0.03355682, y: -0.8591312, z: 0.05680951, w: 0.5074842}
+  m_LocalPosition: {x: 1.2846178, y: 4.101532, z: 1.5452585}
   m_LocalScale: {x: 0.29999992, y: 0.29999995, z: 0.29999995}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -240,27 +240,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 501.97
+      value: 502.568
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -45.87
+      value: -45.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -790.24
+      value: -795.558
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.33133775
+      value: -0.17534526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9435122
+      value: 0.984507
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalRotation.z
@@ -272,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 218.7
+      value: 200.198
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22e9f70655f8540b4b0a2d11b26d6539, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Hablar con la Feligresa
-  overrideUseMessage: 
+  overrideName: Feligresa
+  overrideUseMessage: Pulsa E del teclado o A del mando para hablar
   maxUseDistance: 5
   events:
     onSelect:
