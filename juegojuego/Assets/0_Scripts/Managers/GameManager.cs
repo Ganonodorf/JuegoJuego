@@ -23,7 +23,9 @@ public class GameManager : MonoBehaviour
     // Si no es as? y ya existe un GameManager, el que se acaba de crear se borra.
     private void Awake()
     {
-        HacerloInmortal();
+        //HacerloInmortal();
+
+        Instance = this;
     }
 
     private void Start()

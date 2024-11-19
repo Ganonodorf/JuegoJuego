@@ -45,6 +45,7 @@ public class InventarioManager : MonoBehaviour
     private void Start()
     {
         InicializarVariables();
+
         BuscarGO();
 
         GestionarInputs();
@@ -385,7 +386,7 @@ public class InventarioManager : MonoBehaviour
     private void AbrirInventario()
     {
         GameManager.Instance.UpdateGameState(GameState.Inventario);
-
+        
         camaraInventario.GetComponent<CinemachineVirtualCamera>().enabled = true;
 
         if (inventario.Count > 0)
@@ -397,6 +398,7 @@ public class InventarioManager : MonoBehaviour
     public void CerrarInventario()
     {
         GameManager.Instance.UpdateGameState(GameState.Conduciendo);
+
         camaraInventario.GetComponent<CinemachineVirtualCamera>().LookAt = null;
         camaraInventario.GetComponent<CinemachineVirtualCamera>().enabled = false;
 

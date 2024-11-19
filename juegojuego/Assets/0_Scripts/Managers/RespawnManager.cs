@@ -38,14 +38,14 @@ public class RespawnManager : MonoBehaviour
 
         playerGO.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-        playerGO.transform.SetPositionAndRotation(new Vector3(puntoRespawnMasCercano.transform.position.x,
+        playerGO.transform.GetComponent<Rigidbody>().position = new Vector3(puntoRespawnMasCercano.transform.position.x,
                                                               puntoRespawnMasCercano.transform.position.y,
-                                                              puntoRespawnMasCercano.transform.position.z),
+                                                              puntoRespawnMasCercano.transform.position.z);
 
-                                                  new Quaternion(puntoRespawnMasCercano.transform.rotation.x,
+        playerGO.transform.GetComponent<Rigidbody>().rotation = new Quaternion(puntoRespawnMasCercano.transform.rotation.x,
                                                                  puntoRespawnMasCercano.transform.rotation.y,
                                                                  puntoRespawnMasCercano.transform.rotation.z,
-                                                                 puntoRespawnMasCercano.transform.rotation.w));
+                                                                 puntoRespawnMasCercano.transform.rotation.w);
     }
 
     private GameObject BuscarPuntoRespawnMasCercano()
