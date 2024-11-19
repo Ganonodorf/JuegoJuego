@@ -10,8 +10,6 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        SuscribirseEventos();
-
         InicializarControles();
 
         RegistrarControlesDyalogueSystem();
@@ -19,6 +17,11 @@ public class InputManager : MonoBehaviour
         //HacerloInmortal();
 
         Instance = this;
+    }
+
+    private void Start()
+    {
+        SuscribirseEventos();
     }
 
     private void OnDestroy()
@@ -124,6 +127,7 @@ public class InputManager : MonoBehaviour
     private void RegistrarControlesDyalogueSystem()
     {
         InputDeviceManager.RegisterInputAction("Accion", controles.Conduciendo.Accion);
+        InputDeviceManager.RegisterInputAction("Seleccion", controles.UI.Accion);
     }
 
     private void DesuscribirseEventos()

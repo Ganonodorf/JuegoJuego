@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,6 +14,16 @@ public class PauseManager : MonoBehaviour
         RecogerInfoInputs();
 
         pausaGO = GameObject.FindGameObjectWithTag("Pausa");
+
+        LinkearFunciones();
+    }
+
+    private void LinkearFunciones()
+    {
+        pausaGO.transform.GetChild(0).gameObject.GetComponent<Button>().onClick.AddListener(BotonContinuar);
+        pausaGO.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(BotonRespawn);
+        pausaGO.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(BotonReiniciar);
+        pausaGO.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
 
     private void Pausa()
@@ -25,6 +36,7 @@ public class PauseManager : MonoBehaviour
 
     public void BotonContinuar()
     {
+        Debug.Log("BotonContinuar");
         AparecerPausa(false);
 
         GameManager.Instance.UpdateGameState(estadoAlQueVolver);
@@ -32,6 +44,7 @@ public class PauseManager : MonoBehaviour
 
     public void BotonRespawn()
     {
+        Debug.Log("BotonRespawn");
         AparecerPausa(false);
 
         if(estadoAlQueVolver == GameState.Inventario)
@@ -48,6 +61,7 @@ public class PauseManager : MonoBehaviour
 
     public void BotonReiniciar()
     {
+        Debug.Log("BotonReiniciar");
         GameManager.Instance.UpdateGameState(GameState.Conduciendo);
 
         estadoAlQueVolver = GameState.Conduciendo;
@@ -61,6 +75,7 @@ public class PauseManager : MonoBehaviour
 
     public void BotonSalir()
     {
+        Debug.Log("BotonSalir");
         Application.Quit();
     }
 
