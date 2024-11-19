@@ -774,6 +774,42 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MovimientoFrontal"",
+                    ""type"": ""Value"",
+                    ""id"": ""267c529c-2b9a-4481-adf7-9efce2dcf5da"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MovimientoLateral"",
+                    ""type"": ""Value"",
+                    ""id"": ""7e20d5a6-de9c-45d2-b4b0-a35efa1435bd"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Derrape"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5658992-e134-442d-9f24-09efa700bb42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Luces"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ce11058-551e-4ad6-a3af-8e7628847916"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -884,6 +920,226 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Seleccion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""773a1c15-d9cd-4531-8854-8d37b46295cc"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""8ecfcaf7-6d2c-49d4-981e-663ba8787323"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""7e31a419-5997-4b3c-96ba-36317bd227c1"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""08d6b76f-992e-4182-929a-29e0ec7210f8"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Flechas"",
+                    ""id"": ""9b19b46f-815f-4739-b230-3d2e1eb36bdc"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""c57b103e-d1d9-4f34-9c58-29810bc1cc7a"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""65e7f685-e556-44a3-ad3a-30a7ac9e9417"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Gatillos"",
+                    ""id"": ""08e334cc-0a73-4281-88dc-2becbcdb6608"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""28fc1ce4-81b3-4f36-90b2-92ecdf8013a0"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""b0a8f931-a83a-4267-a483-29907e7a15f1"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""b06da468-3417-42d7-a9d0-18eea6cc0235"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""1325245a-f7c3-4799-8987-b62bbd80ca40"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""b8d219e4-0cc4-4063-8ef1-6686e684ac00"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Flechas"",
+                    ""id"": ""493ee13c-beb6-4164-a550-b4ebf51e51d3"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""64ff8ee5-5299-49bf-92da-6f43bde270cb"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""5f7e21a2-2e2f-4a0b-b99f-0a75ba22cfe3"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoFrontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f3ecb93-34eb-4b3c-96ce-89786e6748b5"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Luces"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af6a022e-85d7-4a33-a85c-b722c04e2c5d"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Luces"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ad5a1827-7ad1-4f5c-86da-84d278736128"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Derrape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""106af8d4-a65d-4e1a-8fa4-f7f541d3de46"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Derrape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1104,6 +1360,10 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_Dialogo_Arriba = m_Dialogo.FindAction("Arriba", throwIfNotFound: true);
         m_Dialogo_Abajo = m_Dialogo.FindAction("Abajo", throwIfNotFound: true);
         m_Dialogo_Seleccion = m_Dialogo.FindAction("Seleccion", throwIfNotFound: true);
+        m_Dialogo_MovimientoFrontal = m_Dialogo.FindAction("MovimientoFrontal", throwIfNotFound: true);
+        m_Dialogo_MovimientoLateral = m_Dialogo.FindAction("MovimientoLateral", throwIfNotFound: true);
+        m_Dialogo_Derrape = m_Dialogo.FindAction("Derrape", throwIfNotFound: true);
+        m_Dialogo_Luces = m_Dialogo.FindAction("Luces", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MovimientoDer = m_UI.FindAction("MovimientoDer", throwIfNotFound: true);
@@ -1378,6 +1638,10 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Dialogo_Arriba;
     private readonly InputAction m_Dialogo_Abajo;
     private readonly InputAction m_Dialogo_Seleccion;
+    private readonly InputAction m_Dialogo_MovimientoFrontal;
+    private readonly InputAction m_Dialogo_MovimientoLateral;
+    private readonly InputAction m_Dialogo_Derrape;
+    private readonly InputAction m_Dialogo_Luces;
     public struct DialogoActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -1385,6 +1649,10 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @Arriba => m_Wrapper.m_Dialogo_Arriba;
         public InputAction @Abajo => m_Wrapper.m_Dialogo_Abajo;
         public InputAction @Seleccion => m_Wrapper.m_Dialogo_Seleccion;
+        public InputAction @MovimientoFrontal => m_Wrapper.m_Dialogo_MovimientoFrontal;
+        public InputAction @MovimientoLateral => m_Wrapper.m_Dialogo_MovimientoLateral;
+        public InputAction @Derrape => m_Wrapper.m_Dialogo_Derrape;
+        public InputAction @Luces => m_Wrapper.m_Dialogo_Luces;
         public InputActionMap Get() { return m_Wrapper.m_Dialogo; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1403,6 +1671,18 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Seleccion.started += instance.OnSeleccion;
             @Seleccion.performed += instance.OnSeleccion;
             @Seleccion.canceled += instance.OnSeleccion;
+            @MovimientoFrontal.started += instance.OnMovimientoFrontal;
+            @MovimientoFrontal.performed += instance.OnMovimientoFrontal;
+            @MovimientoFrontal.canceled += instance.OnMovimientoFrontal;
+            @MovimientoLateral.started += instance.OnMovimientoLateral;
+            @MovimientoLateral.performed += instance.OnMovimientoLateral;
+            @MovimientoLateral.canceled += instance.OnMovimientoLateral;
+            @Derrape.started += instance.OnDerrape;
+            @Derrape.performed += instance.OnDerrape;
+            @Derrape.canceled += instance.OnDerrape;
+            @Luces.started += instance.OnLuces;
+            @Luces.performed += instance.OnLuces;
+            @Luces.canceled += instance.OnLuces;
         }
 
         private void UnregisterCallbacks(IDialogoActions instance)
@@ -1416,6 +1696,18 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Seleccion.started -= instance.OnSeleccion;
             @Seleccion.performed -= instance.OnSeleccion;
             @Seleccion.canceled -= instance.OnSeleccion;
+            @MovimientoFrontal.started -= instance.OnMovimientoFrontal;
+            @MovimientoFrontal.performed -= instance.OnMovimientoFrontal;
+            @MovimientoFrontal.canceled -= instance.OnMovimientoFrontal;
+            @MovimientoLateral.started -= instance.OnMovimientoLateral;
+            @MovimientoLateral.performed -= instance.OnMovimientoLateral;
+            @MovimientoLateral.canceled -= instance.OnMovimientoLateral;
+            @Derrape.started -= instance.OnDerrape;
+            @Derrape.performed -= instance.OnDerrape;
+            @Derrape.canceled -= instance.OnDerrape;
+            @Luces.started -= instance.OnLuces;
+            @Luces.performed -= instance.OnLuces;
+            @Luces.canceled -= instance.OnLuces;
         }
 
         public void RemoveCallbacks(IDialogoActions instance)
@@ -1530,6 +1822,10 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnArriba(InputAction.CallbackContext context);
         void OnAbajo(InputAction.CallbackContext context);
         void OnSeleccion(InputAction.CallbackContext context);
+        void OnMovimientoFrontal(InputAction.CallbackContext context);
+        void OnMovimientoLateral(InputAction.CallbackContext context);
+        void OnDerrape(InputAction.CallbackContext context);
+        void OnLuces(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

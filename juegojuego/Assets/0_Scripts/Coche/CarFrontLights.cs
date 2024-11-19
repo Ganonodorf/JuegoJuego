@@ -10,12 +10,14 @@ public class CarFrontLights : MonoBehaviour
     private void Start()
     {
         InputManager.Instance.controles.Conduciendo.Luces.performed += contexto => TriggerLuces();
+        InputManager.Instance.controles.Dialogo.Luces.performed += contexto => TriggerLuces();
         audioSource = GetComponent<AudioSource>();
     }
 
     private void OnDestroy()
     {
         InputManager.Instance.controles.Conduciendo.Luces.performed -= contexto => TriggerLuces();
+        InputManager.Instance.controles.Dialogo.Luces.performed -= contexto => TriggerLuces();
     }
 
     private void TriggerLuces()

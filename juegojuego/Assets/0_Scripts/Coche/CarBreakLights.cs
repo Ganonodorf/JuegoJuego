@@ -6,12 +6,18 @@ public class CarBreakLights : MonoBehaviour
     {
         InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => EncenderLuces(true);
         InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => EncenderLuces(false);
+
+        InputManager.Instance.controles.Dialogo.Derrape.performed += contexto => EncenderLuces(true);
+        InputManager.Instance.controles.Dialogo.Derrape.canceled += contexto => EncenderLuces(false);
     }
 
     private void OnDestroy()
     {
         InputManager.Instance.controles.Conduciendo.Derrape.performed -= contexto => EncenderLuces(true);
         InputManager.Instance.controles.Conduciendo.Derrape.canceled -= contexto => EncenderLuces(false);
+
+        InputManager.Instance.controles.Dialogo.Derrape.performed -= contexto => EncenderLuces(true);
+        InputManager.Instance.controles.Dialogo.Derrape.canceled -= contexto => EncenderLuces(false);
     }
 
     private void EncenderLuces(bool estado)

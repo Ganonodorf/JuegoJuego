@@ -76,12 +76,18 @@ public class CarController : MonoBehaviour
     {
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => CentrarRuedas();
+
+        InputManager.Instance.controles.Dialogo.MovimientoLateral.performed += contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Dialogo.MovimientoLateral.canceled += contexto => CentrarRuedas();
     }
 
     private void DesgestionarInputs()
     {
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed -= contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled -= contexto => CentrarRuedas();
+
+        InputManager.Instance.controles.Dialogo.MovimientoLateral.performed -= contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Dialogo.MovimientoLateral.canceled -= contexto => CentrarRuedas();
     }
 
     private void GirarRuedas(float valorMovimientoHorizontal)

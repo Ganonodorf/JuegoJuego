@@ -84,7 +84,7 @@ public class WheelController : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
+        if (GameManager.Instance.GetGameState() == GameState.Conduciendo || GameManager.Instance.GetGameState() == GameState.Dialogo)
         {
             ActualizarGiroRueda();
             Debug.DrawRay(transform.position, -transform.up * (lastFrameSpringLength), Color.green);
@@ -93,7 +93,7 @@ public class WheelController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
+        if (GameManager.Instance.GetGameState() == GameState.Conduciendo || GameManager.Instance.GetGameState() == GameState.Dialogo)
         {
             if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, springRestLength))
             {
@@ -419,6 +419,12 @@ public class WheelController : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled += contexto => ResetValorMovimientoFrontal();
         InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => AccionJugadorDerrapar();
         InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => AccionJugadorDejarDeDerrapar();
+
+        InputManager.Instance.controles.Dialogo.MovimientoFrontal.performed += contexto => RecogerValorMovimientoFrontal(contexto.ReadValue<Vector2>().y);
+        InputManager.Instance.controles.Dialogo.MovimientoFrontal.canceled += contexto => ResetValorMovimientoFrontal();
+        InputManager.Instance.controles.Dialogo.Derrape.performed += contexto => AccionJugadorDerrapar();
+        InputManager.Instance.controles.Dialogo.Derrape.canceled += contexto => AccionJugadorDejarDeDerrapar();
+
     }
 
     private void DesgestionarInputs()
@@ -427,5 +433,10 @@ public class WheelController : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled -= contexto => ResetValorMovimientoFrontal();
         InputManager.Instance.controles.Conduciendo.Derrape.performed -= contexto => AccionJugadorDerrapar();
         InputManager.Instance.controles.Conduciendo.Derrape.canceled -= contexto => AccionJugadorDejarDeDerrapar();
+
+        InputManager.Instance.controles.Dialogo.MovimientoFrontal.performed -= contexto => RecogerValorMovimientoFrontal(contexto.ReadValue<Vector2>().y);
+        InputManager.Instance.controles.Dialogo.MovimientoFrontal.canceled -= contexto => ResetValorMovimientoFrontal();
+        InputManager.Instance.controles.Dialogo.Derrape.performed -= contexto => AccionJugadorDerrapar();
+        InputManager.Instance.controles.Dialogo.Derrape.canceled -= contexto => AccionJugadorDejarDeDerrapar();
     }
 }
