@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
@@ -29,8 +30,32 @@ public class CarController : MonoBehaviour
         GestionarInputs();
         coche = this.GetComponent<Rigidbody>();
 
+        GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
+
         RuedaDerechaGO = GameObject.FindGameObjectWithTag("WheelFrontRight");
         RuedaIzquierdaGO = GameObject.FindGameObjectWithTag("WheelFrontLeft");
+    }
+
+    private void GameManager_OnGameStateChanged(GameState nuevoEstadoJuego, GameState viejoEsadoJuego)
+    {
+        if(nuevoEstadoJuego == GameState.Conduciendo)
+        {
+            // Para que no pueda interactuar con cosas del Dialogue System
+            if (this.TryGetComponent(out ProximitySelector proximitySelector))
+            {
+                proximitySelector.enabled = true;
+            }
+        }
+        else
+        {
+            // Para que no pueda interactuar con cosas del Dialogue System
+            if (this.TryGetComponent(out ProximitySelector proximitySelector))
+            {
+                proximitySelector.enabled = false;
+            }
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -106,6 +131,4 @@ public class CarController : MonoBehaviour
 
         return ackermannValue;
     }
-
-    
 }

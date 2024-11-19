@@ -44,16 +44,22 @@ public class AudioManager : MonoBehaviour
 
     private void HacerSonarElPito()
     {
-        audioSource.clip = pito;
-        audioSource.loop = true;
-        audioSource.Play();
+        if(audioSource != null)
+        {
+            audioSource.clip = pito;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
 
     private void DejarDeSonarElPito()
     {
-        audioSource.Stop();
-        audioSource.loop = false;
-        audioSource.clip = null;
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+            audioSource.loop = false;
+            audioSource.clip = null;
+        }
     }
 
     private void HacerloInmortal()

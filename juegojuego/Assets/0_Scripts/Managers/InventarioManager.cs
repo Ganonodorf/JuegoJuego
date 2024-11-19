@@ -377,12 +377,6 @@ public class InventarioManager : MonoBehaviour
 
         camaraInventario.GetComponent<CinemachineVirtualCamera>().enabled = true;
 
-        // Para que no pueda interactuar con cosas del Dialogue System
-        if(jugador.TryGetComponent(out ProximitySelector proximitySelector))
-        {
-            proximitySelector.enabled = false;
-        }
-
         if (inventario.Count > 0)
         {
             FocusearObjeto(inventario[indexObjetoResaltado]);
@@ -394,12 +388,6 @@ public class InventarioManager : MonoBehaviour
         GameManager.Instance.UpdateGameState(GameState.Conduciendo);
         camaraInventario.GetComponent<CinemachineVirtualCamera>().LookAt = null;
         camaraInventario.GetComponent<CinemachineVirtualCamera>().enabled = false;
-
-        // Para que pueda volver a interactuar con cosas del Dialogue System
-        if (jugador.TryGetComponent(out ProximitySelector proximitySelector))
-        {
-            proximitySelector.enabled = true;
-        }
 
         if (inventario.Count > 0)
         {

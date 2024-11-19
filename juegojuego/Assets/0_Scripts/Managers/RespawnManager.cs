@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class RespawnManager : MonoBehaviour
@@ -33,7 +34,19 @@ public class RespawnManager : MonoBehaviour
 
     public void MoverARespawnMasCercano()
     {
-        GameObject puntoRespawnMasCercano = BuscarPuntoRespawnMasCercano();
+        GameObject puntoRespawnMasCercano;
+        //puntoRespawnMasCercano = BuscarPuntoRespawnMasCercano();
+
+        if (DialogueLua.GetVariable("PuertaSegundaZonaAbierta").asBool == false)
+        {
+            puntoRespawnMasCercano = puntosRespawn[0];
+        }
+        else
+        {
+            puntoRespawnMasCercano = puntosRespawn[1];
+        }
+
+        playerGO.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         playerGO.transform.SetPositionAndRotation(new Vector3(puntoRespawnMasCercano.transform.position.x,
                                                               puntoRespawnMasCercano.transform.position.y,

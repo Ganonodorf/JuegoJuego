@@ -57,6 +57,7 @@ public class PauseManager : MonoBehaviour
 
     private void AparecerPausa(bool estado)
     {
+        if (estado) { pausaGO.transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
         pausaGO.GetComponent<Image>().enabled = estado;
         pausaGO.transform.GetChild(0).gameObject.SetActive(estado);
         pausaGO.transform.GetChild(1).gameObject.SetActive(estado);
