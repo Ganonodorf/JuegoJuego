@@ -11,7 +11,7 @@ public class MenuInicialManager : MonoBehaviour
     private void Start()
     {
         menuInicialGO = GameObject.FindGameObjectWithTag("MenuInicial");
-        camaraMenu = GameObject.FindGameObjectWithTag("CamaraMenuInicial");
+        camaraMenu = GameObject.FindGameObjectWithTag("MenuInicialCamara");
 
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
 
@@ -38,7 +38,7 @@ public class MenuInicialManager : MonoBehaviour
     {
         AparecerMenu(false);
 
-        camaraMenu.GetComponent<CinemachineFreeLook>().enabled = true;
+        camaraMenu.GetComponent<CinemachineFreeLook>().enabled = false;
 
         GameManager.Instance.UpdateGameState(GameState.SecuenciaInicial);
     }
