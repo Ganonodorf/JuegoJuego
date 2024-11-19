@@ -1022,7 +1022,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8fa0bf64-1825-499e-896d-ab26eb18bf4b"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1056,6 +1056,17 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""85f4cac3-71ed-4cc2-ab29-2f8efcf74611"",
                     ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Volver"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5691f0e1-468a-42b4-b3f4-6860e0583d59"",
+                    ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

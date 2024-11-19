@@ -29,6 +29,14 @@ public class AudioManager : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.Pito.canceled += contexto => DejarDeSonarElPito();
     }
 
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= CambioEstadoJuego;
+
+        InputManager.Instance.controles.Conduciendo.Pito.performed -= contexto => HacerSonarElPito();
+        InputManager.Instance.controles.Conduciendo.Pito.canceled -= contexto => DejarDeSonarElPito();
+    }
+
     private void CambioEstadoJuego(GameState nuevoEstadoJuego, GameState viejoEstadoJuego)
     {
         if(nuevoEstadoJuego == GameState.Inventario)

@@ -61,6 +61,17 @@ public class InventarioManager : MonoBehaviour
         InputManager.Instance.controles.Inventario.SoltarDelInventario.performed += contexto => SoltarDelInventario();
     }
 
+    private void DesgestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.AbrirInventario.performed -= contexto => AbrirInventario();
+        InputManager.Instance.controles.Inventario.CerrarInventario.performed -= contexto => CerrarInventario();
+        InputManager.Instance.controles.Inventario.MovimientoDer.performed -= contexto => { if (inventario.Count > 0) NavegarInventarioDer(); };
+        InputManager.Instance.controles.Inventario.MovimientoIzq.performed -= contexto => { if (inventario.Count > 0) NavegarInventarioIzq(); };
+        InputManager.Instance.controles.Inventario.MovimientoArriba.performed -= contexto => { if (inventario.Count > 3) NavegarInventarioArriba(); };
+        InputManager.Instance.controles.Inventario.MovimientoAbajo.performed -= contexto => { if (inventario.Count > 3) NavegarInventarioAbajo(); };
+        InputManager.Instance.controles.Inventario.SoltarDelInventario.performed -= contexto => SoltarDelInventario();
+    }
+
     private void RegistrarFuncionesLua()
     {
         Lua.RegisterFunction(nameof(AgregarAlInventario), this, SymbolExtensions.GetMethodInfo(() => AgregarAlInventario(string.Empty)));

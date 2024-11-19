@@ -28,6 +28,11 @@ public class CarTurnAround : MonoBehaviour
         InicializarVariables();
     }
 
+    private void OnDestroy()
+    {
+        DesgestionarInputs();
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (carRigidbody.velocity.magnitude < maxTurnAroundVelocity && Vector3.Angle(Vector3.up, transform.up) > minTurnAroundAngle)
@@ -42,6 +47,13 @@ public class CarTurnAround : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => ResetTurnAroundValue();
     }
+
+    private void DesgestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed -= contexto => SetTurnAroundValue(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled -= contexto => ResetTurnAroundValue();
+    }
+
     private void InicializarVariables()
     {
         carRigidbody = transform.root.GetComponent<Rigidbody>();

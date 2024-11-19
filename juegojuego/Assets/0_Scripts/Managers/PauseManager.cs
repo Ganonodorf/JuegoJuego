@@ -46,22 +46,41 @@ public class PauseManager : MonoBehaviour
         RespawnManager.Instance.MoverARespawnMasCercano();
     }
 
-    public void BotonSalir()
+    public void BotonReiniciar()
     {
         GameManager.Instance.UpdateGameState(GameState.Conduciendo);
 
+        estadoAlQueVolver = GameState.Conduciendo;
+
         AparecerPausa(false);
 
+        InputManager.Instance.gameObject.SetActive(false);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void BotonSalir()
+    {
+        Application.Quit();
     }
 
     private void AparecerPausa(bool estado)
     {
         if (estado) { pausaGO.transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
+
         pausaGO.GetComponent<Image>().enabled = estado;
+
         pausaGO.transform.GetChild(0).gameObject.SetActive(estado);
         pausaGO.transform.GetChild(1).gameObject.SetActive(estado);
         pausaGO.transform.GetChild(2).gameObject.SetActive(estado);
+        pausaGO.transform.GetChild(3).gameObject.SetActive(estado);
+
+        /*
+        foreach (RectTransform child in pausaGO.transform.GetComponentsInChildren<RectTransform>())
+        {
+            child.gameObject.SetActive(estado);
+        }
+        */
     }
 
     private void RecogerInfoInputs()
@@ -69,5 +88,12 @@ public class PauseManager : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.Pausa.performed += contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed += contexto => Pausa();
         InputManager.Instance.controles.UI.Volver.performed += contexto => BotonContinuar();
+    }
+
+    private void SoltarInfoInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.Pausa.performed -= contexto => Pausa();
+        InputManager.Instance.controles.Inventario.Pausa.performed -= contexto => Pausa();
+        InputManager.Instance.controles.UI.Volver.performed -= contexto => BotonContinuar();
     }
 }

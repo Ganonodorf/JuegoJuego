@@ -35,6 +35,11 @@ public class CamaraManager : MonoBehaviour
         DesregistrarFuncionesLua();
     }
 
+    private void OnDestroy()
+    {
+        SoltarInfoInputs();
+    }
+
     public void JugadorHaEntrado()
     {
         camaraExterioresGO.GetComponent<CinemachineFreeLook>().enabled = false;
@@ -124,5 +129,10 @@ public class CamaraManager : MonoBehaviour
     {
         InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => AccionJugadorDerrapar();
         InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => AccionJugadorDejarDeDerrapar();
+    }
+    private void SoltarInfoInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.Derrape.performed -= contexto => AccionJugadorDerrapar();
+        InputManager.Instance.controles.Conduciendo.Derrape.canceled -= contexto => AccionJugadorDejarDeDerrapar();
     }
 }

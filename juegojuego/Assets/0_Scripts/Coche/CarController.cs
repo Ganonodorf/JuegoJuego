@@ -36,26 +36,34 @@ public class CarController : MonoBehaviour
         RuedaIzquierdaGO = GameObject.FindGameObjectWithTag("WheelFrontLeft");
     }
 
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManager_OnGameStateChanged;
+
+        DesgestionarInputs();
+    }
+
     private void GameManager_OnGameStateChanged(GameState nuevoEstadoJuego, GameState viejoEsadoJuego)
     {
-        if(nuevoEstadoJuego == GameState.Conduciendo)
+        if(this.gameObject != null)
         {
-            // Para que no pueda interactuar con cosas del Dialogue System
-            if (this.TryGetComponent(out ProximitySelector proximitySelector))
+            if (nuevoEstadoJuego == GameState.Conduciendo)
             {
-                proximitySelector.enabled = true;
+                // Para que no pueda interactuar con cosas del Dialogue System
+                if (TryGetComponent(out ProximitySelector proximitySelector))
+                {
+                    proximitySelector.enabled = true;
+                }
+            }
+            else
+            {
+                // Para que no pueda interactuar con cosas del Dialogue System
+                if (TryGetComponent(out ProximitySelector proximitySelector))
+                {
+                    proximitySelector.enabled = false;
+                }
             }
         }
-        else
-        {
-            // Para que no pueda interactuar con cosas del Dialogue System
-            if (this.TryGetComponent(out ProximitySelector proximitySelector))
-            {
-                proximitySelector.enabled = false;
-            }
-        }
-
-
     }
 
     private void FixedUpdate()
@@ -68,6 +76,12 @@ public class CarController : MonoBehaviour
     {
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed += contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
         InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled += contexto => CentrarRuedas();
+    }
+
+    private void DesgestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.performed -= contexto => GirarRuedas(contexto.ReadValue<Vector2>().x);
+        InputManager.Instance.controles.Conduciendo.MovimientoLateral.canceled -= contexto => CentrarRuedas();
     }
 
     private void GirarRuedas(float valorMovimientoHorizontal)

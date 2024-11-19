@@ -75,8 +75,13 @@ public class WheelController : MonoBehaviour
         InicializarVariables();
 
         GestionarInputs();
-
     }
+
+    private void OnDestroy()
+    {
+        DesgestionarInputs();
+    }
+
     void Update()
     {
         if (GameManager.Instance.GetGameState() == GameState.Conduciendo)
@@ -414,5 +419,13 @@ public class WheelController : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled += contexto => ResetValorMovimientoFrontal();
         InputManager.Instance.controles.Conduciendo.Derrape.performed += contexto => AccionJugadorDerrapar();
         InputManager.Instance.controles.Conduciendo.Derrape.canceled += contexto => AccionJugadorDejarDeDerrapar();
+    }
+
+    private void DesgestionarInputs()
+    {
+        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.performed -= contexto => RecogerValorMovimientoFrontal(contexto.ReadValue<Vector2>().y);
+        InputManager.Instance.controles.Conduciendo.MovimientoFrontal.canceled -= contexto => ResetValorMovimientoFrontal();
+        InputManager.Instance.controles.Conduciendo.Derrape.performed -= contexto => AccionJugadorDerrapar();
+        InputManager.Instance.controles.Conduciendo.Derrape.canceled -= contexto => AccionJugadorDejarDeDerrapar();
     }
 }
