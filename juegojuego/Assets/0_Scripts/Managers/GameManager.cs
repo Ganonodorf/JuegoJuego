@@ -60,7 +60,10 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
-            case GameState.PantallaInicio:
+            case GameState.MenuInicio:
+                Debug.Log("Estado de juego: MenuInicio");
+                break;
+            case GameState.SecuenciaInicial:
                 PantallaInicio();
                 Debug.Log("Estado de juego: PantallaInicio");
                 break;
@@ -124,7 +127,8 @@ public class GameManager : MonoBehaviour
 // Enumerado que contiene los diferentes estados de juego
 public enum GameState
 {
-    PantallaInicio,
+    MenuInicio,
+    SecuenciaInicial,
     PantallaPausa,
     Conduciendo,
     Dialogo,
