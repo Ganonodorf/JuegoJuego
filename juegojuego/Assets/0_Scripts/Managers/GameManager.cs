@@ -64,8 +64,8 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Estado de juego: MenuInicio");
                 break;
             case GameState.SecuenciaInicial:
-                PantallaInicio();
-                Debug.Log("Estado de juego: PantallaInicio");
+                SecuenciaInicial();
+                Debug.Log("Estado de juego: SecuenciaInicial");
                 break;
             case GameState.PantallaPausa:
                 Debug.Log("Estado de juego: PantallaPausa");
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         OnGameStateChanged?.Invoke(newState, previousState);
     }
 
-    private void PantallaInicio()
+    private void SecuenciaInicial()
     {
         DialogueManager.StartConversation("Intro cutscene");
     }
