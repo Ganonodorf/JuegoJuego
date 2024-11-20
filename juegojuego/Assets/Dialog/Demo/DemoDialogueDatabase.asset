@@ -2602,13 +2602,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 17
-        destinationConversationID: 1
-        destinationDialogueID: 55
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -4861,7 +4855,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 761.97034, y: 122.7244}
+    canvasScrollPosition: {x: 71.47684, y: 0}
     canvasZoom: 0.74149877
   - id: 10
     fields:
@@ -12765,9 +12759,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(CamaraPaqui,false);
-
-          SetActive(CamaraManoli,true)'
+        value: 
         type: 0
         typeString: 
       conversationID: 5
@@ -16583,7 +16575,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraManoli,false);
+
+          SetActive(CamaraMarianto,true)'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -16640,7 +16634,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraMarianto,false);
+
+          SetActive(CamaraManoli,true)'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -16894,8 +16890,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 561.1109, y: 0}
-    canvasZoom: 0.72000015
+    canvasScrollPosition: {x: 94.44449, y: 112.82039}
+    canvasZoom: 0.9
   - id: 4
     fields:
     - title: Title
@@ -20174,7 +20170,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 14
+        destinationConversationID: 11
+        destinationDialogueID: 51
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -22237,8 +22239,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 32.837456, y: 15.313542}
-    canvasZoom: 0.65000015
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.74000007
   - id: 12
     fields:
     - title: Title

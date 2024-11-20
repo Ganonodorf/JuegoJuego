@@ -38,8 +38,8 @@ namespace Constantes
         public static class UI
         {
             public const string TAG_ICONO_INVENTARIO = "IconoInventario";
-            public static readonly Vector3 POSICION_BOTON_MOSTRAR = new Vector3(-460.0f, -260.0f, 0.0f);
-            public static readonly Vector3 POSICION_BOTON_OCULTAR = new Vector3(-460.0f, -345.0f, 0.0f);
+            public static readonly Vector3 POSICION_BOTON_MOSTRAR = new Vector3(-400.0f, -260.0f, 0.0f);
+            public static readonly Vector3 POSICION_BOTON_OCULTAR = new Vector3(-400.0f, -345.0f, 0.0f);
             public const float CANTIDAD_MOVIMIENTO_BOTON = 1.0f;
 
             public const string TAG_NOTIFICACION_INVENTARIO = "NotificacionInventario";

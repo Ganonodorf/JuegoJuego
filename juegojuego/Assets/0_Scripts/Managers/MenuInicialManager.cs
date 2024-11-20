@@ -15,6 +15,8 @@ public class MenuInicialManager : MonoBehaviour
 
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
 
+        menuInicialGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().Select();
+
         LinkearFunciones();
     }
 

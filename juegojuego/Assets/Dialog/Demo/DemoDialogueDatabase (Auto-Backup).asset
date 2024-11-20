@@ -2602,13 +2602,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 17
-        destinationConversationID: 1
-        destinationDialogueID: 55
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -4861,7 +4855,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 761.97034, y: 122.7244}
+    canvasScrollPosition: {x: 71.47684, y: 0}
     canvasZoom: 0.74149877
   - id: 10
     fields:
@@ -32714,6 +32708,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: c48cabad-9cde-450d-ac9c-6f2da59485e8
         type: 0
         typeString: 
       conversationID: 17

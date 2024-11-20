@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //initialGameState = GameState.MenuInicio;
+        initialGameState = GameState.MenuInicio;
 
         finJuego = false;
 
