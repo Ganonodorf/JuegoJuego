@@ -28,7 +28,7 @@ namespace Constantes
             };
             public const float LONGITUD_COCHE = 6.0f;
             public const float ESCALA_REDUCCION = 5.0f;
-            public const string NOMBRE_CAMARA_GO = "CamaraInventario";
+            public const string TAG_CAMARA = "CamaraInventario";
             public static readonly Color COLOR_ILUMINADO = new Color(0.2f, 0.2f, 0.2f, 1f);
         }
 
@@ -37,12 +37,12 @@ namespace Constantes
          */
         public static class UI
         {
-            public const string NOMBRE_BOTON_GO = "IconoInventario";
+            public const string TAG_ICONO_INVENTARIO = "IconoInventario";
             public static readonly Vector3 POSICION_BOTON_MOSTRAR = new Vector3(-460.0f, -260.0f, 0.0f);
             public static readonly Vector3 POSICION_BOTON_OCULTAR = new Vector3(-460.0f, -345.0f, 0.0f);
             public const float CANTIDAD_MOVIMIENTO_BOTON = 1.0f;
 
-            public const string NOMBRE_NOTIFICACION_GO = "PanelNotificacion";
+            public const string TAG_NOTIFICACION_INVENTARIO = "NotificacionInventario";
             public static readonly Vector3 POSICION_NOTIFICACION_MOSTRAR = new Vector3(-190.0f, -258.0f, 0.0f);
             public static readonly Vector3 POSICION_NOTIFICACION_OCULTAR = new Vector3(-190.0f, -340.0f, 0.0f);
             public const float CANTIDAD_MOVIMIENTO_NOTIFICACION = 4.0f;

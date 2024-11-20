@@ -477,8 +477,8 @@ public class InventarioManager : MonoBehaviour
 
     private void BuscarGO()
     {
-        jugador = GameObject.Find(Player.NOMBRE_GO);
-        camaraInventario = GameObject.Find(Inventario.Manager.NOMBRE_CAMARA_GO);
+        jugador = GameObject.FindGameObjectWithTag(Player.TAG_PLAYER);
+        camaraInventario = GameObject.FindGameObjectWithTag(Inventario.Manager.TAG_CAMARA);
     }
 }
 

@@ -30,7 +30,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateGameState(GameState.MenuInicio);
+        //initialGameState = GameState.MenuInicio;
+
+        UpdateGameState(initialGameState);
     }
 
     // Para devolver el GameState

@@ -14,15 +14,15 @@ public class PauseManager : MonoBehaviour
 
         pausaGO = GameObject.FindGameObjectWithTag("Pausa");
 
-        //LinkearFunciones();
+        LinkearFunciones();
     }
 
     private void LinkearFunciones()
     {
-        pausaGO.transform.GetChild(0).gameObject.GetComponent<Button>().onClick.AddListener(BotonContinuar);
-        pausaGO.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(BotonRespawn);
+        pausaGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().onClick.AddListener(BotonContinuar);
+        pausaGO.transform.GetChild(1).transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(BotonRespawn);
         //pausaGO.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(BotonReiniciar);
-        pausaGO.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(BotonSalir);
+        pausaGO.transform.GetChild(1).transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
 
     private void Pausa()
@@ -54,8 +54,6 @@ public class PauseManager : MonoBehaviour
         }
 
         RespawnManager.Instance.MoverARespawnMasCercano();
-        
-        Debug.Log("Boton respawn");
     }
 
     public void BotonReiniciar()
@@ -82,30 +80,19 @@ public class PauseManager : MonoBehaviour
 
         pausaGO.transform.GetChild(0).gameObject.SetActive(estado);
         pausaGO.transform.GetChild(1).gameObject.SetActive(estado);
-        //pausaGO.transform.GetChild(2).gameObject.SetActive(estado);
-        pausaGO.transform.GetChild(3).gameObject.SetActive(estado);
 
-        if (estado) { pausaGO.transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
-
-        /*
-        foreach (RectTransform child in pausaGO.transform.GetComponentsInChildren<RectTransform>())
-        {
-            child.gameObject.SetActive(estado);
-        }
-        */
+        if (estado) { pausaGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
     }
 
     private void RecogerInfoInputs()
     {
         InputManager.Instance.controles.Conduciendo.Pausa.performed += contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed += contexto => Pausa();
-        InputManager.Instance.controles.UI.Volver.performed += contexto => BotonContinuar();
     }
 
     private void SoltarInfoInputs()
     {
         InputManager.Instance.controles.Conduciendo.Pausa.performed -= contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed -= contexto => Pausa();
-        InputManager.Instance.controles.UI.Volver.performed -= contexto => BotonContinuar();
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using Constantes;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -18,8 +19,6 @@ public class UIManager : MonoBehaviour
         //HacerloInmortal();
 
         Instance = this;
-
-        SuscribirseEventos();
     }
 
     private void OnDestroy()
@@ -30,11 +29,15 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         BuscarGO();
+
+        SuscribirseEventos();
     }
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstado, GameState anteriorEstado)
     {
-        if((nuevoEstado == GameState.Inventario || nuevoEstado == GameState.Dialogo) &&
+
+        Debug.Log(nuevoEstado);
+        if ((nuevoEstado == GameState.Inventario || nuevoEstado == GameState.Dialogo) &&
             anteriorEstado == GameState.Conduciendo)
         {
             if(moverBotonInventarioRoutine != null)
@@ -56,6 +59,11 @@ public class UIManager : MonoBehaviour
             StartCoroutine(moverBotonInventarioRoutine);
 
             EjecutarNotificacion(string.Empty, OcultarNotificacionInventarioCoroutine());
+        }
+
+        else if(nuevoEstado == GameState.MenuInicio)
+        {
+            OcultarBotonInventario();
         }
     }
 
@@ -109,7 +117,14 @@ public class UIManager : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
     }
-    
+
+    private void OcultarBotonInventario()
+    {
+        botonInventarioGO.transform.localPosition = new Vector3(botonInventarioGO.transform.localPosition.x,
+                                                                Inventario.UI.POSICION_BOTON_OCULTAR.y,
+                                                                botonInventarioGO.transform.localPosition.z);
+    }
+
     private void EjecutarNotificacion(string mensaje, IEnumerator accionAEjecutar)
     {
         notificacionInventarioGO.GetComponentInChildren<TextMeshProUGUI>().text = mensaje;
@@ -210,7 +225,7 @@ public class UIManager : MonoBehaviour
 
     private void BuscarGO()
     {
-        botonInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_BOTON_GO);
-        notificacionInventarioGO = GameObject.Find(Inventario.UI.NOMBRE_NOTIFICACION_GO);
+        botonInventarioGO = GameObject.FindGameObjectWithTag(Inventario.UI.TAG_ICONO_INVENTARIO);
+        notificacionInventarioGO = GameObject.FindGameObjectWithTag(Inventario.UI.TAG_NOTIFICACION_INVENTARIO);
     }
 }

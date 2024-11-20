@@ -35,6 +35,14 @@ public class InputManager : MonoBehaviour
     {
         switch (nuevoEstado)
         {
+            case GameState.MenuInicio:
+                Debug.Log("Controles: UI");
+                ControlesUI();
+                break;
+            case GameState.SecuenciaInicial:
+                Debug.Log("Controles: Dialogo");
+                ControlesDialogo();
+                break;
             case GameState.Conduciendo:
                 Debug.Log("Controles: Conduciendo");
                 ControlesConduciendo();

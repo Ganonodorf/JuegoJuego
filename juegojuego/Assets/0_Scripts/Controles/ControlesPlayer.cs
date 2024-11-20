@@ -1175,15 +1175,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Volver"",
-                    ""type"": ""Button"",
-                    ""id"": ""465c0343-377c-41c0-ac21-9d3c6faeeabb"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1307,28 +1298,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""action"": ""Accion"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""85f4cac3-71ed-4cc2-ab29-2f8efcf74611"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Volver"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5691f0e1-468a-42b4-b3f4-6860e0583d59"",
-                    ""path"": ""<Gamepad>/start"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Volver"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1369,7 +1338,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_UI_MovimientoDer = m_UI.FindAction("MovimientoDer", throwIfNotFound: true);
         m_UI_MovimientoIzq = m_UI.FindAction("MovimientoIzq", throwIfNotFound: true);
         m_UI_Accion = m_UI.FindAction("Accion", throwIfNotFound: true);
-        m_UI_Volver = m_UI.FindAction("Volver", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1732,7 +1700,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_MovimientoDer;
     private readonly InputAction m_UI_MovimientoIzq;
     private readonly InputAction m_UI_Accion;
-    private readonly InputAction m_UI_Volver;
     public struct UIActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -1740,7 +1707,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @MovimientoDer => m_Wrapper.m_UI_MovimientoDer;
         public InputAction @MovimientoIzq => m_Wrapper.m_UI_MovimientoIzq;
         public InputAction @Accion => m_Wrapper.m_UI_Accion;
-        public InputAction @Volver => m_Wrapper.m_UI_Volver;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1759,9 +1725,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Accion.started += instance.OnAccion;
             @Accion.performed += instance.OnAccion;
             @Accion.canceled += instance.OnAccion;
-            @Volver.started += instance.OnVolver;
-            @Volver.performed += instance.OnVolver;
-            @Volver.canceled += instance.OnVolver;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1775,9 +1738,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Accion.started -= instance.OnAccion;
             @Accion.performed -= instance.OnAccion;
             @Accion.canceled -= instance.OnAccion;
-            @Volver.started -= instance.OnVolver;
-            @Volver.performed -= instance.OnVolver;
-            @Volver.canceled -= instance.OnVolver;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1832,6 +1792,5 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnMovimientoDer(InputAction.CallbackContext context);
         void OnMovimientoIzq(InputAction.CallbackContext context);
         void OnAccion(InputAction.CallbackContext context);
-        void OnVolver(InputAction.CallbackContext context);
     }
 }
