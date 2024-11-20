@@ -1203,9 +1203,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(CamaraFin_1,true);
-
-          AnimatorPlay(Fin,CarPlayer)'
+        value: SetActive(CamaraFin_1,true);
         type: 0
         typeString: 
       conversationID: 19
@@ -1262,9 +1260,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(CamaraFin_1,false);
 
-          SetActive(CamaraFin_2,true);
-
-          AnimatorPlay(Fin2,CarPlayer)'
+          SetActive(CamaraFin_2,true);'
         type: 0
         typeString: 
       conversationID: 19
@@ -1384,61 +1380,6 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 19
-        originDialogueID: 4
-        destinationConversationID: 19
-        destinationDialogueID: 5
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 160
-        y: 230
-        width: 160
-        height: 30
-    - id: 5
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 19
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "\xA1Gracias por jugar!"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 19
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
       userScript: 
@@ -1448,7 +1389,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 280
+        y: 230
         width: 160
         height: 30
     entryGroups: []
@@ -33498,7 +33439,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 94.98851}
     canvasZoom: 0.94748306
   - id: 20
     fields:

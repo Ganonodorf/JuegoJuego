@@ -6,7 +6,7 @@ public class FinJuego : MonoBehaviour
     {
         if(collider.transform.name == Constantes.Player.NOMBRE_GO)
         {
-            GameManager.Instance.UpdateGameState(GameState.FinJuego);
+            GameManager.Instance.UpdateGameState(GameState.SecuenciaFinal);
         }
     }
 }

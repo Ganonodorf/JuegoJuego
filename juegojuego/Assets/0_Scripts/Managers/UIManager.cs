@@ -2,7 +2,6 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using Constantes;
-using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -35,8 +34,6 @@ public class UIManager : MonoBehaviour
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstado, GameState anteriorEstado)
     {
-
-        Debug.Log(nuevoEstado);
         if ((nuevoEstado == GameState.Inventario || nuevoEstado == GameState.Dialogo) &&
             anteriorEstado == GameState.Conduciendo)
         {
@@ -61,7 +58,7 @@ public class UIManager : MonoBehaviour
             EjecutarNotificacion(string.Empty, OcultarNotificacionInventarioCoroutine());
         }
 
-        else if(nuevoEstado == GameState.MenuInicio)
+        else if(nuevoEstado == GameState.MenuInicio || nuevoEstado == GameState.FinJuego)
         {
             OcultarBotonInventario();
         }

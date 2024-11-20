@@ -1,6 +1,7 @@
 using System;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameState initialGameState;
 
+    private bool finJuego;
+
     // En el awake decimos que si cuando el GameObject que tenga este script es creado
     // no existe ya un GameManager, asignamos Instance a ese GameObject.
     // Si no es as? y ya existe un GameManager, el que se acaba de crear se borra.
@@ -31,6 +34,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         //initialGameState = GameState.MenuInicio;
+
+        finJuego = false;
 
         UpdateGameState(initialGameState);
     }
@@ -54,11 +59,7 @@ public class GameManager : MonoBehaviour
         previousState = state;
         state = newState;
 
-        if(previousState == GameState.FinJuego)
-        {
-            Debug.Log("Fin del juego señores");
-            return;
-        }
+        if(newState == GameState.Conduciendo && finJuego) { newState = GameState.FinJuego; }
 
         switch (newState)
         {
@@ -81,9 +82,12 @@ public class GameManager : MonoBehaviour
             case GameState.Inventario:
                 Debug.Log("Estado de juego: Inventario");
                 break;
+            case GameState.SecuenciaFinal:
+                Debug.Log("Estado de juego: SecuenciaFinal");
+                SecuenciaFinal();
+                break;
             case GameState.FinJuego:
                 Debug.Log("Estado de juego: FinJuego");
-                FinJuego();
                 break;
             default:
                 break;
@@ -97,9 +101,11 @@ public class GameManager : MonoBehaviour
         DialogueManager.StartConversation("Intro cutscene");
     }
 
-    private void FinJuego()
+    private void SecuenciaFinal()
     {
         DialogueManager.StartConversation("Fin Cutscene");
+
+        finJuego = true;
     }
 
     private void HacerloInmortal()
@@ -135,5 +141,6 @@ public enum GameState
     Conduciendo,
     Dialogo,
     Inventario,
+    SecuenciaFinal,
     FinJuego
 }
