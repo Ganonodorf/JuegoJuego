@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,18 +108,282 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2240
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e87cc6a10afd6478f74abaf5adc50a
+      internalID: -853019593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_1
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2240
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30787c80496fff4488b4a7ff82669068
+      internalID: -374489157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_2
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 2240
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453bda60882f44c45899f867e35df2bd
+      internalID: -1785065541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_3
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 2240
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2a742e155ea5949962b276a36f870e
+      internalID: -749549258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf53aa992bc51d48a1914c760594ea8
+      internalID: -550063282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_5
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1120
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acf2f0c23bcb534d9fa5d4880673657
+      internalID: -275854658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_6
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 1120
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9796e3634599cb2439f3117c43caf855
+      internalID: 451851362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_7
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 1120
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5852eecdb1f84f94ab66da02170ca295
+      internalID: 1006757753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a439ff21ecb2a1499a5c4e73dc779ad
+      internalID: 584710232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_9
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 0
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: debe952f5e0a65847b79b8a4e4620de7
+      internalID: 599206529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_10
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 0
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4521ffdf1accad14ab57f228581b0bf9
+      internalID: 3137498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarmencarmenAnimation_1_11
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 0
+        width: 944
+        height: 1120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d669890dd0df3141ac70e44b28aa7b7
+      internalID: 1527297586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 63e623403bf581841bb3171b2d3c855e
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CarmencarmenAnimation_1_0: -853019593
+      CarmencarmenAnimation_1_1: -374489157
+      CarmencarmenAnimation_1_10: 3137498
+      CarmencarmenAnimation_1_11: 1527297586
+      CarmencarmenAnimation_1_2: -1785065541
+      CarmencarmenAnimation_1_3: -749549258
+      CarmencarmenAnimation_1_4: -550063282
+      CarmencarmenAnimation_1_5: -275854658
+      CarmencarmenAnimation_1_6: 451851362
+      CarmencarmenAnimation_1_7: 1006757753
+      CarmencarmenAnimation_1_8: 584710232
+      CarmencarmenAnimation_1_9: 599206529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
