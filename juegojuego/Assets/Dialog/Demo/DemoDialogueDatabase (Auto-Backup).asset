@@ -25170,7 +25170,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "!AVANZA, NO TE RINDAS! \xA1ENCONTREMOS LA CABEZA PERDIDA!"
+        value: "\xA1AVANZA, NO TE RINDAS! \xA1ENCONTREMOS LA CABEZA PERDIDA!"
         type: 0
         typeString: 
       - title: Sequence
@@ -26920,6 +26920,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 73685be2-2b35-4030-95ef-ad0dfc42bf01
+        type: 0
+        typeString: 
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -26973,6 +26977,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: c95c518d-5340-4b70-b567-70d0541e2df5
         type: 0
         typeString: 
       conversationID: 14
@@ -27269,7 +27277,7 @@ MonoBehaviour:
       - originConversationID: 14
         originDialogueID: 18
         destinationConversationID: 14
-        destinationDialogueID: 27
+        destinationDialogueID: 33
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -27398,7 +27406,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1011.88336
+        x: 1010.95624
         y: 203.49586
         width: 160
         height: 30
@@ -27458,7 +27466,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1011.88336
+        x: 1010.95624
         y: 254.60942
         width: 160
         height: 30
@@ -27570,8 +27578,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1014.11053
-        y: 406.9474
+        x: 1015.03766
+        y: 416.21957
         width: 160
         height: 30
     - id: 24
@@ -27585,7 +27593,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 17
+        value: 19
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -27597,7 +27605,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[Abre la verja]'
+        value: Las manos de candelaria tiemblan mientras trastea con la verja. Al
+          final la consigue abrir, entusiasmada.
         type: 0
         typeString: 
       - title: Sequence
@@ -27629,8 +27638,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1012.99646
-        y: 355.72296
+        x: 1013.9232
+        y: 362.21347
         width: 160
         height: 30
     - id: 25
@@ -27788,8 +27797,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 802.52844
-        y: 330.42062
+        x: 801.6013
+        y: 376.78137
         width: 160
         height: 30
     - id: 28
@@ -28085,8 +28094,64 @@ MonoBehaviour:
         y: 304.3921
         width: 160
         height: 30
+    - id: 33
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "La se\xF1ora se entristece visiblemente. Su mirada se pierde en la
+          neblina del p\xE1ramo. "
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 33
+        destinationConversationID: 14
+        destinationDialogueID: 27
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 800.19916
+        y: 329.96884
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 135.37305, y: 0}
     canvasZoom: 1.0785016
   - id: 15
     fields:
@@ -30412,6 +30477,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 3156f75c-6b35-47e4-b8a0-0d56b77f3fb0
+        type: 0
+        typeString: 
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -30654,7 +30723,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.0498657}
+    canvasScrollPosition: {x: 565.88403, y: 0}
     canvasZoom: 0.9524919
   - id: 16
     fields:
