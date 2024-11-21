@@ -3494,7 +3494,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Sientes como si la Cura notara tu presencia aun con los ojos cerrados,
+        value: "Sientes como si la cura notara tu presencia aun con los ojos cerrados,
           los abre y gira la cabeza hacia t\xED r\xE1pidamente."
         type: 0
         typeString: 
@@ -4786,7 +4786,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "En un arrebato de c\xF3lera, la Cura golpea el bicifijo provocando
+        value: "En un arrebato de c\xF3lera, la cura golpea el bicifijo provocando
           que se rompa la madera y su mano."
         type: 0
         typeString: CustomFieldType_Text
@@ -4877,7 +4877,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 71.47684, y: 0}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.74149877
   - id: 10
     fields:
@@ -7578,7 +7578,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "La Feligresa parece que desconf\xEDa de ti y no se atreve a hablar."
+        value: "La feligresa parece que desconf\xEDa de ti y no se atreve a hablar."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -7690,7 +7690,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Perpleja, la Feligresa asoma la cabeza al interior del veh\xEDculo.
+        value: "Perpleja, la feligresa asoma la cabeza al interior del veh\xEDculo.
           Sus ojos no dan cr\xE9dito a lo que ven. Ves que te mira agradecida y a
           la vez desconfiada."
         type: 0
@@ -7780,7 +7780,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 298.79938, y: 114.11432}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.6659987
   - id: 6
     fields:
@@ -12645,8 +12645,8 @@ MonoBehaviour:
         width: 566.2284
         height: 899.45123
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 615.07916, y: 0}
-    canvasZoom: 0.73349893
+    canvasScrollPosition: {x: 179.04956, y: 350.3803}
+    canvasZoom: 0.94349873
   - id: 5
     fields:
     - title: Title
@@ -16912,7 +16912,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 94.44449, y: 112.82039}
+    canvasScrollPosition: {x: 696.66675, y: 127.77774}
     canvasZoom: 0.9
   - id: 4
     fields:
@@ -18127,12 +18127,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'AgregarAlInventario("BicifijoArreglado");
-
-        SetQuestState("Arregla
-        el bicifijo", "returnToNPC");
-
-        MirarObjetoInventario("BicifijoArreglado");'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18192,7 +18187,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'AgregarAlInventario("BicifijoArreglado");
+
+        SetQuestState("Arregla
+        el bicifijo", "returnToNPC");
+
+        MirarObjetoInventario("BicifijoArreglado");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18964,8 +18964,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 377.7637, y: 66.945496}
-    canvasZoom: 0.8365016
+    canvasScrollPosition: {x: 672.9538, y: 98.41547}
+    canvasZoom: 0.86650157
   - id: 7
     fields:
     - title: Title
@@ -22228,7 +22228,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "La Enterradora te mira, escudri\xF1ando tu alma."
+        value: "La enterradora te mira, escudri\xF1ando tu alma."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -23936,8 +23936,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 106.85333}
-    canvasZoom: 0.99201417
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.6320145
   - id: 13
     fields:
     - title: Title
@@ -24660,7 +24660,7 @@ MonoBehaviour:
       - originConversationID: 13
         originDialogueID: 11
         destinationConversationID: 13
-        destinationDialogueID: 12
+        destinationDialogueID: 38
         isConnector: 0
         priority: 2
       conditionsString: Variable["RadDetectorEntregado"] == false
@@ -24670,7 +24670,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 448.05417
+        x: 446.92935
         y: 505.22275
         width: 160
         height: 30
@@ -24725,8 +24725,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 448.05417
-        y: 555.2229
+        x: 450.7604
+        y: 614.7597
         width: 160
         height: 30
     - id: 13
@@ -24787,8 +24787,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 448.05417
-        y: 605.2229
+        x: 450.7604
+        y: 664.7597
         width: 160
         height: 30
     - id: 14
@@ -25175,8 +25175,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 449.05417
-        y: 655.2229
+        x: 451.7604
+        y: 714.7597
         width: 160
         height: 30
     - id: 21
@@ -26157,9 +26157,66 @@ MonoBehaviour:
         y: 810.51306
         width: 160
         height: 30
+    - id: 38
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "El chatarrero se\xF1ala un cacharro electr\xF3nico desgastado. Este
+          objeto tiene pinta de ser usado para rastrear y encontrar cosas, aunque
+          en este momento no parece estar encendido."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 38
+        destinationConversationID: 13
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 448.05417
+        y: 560.6352
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7390383
+    canvasScrollPosition: {x: 68.46775, y: 299.93814}
+    canvasZoom: 0.88903815
   - id: 14
     fields:
     - title: Title
@@ -28183,8 +28240,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 135.37305, y: 0}
-    canvasZoom: 1.0785016
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7185019
   - id: 15
     fields:
     - title: Title
@@ -30755,8 +30812,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 565.88403, y: 0}
-    canvasZoom: 0.9524919
+    canvasScrollPosition: {x: 1154.037, y: 67.43375}
+    canvasZoom: 0.65249217
   - id: 16
     fields:
     - title: Title
@@ -31549,7 +31606,7 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 13
         destinationConversationID: 16
-        destinationDialogueID: 14
+        destinationDialogueID: 23
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -31619,8 +31676,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 501.73026
-        y: 634.9132
+        x: 502.88034
+        y: 789.5195
         width: 160
         height: 30
     - id: 15
@@ -31681,8 +31738,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 502.87704
-        y: 684.9132
+        x: 504.02713
+        y: 839.5195
         width: 160
         height: 30
     - id: 16
@@ -31708,7 +31765,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Estaba con otra mujer que se fue gritando.
+        value: La mujer se fue corriendo, a lo mejor el traje le hace recordar.
         type: 0
         typeString: 
       - title: Sequence
@@ -31746,8 +31803,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 502.87704
-        y: 734.9132
+        x: 504.02713
+        y: 889.5195
         width: 160
         height: 30
     - id: 17
@@ -32083,9 +32140,175 @@ MonoBehaviour:
         y: 111.21753
         width: 160
         height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "S\xED, ten\xEDa una cita con una mujer y vinieron aqu\xED."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 23
+        destinationConversationID: 16
+        destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 500.5701
+        y: 632.59314
+        width: 160
+        height: 30
+    - id: 24
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Se acerc\xF3 para mostrarme su adoraci\xF3n con el traje y lo engull\xED
+          entero."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 24
+        destinationConversationID: 16
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 500.5701
+        y: 682.59314
+        width: 160
+        height: 30
+    - id: 25
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ja.. JAJAJAJA Ja...
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 25
+        destinationConversationID: 16
+        destinationDialogueID: 14
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 500.5701
+        y: 732.59314
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1994907
+    canvasScrollPosition: {x: 0, y: 254.69681}
+    canvasZoom: 0.7494911
   - id: 17
     fields:
     - title: Title
@@ -32813,8 +33036,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 19.397308, y: 0}
-    canvasZoom: 1.4434987
+    canvasScrollPosition: {x: 0, y: 353.59918}
+    canvasZoom: 1.2334989
   - id: 18
     fields:
     - title: Title
@@ -33552,8 +33775,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 94.98851}
-    canvasZoom: 0.94748306
+    canvasScrollPosition: {x: 0, y: 6.5897293}
+    canvasZoom: 0.7974832
   - id: 20
     fields:
     - title: Title
