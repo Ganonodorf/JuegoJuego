@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        initialGameState = GameState.MenuInicio;
+        //initialGameState = GameState.MenuInicio;
 
         finJuego = false;
 
@@ -89,6 +89,9 @@ public class GameManager : MonoBehaviour
             case GameState.FinJuego:
                 Debug.Log("Estado de juego: FinJuego");
                 break;
+            case GameState.Editor:
+                Debug.Log("Estado de juego: Editor");
+                break;
             default:
                 break;
         }
@@ -142,5 +145,6 @@ public enum GameState
     Dialogo,
     Inventario,
     SecuenciaFinal,
-    FinJuego
+    FinJuego,
+    Editor
 }

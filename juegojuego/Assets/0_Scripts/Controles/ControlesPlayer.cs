@@ -465,15 +465,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Foto"",
-                    ""type"": ""Button"",
-                    ""id"": ""5c5dd798-6d4a-4a3c-8cd0-fdff559d7772"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""MovimientoIzq"",
                     ""type"": ""Button"",
                     ""id"": ""98088bdb-bc0a-4707-9ddf-96a4e77ca467"",
@@ -522,6 +513,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""name"": ""Pausa"",
                     ""type"": ""Button"",
                     ""id"": ""e2b7f24d-c18b-41b3-b885-5f949df79dd3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Foto"",
+                    ""type"": ""Button"",
+                    ""id"": ""5c5dd798-6d4a-4a3c-8cd0-fdff559d7772"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -798,15 +798,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Foto"",
-                    ""type"": ""Button"",
-                    ""id"": ""e8e89a09-d3b9-43f8-9025-8acdaa27f532"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Abajo"",
                     ""type"": ""Button"",
                     ""id"": ""1bd1d002-0d8b-4d8c-94e8-62bfe81867d6"",
@@ -855,6 +846,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""name"": ""Luces"",
                     ""type"": ""Button"",
                     ""id"": ""7ce11058-551e-4ad6-a3af-8e7628847916"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Foto"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8e89a09-d3b9-43f8-9025-8acdaa27f532"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -1219,15 +1219,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Foto"",
-                    ""type"": ""Button"",
-                    ""id"": ""d2488f0b-a24c-4bd3-90c8-0ac53ffb4203"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""MovimientoIzq"",
                     ""type"": ""Button"",
                     ""id"": ""c35e9715-9d30-4d0a-90d4-2832b4e179a5"",
@@ -1240,6 +1231,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""name"": ""Accion"",
                     ""type"": ""Button"",
                     ""id"": ""4a78a907-5ea7-4284-a7a3-e17b1c007de2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Foto"",
+                    ""type"": ""Button"",
+                    ""id"": ""d2488f0b-a24c-4bd3-90c8-0ac53ffb4203"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -1380,6 +1380,204 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""CamaraEditor"",
+            ""id"": ""a774582b-2b83-426a-a83f-af4682435c0e"",
+            ""actions"": [
+                {
+                    ""name"": ""Movimiento"",
+                    ""type"": ""Value"",
+                    ""id"": ""f45235d0-bba8-4f30-9dbd-88c78625abd7"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Rotacion"",
+                    ""type"": ""Value"",
+                    ""id"": ""32c483b4-b529-4771-adf6-9335104db676"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Foto"",
+                    ""type"": ""Button"",
+                    ""id"": ""3fff2cf9-18c5-4372-a309-aa5cef310ef4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoverAltura"",
+                    ""type"": ""Value"",
+                    ""id"": ""31c0f397-8873-43e2-8141-5f60b9f0c713"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""5d936bcd-9e3b-4cde-a979-2174e4099e25"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movimiento"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""af979de8-ad49-4873-bc08-e11ad513e85e"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movimiento"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""79fa8490-df70-4b0e-a890-c12375ac57a3"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movimiento"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""dc30a771-7f09-4ead-ba4b-94895af9d954"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movimiento"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""2b0dafe9-17ea-4ff6-a8c7-8ac98cd092db"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movimiento"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0cd7cf5a-d8a3-4cbe-93d3-f12e6fb85f90"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movimiento"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""QE"",
+                    ""id"": ""0c303233-f1aa-469b-a5da-b5881c6da9e6"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotacion"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d9d2da97-5575-473a-b103-e40a0fd29967"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotacion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""fbd9bc43-8ef9-4012-ae20-d1527a1002b6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotacion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5284aac7-44f6-4f1e-92f4-469ad85d170b"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotacion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5169a985-9128-4a49-9b29-ec632e46efa5"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Foto"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Gatillos"",
+                    ""id"": ""16f11fc3-4c25-416a-97aa-13c1241953e4"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoverAltura"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""1e492cce-446d-4e5a-87e8-019dfb41ee7e"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoverAltura"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""5ecad43b-1d2f-404f-bda7-5cf8c02cea20"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoverAltura"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -1399,29 +1597,35 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         // Inventario
         m_Inventario = asset.FindActionMap("Inventario", throwIfNotFound: true);
         m_Inventario_MovimientoDer = m_Inventario.FindAction("MovimientoDer", throwIfNotFound: true);
-        m_Inventario_Foto = m_Inventario.FindAction("Foto", throwIfNotFound: true);
         m_Inventario_MovimientoIzq = m_Inventario.FindAction("MovimientoIzq", throwIfNotFound: true);
         m_Inventario_MovimientoArriba = m_Inventario.FindAction("MovimientoArriba", throwIfNotFound: true);
         m_Inventario_MovimientoAbajo = m_Inventario.FindAction("MovimientoAbajo", throwIfNotFound: true);
         m_Inventario_SoltarDelInventario = m_Inventario.FindAction("SoltarDelInventario", throwIfNotFound: true);
         m_Inventario_CerrarInventario = m_Inventario.FindAction("CerrarInventario", throwIfNotFound: true);
         m_Inventario_Pausa = m_Inventario.FindAction("Pausa", throwIfNotFound: true);
+        m_Inventario_Foto = m_Inventario.FindAction("Foto", throwIfNotFound: true);
         // Dialogo
         m_Dialogo = asset.FindActionMap("Dialogo", throwIfNotFound: true);
         m_Dialogo_Arriba = m_Dialogo.FindAction("Arriba", throwIfNotFound: true);
-        m_Dialogo_Foto = m_Dialogo.FindAction("Foto", throwIfNotFound: true);
         m_Dialogo_Abajo = m_Dialogo.FindAction("Abajo", throwIfNotFound: true);
         m_Dialogo_Seleccion = m_Dialogo.FindAction("Seleccion", throwIfNotFound: true);
         m_Dialogo_MovimientoFrontal = m_Dialogo.FindAction("MovimientoFrontal", throwIfNotFound: true);
         m_Dialogo_MovimientoLateral = m_Dialogo.FindAction("MovimientoLateral", throwIfNotFound: true);
         m_Dialogo_Derrape = m_Dialogo.FindAction("Derrape", throwIfNotFound: true);
         m_Dialogo_Luces = m_Dialogo.FindAction("Luces", throwIfNotFound: true);
+        m_Dialogo_Foto = m_Dialogo.FindAction("Foto", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MovimientoDer = m_UI.FindAction("MovimientoDer", throwIfNotFound: true);
-        m_UI_Foto = m_UI.FindAction("Foto", throwIfNotFound: true);
         m_UI_MovimientoIzq = m_UI.FindAction("MovimientoIzq", throwIfNotFound: true);
         m_UI_Accion = m_UI.FindAction("Accion", throwIfNotFound: true);
+        m_UI_Foto = m_UI.FindAction("Foto", throwIfNotFound: true);
+        // CamaraEditor
+        m_CamaraEditor = asset.FindActionMap("CamaraEditor", throwIfNotFound: true);
+        m_CamaraEditor_Movimiento = m_CamaraEditor.FindAction("Movimiento", throwIfNotFound: true);
+        m_CamaraEditor_Rotacion = m_CamaraEditor.FindAction("Rotacion", throwIfNotFound: true);
+        m_CamaraEditor_Foto = m_CamaraEditor.FindAction("Foto", throwIfNotFound: true);
+        m_CamaraEditor_MoverAltura = m_CamaraEditor.FindAction("MoverAltura", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1602,25 +1806,25 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Inventario;
     private List<IInventarioActions> m_InventarioActionsCallbackInterfaces = new List<IInventarioActions>();
     private readonly InputAction m_Inventario_MovimientoDer;
-    private readonly InputAction m_Inventario_Foto;
     private readonly InputAction m_Inventario_MovimientoIzq;
     private readonly InputAction m_Inventario_MovimientoArriba;
     private readonly InputAction m_Inventario_MovimientoAbajo;
     private readonly InputAction m_Inventario_SoltarDelInventario;
     private readonly InputAction m_Inventario_CerrarInventario;
     private readonly InputAction m_Inventario_Pausa;
+    private readonly InputAction m_Inventario_Foto;
     public struct InventarioActions
     {
         private @ControlesPlayer m_Wrapper;
         public InventarioActions(@ControlesPlayer wrapper) { m_Wrapper = wrapper; }
         public InputAction @MovimientoDer => m_Wrapper.m_Inventario_MovimientoDer;
-        public InputAction @Foto => m_Wrapper.m_Inventario_Foto;
         public InputAction @MovimientoIzq => m_Wrapper.m_Inventario_MovimientoIzq;
         public InputAction @MovimientoArriba => m_Wrapper.m_Inventario_MovimientoArriba;
         public InputAction @MovimientoAbajo => m_Wrapper.m_Inventario_MovimientoAbajo;
         public InputAction @SoltarDelInventario => m_Wrapper.m_Inventario_SoltarDelInventario;
         public InputAction @CerrarInventario => m_Wrapper.m_Inventario_CerrarInventario;
         public InputAction @Pausa => m_Wrapper.m_Inventario_Pausa;
+        public InputAction @Foto => m_Wrapper.m_Inventario_Foto;
         public InputActionMap Get() { return m_Wrapper.m_Inventario; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1633,9 +1837,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @MovimientoDer.started += instance.OnMovimientoDer;
             @MovimientoDer.performed += instance.OnMovimientoDer;
             @MovimientoDer.canceled += instance.OnMovimientoDer;
-            @Foto.started += instance.OnFoto;
-            @Foto.performed += instance.OnFoto;
-            @Foto.canceled += instance.OnFoto;
             @MovimientoIzq.started += instance.OnMovimientoIzq;
             @MovimientoIzq.performed += instance.OnMovimientoIzq;
             @MovimientoIzq.canceled += instance.OnMovimientoIzq;
@@ -1654,6 +1855,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Pausa.started += instance.OnPausa;
             @Pausa.performed += instance.OnPausa;
             @Pausa.canceled += instance.OnPausa;
+            @Foto.started += instance.OnFoto;
+            @Foto.performed += instance.OnFoto;
+            @Foto.canceled += instance.OnFoto;
         }
 
         private void UnregisterCallbacks(IInventarioActions instance)
@@ -1661,9 +1865,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @MovimientoDer.started -= instance.OnMovimientoDer;
             @MovimientoDer.performed -= instance.OnMovimientoDer;
             @MovimientoDer.canceled -= instance.OnMovimientoDer;
-            @Foto.started -= instance.OnFoto;
-            @Foto.performed -= instance.OnFoto;
-            @Foto.canceled -= instance.OnFoto;
             @MovimientoIzq.started -= instance.OnMovimientoIzq;
             @MovimientoIzq.performed -= instance.OnMovimientoIzq;
             @MovimientoIzq.canceled -= instance.OnMovimientoIzq;
@@ -1682,6 +1883,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Pausa.started -= instance.OnPausa;
             @Pausa.performed -= instance.OnPausa;
             @Pausa.canceled -= instance.OnPausa;
+            @Foto.started -= instance.OnFoto;
+            @Foto.performed -= instance.OnFoto;
+            @Foto.canceled -= instance.OnFoto;
         }
 
         public void RemoveCallbacks(IInventarioActions instance)
@@ -1704,25 +1908,25 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Dialogo;
     private List<IDialogoActions> m_DialogoActionsCallbackInterfaces = new List<IDialogoActions>();
     private readonly InputAction m_Dialogo_Arriba;
-    private readonly InputAction m_Dialogo_Foto;
     private readonly InputAction m_Dialogo_Abajo;
     private readonly InputAction m_Dialogo_Seleccion;
     private readonly InputAction m_Dialogo_MovimientoFrontal;
     private readonly InputAction m_Dialogo_MovimientoLateral;
     private readonly InputAction m_Dialogo_Derrape;
     private readonly InputAction m_Dialogo_Luces;
+    private readonly InputAction m_Dialogo_Foto;
     public struct DialogoActions
     {
         private @ControlesPlayer m_Wrapper;
         public DialogoActions(@ControlesPlayer wrapper) { m_Wrapper = wrapper; }
         public InputAction @Arriba => m_Wrapper.m_Dialogo_Arriba;
-        public InputAction @Foto => m_Wrapper.m_Dialogo_Foto;
         public InputAction @Abajo => m_Wrapper.m_Dialogo_Abajo;
         public InputAction @Seleccion => m_Wrapper.m_Dialogo_Seleccion;
         public InputAction @MovimientoFrontal => m_Wrapper.m_Dialogo_MovimientoFrontal;
         public InputAction @MovimientoLateral => m_Wrapper.m_Dialogo_MovimientoLateral;
         public InputAction @Derrape => m_Wrapper.m_Dialogo_Derrape;
         public InputAction @Luces => m_Wrapper.m_Dialogo_Luces;
+        public InputAction @Foto => m_Wrapper.m_Dialogo_Foto;
         public InputActionMap Get() { return m_Wrapper.m_Dialogo; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1735,9 +1939,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Arriba.started += instance.OnArriba;
             @Arriba.performed += instance.OnArriba;
             @Arriba.canceled += instance.OnArriba;
-            @Foto.started += instance.OnFoto;
-            @Foto.performed += instance.OnFoto;
-            @Foto.canceled += instance.OnFoto;
             @Abajo.started += instance.OnAbajo;
             @Abajo.performed += instance.OnAbajo;
             @Abajo.canceled += instance.OnAbajo;
@@ -1756,6 +1957,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Luces.started += instance.OnLuces;
             @Luces.performed += instance.OnLuces;
             @Luces.canceled += instance.OnLuces;
+            @Foto.started += instance.OnFoto;
+            @Foto.performed += instance.OnFoto;
+            @Foto.canceled += instance.OnFoto;
         }
 
         private void UnregisterCallbacks(IDialogoActions instance)
@@ -1763,9 +1967,6 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Arriba.started -= instance.OnArriba;
             @Arriba.performed -= instance.OnArriba;
             @Arriba.canceled -= instance.OnArriba;
-            @Foto.started -= instance.OnFoto;
-            @Foto.performed -= instance.OnFoto;
-            @Foto.canceled -= instance.OnFoto;
             @Abajo.started -= instance.OnAbajo;
             @Abajo.performed -= instance.OnAbajo;
             @Abajo.canceled -= instance.OnAbajo;
@@ -1784,6 +1985,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Luces.started -= instance.OnLuces;
             @Luces.performed -= instance.OnLuces;
             @Luces.canceled -= instance.OnLuces;
+            @Foto.started -= instance.OnFoto;
+            @Foto.performed -= instance.OnFoto;
+            @Foto.canceled -= instance.OnFoto;
         }
 
         public void RemoveCallbacks(IDialogoActions instance)
@@ -1806,17 +2010,17 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_MovimientoDer;
-    private readonly InputAction m_UI_Foto;
     private readonly InputAction m_UI_MovimientoIzq;
     private readonly InputAction m_UI_Accion;
+    private readonly InputAction m_UI_Foto;
     public struct UIActions
     {
         private @ControlesPlayer m_Wrapper;
         public UIActions(@ControlesPlayer wrapper) { m_Wrapper = wrapper; }
         public InputAction @MovimientoDer => m_Wrapper.m_UI_MovimientoDer;
-        public InputAction @Foto => m_Wrapper.m_UI_Foto;
         public InputAction @MovimientoIzq => m_Wrapper.m_UI_MovimientoIzq;
         public InputAction @Accion => m_Wrapper.m_UI_Accion;
+        public InputAction @Foto => m_Wrapper.m_UI_Foto;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1829,15 +2033,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @MovimientoDer.started += instance.OnMovimientoDer;
             @MovimientoDer.performed += instance.OnMovimientoDer;
             @MovimientoDer.canceled += instance.OnMovimientoDer;
-            @Foto.started += instance.OnFoto;
-            @Foto.performed += instance.OnFoto;
-            @Foto.canceled += instance.OnFoto;
             @MovimientoIzq.started += instance.OnMovimientoIzq;
             @MovimientoIzq.performed += instance.OnMovimientoIzq;
             @MovimientoIzq.canceled += instance.OnMovimientoIzq;
             @Accion.started += instance.OnAccion;
             @Accion.performed += instance.OnAccion;
             @Accion.canceled += instance.OnAccion;
+            @Foto.started += instance.OnFoto;
+            @Foto.performed += instance.OnFoto;
+            @Foto.canceled += instance.OnFoto;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1845,15 +2049,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @MovimientoDer.started -= instance.OnMovimientoDer;
             @MovimientoDer.performed -= instance.OnMovimientoDer;
             @MovimientoDer.canceled -= instance.OnMovimientoDer;
-            @Foto.started -= instance.OnFoto;
-            @Foto.performed -= instance.OnFoto;
-            @Foto.canceled -= instance.OnFoto;
             @MovimientoIzq.started -= instance.OnMovimientoIzq;
             @MovimientoIzq.performed -= instance.OnMovimientoIzq;
             @MovimientoIzq.canceled -= instance.OnMovimientoIzq;
             @Accion.started -= instance.OnAccion;
             @Accion.performed -= instance.OnAccion;
             @Accion.canceled -= instance.OnAccion;
+            @Foto.started -= instance.OnFoto;
+            @Foto.performed -= instance.OnFoto;
+            @Foto.canceled -= instance.OnFoto;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1871,6 +2075,76 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // CamaraEditor
+    private readonly InputActionMap m_CamaraEditor;
+    private List<ICamaraEditorActions> m_CamaraEditorActionsCallbackInterfaces = new List<ICamaraEditorActions>();
+    private readonly InputAction m_CamaraEditor_Movimiento;
+    private readonly InputAction m_CamaraEditor_Rotacion;
+    private readonly InputAction m_CamaraEditor_Foto;
+    private readonly InputAction m_CamaraEditor_MoverAltura;
+    public struct CamaraEditorActions
+    {
+        private @ControlesPlayer m_Wrapper;
+        public CamaraEditorActions(@ControlesPlayer wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movimiento => m_Wrapper.m_CamaraEditor_Movimiento;
+        public InputAction @Rotacion => m_Wrapper.m_CamaraEditor_Rotacion;
+        public InputAction @Foto => m_Wrapper.m_CamaraEditor_Foto;
+        public InputAction @MoverAltura => m_Wrapper.m_CamaraEditor_MoverAltura;
+        public InputActionMap Get() { return m_Wrapper.m_CamaraEditor; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CamaraEditorActions set) { return set.Get(); }
+        public void AddCallbacks(ICamaraEditorActions instance)
+        {
+            if (instance == null || m_Wrapper.m_CamaraEditorActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_CamaraEditorActionsCallbackInterfaces.Add(instance);
+            @Movimiento.started += instance.OnMovimiento;
+            @Movimiento.performed += instance.OnMovimiento;
+            @Movimiento.canceled += instance.OnMovimiento;
+            @Rotacion.started += instance.OnRotacion;
+            @Rotacion.performed += instance.OnRotacion;
+            @Rotacion.canceled += instance.OnRotacion;
+            @Foto.started += instance.OnFoto;
+            @Foto.performed += instance.OnFoto;
+            @Foto.canceled += instance.OnFoto;
+            @MoverAltura.started += instance.OnMoverAltura;
+            @MoverAltura.performed += instance.OnMoverAltura;
+            @MoverAltura.canceled += instance.OnMoverAltura;
+        }
+
+        private void UnregisterCallbacks(ICamaraEditorActions instance)
+        {
+            @Movimiento.started -= instance.OnMovimiento;
+            @Movimiento.performed -= instance.OnMovimiento;
+            @Movimiento.canceled -= instance.OnMovimiento;
+            @Rotacion.started -= instance.OnRotacion;
+            @Rotacion.performed -= instance.OnRotacion;
+            @Rotacion.canceled -= instance.OnRotacion;
+            @Foto.started -= instance.OnFoto;
+            @Foto.performed -= instance.OnFoto;
+            @Foto.canceled -= instance.OnFoto;
+            @MoverAltura.started -= instance.OnMoverAltura;
+            @MoverAltura.performed -= instance.OnMoverAltura;
+            @MoverAltura.canceled -= instance.OnMoverAltura;
+        }
+
+        public void RemoveCallbacks(ICamaraEditorActions instance)
+        {
+            if (m_Wrapper.m_CamaraEditorActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ICamaraEditorActions instance)
+        {
+            foreach (var item in m_Wrapper.m_CamaraEditorActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_CamaraEditorActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public CamaraEditorActions @CamaraEditor => new CamaraEditorActions(this);
     public interface IConduciendoActions
     {
         void OnMovimientoLateral(InputAction.CallbackContext context);
@@ -1887,30 +2161,37 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     public interface IInventarioActions
     {
         void OnMovimientoDer(InputAction.CallbackContext context);
-        void OnFoto(InputAction.CallbackContext context);
         void OnMovimientoIzq(InputAction.CallbackContext context);
         void OnMovimientoArriba(InputAction.CallbackContext context);
         void OnMovimientoAbajo(InputAction.CallbackContext context);
         void OnSoltarDelInventario(InputAction.CallbackContext context);
         void OnCerrarInventario(InputAction.CallbackContext context);
         void OnPausa(InputAction.CallbackContext context);
+        void OnFoto(InputAction.CallbackContext context);
     }
     public interface IDialogoActions
     {
         void OnArriba(InputAction.CallbackContext context);
-        void OnFoto(InputAction.CallbackContext context);
         void OnAbajo(InputAction.CallbackContext context);
         void OnSeleccion(InputAction.CallbackContext context);
         void OnMovimientoFrontal(InputAction.CallbackContext context);
         void OnMovimientoLateral(InputAction.CallbackContext context);
         void OnDerrape(InputAction.CallbackContext context);
         void OnLuces(InputAction.CallbackContext context);
+        void OnFoto(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
         void OnMovimientoDer(InputAction.CallbackContext context);
-        void OnFoto(InputAction.CallbackContext context);
         void OnMovimientoIzq(InputAction.CallbackContext context);
         void OnAccion(InputAction.CallbackContext context);
+        void OnFoto(InputAction.CallbackContext context);
+    }
+    public interface ICamaraEditorActions
+    {
+        void OnMovimiento(InputAction.CallbackContext context);
+        void OnRotacion(InputAction.CallbackContext context);
+        void OnFoto(InputAction.CallbackContext context);
+        void OnMoverAltura(InputAction.CallbackContext context);
     }
 }

@@ -10,6 +10,7 @@ public class ScreenshotManager : MonoBehaviour
         InputManager.Instance.controles.Inventario.Foto.performed += contexto => HacerFoto();
         InputManager.Instance.controles.UI.Foto.performed += contexto => HacerFoto();
         InputManager.Instance.controles.Dialogo.Foto.performed += contexto => HacerFoto();
+        InputManager.Instance.controles.CamaraEditor.Foto.performed += contexto => HacerFoto();
     }
 
     private void HacerFoto()
