@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    // Interactuable del coche
+    private GameObject PlayerInteractionsGO;
+
     private GameObject RuedaDerechaGO;
     private GameObject RuedaIzquierdaGO;
 
@@ -34,6 +37,8 @@ public class CarController : MonoBehaviour
 
         RuedaDerechaGO = GameObject.FindGameObjectWithTag("WheelFrontRight");
         RuedaIzquierdaGO = GameObject.FindGameObjectWithTag("WheelFrontLeft");
+
+        PlayerInteractionsGO = GameObject.FindGameObjectWithTag("CarPlayerInteractions");
     }
 
     private void OnDestroy()
@@ -50,7 +55,7 @@ public class CarController : MonoBehaviour
             if (nuevoEstadoJuego == GameState.Conduciendo)
             {
                 // Para que no pueda interactuar con cosas del Dialogue System
-                if (TryGetComponent(out ProximitySelector proximitySelector))
+                if (PlayerInteractionsGO.TryGetComponent(out ProximitySelector proximitySelector))
                 {
                     proximitySelector.enabled = true;
                 }
@@ -58,7 +63,7 @@ public class CarController : MonoBehaviour
             else
             {
                 // Para que no pueda interactuar con cosas del Dialogue System
-                if (TryGetComponent(out ProximitySelector proximitySelector))
+                if (PlayerInteractionsGO.TryGetComponent(out ProximitySelector proximitySelector))
                 {
                     proximitySelector.enabled = false;
                 }

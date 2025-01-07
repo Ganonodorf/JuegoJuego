@@ -64,8 +64,12 @@ public class InputManager : MonoBehaviour
                 ControlesDialogo();
                 break;
             case GameState.FinJuego:
-                Debug.Log("Controles: FinJuego.");
+                Debug.Log("Controles: FinJuego");
                 ControlesUI();
+                break;
+            case GameState.Editor:
+                Debug.Log("Controles: Editor");
+                ControlesEditor();
                 break;
             default:
                 break;
@@ -78,6 +82,7 @@ public class InputManager : MonoBehaviour
         controles.Inventario.Disable();
         controles.Dialogo.Disable();
         controles.UI.Disable();
+        controles.CamaraEditor.Disable();
     }
 
     private void ControlesInventario()
@@ -86,6 +91,7 @@ public class InputManager : MonoBehaviour
         controles.Inventario.Enable();
         controles.Dialogo.Disable();
         controles.UI.Disable();
+        controles.CamaraEditor.Disable();
     }
 
     private void ControlesDialogo()
@@ -94,6 +100,7 @@ public class InputManager : MonoBehaviour
         controles.Inventario.Disable();
         controles.Dialogo.Enable();
         controles.UI.Disable();
+        controles.CamaraEditor.Disable();
     }
 
     private void ControlesUI()
@@ -102,6 +109,16 @@ public class InputManager : MonoBehaviour
         controles.Inventario.Disable();
         controles.Dialogo.Disable();
         controles.UI.Enable();
+        controles.CamaraEditor.Disable();
+    }
+
+    private void ControlesEditor()
+    {
+        controles.Conduciendo.Disable();
+        controles.Inventario.Disable();
+        controles.Dialogo.Disable();
+        controles.UI.Disable();
+        controles.CamaraEditor.Enable();
     }
 
     private void HacerloInmortal()
