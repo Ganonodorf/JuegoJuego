@@ -142,7 +142,7 @@ public class InputManager : MonoBehaviour
     private void InicializarControles()
     {
         controles = new ControlesPlayer();
-        controles.Conduciendo.Enable();
+        controles.UI.Enable();
     }
 
     private void RegistrarControlesDyalogueSystem()

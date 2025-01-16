@@ -2202,37 +2202,37 @@ MonoBehaviour:
         originDialogueID: 1
         destinationConversationID: 1
         destinationDialogueID: 18
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 1
         originDialogueID: 1
         destinationConversationID: 1
         destinationDialogueID: 7
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 1
         originDialogueID: 1
         destinationConversationID: 1
         destinationDialogueID: 37
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 1
         originDialogueID: 1
         destinationConversationID: 1
         destinationDialogueID: 40
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 1
         originDialogueID: 1
         destinationConversationID: 1
         destinationDialogueID: 44
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 1
         originDialogueID: 1
         destinationConversationID: 1
         destinationDialogueID: 19
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: Variable["HabladoCura"] == true
       userScript: 
@@ -2678,7 +2678,7 @@ MonoBehaviour:
         originDialogueID: 18
         destinationConversationID: 1
         destinationDialogueID: 16
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: CurrentQuestState("Arregla el bicifijo") == "unassigned"
       userScript: SetQuestState("Arregla el bicifijo", "active")
@@ -3696,7 +3696,7 @@ MonoBehaviour:
         originDialogueID: 35
         destinationConversationID: 1
         destinationDialogueID: 55
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -3865,7 +3865,7 @@ MonoBehaviour:
         originDialogueID: 39
         destinationConversationID: 1
         destinationDialogueID: 55
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -4089,7 +4089,7 @@ MonoBehaviour:
         originDialogueID: 43
         destinationConversationID: 1
         destinationDialogueID: 55
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -4877,7 +4877,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 21.577911}
     canvasZoom: 0.74149877
   - id: 10
     fields:
@@ -5201,31 +5201,31 @@ MonoBehaviour:
         originDialogueID: 4
         destinationConversationID: 10
         destinationDialogueID: 8
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 10
         originDialogueID: 4
         destinationConversationID: 10
         destinationDialogueID: 18
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 10
         originDialogueID: 4
         destinationConversationID: 10
         destinationDialogueID: 24
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 10
         originDialogueID: 4
         destinationConversationID: 10
         destinationDialogueID: 28
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 10
         originDialogueID: 4
         destinationConversationID: 10
         destinationDialogueID: 7
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: Variable["HabladoFeligresa"] == true and (Variable["Comida"]
         == false)
@@ -6626,7 +6626,7 @@ MonoBehaviour:
         originDialogueID: 29
         destinationConversationID: 10
         destinationDialogueID: 42
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: DejarMirarObjeto()
@@ -7377,7 +7377,7 @@ MonoBehaviour:
         originDialogueID: 43
         destinationConversationID: 10
         destinationDialogueID: 42
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -7432,7 +7432,7 @@ MonoBehaviour:
         originDialogueID: 44
         destinationConversationID: 10
         destinationDialogueID: 42
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -7487,7 +7487,7 @@ MonoBehaviour:
         originDialogueID: 45
         destinationConversationID: 10
         destinationDialogueID: 42
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -7654,7 +7654,7 @@ MonoBehaviour:
         originDialogueID: 48
         destinationConversationID: 10
         destinationDialogueID: 42
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -8234,7 +8234,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Eeeeeh, eeeeeh, EEEEEEEEH\r"
+        value: "Eeeeeh, eeeeeh, EEEEEEEEH\r."
         type: 0
         typeString: 
       - title: Sequence
@@ -9499,9 +9499,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Pero qu\xE9 te pasa?? no sabes que esto es una carretera nacional?
-          No puedes ir por ah\xED sin un permiso de circulaci\xF3n ni haber pasado
-          la ITV."
+        value: "\xBF\xBFPero qu\xE9 te pasa?? no sabes que esto es una carretera
+          nacional? No puedes ir por ah\xED sin un permiso de circulaci\xF3n ni haber
+          pasado la ITV."
         type: 0
         typeString: 
       - title: Sequence
@@ -11186,7 +11186,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "Bueno, pues parece que todo est\xE1 en orden, ya te he puesto la
-          matr\xEDcula y voy a subirte el puente levadizo ahora mismito."
+          matr\xEDcula y voy a bajarte el puente levadizo ahora mismito."
         type: 0
         typeString: 
       - title: Sequence
@@ -11565,7 +11565,7 @@ MonoBehaviour:
         originDialogueID: 72
         destinationConversationID: 2
         destinationDialogueID: 87
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -11913,7 +11913,7 @@ MonoBehaviour:
         originDialogueID: 78
         destinationConversationID: 2
         destinationDialogueID: 87
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -12250,7 +12250,7 @@ MonoBehaviour:
         originDialogueID: 84
         destinationConversationID: 2
         destinationDialogueID: 87
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -12425,37 +12425,37 @@ MonoBehaviour:
         originDialogueID: 87
         destinationConversationID: 2
         destinationDialogueID: 18
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 2
         originDialogueID: 87
         destinationConversationID: 2
         destinationDialogueID: 20
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 2
         originDialogueID: 87
         destinationConversationID: 2
         destinationDialogueID: 70
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 2
         originDialogueID: 87
         destinationConversationID: 2
         destinationDialogueID: 73
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 2
         originDialogueID: 87
         destinationConversationID: 2
         destinationDialogueID: 79
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 2
         originDialogueID: 87
         destinationConversationID: 2
         destinationDialogueID: 16
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -12645,8 +12645,8 @@ MonoBehaviour:
         width: 566.2284
         height: 899.45123
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 179.04956, y: 350.3803}
-    canvasZoom: 0.94349873
+    canvasScrollPosition: {x: 428.18988, y: 0}
+    canvasZoom: 0.7934989
   - id: 5
     fields:
     - title: Title
@@ -12906,7 +12906,7 @@ MonoBehaviour:
         originDialogueID: 12
         destinationConversationID: 5
         destinationDialogueID: 76
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -13626,7 +13626,7 @@ MonoBehaviour:
         originDialogueID: 25
         destinationConversationID: 5
         destinationDialogueID: 76
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -16192,7 +16192,7 @@ MonoBehaviour:
         originDialogueID: 72
         destinationConversationID: 5
         destinationDialogueID: 76
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -16371,7 +16371,7 @@ MonoBehaviour:
         originDialogueID: 75
         destinationConversationID: 5
         destinationDialogueID: 76
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -16426,31 +16426,31 @@ MonoBehaviour:
         originDialogueID: 76
         destinationConversationID: 5
         destinationDialogueID: 15
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 5
         originDialogueID: 76
         destinationConversationID: 5
         destinationDialogueID: 16
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 5
         originDialogueID: 76
         destinationConversationID: 5
         destinationDialogueID: 66
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 5
         originDialogueID: 76
         destinationConversationID: 5
         destinationDialogueID: 70
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 5
         originDialogueID: 76
         destinationConversationID: 5
         destinationDialogueID: 14
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -16766,7 +16766,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "La escena te ha dejado completamente perpleja, el resto de se\xF1oras
-          parece estar acostumbrada a lo que acabas de presenciar y ni se inmutan."
+          parece estar acostumbradas a lo que acabas de presenciar y ni se inmutan."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16912,7 +16912,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 696.66675, y: 127.77774}
+    canvasScrollPosition: {x: 478.8891, y: 151.11105}
     canvasZoom: 0.9
   - id: 4
     fields:
@@ -17605,7 +17605,7 @@ MonoBehaviour:
         originDialogueID: 37
         destinationConversationID: 4
         destinationDialogueID: 59
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -17890,7 +17890,7 @@ MonoBehaviour:
         originDialogueID: 42
         destinationConversationID: 4
         destinationDialogueID: 59
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -18064,6 +18064,12 @@ MonoBehaviour:
         originDialogueID: 45
         destinationConversationID: 4
         destinationDialogueID: 59
+        isConnector: 1
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 45
+        destinationConversationID: 4
+        destinationDialogueID: 48
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -18525,7 +18531,7 @@ MonoBehaviour:
         originDialogueID: 53
         destinationConversationID: 4
         destinationDialogueID: 59
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -18581,7 +18587,7 @@ MonoBehaviour:
         originDialogueID: 54
         destinationConversationID: 4
         destinationDialogueID: 59
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -18590,8 +18596,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1255.7849
-        y: 306.7585
+        x: 1253.2094
+        y: 308.04636
         width: 160
         height: 30
     - id: 55
@@ -18759,7 +18765,7 @@ MonoBehaviour:
         originDialogueID: 57
         destinationConversationID: 4
         destinationDialogueID: 59
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: DejarMirarObjeto()
@@ -18863,37 +18869,37 @@ MonoBehaviour:
         originDialogueID: 59
         destinationConversationID: 4
         destinationDialogueID: 30
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 4
         originDialogueID: 59
         destinationConversationID: 4
         destinationDialogueID: 40
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 4
         originDialogueID: 59
         destinationConversationID: 4
         destinationDialogueID: 43
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 4
         originDialogueID: 59
         destinationConversationID: 4
         destinationDialogueID: 48
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 4
         originDialogueID: 59
         destinationConversationID: 4
         destinationDialogueID: 49
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 4
         originDialogueID: 59
         destinationConversationID: 4
         destinationDialogueID: 28
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -18964,8 +18970,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 672.9538, y: 98.41547}
-    canvasZoom: 0.86650157
+    canvasScrollPosition: {x: 315.5177, y: 0}
+    canvasZoom: 0.77650166
   - id: 7
     fields:
     - title: Title
@@ -19496,37 +19502,37 @@ MonoBehaviour:
         originDialogueID: 2
         destinationConversationID: 11
         destinationDialogueID: 4
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 11
         originDialogueID: 2
         destinationConversationID: 11
         destinationDialogueID: 5
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 11
         originDialogueID: 2
         destinationConversationID: 11
         destinationDialogueID: 6
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 11
         originDialogueID: 2
         destinationConversationID: 11
         destinationDialogueID: 7
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 11
         originDialogueID: 2
         destinationConversationID: 11
         destinationDialogueID: 8
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 11
         originDialogueID: 2
         destinationConversationID: 11
         destinationDialogueID: 3
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: Variable["HabladoEnterradora"] == true
       userScript: 
@@ -20197,7 +20203,7 @@ MonoBehaviour:
         originDialogueID: 14
         destinationConversationID: 11
         destinationDialogueID: 51
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -20581,7 +20587,7 @@ MonoBehaviour:
         originDialogueID: 21
         destinationConversationID: 11
         destinationDialogueID: 51
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -20757,7 +20763,7 @@ MonoBehaviour:
         originDialogueID: 24
         destinationConversationID: 11
         destinationDialogueID: 51
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -21042,7 +21048,7 @@ MonoBehaviour:
         originDialogueID: 29
         destinationConversationID: 11
         destinationDialogueID: 51
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -21434,7 +21440,7 @@ MonoBehaviour:
         originDialogueID: 37
         destinationConversationID: 11
         destinationDialogueID: 51
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -21932,7 +21938,7 @@ MonoBehaviour:
         originDialogueID: 46
         destinationConversationID: 11
         destinationDialogueID: 51
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -22959,7 +22965,7 @@ MonoBehaviour:
         originDialogueID: 15
         destinationConversationID: 12
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: DejarMirarObjeto()
@@ -23365,7 +23371,7 @@ MonoBehaviour:
         originDialogueID: 23
         destinationConversationID: 12
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -23420,7 +23426,7 @@ MonoBehaviour:
         originDialogueID: 24
         destinationConversationID: 12
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -23475,7 +23481,7 @@ MonoBehaviour:
         originDialogueID: 25
         destinationConversationID: 12
         destinationDialogueID: 26
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -23746,7 +23752,7 @@ MonoBehaviour:
         originDialogueID: 30
         destinationConversationID: 12
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -23807,7 +23813,7 @@ MonoBehaviour:
         originDialogueID: 31
         destinationConversationID: 12
         destinationDialogueID: 15
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: MirarObjetoInventario("ORMalino")
@@ -23922,7 +23928,7 @@ MonoBehaviour:
         originDialogueID: 33
         destinationConversationID: 12
         destinationDialogueID: 10
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -25113,7 +25119,7 @@ MonoBehaviour:
         originDialogueID: 19
         destinationConversationID: 13
         destinationDialogueID: 21
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -25227,7 +25233,7 @@ MonoBehaviour:
         originDialogueID: 21
         destinationConversationID: 13
         destinationDialogueID: 8
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 13
         originDialogueID: 21
@@ -25385,8 +25391,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Hubo cosas que calleron y se olvidaron o perdieron y que a\xFAn ahora
-          permanecen."
+        value: Hubo cosas que cayeron y se olvidaron o perdieron y que aun ahora
+          permanecen.
         type: 0
         typeString: 
       - title: Sequence
@@ -25688,13 +25694,13 @@ MonoBehaviour:
         originDialogueID: 29
         destinationConversationID: 13
         destinationDialogueID: 28
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 13
         originDialogueID: 29
         destinationConversationID: 13
         destinationDialogueID: 31
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -25750,13 +25756,13 @@ MonoBehaviour:
         originDialogueID: 30
         destinationConversationID: 13
         destinationDialogueID: 27
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 13
         originDialogueID: 30
         destinationConversationID: 13
         destinationDialogueID: 31
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -25811,7 +25817,7 @@ MonoBehaviour:
         originDialogueID: 31
         destinationConversationID: 13
         destinationDialogueID: 21
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -26215,8 +26221,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 68.46775, y: 299.93814}
-    canvasZoom: 0.88903815
+    canvasScrollPosition: {x: 0, y: 174.90143}
+    canvasZoom: 0.8290382
   - id: 14
     fields:
     - title: Title
@@ -26883,7 +26889,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\xBFSabes d\xF3nde vive la artista esta que ha desaparecido? Es la
-          que ha hizo el malino de antes."
+          que hizo el malino de antes."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -27139,7 +27145,7 @@ MonoBehaviour:
         originDialogueID: 14
         destinationConversationID: 14
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -27194,7 +27200,7 @@ MonoBehaviour:
         originDialogueID: 15
         destinationConversationID: 14
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -27822,7 +27828,7 @@ MonoBehaviour:
         originDialogueID: 26
         destinationConversationID: 14
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -27877,7 +27883,7 @@ MonoBehaviour:
         originDialogueID: 27
         destinationConversationID: 14
         destinationDialogueID: 1
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -27992,7 +27998,7 @@ MonoBehaviour:
         originDialogueID: 29
         destinationConversationID: 14
         destinationDialogueID: 30
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -28240,7 +28246,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 356.29694, y: 0}
     canvasZoom: 0.7185019
   - id: 15
     fields:
@@ -29005,7 +29011,7 @@ MonoBehaviour:
         originDialogueID: 16
         destinationConversationID: 15
         destinationDialogueID: 32
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -29120,7 +29126,7 @@ MonoBehaviour:
         originDialogueID: 18
         destinationConversationID: 15
         destinationDialogueID: 32
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -29340,7 +29346,7 @@ MonoBehaviour:
         originDialogueID: 23
         destinationConversationID: 15
         destinationDialogueID: 32
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -30347,7 +30353,7 @@ MonoBehaviour:
         originDialogueID: 40
         destinationConversationID: 15
         destinationDialogueID: 32
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -30402,7 +30408,7 @@ MonoBehaviour:
         originDialogueID: 41
         destinationConversationID: 15
         destinationDialogueID: 42
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: "Variable[\"PuertaPlayaAbierta\"] == false and \n(Variable[\"RadDetectorEncendido\"]
         == true) and \n(Variable[\"PuertaInteriorAbierta\"] == true)"
@@ -30522,7 +30528,7 @@ MonoBehaviour:
         originDialogueID: 43
         destinationConversationID: 15
         destinationDialogueID: 32
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -31124,13 +31130,13 @@ MonoBehaviour:
         originDialogueID: 4
         destinationConversationID: 16
         destinationDialogueID: 5
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 16
         originDialogueID: 4
         destinationConversationID: 16
         destinationDialogueID: 20
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -31274,7 +31280,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 15
+        value: 19
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -31286,8 +31292,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[Sale del agua mostrando que est\xE1 mutado y fusionado con una cabeza
-          nuclear]"
+        value: "El Siluro sale del agua mostrando que est\xE1 mutado y fusionado
+          con una cabeza nuclear."
         type: 0
         typeString: 
       - title: Sequence
@@ -31383,7 +31389,7 @@ MonoBehaviour:
         originDialogueID: 9
         destinationConversationID: 16
         destinationDialogueID: 20
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -31788,13 +31794,13 @@ MonoBehaviour:
         originDialogueID: 16
         destinationConversationID: 16
         destinationDialogueID: 17
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 16
         originDialogueID: 16
         destinationConversationID: 16
         destinationDialogueID: 20
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -31830,7 +31836,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFSabes qu\xE9 es esto? [Le ense\xF1ar el malino]"
+        value: "\xBFSabes qu\xE9 es esto? [Ense\xF1arle el malino]"
         type: 0
         typeString: 
       - title: Sequence
@@ -32307,7 +32313,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 254.69681}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.7494911
   - id: 17
     fields:
@@ -32427,7 +32433,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 18
+        value: 19
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -32439,7 +32445,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[Una mesa de trabajo extra\xF1amente vac\xEDa]"
+        value: "Ante ti ves una mesa de trabajo extra\xF1amente vac\xEDa."
         type: 0
         typeString: 
       - title: Sequence
@@ -32477,11 +32483,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 4
         type: 0
@@ -32493,15 +32499,15 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: He llegado a este lugar.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -32512,61 +32518,6 @@ MonoBehaviour:
       outgoingLinks:
       - originConversationID: 17
         originDialogueID: 2
-        destinationConversationID: 17
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 153.9187
-        y: 164.56915
-        width: 160
-        height: 30
-    - id: 3
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 18
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: ...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 17
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 17
-        originDialogueID: 3
         destinationConversationID: 17
         destinationDialogueID: 6
         isConnector: 0
@@ -32579,7 +32530,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 153.9187
-        y: 214.56915
+        y: 164.56915
         width: 160
         height: 30
     - id: 4
@@ -32704,11 +32655,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 19
         type: 5
@@ -32720,20 +32671,20 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Una enorme ara\xF1a sisea, inm\xF3vil. El sonido es como el de un
-          silbido imperfecto del se escapa mucho aire."
+          silbido imperfecto del que se escapa mucho aire."
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
         value: 1ef50536-66b2-4a2e-b38b-de564691835d
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -33036,8 +32987,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 353.59918}
-    canvasZoom: 1.2334989
+    canvasScrollPosition: {x: 0, y: 6.244934}
+    canvasZoom: 0.9634992
   - id: 18
     fields:
     - title: Title
@@ -33596,7 +33547,7 @@ MonoBehaviour:
         originDialogueID: 8
         destinationConversationID: 18
         destinationDialogueID: 3
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -33706,7 +33657,7 @@ MonoBehaviour:
         originDialogueID: 10
         destinationConversationID: 18
         destinationDialogueID: 4
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -33902,7 +33853,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "Un cartel improvisado se alza ante ti. Est\xE1 hecho a mano con un
-          tronco ca\xEDdo y unos retrablos."
+          tronco ca\xEDdo y unos retablos."
         type: 0
         typeString: 
       - title: Sequence
@@ -34202,7 +34153,7 @@ MonoBehaviour:
         originDialogueID: 6
         destinationConversationID: 20
         destinationDialogueID: 10
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -34260,7 +34211,7 @@ MonoBehaviour:
         originDialogueID: 7
         destinationConversationID: 20
         destinationDialogueID: 10
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -34449,25 +34400,25 @@ MonoBehaviour:
         originDialogueID: 10
         destinationConversationID: 20
         destinationDialogueID: 2
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 20
         originDialogueID: 10
         destinationConversationID: 20
         destinationDialogueID: 3
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 20
         originDialogueID: 10
         destinationConversationID: 20
         destinationDialogueID: 4
-        isConnector: 0
+        isConnector: 1
         priority: 2
       - originConversationID: 20
         originDialogueID: 10
         destinationConversationID: 20
         destinationDialogueID: 9
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -35573,7 +35524,7 @@ MonoBehaviour:
         originDialogueID: 9
         destinationConversationID: 22
         destinationDialogueID: 3
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 
@@ -35850,7 +35801,7 @@ MonoBehaviour:
         originDialogueID: 14
         destinationConversationID: 22
         destinationDialogueID: 3
-        isConnector: 0
+        isConnector: 1
         priority: 2
       conditionsString: 
       userScript: 

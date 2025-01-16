@@ -10,11 +10,16 @@ public class PauseManager : MonoBehaviour
 
     private void Start()
     {
-        RecogerInfoInputs();
+        GestionarInputs();
 
         pausaGO = GameObject.FindGameObjectWithTag("Pausa");
 
         LinkearFunciones();
+    }
+
+    private void OnDestroy()
+    {
+        DesgestionarInputs();
     }
 
     private void LinkearFunciones()
@@ -84,13 +89,13 @@ public class PauseManager : MonoBehaviour
         if (estado) { pausaGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
     }
 
-    private void RecogerInfoInputs()
+    private void GestionarInputs()
     {
         InputManager.Instance.controles.Conduciendo.Pausa.performed += contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed += contexto => Pausa();
     }
 
-    private void SoltarInfoInputs()
+    private void DesgestionarInputs()
     {
         InputManager.Instance.controles.Conduciendo.Pausa.performed -= contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed -= contexto => Pausa();
