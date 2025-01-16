@@ -26684,7 +26684,7 @@ MonoBehaviour:
         destinationDialogueID: 41
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Intro_Siluro"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -27188,7 +27188,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 297.6638, y: 209.26431}
+    canvasScrollPosition: {x: 664.35767, y: 89.38364}
     canvasZoom: 0.7090383
   - id: 14
     fields:
@@ -27828,8 +27828,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 381
-        y: 351.60938
+        x: 379.76315
+        y: 352.84622
         width: 160
         height: 30
     - id: 10
@@ -28111,8 +28111,8 @@ MonoBehaviour:
       - originConversationID: 14
         originDialogueID: 14
         destinationConversationID: 14
-        destinationDialogueID: 1
-        isConnector: 1
+        destinationDialogueID: 34
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
@@ -29212,8 +29212,64 @@ MonoBehaviour:
         y: 329.96884
         width: 160
         height: 30
+    - id: 34
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\xBFSe parece a una cabeza verdad? Mucha gente los busca por otros
+          motivos, como el loco ese del agua que no para de gritar."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 34
+        destinationConversationID: 14
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 381
+        y: 451.60938
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 42.140755, y: 23.239376}
+    canvasScrollPosition: {x: 80.48324, y: 5.923397}
     canvasZoom: 0.80850184
   - id: 15
     fields:
@@ -31786,8 +31842,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 65.744446, y: 138.78482}
-    canvasZoom: 0.86699355
+    canvasScrollPosition: {x: 187.85202, y: 93.417465}
+    canvasZoom: 0.74699366
   - id: 16
     fields:
     - title: Title
