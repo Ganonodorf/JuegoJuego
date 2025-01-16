@@ -8234,7 +8234,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Eeeeeh, eeeeeh, EEEEEEEEH\r"
+        value: "Eeeeeh, eeeeeh, EEEEEEEEH\r."
         type: 0
         typeString: 
       - title: Sequence
@@ -9499,9 +9499,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Pero qu\xE9 te pasa?? no sabes que esto es una carretera nacional?
-          No puedes ir por ah\xED sin un permiso de circulaci\xF3n ni haber pasado
-          la ITV."
+        value: "\xBF\xBFPero qu\xE9 te pasa?? no sabes que esto es una carretera
+          nacional? No puedes ir por ah\xED sin un permiso de circulaci\xF3n ni haber
+          pasado la ITV."
         type: 0
         typeString: 
       - title: Sequence
@@ -11186,7 +11186,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "Bueno, pues parece que todo est\xE1 en orden, ya te he puesto la
-          matr\xEDcula y voy a subirte el puente levadizo ahora mismito."
+          matr\xEDcula y voy a bajarte el puente levadizo ahora mismito."
         type: 0
         typeString: 
       - title: Sequence
@@ -12645,8 +12645,8 @@ MonoBehaviour:
         width: 566.2284
         height: 899.45123
       color: {r: 0.37126204, g: 0.76022404, b: 0.764151, a: 1}
-    canvasScrollPosition: {x: 179.04956, y: 350.3803}
-    canvasZoom: 0.94349873
+    canvasScrollPosition: {x: 428.18988, y: 0}
+    canvasZoom: 0.7934989
   - id: 5
     fields:
     - title: Title
@@ -16766,7 +16766,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "La escena te ha dejado completamente perpleja, el resto de se\xF1oras
-          parece estar acostumbrada a lo que acabas de presenciar y ni se inmutan."
+          parece estar acostumbradas a lo que acabas de presenciar y ni se inmutan."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16912,7 +16912,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 696.66675, y: 127.77774}
+    canvasScrollPosition: {x: 478.8891, y: 151.11105}
     canvasZoom: 0.9
   - id: 4
     fields:
@@ -18066,6 +18066,12 @@ MonoBehaviour:
         destinationDialogueID: 59
         isConnector: 1
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 45
+        destinationConversationID: 4
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: DejarMirarObjeto()
       onExecute:
@@ -18590,8 +18596,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1255.7849
-        y: 306.7585
+        x: 1253.2094
+        y: 308.04636
         width: 160
         height: 30
     - id: 55
@@ -18964,7 +18970,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 24.940346}
+    canvasScrollPosition: {x: 315.5177, y: 0}
     canvasZoom: 0.77650166
   - id: 7
     fields:
@@ -28240,7 +28246,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 356.29694, y: 0}
     canvasZoom: 0.7185019
   - id: 15
     fields:
@@ -31274,7 +31280,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 15
+        value: 19
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -31286,8 +31292,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[Sale del agua mostrando que est\xE1 mutado y fusionado con una cabeza
-          nuclear]"
+        value: "El Siluro sale del agua mostrando que est\xE1 mutado y fusionado
+          con una cabeza nuclear."
         type: 0
         typeString: 
       - title: Sequence
@@ -32427,7 +32433,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 18
+        value: 19
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -32439,7 +32445,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[Una mesa de trabajo extra\xF1amente vac\xEDa]"
+        value: "Ante ti ves una mesa de trabajo extra\xF1amente vac\xEDa."
         type: 0
         typeString: 
       - title: Sequence
@@ -32477,11 +32483,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 4
         type: 0
@@ -32493,15 +32499,15 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: He llegado a este lugar.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -32512,61 +32518,6 @@ MonoBehaviour:
       outgoingLinks:
       - originConversationID: 17
         originDialogueID: 2
-        destinationConversationID: 17
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 153.9187
-        y: 164.56915
-        width: 160
-        height: 30
-    - id: 3
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 18
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: ...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 17
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 17
-        originDialogueID: 3
         destinationConversationID: 17
         destinationDialogueID: 6
         isConnector: 0
@@ -32579,7 +32530,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 153.9187
-        y: 214.56915
+        y: 164.56915
         width: 160
         height: 30
     - id: 4
@@ -32704,11 +32655,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 19
         type: 5
@@ -32720,20 +32671,20 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Una enorme ara\xF1a sisea, inm\xF3vil. El sonido es como el de un
           silbido imperfecto del que se escapa mucho aire."
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
         value: 1ef50536-66b2-4a2e-b38b-de564691835d
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -33036,7 +32987,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 245.99606}
+    canvasScrollPosition: {x: 0, y: 6.244934}
     canvasZoom: 0.9634992
   - id: 18
     fields:

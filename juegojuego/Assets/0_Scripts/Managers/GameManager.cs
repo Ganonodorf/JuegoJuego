@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
         //initialGameState = GameState.MenuInicio;
 
         finJuego = false;
+
+        HacerCursorInvisible();
 
         UpdateGameState(initialGameState);
     }
@@ -132,6 +135,11 @@ public class GameManager : MonoBehaviour
     public void UpdateGameStateConduciendo()
     {
         UpdateGameState(GameState.Conduciendo);
+    }
+
+    private void HacerCursorInvisible()
+    {
+        Cursor.visible = false;
     }
 }
 
