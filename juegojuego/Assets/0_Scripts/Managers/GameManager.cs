@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
         HacerCursorInvisible();
 
         UpdateGameState(initialGameState);
+
+        DialogueManager.SetLanguage("en");
     }
 
     // Para devolver el GameState
