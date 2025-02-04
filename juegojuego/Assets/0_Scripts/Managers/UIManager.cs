@@ -2,6 +2,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using Constantes;
+using System;
+using PixelCrushers.DialogueSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +14,12 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator moverBotonInventarioRoutine;
     private IEnumerator moverNotificacionInventarioRoutine;
+
+    private string objetoRecogidoLocalizado;
+    private string objetoSoltadoLocalizado;
+    private string objetoFocuseadoLocalizado;
+    private string inventarioLlenoLocalizado;
+    
 
     private void Awake()
     {
@@ -30,6 +38,24 @@ public class UIManager : MonoBehaviour
         BuscarGO();
 
         SuscribirseEventos();
+
+        LocalizarMensajes();
+    }
+
+    private void LocalizarMensajes()
+    {
+        if(Localization.language == "en"){
+            objetoRecogidoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO_EN;
+            objetoSoltadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO_EN;
+            objetoFocuseadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO_EN;
+            inventarioLlenoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO_EN;
+        }
+        else{
+            objetoRecogidoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO;
+            objetoSoltadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO;
+            objetoFocuseadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO;
+            inventarioLlenoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO;
+        }
     }
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstado, GameState anteriorEstado)
@@ -69,16 +95,16 @@ public class UIManager : MonoBehaviour
         switch (mensaje)
         {
             case InventarioMensajes.ObjetoAgregado:
-                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO, MostrarYOcultarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(objetoRecogidoLocalizado, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.ObjetoSoltado:
-                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO, MostrarYOcultarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(objetoSoltadoLocalizado, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.ObjetoFocuseado:
-                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO, MostrarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(objetoFocuseadoLocalizado, MostrarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.InventarioLleno:
-                EjecutarNotificacion(Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO, MostrarYOcultarNotificacionInventarioCoroutine());
+                EjecutarNotificacion(inventarioLlenoLocalizado, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             default:
                 break;
@@ -171,16 +197,16 @@ public class UIManager : MonoBehaviour
          * Si por ejemplo pusiera:
          * Coroutine a = StartCoroutine(MostrarNotificacionInventarioCoroutine);
          * ...
-         * Un cacho de código
+         * Un cacho de cï¿½digo
          * ...
          * yield return a
-         * Podría llamar a otra corrutina para que se vaya haciendo, mientras yo voy haciendo cosas aquí y esperar a que acabe a después.
+         * Podrï¿½a llamar a otra corrutina para que se vaya haciendo, mientras yo voy haciendo cosas aquï¿½ y esperar a que acabe a despuï¿½s.
          * Sin embargo, como en este caso necesitamos que la corrutina acabe (porque tiene que subir el panel) para esperar y luego bajarlo,
          * hay que hacerlo esperando.
          */
         
         // Espera a que MostrarNotificacionInventarioCoroutine acabe. Si simplemente llamaras a la funcion,
-        // se haría la función en un frame, y no se buclaría como hacen las corrutinas.
+        // se harï¿½a la funciï¿½n en un frame, y no se buclarï¿½a como hacen las corrutinas.
         yield return StartCoroutine(MostrarNotificacionInventarioCoroutine());
 
         float temporizador = 0.0f;
