@@ -37610,8 +37610,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 831.4261
-        y: 271.1379
+        x: 827.8439
+        y: 276.7355
         width: 160
         height: 30
     - id: 7
@@ -37681,8 +37681,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 834.15576
-        y: 328.7712
+        x: 827.8439
+        y: 326.7355
         width: 160
         height: 30
     - id: 8
@@ -37752,8 +37752,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 831.6113
-        y: 381.3157
+        x: 827.8439
+        y: 376.7355
         width: 160
         height: 30
     - id: 9
@@ -37823,8 +37823,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 830.1924
-        y: 435.3176
+        x: 827.8439
+        y: 428.0208
         width: 160
         height: 30
     - id: 10
@@ -37895,8 +37895,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 620.86145
-        y: 274.04932
+        x: 626.0026
+        y: 271.47858
         width: 160
         height: 30
     - id: 15
@@ -38108,8 +38108,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 837.0836
-        y: 487.7845
+        x: 827.8439
+        y: 476.73553
         width: 160
         height: 30
     - id: 18
@@ -38180,8 +38180,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 838.04236
-        y: 547.75757
+        x: 827.8439
+        y: 526.73535
         width: 160
         height: 30
     - id: 20
@@ -38251,8 +38251,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 76.85013
-        y: 903.2784
+        x: 38.274246
+        y: 698.9126
         width: 160
         height: 30
     - id: 21
@@ -38322,8 +38322,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77.93704
-        y: 953.2784
+        x: 38.274246
+        y: 748.9126
         width: 160
         height: 30
     - id: 22
@@ -38393,8 +38393,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 77.77945
-        y: 1004.208
+        x: 38.274246
+        y: 799.84216
         width: 160
         height: 30
     - id: 23
@@ -38464,8 +38464,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 78.86636
-        y: 1054.2078
+        x: 38.274246
+        y: 849.84204
         width: 160
         height: 30
     - id: 24
@@ -38536,8 +38536,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1473.3903
-        y: 32.54161
+        x: 1749.2926
+        y: 280.99292
         width: 160
         height: 30
     - id: 25
@@ -38563,7 +38563,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hmmm... Bueno, puedo intentar...
+        value: "\xA1Anda! Hmmm... Se me ocurre que puedo intentar..."
         type: 0
         typeString: 
       - title: Sequence
@@ -38607,8 +38607,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1473.3903
-        y: 79.081406
+        x: 1749.2926
+        y: 328.81802
         width: 160
         height: 30
     - id: 26
@@ -38684,8 +38684,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1477.2069
-        y: 132.54153
+        x: 1753.1093
+        y: 380.99283
         width: 160
         height: 30
     - id: 27
@@ -38755,8 +38755,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1394.3387
-        y: 193.4667
+        x: 1670.2411
+        y: 441.91803
         width: 160
         height: 30
     - id: 28
@@ -38782,7 +38782,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Ok, pero habr\xE1 que abrir la verja de alguna manera."
+        value: Venga hombre, tengo una muy buena idea para que nos abra la verja.
         type: 0
         typeString: 
       - title: Sequence
@@ -38812,7 +38812,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 28
+        destinationConversationID: 15
+        destinationDialogueID: 59
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -38820,8 +38826,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1394.3387
-        y: 243.46657
+        x: 1670.2411
+        y: 491.91785
         width: 160
         height: 30
     - id: 29
@@ -38894,8 +38900,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1570.36
-        y: 195.56662
+        x: 1846.2623
+        y: 444.01788
         width: 160
         height: 30
     - id: 30
@@ -38921,7 +38927,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ...
+        value: Estupendo...
         type: 0
         typeString: 
       - title: Sequence
@@ -38955,7 +38961,7 @@ MonoBehaviour:
       - originConversationID: 15
         originDialogueID: 30
         destinationConversationID: 15
-        destinationDialogueID: 31
+        destinationDialogueID: 61
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -38965,8 +38971,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1569.1005
-        y: 245.56647
+        x: 1845.0028
+        y: 494.0177
         width: 160
         height: 30
     - id: 31
@@ -38992,7 +38998,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Jajajaj. Ok, vamos a ver a la se\xF1ora. A ver qu\xE9 tal."
+        value: "Vale, vamos a ver a la se\xF1ora y ver si funciona mi plan."
         type: 0
         typeString: 
       - title: Sequence
@@ -39022,7 +39028,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 31
+        destinationConversationID: 15
+        destinationDialogueID: 59
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -39030,8 +39042,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1569.1005
-        y: 295.5664
+        x: 1846.2881
+        y: 586.43317
         width: 160
         height: 30
     - id: 32
@@ -39115,6 +39127,12 @@ MonoBehaviour:
       - originConversationID: 15
         originDialogueID: 32
         destinationConversationID: 15
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      - originConversationID: 15
+        originDialogueID: 32
+        destinationConversationID: 15
         destinationDialogueID: 41
         isConnector: 0
         priority: 2
@@ -39122,12 +39140,6 @@ MonoBehaviour:
         originDialogueID: 32
         destinationConversationID: 15
         destinationDialogueID: 24
-        isConnector: 0
-        priority: 2
-      - originConversationID: 15
-        originDialogueID: 32
-        destinationConversationID: 15
-        destinationDialogueID: 35
         isConnector: 0
         priority: 2
       - originConversationID: 15
@@ -39149,7 +39161,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 387.88168
+        x: 386.87418
         y: 128.27878
         width: 160
         height: 30
@@ -39285,8 +39297,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2002.2794
-        y: 331.88892
+        x: 2269.849
+        y: 286.88345
         width: 160
         height: 30
     - id: 35
@@ -39312,7 +39324,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFMe puedes abrir esas puertas que tienes detr\xE1s?"
+        value: "\xBFMe puedes abrir alguna de las puertas que tienes detr\xE1s?"
         type: 0
         typeString: 
       - title: Sequence
@@ -39357,8 +39369,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1434.1726
-        y: 331.72113
+        x: 1033.5103
+        y: 274.96262
         width: 160
         height: 30
     - id: 36
@@ -39434,8 +39446,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1434.1726
-        y: 381.72113
+        x: 1033.5103
+        y: 324.96262
         width: 160
         height: 30
     - id: 37
@@ -39507,8 +39519,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1434.8972
-        y: 478.0816
+        x: 1033.5103
+        y: 374.96262
         width: 160
         height: 30
     - id: 38
@@ -39578,8 +39590,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1434.8972
-        y: 528.0819
+        x: 1033.5103
+        y: 424.96262
         width: 160
         height: 30
     - id: 39
@@ -39650,8 +39662,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1436.4937
-        y: 574.09155
+        x: 1033.5103
+        y: 474.96262
         width: 160
         height: 30
     - id: 40
@@ -39711,8 +39723,8 @@ MonoBehaviour:
       - originConversationID: 15
         originDialogueID: 40
         destinationConversationID: 15
-        destinationDialogueID: 32
-        isConnector: 1
+        destinationDialogueID: 59
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
@@ -39721,8 +39733,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1436.4937
-        y: 624.09155
+        x: 1033.5103
+        y: 524.9624
         width: 160
         height: 30
     - id: 41
@@ -39782,8 +39794,8 @@ MonoBehaviour:
       - originConversationID: 15
         originDialogueID: 41
         destinationConversationID: 15
-        destinationDialogueID: 42
-        isConnector: 1
+        destinationDialogueID: 60
+        isConnector: 0
         priority: 2
       conditionsString: "Variable[\"PuertaPlayaAbierta\"] == false and \n(Variable[\"RadDetectorEncendido\"]
         == true) and \n(Variable[\"PuertaInteriorAbierta\"] == true)"
@@ -39793,8 +39805,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1067.2025
-        y: 275.18054
+        x: 1474.837
+        y: 280.4032
         width: 160
         height: 30
     - id: 42
@@ -39820,8 +39832,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Claro... Pero recuerda que es un sitio peligroso. Intenta encontrar
-          lo que necesites all\xED y volver cuanto antes."
+        value: "Pero recuerda que es un sitio peligroso. Intenta encontrar lo que
+          necesites all\xED y volver cuanto antes."
         type: 0
         typeString: 
       - title: Sequence
@@ -39865,8 +39877,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1069.4756
-        y: 335.95312
+        x: 1471.6909
+        y: 382.40952
         width: 160
         height: 30
     - id: 43
@@ -39892,7 +39904,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ok.
+        value: "Vale, tendr\xE9 cuidado"
         type: 0
         typeString: 
       - title: Sequence
@@ -39936,8 +39948,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1070.9711
-        y: 387.4489
+        x: 1474.127
+        y: 445.36963
         width: 160
         height: 30
     - id: 44
@@ -40009,8 +40021,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1627.471
-        y: 476.71826
+        x: 1246.6962
+        y: 379.35498
         width: 160
         height: 30
     - id: 45
@@ -40080,8 +40092,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2009.5604
-        y: 95.23418
+        x: 2044.5698
+        y: 285.47113
         width: 160
         height: 30
     - id: 46
@@ -40151,8 +40163,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2013.6017
-        y: 156.54497
+        x: 2048.611
+        y: 346.78192
         width: 160
         height: 30
     - id: 47
@@ -40178,8 +40190,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Por dentro, le suena una risa traviesa con toda la amplitud del p\xE1ramo.
-          Por fuerta s\xF3lo le ves la sonrisa en los ojos."
+        value: "Por dentro, a este hombre le suena una risa traviesa con toda la
+          amplitud del p\xE1ramo. Por fuera, s\xF3lo le ves la sonrisa a trav\xE9s
+          de sus ojos."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -40223,8 +40236,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2013.6017
-        y: 205.70499
+        x: 2048.611
+        y: 395.94196
         width: 160
         height: 30
     - id: 48
@@ -40250,7 +40263,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Vamos a ver a Do\xF1a Candelaria."
+        value: "Venga va, ve a ver a Do\xF1a Candelaria. Nos vemos all\xED."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -40288,8 +40301,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2013.6017
-        y: 255.70496
+        x: 2048.611
+        y: 445.94205
         width: 160
         height: 30
     - id: 49
@@ -40357,7 +40370,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 342.5959
+        x: 343.8812
         y: 275.31372
         width: 160
         height: 30
@@ -40501,7 +40514,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 348.43698
+        x: 349.7223
         y: 377.25015
         width: 160
         height: 30
@@ -40776,8 +40789,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 219.4124
-        y: 642.4048
+        x: 233.5509
+        y: 646.26086
         width: 160
         height: 30
     - id: 56
@@ -40914,8 +40927,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 221.82344
-        y: 693.6102
+        x: 235.96194
+        y: 697.4663
         width: 160
         height: 30
     - id: 58
@@ -40982,8 +40995,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 220.90938
-        y: 743.6102
+        x: 235.04785
+        y: 747.4663
         width: 160
         height: 30
     - id: 59
@@ -41047,9 +41060,144 @@ MonoBehaviour:
         y: 126.713104
         width: 160
         height: 30
+    - id: 60
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\xA1Claro! Ser\xE1 un placer."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 60
+        destinationConversationID: 15
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1473.5518
+        y: 329.1179
+        width: 160
+        height: 30
+    - id: 61
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "El hombre baja la vista y ves c\xF3mo sonr\xEDe y se r\xEDe por lo
+          bajo."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 61
+        destinationConversationID: 15
+        destinationDialogueID: 31
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1845.0028
+        y: 544.0177
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 598.3362, y: 0}
-    canvasZoom: 0.6685204
+    canvasScrollPosition: {x: 525.6948, y: 0}
+    canvasZoom: 0.77801687
   - id: 16
     fields:
     - title: Title
@@ -41445,8 +41593,8 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 4
         destinationConversationID: 16
-        destinationDialogueID: 20
-        isConnector: 1
+        destinationDialogueID: 26
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
@@ -41455,7 +41603,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 40.962242
+        x: 42.29647
         y: 449.19052
         width: 160
         height: 30
@@ -41528,8 +41676,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 497.54684
-        y: 333.0572
+        x: 272.06058
+        y: 253.00272
         width: 160
         height: 30
     - id: 6
@@ -41599,8 +41747,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 498.54684
-        y: 383.0572
+        x: 273.06058
+        y: 303.00275
         width: 160
         height: 30
     - id: 7
@@ -41671,8 +41819,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 498.54684
-        y: 433.0572
+        x: 273.06058
+        y: 353.00266
         width: 160
         height: 30
     - id: 9
@@ -41760,7 +41908,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 116.60602
+        x: 115.271774
         y: 162.90192
         width: 160
         height: 30
@@ -41902,8 +42050,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 498.54684
-        y: 483.0572
+        x: 273.06058
+        y: 403.00266
         width: 160
         height: 30
     - id: 12
@@ -41973,8 +42121,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 501.7302
-        y: 532.59314
+        x: 276.24393
+        y: 452.53848
         width: 160
         height: 30
     - id: 13
@@ -42044,8 +42192,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 500.5701
-        y: 582.59314
+        x: 275.08383
+        y: 502.53848
         width: 160
         height: 30
     - id: 14
@@ -42116,8 +42264,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 502.88034
-        y: 789.5195
+        x: 277.39407
+        y: 709.4646
         width: 160
         height: 30
     - id: 15
@@ -42190,8 +42338,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 504.02713
-        y: 839.5195
+        x: 278.54086
+        y: 759.4646
         width: 160
         height: 30
     - id: 16
@@ -42251,14 +42399,8 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 16
         destinationConversationID: 16
-        destinationDialogueID: 17
-        isConnector: 1
-        priority: 2
-      - originConversationID: 16
-        originDialogueID: 16
-        destinationConversationID: 16
-        destinationDialogueID: 20
-        isConnector: 1
+        destinationDialogueID: 26
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
@@ -42267,8 +42409,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 504.02713
-        y: 889.5195
+        x: 278.54086
+        y: 809.46484
         width: 160
         height: 30
     - id: 17
@@ -42339,8 +42481,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 733.552
-        y: 283.96497
+        x: 486.71783
+        y: 255.94601
         width: 160
         height: 30
     - id: 18
@@ -42410,8 +42552,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 732.4189
-        y: 333.0901
+        x: 485.58472
+        y: 305.07114
         width: 160
         height: 30
     - id: 19
@@ -42437,7 +42579,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Anda, ll\xE9valo a su sitio."
+        value: "Anda, ll\xE9valo a su sitio y deja de hacer preguntas absurdas."
         type: 0
         typeString: 
       - title: Sequence
@@ -42475,8 +42617,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 733.552
-        y: 382.83185
+        x: 486.71783
+        y: 354.81293
         width: 160
         height: 30
     - id: 20
@@ -42502,7 +42644,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Me voy.
+        value: Mejor me voy.
         type: 0
         typeString: 
       - title: Sequence
@@ -42540,8 +42682,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 334.59225
-        y: 100.755066
+        x: 697.5052
+        y: 255.52646
         width: 160
         height: 30
     - id: 21
@@ -42602,12 +42744,6 @@ MonoBehaviour:
         originDialogueID: 21
         destinationConversationID: 16
         destinationDialogueID: 22
-        isConnector: 0
-        priority: 2
-      - originConversationID: 16
-        originDialogueID: 21
-        destinationConversationID: 16
-        destinationDialogueID: 20
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -42759,8 +42895,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 500.5701
-        y: 632.59314
+        x: 275.08383
+        y: 552.5382
         width: 160
         height: 30
     - id: 24
@@ -42831,8 +42967,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 500.5701
-        y: 682.59314
+        x: 275.08383
+        y: 602.5382
         width: 160
         height: 30
     - id: 25
@@ -42902,8 +43038,87 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 500.5701
-        y: 732.59314
+        x: 275.08383
+        y: 652.5382
+        width: 160
+        height: 30
+    - id: 26
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\xBFQuieres algo m\xE1s o s\xF3lo has venido a contemplarme?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 26
+        destinationConversationID: 16
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      - originConversationID: 16
+        originDialogueID: 26
+        destinationConversationID: 16
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
+      - originConversationID: 16
+        originDialogueID: 26
+        destinationConversationID: 16
+        destinationDialogueID: 20
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 511.69623
+        y: 155.10637
         width: 160
         height: 30
     entryGroups: []
