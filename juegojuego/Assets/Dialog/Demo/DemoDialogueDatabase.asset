@@ -30945,12 +30945,6 @@ MonoBehaviour:
         destinationDialogueID: 21
         isConnector: 0
         priority: 2
-      - originConversationID: 13
-        originDialogueID: 0
-        destinationConversationID: 13
-        destinationDialogueID: 45
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -31029,8 +31023,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 172.95634
+        x: 97.62515
+        y: 184.22751
         width: 160
         height: 30
     - id: 2
@@ -31100,8 +31094,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 372.9564
+        x: 97.62515
+        y: 384.2275
         width: 160
         height: 30
     - id: 3
@@ -31172,8 +31166,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 522.9564
+        x: 97.62515
+        y: 534.2285
         width: 160
         height: 30
     - id: 4
@@ -31243,8 +31237,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 572.9563
+        x: 97.62515
+        y: 584.2294
         width: 160
         height: 30
     - id: 5
@@ -31304,12 +31298,6 @@ MonoBehaviour:
       - originConversationID: 13
         originDialogueID: 5
         destinationConversationID: 13
-        destinationDialogueID: 6
-        isConnector: 0
-        priority: 2
-      - originConversationID: 13
-        originDialogueID: 5
-        destinationConversationID: 13
         destinationDialogueID: 37
         isConnector: 0
         priority: 2
@@ -31320,150 +31308,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 622.9563
-        width: 160
-        height: 30
-    - id: 6
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 4
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 14
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "\xA1Espera, hombre!"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: Menu Text en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      conversationID: 13
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 13
-        originDialogueID: 6
-        destinationConversationID: 13
-        destinationDialogueID: 7
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["ORMalino"] == true
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 378.40695
-        y: 309.2831
-        width: 160
-        height: 30
-    - id: 7
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 14
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 4
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "\xBFMmm?"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: Menu Text en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      conversationID: 13
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 13
-        originDialogueID: 7
-        destinationConversationID: 13
-        destinationDialogueID: 8
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 378.40695
-        y: 359.2831
+        x: 97.62515
+        y: 634.2294
         width: 160
         height: 30
     - id: 8
@@ -31533,8 +31379,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538.7276
-        y: 475.10345
+        x: 1083.0247
+        y: 508.34302
         width: 160
         height: 30
     - id: 9
@@ -31604,8 +31450,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538.7276
-        y: 524.10345
+        x: 1083.0247
+        y: 557.343
         width: 160
         height: 30
     - id: 10
@@ -31675,8 +31521,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538.7276
-        y: 575.10345
+        x: 1083.0247
+        y: 608.343
         width: 160
         height: 30
     - id: 11
@@ -31747,8 +31593,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538.60284
-        y: 625.10345
+        x: 1082.8999
+        y: 658.343
         width: 160
         height: 30
     - id: 12
@@ -31818,8 +31664,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 542.4339
-        y: 734.64044
+        x: 1086.731
+        y: 767.88
         width: 160
         height: 30
     - id: 13
@@ -31892,8 +31738,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 542.4339
-        y: 784.64044
+        x: 1086.731
+        y: 817.88
         width: 160
         height: 30
     - id: 14
@@ -31957,8 +31803,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 722.9563
+        x: 97.62515
+        y: 734.2294
         width: 160
         height: 30
     - id: 15
@@ -32380,8 +32226,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 543.43384
-        y: 834.64044
+        x: 1087.7308
+        y: 867.88
         width: 160
         height: 30
     - id: 21
@@ -32475,8 +32321,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 669.9527
-        y: 222.08392
+        x: 420.65634
+        y: 33.72676
         width: 160
         height: 30
     - id: 22
@@ -32546,8 +32392,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 897.58386
-        y: 414.40878
+        x: 297.88815
+        y: 183.11719
         width: 160
         height: 30
     - id: 23
@@ -32617,8 +32463,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 897.58386
-        y: 464.40878
+        x: 298.76187
+        y: 233.11716
         width: 160
         height: 30
     - id: 24
@@ -32689,8 +32535,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 897.58386
-        y: 514.4088
+        x: 297.88815
+        y: 283.11722
         width: 160
         height: 30
     - id: 25
@@ -32774,8 +32620,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 897.58386
-        y: 564.40894
+        x: 297.88815
+        y: 333.11734
         width: 160
         height: 30
     - id: 26
@@ -32910,8 +32756,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1102.4097
-        y: 637.36487
+        x: 296.86295
+        y: 385.78317
         width: 160
         height: 30
     - id: 28
@@ -32981,8 +32827,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 899.2389
-        y: 637.5779
+        x: 482.46207
+        y: 386.08008
         width: 160
         height: 30
     - id: 29
@@ -33058,8 +32904,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1115.4286
-        y: 772.0081
+        x: 294.55945
+        y: 481.62042
         width: 160
         height: 30
     - id: 30
@@ -33136,8 +32982,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 896.3542
-        y: 770.1604
+        x: 484.1413
+        y: 481.95087
         width: 160
         height: 30
     - id: 31
@@ -33207,8 +33053,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 787.5681
-        y: 861.8862
+        x: 676.8711
+        y: 387.02548
         width: 160
         height: 30
     - id: 32
@@ -33279,8 +33125,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 222.95634
+        x: 97.62515
+        y: 234.22754
         width: 160
         height: 30
     - id: 33
@@ -33350,8 +33196,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 272.95633
+        x: 97.62515
+        y: 284.22757
         width: 160
         height: 30
     - id: 34
@@ -33421,8 +33267,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 322.9564
+        x: 97.62515
+        y: 334.22757
         width: 160
         height: 30
     - id: 35
@@ -33493,8 +33339,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 422.9564
+        x: 97.62515
+        y: 434.22766
         width: 160
         height: 30
     - id: 36
@@ -33564,8 +33410,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 472.9564
+        x: 97.62515
+        y: 484.228
         width: 160
         height: 30
     - id: 37
@@ -33636,8 +33482,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 99.1077
-        y: 672.9563
+        x: 97.62515
+        y: 684.2294
         width: 160
         height: 30
     - id: 38
@@ -33709,8 +33555,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 539.7276
-        y: 680.5159
+        x: 1084.0247
+        y: 713.7555
         width: 160
         height: 30
     - id: 39
@@ -33781,8 +33627,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 788.8196
-        y: 909.38324
+        x: 682.57526
+        y: 479.0974
         width: 160
         height: 30
     - id: 40
@@ -34141,71 +33987,6 @@ MonoBehaviour:
         y: 641.61395
         width: 160
         height: 30
-    - id: 45
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 14
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: 
-      - title: Menu Text en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      conversationID: 13
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 100.82239
-        y: 81.00301
-        width: 160
-        height: 30
     - id: 46
       fields:
       - title: Title
@@ -34493,8 +34274,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 228.38196, y: 254.33539}
-    canvasZoom: 1.0140353
+    canvasScrollPosition: {x: 129.32384, y: 0}
+    canvasZoom: 0.7990344
   - id: 14
     fields:
     - title: Title
