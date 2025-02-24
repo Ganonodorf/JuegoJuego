@@ -21262,7 +21262,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 338.88873, y: 1.1111069}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.9
   - id: 4
     fields:
@@ -31433,7 +31433,7 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: Variable["ORMalino"] == true && Variable["RadDetectorEntregado"]
+      conditionsString: Variable["ORMalino"] == true and Variable["RadDetectorEntregado"]
         == false
       userScript: 
       onExecute:
@@ -34335,8 +34335,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 29.637512, y: 0}
-    canvasZoom: 0.7760367
+    canvasScrollPosition: {x: 11.699646, y: 66.06541}
+    canvasZoom: 1.4595363
   - id: 14
     fields:
     - title: Title
