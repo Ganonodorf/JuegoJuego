@@ -1,3 +1,4 @@
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -6,13 +7,18 @@ public class PauseManager : MonoBehaviour
 {
     private GameState estadoAlQueVolver;
 
-    private GameObject pausaGO;
+    [SerializeField] private GameObject pausaGO;
+
+    [SerializeField] private GameObject resumeButton;
+    [SerializeField] private GameObject respawnButton;
+    [SerializeField] private GameObject exitButton;
+
+    [SerializeField] private GameObject camaraExteriores;
+    [SerializeField] private GameObject camaraInteriores;
 
     private void Start()
     {
         GestionarInputs();
-
-        pausaGO = GameObject.FindGameObjectWithTag("Pausa");
 
         LinkearFunciones();
     }
@@ -24,10 +30,10 @@ public class PauseManager : MonoBehaviour
 
     private void LinkearFunciones()
     {
-        pausaGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().onClick.AddListener(BotonContinuar);
-        pausaGO.transform.GetChild(1).transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(BotonRespawn);
+        resumeButton.GetComponent<Button>().onClick.AddListener(BotonContinuar);
+        respawnButton.GetComponent<Button>().onClick.AddListener(BotonRespawn);
         //pausaGO.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(BotonReiniciar);
-        pausaGO.transform.GetChild(1).transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(BotonSalir);
+        exitButton.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
 
     private void Pausa()
@@ -81,12 +87,17 @@ public class PauseManager : MonoBehaviour
 
     private void AparecerPausa(bool estado)
     {
-        pausaGO.GetComponent<Image>().enabled = estado;
+        pausaGO.SetActive(estado);
 
-        pausaGO.transform.GetChild(0).gameObject.SetActive(estado);
-        pausaGO.transform.GetChild(1).gameObject.SetActive(estado);
+        OnOffCameraMovement(!estado);
 
-        if (estado) { pausaGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
+        if (estado) { resumeButton.GetComponent<Button>().Select(); }
+    }
+
+    private void OnOffCameraMovement(bool state)
+    {
+        camaraExteriores.GetComponent<CinemachineInputProvider>().enabled = state;
+        camaraInteriores.GetComponent<CinemachineInputProvider>().enabled = state;
     }
 
     private void GestionarInputs()

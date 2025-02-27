@@ -4,13 +4,13 @@ using UnityEngine.UI;
 
 public class CreditosManager : MonoBehaviour
 {
-    private GameObject creditosGO;
+    [SerializeField] private GameObject creditosGO;
+    [SerializeField] private GameObject exitButton;
 
     private GameObject camaraCreditos;
 
     private void Start()
     {
-        creditosGO = GameObject.FindGameObjectWithTag("Creditos");
         camaraCreditos = GameObject.FindGameObjectWithTag("CreditosCamara");
 
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
@@ -30,7 +30,7 @@ public class CreditosManager : MonoBehaviour
 
     private void LinkearFunciones()
     {
-        creditosGO.transform.GetChild(3).transform.GetChild(0).gameObject.GetComponent<Button>().onClick.AddListener(BotonSalir);
+        exitButton.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
 
     public void BotonSalir()
@@ -40,11 +40,8 @@ public class CreditosManager : MonoBehaviour
 
     private void AparecerMenu(bool estado)
     {
-        creditosGO.transform.GetChild(0).gameObject.SetActive(estado);
-        creditosGO.transform.GetChild(1).gameObject.SetActive(estado);
-        creditosGO.transform.GetChild(2).gameObject.SetActive(estado);
-        creditosGO.transform.GetChild(3).gameObject.SetActive(estado);
+        creditosGO.SetActive(estado);
 
-        if (estado) { creditosGO.transform.GetChild(3).transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
+        if (estado) { exitButton.GetComponent<Button>().Select(); }
     }
 }

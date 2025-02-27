@@ -4,18 +4,21 @@ using UnityEngine.UI;
 
 public class MenuInicialManager : MonoBehaviour
 {
-    private GameObject menuInicialGO;
+    [SerializeField] private GameObject menuInicialGO;
 
     private GameObject camaraMenu;
 
+    [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject exitButton;
+
+
     private void Start()
     {
-        menuInicialGO = GameObject.FindGameObjectWithTag("MenuInicial");
         camaraMenu = GameObject.FindGameObjectWithTag("MenuInicialCamara");
 
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
 
-        menuInicialGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().Select();
+        startButton.GetComponent<Button>().Select();
 
         LinkearFunciones();
     }
@@ -32,8 +35,8 @@ public class MenuInicialManager : MonoBehaviour
 
     private void LinkearFunciones()
     {
-        menuInicialGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().onClick.AddListener(BotonJugar);
-        menuInicialGO.transform.GetChild(1).transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(BotonSalir);
+        startButton.GetComponent<Button>().onClick.AddListener(BotonJugar);
+        exitButton.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
 
     public void BotonJugar()
@@ -52,9 +55,8 @@ public class MenuInicialManager : MonoBehaviour
 
     private void AparecerMenu(bool estado)
     {
-        menuInicialGO.transform.GetChild(0).gameObject.SetActive(estado);
-        menuInicialGO.transform.GetChild(1).gameObject.SetActive(estado);
+        menuInicialGO.SetActive(estado);
 
-        if (estado) { menuInicialGO.transform.GetChild(1).transform.GetChild(0).gameObject.GetComponent<Button>().Select(); }
+        if (estado) { startButton.GetComponent<Button>().Select(); }
     }
 }
