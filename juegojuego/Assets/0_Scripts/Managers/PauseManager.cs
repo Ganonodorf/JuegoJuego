@@ -125,8 +125,11 @@ public class PauseManager : MonoBehaviour
 
     private void OptionallySelectFirst()
     {
-        if (pausaGO.activeSelf &&
-            EventSystem.current.currentSelectedGameObject == null)
+        if (pausaGO.activeSelf
+            && EventSystem.current.currentSelectedGameObject != resumeButton
+            && EventSystem.current.currentSelectedGameObject != respawnButton
+            && EventSystem.current.currentSelectedGameObject != exitButton
+            )
             resumeButton.GetComponent<Button>().Select();
     }
 }

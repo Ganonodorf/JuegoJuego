@@ -72,8 +72,10 @@ public class MenuInicialManager : MonoBehaviour
 
     private void OptionallySelectFirst()
     {
-        if(menuInicialGO.activeSelf &&
-           EventSystem.current.currentSelectedGameObject == null)
+        if(menuInicialGO.activeSelf 
+            && EventSystem.current.currentSelectedGameObject != startButton
+            && EventSystem.current.currentSelectedGameObject != exitButton
+            )
         startButton.GetComponent<Button>().Select();
     }
 
