@@ -53,7 +53,6 @@ public class CursorManager : MonoBehaviour
         {
             case CursorState.Optional:
                 _cursor_state = CursorState.Optional;
-                Cursor.visible = true;
                 break;
             case CursorState.Deactivated:
                 _cursor_state = CursorState.Deactivated;
