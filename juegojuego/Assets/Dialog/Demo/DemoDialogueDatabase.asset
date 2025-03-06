@@ -31129,8 +31129,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 859.90515, y: 5.519365}
-    canvasZoom: 0.98001033
+    canvasScrollPosition: {x: 469.33014, y: 0}
+    canvasZoom: 0.85401314
   - id: 13
     fields:
     - title: Title
@@ -33723,11 +33723,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 19
         type: 5
@@ -33739,16 +33739,16 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Las palabras de apoyo de este hombre te alcanzan en toda su irracional
           sinceridad.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: en
         value: 
         type: 4
@@ -33756,11 +33756,11 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Response Menu Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Menu Text en
         value: 
         type: 4
@@ -34645,8 +34645,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 83.19556, y: 0}
-    canvasZoom: 1.0725495
+    canvasScrollPosition: {x: 0, y: 71.04395}
+    canvasZoom: 0.8415468
   - id: 14
     fields:
     - title: Title
@@ -40850,8 +40850,8 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "\xA1Ah! Eso es una de las artesan\xEDas de por aqu\xED. S\xED. S\xED.
           Es una maldici\xF3n, un mal augurio, una cosa terrible... Pero la gente
-          de por aqu\xED dicen, a la vez, que te va a traer buena suerte... No lo
-          entiendo pero me parece muy curioso."
+          de por aqu\xED dice que trae buena suerte tambi\xE9n. No lo entiendo pero
+          me parece muy curioso."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -41431,7 +41431,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 59
+        destinationConversationID: 15
+        destinationDialogueID: 62
+        isConnector: 0
+        priority: 2
+      - originConversationID: 15
+        originDialogueID: 59
+        destinationConversationID: 15
+        destinationDialogueID: 63
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -41578,9 +41590,137 @@ MonoBehaviour:
         y: 544.0177
         width: 160
         height: 30
+    - id: 62
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "S\xED."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 62
+        destinationConversationID: 15
+        destinationDialogueID: 32
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 654.4161
+        y: 109.447784
+        width: 160
+        height: 30
+    - id: 63
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: No. Hasta luego.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1139.6864
+        y: 122.66072
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1033.3965, y: 7.711914}
-    canvasZoom: 0.77801687
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.5470271
   - id: 16
     fields:
     - title: Title
