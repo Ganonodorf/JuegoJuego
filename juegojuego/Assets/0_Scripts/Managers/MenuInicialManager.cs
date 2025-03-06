@@ -1,6 +1,7 @@
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuInicialManager : MonoBehaviour
 {
@@ -21,6 +22,15 @@ public class MenuInicialManager : MonoBehaviour
         startButton.GetComponent<Button>().Select();
 
         LinkearFunciones();
+
+        GestionarInputs();
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManager_OnGameStateChanged;
+
+        DesgestionarInputs();
     }
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstadoJuego, GameState viejoEstadoJuego)
@@ -58,5 +68,28 @@ public class MenuInicialManager : MonoBehaviour
         menuInicialGO.SetActive(estado);
 
         if (estado) { startButton.GetComponent<Button>().Select(); }
+    }
+
+    private void OptionallySelectFirst()
+    {
+        if(menuInicialGO.activeSelf &&
+           EventSystem.current.currentSelectedGameObject == null)
+        startButton.GetComponent<Button>().Select();
+    }
+
+    private void GestionarInputs()
+    {
+        InputManager.Instance.controles.UI.MovimientoDer.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.MovimientoIzq.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Arriba.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Abajo.performed += contexto => OptionallySelectFirst();
+    }
+
+    private void DesgestionarInputs()
+    {
+        InputManager.Instance.controles.UI.MovimientoDer.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.MovimientoIzq.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Arriba.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Abajo.performed -= contexto => OptionallySelectFirst();
     }
 }

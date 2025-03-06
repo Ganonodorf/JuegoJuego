@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
         finJuego = false;
 
-        HacerCursorInvisible();
+        HacerCursorVisible();
 
         UpdateGameState(initialGameState);
 
@@ -139,9 +139,9 @@ public class GameManager : MonoBehaviour
         UpdateGameState(GameState.Conduciendo);
     }
 
-    private void HacerCursorInvisible()
+    private void HacerCursorVisible()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 }
 

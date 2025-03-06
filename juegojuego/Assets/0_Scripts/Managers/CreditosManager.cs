@@ -16,6 +16,13 @@ public class CreditosManager : MonoBehaviour
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
 
         LinkearFunciones();
+
+        GestionarInputs();
+    }
+
+    private void OnDestroy()
+    {
+        DesgestionarInputs();
     }
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstadoJuego, GameState viejoEstadoJuego)
@@ -43,5 +50,27 @@ public class CreditosManager : MonoBehaviour
         creditosGO.SetActive(estado);
 
         if (estado) { exitButton.GetComponent<Button>().Select(); }
+    }
+
+    private void OptionallySelectFirst()
+    {
+        if(creditosGO && Cursor.visible)
+        exitButton.GetComponent<Button>().Select();
+    }
+
+    private void GestionarInputs()
+    {
+        InputManager.Instance.controles.UI.MovimientoDer.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.MovimientoIzq.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Arriba.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Abajo.performed += contexto => OptionallySelectFirst();
+    }
+
+    private void DesgestionarInputs()
+    {
+        InputManager.Instance.controles.UI.MovimientoDer.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.MovimientoIzq.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Arriba.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Abajo.performed -= contexto => OptionallySelectFirst();
     }
 }

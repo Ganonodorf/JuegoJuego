@@ -2,6 +2,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseManager : MonoBehaviour
 {
@@ -104,11 +105,28 @@ public class PauseManager : MonoBehaviour
     {
         InputManager.Instance.controles.Conduciendo.Pausa.performed += contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed += contexto => Pausa();
+
+        InputManager.Instance.controles.UI.MovimientoDer.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.MovimientoIzq.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Arriba.performed += contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Abajo.performed += contexto => OptionallySelectFirst();
     }
 
     private void DesgestionarInputs()
     {
         InputManager.Instance.controles.Conduciendo.Pausa.performed -= contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed -= contexto => Pausa();
+
+        InputManager.Instance.controles.UI.MovimientoDer.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.MovimientoIzq.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Arriba.performed -= contexto => OptionallySelectFirst();
+        InputManager.Instance.controles.UI.Abajo.performed -= contexto => OptionallySelectFirst();
+    }
+
+    private void OptionallySelectFirst()
+    {
+        if (pausaGO.activeSelf &&
+            EventSystem.current.currentSelectedGameObject == null)
+            resumeButton.GetComponent<Button>().Select();
     }
 }
