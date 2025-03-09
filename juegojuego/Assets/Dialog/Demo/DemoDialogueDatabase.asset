@@ -43016,8 +43016,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "S\xED. Mira. [Te ense\xF1a el traje de cocodrilo que tiene pegado
-          en el lateral]"
+        value: "S\xED. Mira. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -43051,7 +43050,7 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 14
         destinationConversationID: 16
-        destinationDialogueID: 15
+        destinationDialogueID: 27
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -43088,7 +43087,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Toma [Te entrega el traje de cocodrilo]
+        value: Toma.
         type: 0
         typeString: 
       - title: Sequence
@@ -43122,7 +43121,7 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 15
         destinationConversationID: 16
-        destinationDialogueID: 16
+        destinationDialogueID: 28
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -43135,8 +43134,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 278.54086
-        y: 759.4646
+        x: 280.2394
+        y: 848.5731
         width: 160
         height: 30
     - id: 16
@@ -43206,8 +43205,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 278.54086
-        y: 809.46484
+        x: 279.3901
+        y: 984.3485
         width: 160
         height: 30
     - id: 17
@@ -43233,7 +43232,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\xBFSabes qu\xE9 es esto? [Ense\xF1arle el malino]"
+        value: "\xBFSabes qu\xE9 es esto?"
         type: 0
         typeString: 
       - title: Sequence
@@ -43267,7 +43266,7 @@ MonoBehaviour:
       - originConversationID: 16
         originDialogueID: 17
         destinationConversationID: 16
-        destinationDialogueID: 18
+        destinationDialogueID: 29
         isConnector: 0
         priority: 2
       conditionsString: Variable["Intro_Siluro"] == true and (Variable["ORMalino"]
@@ -43279,7 +43278,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 486.71783
-        y: 255.94601
+        y: 255.1182
         width: 160
         height: 30
     - id: 18
@@ -43349,8 +43348,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 485.58472
-        y: 305.07114
+        x: 488.06818
+        y: 367.15732
         width: 160
         height: 30
     - id: 19
@@ -43414,8 +43413,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 486.71783
-        y: 354.81293
+        x: 489.2013
+        y: 416.8991
         width: 160
         height: 30
     - id: 20
@@ -43924,9 +43923,213 @@ MonoBehaviour:
         y: 163.11182
         width: 160
         height: 30
+    - id: 27
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "En el lateral de su extra\xF1o cuerpo puedes ver un bulto de tela
+          con un patr\xF3n de piel de cocodrilo."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 27
+        destinationConversationID: 16
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 282.03757
+        y: 775.9457
+        width: 160
+        height: 30
+    - id: 28
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: El siluro te entrega el disfraz de cocodrilo. El olor que va a dejar
+          en los asientos va a durar un par de semanas.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 28
+        destinationConversationID: 16
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 280.89215
+        y: 913.80273
+        width: 160
+        height: 30
+    - id: 29
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Le muestras la misteriosa cabeza que llevas en los asientos de atr\xE1s.
+          Ahora te parece que su expresi\xF3n denota miedo."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 16
+        originDialogueID: 29
+        destinationConversationID: 16
+        destinationDialogueID: 18
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 488.37372
+        y: 308.4294
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 72.72833}
-    canvasZoom: 0.59949124
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.58951277
   - id: 17
     fields:
     - title: Title
