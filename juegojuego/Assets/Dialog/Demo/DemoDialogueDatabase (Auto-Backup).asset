@@ -35500,7 +35500,7 @@ MonoBehaviour:
       - originConversationID: 14
         originDialogueID: 10
         destinationConversationID: 14
-        destinationDialogueID: 11
+        destinationDialogueID: 38
         isConnector: 0
         priority: 2
       conditionsString: Variable["Preguntar_por_el_malino_a_Candelaria"] == true
@@ -35582,8 +35582,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 500.24548
-        y: 321.08267
+        x: 511.84387
+        y: 530.9883
         width: 160
         height: 30
     - id: 12
@@ -35653,8 +35653,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 500.24548
-        y: 370.31107
+        x: 507.39948
+        y: 575.3278
         width: 160
         height: 30
     - id: 13
@@ -35724,8 +35724,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 499.2384
-        y: 420.3111
+        x: 506.3924
+        y: 625.3278
         width: 160
         height: 30
     - id: 14
@@ -36645,8 +36645,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 499.2384
-        y: 470.31113
+        x: 506.3924
+        y: 675.32794
         width: 160
         height: 30
     - id: 27
@@ -37448,9 +37448,283 @@ MonoBehaviour:
         y: 137.4588
         width: 160
         height: 30
+    - id: 38
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Ah! Esa es una buena prenda. No s\xE9 d\xF3nde est\xE1 pero te puedes
+          esperar cualquier cosa. M\xE1s de una vez la he visto hablando sola en
+          la playa. Le pregunt\xE9 y me dijo que estaba hablando con un pez. \xA1La
+          muy sinverg\xFCenza!"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 38
+        destinationConversationID: 14
+        destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 519.61816
+        y: 320.85947
+        width: 160
+        height: 30
+    - id: 39
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "La se\xF1ora se altera y comienza a gritar. No s\xF3lo est\xE1 enfadada,
+          tambi\xE9n est\xE1 preocupada."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 39
+        destinationConversationID: 14
+        destinationDialogueID: 40
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 519.61816
+        y: 360.63733
+        width: 160
+        height: 30
+    - id: 40
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\xA1Y me dice que la loca soy yo! Yo! Ay ay ay\u2026 \xA1Y d\xF3nde
+          se habr\xE1 metido ahora! \xA1No creo que se haya atrevido a irse para
+          el pueblo! \xA1Espero que no!\r"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 40
+        destinationConversationID: 14
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 524.0626
+        y: 406.1929
+        width: 160
+        height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Bueno, yo solo tengo que ir a su casa. \xBFSabes d\xF3nde est\xE1?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 41
+        destinationConversationID: 14
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 516.0627
+        y: 461.52634
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 134.6229, y: 124.624275}
-    canvasZoom: 0.9300054
+    canvasScrollPosition: {x: 0, y: 174.14203}
+    canvasZoom: 0.7800055
   - id: 15
     fields:
     - title: Title
@@ -40000,8 +40274,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Alguien que suela deambular por esa zona de la costa. Si la conocen
-          bien, te podr\xEDan ayudar."
+        value: "Alguien que suela deambular la costa. Hay quien vive ah\xED entre
+          la chatarra, \xBFsabes? Te podr\xEDan ayudar."
         type: 0
         typeString: 
       - title: Sequence
@@ -40046,7 +40320,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1033.5103
-        y: 474.96262
+        y: 473.0043
         width: 160
         height: 30
     - id: 40
@@ -41719,8 +41993,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5470271
+    canvasScrollPosition: {x: 569.5069, y: 215.34268}
+    canvasZoom: 0.8470268
   - id: 16
     fields:
     - title: Title
