@@ -564,17 +564,13 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name
-      value: <color=#CABC6B>El Viento</color>
+      value: 
       type: 0
       typeString: CustomFieldType_Text
     - title: NodeColor
       value: '#cabc6bff'
       type: 0
       typeString: CustomFieldType_Text
-    - title: Display Name en
-      value: <color=#CABC6B>The Wind</color>
-      type: 0
-      typeString: CustomFieldType_Localization
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -31557,8 +31553,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2447.9158
-        y: 248.46591
+        x: 2447.3293
+        y: 247.8794
         width: 160
         height: 30
     entryGroups: []
@@ -35333,7 +35329,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 54
+        destinationConversationID: 13
+        destinationDialogueID: 55
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
       onExecute:
@@ -35345,8 +35347,69 @@ MonoBehaviour:
         y: 199.26874
         width: 160
         height: 30
+    - id: 55
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Te has despedido del chatarrero. Te recordar\xE1."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1703.7944
+        y: 249.26874
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 57.85681, y: 0}
+    canvasScrollPosition: {x: 189.77026, y: 0}
     canvasZoom: 1.0370438
   - id: 14
     fields:
