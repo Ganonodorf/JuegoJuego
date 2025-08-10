@@ -32367,8 +32367,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 929.286, y: 0}
-    canvasZoom: 0.96001464
+    canvasScrollPosition: {x: 937.7742, y: 2.413138}
+    canvasZoom: 0.96601444
   - id: 13
     fields:
     - title: Title
@@ -36462,11 +36462,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 14
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 14
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -36508,6 +36508,12 @@ MonoBehaviour:
         destinationDialogueID: 65
         isConnector: 0
         priority: 2
+      - originConversationID: 13
+        originDialogueID: 64
+        destinationConversationID: 13
+        destinationDialogueID: 67
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -36530,11 +36536,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 14
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 14
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -36583,8 +36589,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 839.5237
+        x: 1604.7961
+        y: 862.7704
         width: 160
         height: 30
     - id: 66
@@ -36598,11 +36604,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 14
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 14
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -36640,7 +36646,7 @@ MonoBehaviour:
       - originConversationID: 13
         originDialogueID: 66
         destinationConversationID: 13
-        destinationDialogueID: 67
+        destinationDialogueID: 85
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -36650,8 +36656,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 889.52356
+        x: 1603.812
+        y: 909.2051
         width: 160
         height: 30
     - id: 67
@@ -36665,11 +36671,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 14
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 14
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -36718,8 +36724,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 939.5238
+        x: 1803.8572
+        y: 865.6932
         width: 160
         height: 30
     - id: 68
@@ -36733,11 +36739,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 14
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 14
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -36785,8 +36791,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 989.5236
+        x: 1803.8572
+        y: 915.693
         width: 160
         height: 30
     - id: 69
@@ -36800,11 +36806,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 14
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 14
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -36852,8 +36858,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 1039.5233
+        x: 1803.8572
+        y: 965.6927
         width: 160
         height: 30
     - id: 70
@@ -36920,8 +36926,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 1089.5233
+        x: 1803.1309
+        y: 1015.69293
         width: 160
         height: 30
     - id: 71
@@ -36935,11 +36941,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 14
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 19
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -36987,8 +36993,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 1139.5233
+        x: 1803.5913
+        y: 1061.593
         width: 160
         height: 30
     - id: 72
@@ -37822,9 +37828,76 @@ MonoBehaviour:
         y: 49.81279
         width: 160
         height: 30
+    - id: 85
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Gracias por todo.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 85
+        destinationConversationID: 13
+        destinationDialogueID: 72
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1603.812
+        y: 959.2051
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 670.81616, y: 0}
-    canvasZoom: 0.87654436
+    canvasScrollPosition: {x: 766.3612, y: 0}
+    canvasZoom: 0.93404436
   - id: 14
     fields:
     - title: Title
