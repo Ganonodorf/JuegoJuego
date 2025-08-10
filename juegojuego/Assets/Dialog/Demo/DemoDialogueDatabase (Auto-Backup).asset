@@ -1480,6 +1480,48 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 33
+    fields:
+    - title: Name
+      value: ChatarreroDespedido
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 34
+    fields:
+    - title: Name
+      value: CandelariaDespedida
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 35
+    fields:
+    - title: Name
+      value: MonstruasDespedida
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 19
     fields:
@@ -16119,6 +16161,18 @@ MonoBehaviour:
         destinationDialogueID: 29
         isConnector: 0
         priority: 2
+      - originConversationID: 5
+        originDialogueID: 0
+        destinationConversationID: 5
+        destinationDialogueID: 85
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 0
+        destinationConversationID: 5
+        destinationDialogueID: 86
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -16869,14 +16923,15 @@ MonoBehaviour:
         priority: 2
       conditionsString: "Variable[\"HabladoMonstruas\"] == true and ((CurrentQuestState(\"Ll\xE9vale
         la comida a la pareja de Paco\") == \"returnToNPC\") or (CurrentQuestState(\"Ll\xE9vale
-        la comida a la pareja de Paco\") == \"success\"))"
+        la comida a la pareja de Paco\") == \"success\")) and (Variable[\"ENDING\"]
+        == false)"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 560.68176
+        x: 561.8722
         y: 17.72728
         width: 160
         height: 30
@@ -17303,7 +17358,8 @@ MonoBehaviour:
         destinationDialogueID: 30
         isConnector: 0
         priority: 2
-      conditionsString: Variable["HabladoMonstruas"] == false
+      conditionsString: Variable["HabladoMonstruas"] == false and (Variable["ENDING"]
+        == false)
       userScript: Variable["HabladoMonstruas"] = true
       onExecute:
         m_PersistentCalls:
@@ -21335,9 +21391,748 @@ MonoBehaviour:
         y: 393.3281
         width: 160
         height: 30
+    - id: 85
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: "\xBFQu\xE9? ya te vas, \xBFno?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 85
+        destinationConversationID: 5
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["ENDING"] == true and (Variable["MonstruasDespedida"]
+        == false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1835.2482
+        y: 24.870148
+        width: 160
+        height: 30
+    - id: 86
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["ENDING"] == true and (Variable["MonstruasDespedida"]
+        == true)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2149.5344
+        y: 18.917747
+        width: 160
+        height: 30
+    - id: 87
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "S\xED..."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 87
+        destinationConversationID: 5
+        destinationDialogueID: 88
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 87
+        destinationConversationID: 5
+        destinationDialogueID: 89
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1834.0576
+        y: 85.58443
+        width: 160
+        height: 30
+    - id: 88
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Me alegro mucho por t\xED. Todas nosotras, vaya. Esperamos que tengas
+          un buen viaje y que nos podamos volver a ver."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 88
+        destinationConversationID: 5
+        destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      conditionsString: "(CurrentQuestState(\"Ll\xE9vale la comida a la pareja de
+        Paco\") == \"success\") or (CurrentQuestState(\"Ll\xE9vale la comida a la
+        pareja de Paco\") == \"returnToNPC\")"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1743.7573
+        y: 184.19464
+        width: 160
+        height: 30
+    - id: 89
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Estupendo. Con la mala leche que tengo encima mejor que te busques
+          otro sitio para ir por ah\xED dando tumbos e incordiando a la gente."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 89
+        destinationConversationID: 5
+        destinationDialogueID: 93
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1933.706
+        y: 182.34103
+        width: 160
+        height: 30
+    - id: 90
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "A lo lejos se escucha un estruendo terrible. Un rugido profundo que
+          hace temblar el suelo y la carrocer\xEDa del coche."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 90
+        destinationConversationID: 5
+        destinationDialogueID: 91
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1743.7573
+        y: 234.19464
+        width: 160
+        height: 30
+    - id: 91
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Ah claro, Maria Antonia no ha podido venir a despedirse porque est\xE1
+          sepultada. Creo que te est\xE1 diciendo que tengas cuidado y que suerte
+          desde el otro lado del puente."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 91
+        destinationConversationID: 5
+        destinationDialogueID: 92
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1743.7573
+        y: 284.19464
+        width: 160
+        height: 30
+    - id: 92
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "El terrible alarido no es inteligible. Sin embargo, poniendo atenci\xF3n,
+          te alcanza la sensaci\xF3n de que es un mensaje lleno de apreciaci\xF3n
+          y buenas intenciones."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1743.7573
+        y: 334.19464
+        width: 160
+        height: 30
+    - id: 93
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Me he tenido que traer a estas a este sitio na m\xE1s que para no
+          aguantar a la Maria Antonia que estaba s\xFAper pesada."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 93
+        destinationConversationID: 5
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1933.706
+        y: 232.34103
+        width: 160
+        height: 30
+    - id: 94
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Por las caras que te est\xE1n poniendo las otras jugadoras, deduces
+          que la pobre Maria Antonia no estaba siendo tan pesada y Manoli probablemente
+          haya liado alg\xFAn pifostio."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 94
+        destinationConversationID: 5
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1933.706
+        y: 282.34103
+        width: 160
+        height: 30
+    - id: 95
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Bueno, igualmente... Ten cuidado por ah\xED."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1933.706
+        y: 332.34103
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 317.85712, y: 0}
-    canvasZoom: 0.84000003
+    canvasScrollPosition: {x: 585.4872, y: 0}
+    canvasZoom: 1.0059998
   - id: 4
     fields:
     - title: Title
@@ -31698,6 +32493,12 @@ MonoBehaviour:
         destinationDialogueID: 73
         isConnector: 0
         priority: 2
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 84
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -31769,7 +32570,8 @@ MonoBehaviour:
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Intro_Chatarrero_Agua"] == false
+      conditionsString: Variable["Intro_Chatarrero_Agua"] == false and (Variable["ENDING"]
+        == false)
       userScript: Variable["Intro_Chatarrero_Agua"] = true
       onExecute:
         m_PersistentCalls:
@@ -33073,7 +33875,8 @@ MonoBehaviour:
         destinationDialogueID: 26
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Intro_Chatarrero_Agua"] == true
+      conditionsString: Variable["Intro_Chatarrero_Agua"] == true and (Variable["ENDING"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -35156,7 +35959,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["ENDING"] == true and (Variable["ChatarreroSabeCabezaPerdida"]
-        == true)
+        == true) and (Variable["ChatarreroDespedido"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -35230,8 +36033,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1801.1772
-        y: 184.8003
+        x: 1694.9244
+        y: 482.688
         width: 160
         height: 30
     - id: 57
@@ -35297,8 +36100,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1801.1772
-        y: 234.8003
+        x: 1694.9244
+        y: 532.688
         width: 160
         height: 30
     - id: 58
@@ -35365,8 +36168,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1802.3413
-        y: 291.6358
+        x: 1696.0885
+        y: 589.5235
         width: 160
         height: 30
     - id: 60
@@ -35440,8 +36243,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1802.3413
-        y: 341.6358
+        x: 1696.0885
+        y: 639.5235
         width: 160
         height: 30
     - id: 61
@@ -35507,8 +36310,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1678.6604
-        y: 396.30298
+        x: 1572.4076
+        y: 694.1907
         width: 160
         height: 30
     - id: 62
@@ -35577,8 +36380,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 442.80273
+        x: 1683.2537
+        y: 740.6904
         width: 160
         height: 30
     - id: 63
@@ -35644,8 +36447,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1901.5193
-        y: 395.13623
+        x: 1795.2665
+        y: 693.0239
         width: 160
         height: 30
     - id: 64
@@ -35712,8 +36515,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 492.80267
+        x: 1683.2537
+        y: 790.6904
         width: 160
         height: 30
     - id: 65
@@ -35780,8 +36583,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 541.636
+        x: 1683.2537
+        y: 839.5237
         width: 160
         height: 30
     - id: 66
@@ -35847,8 +36650,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 591.63586
+        x: 1683.2537
+        y: 889.52356
         width: 160
         height: 30
     - id: 67
@@ -35915,8 +36718,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 641.63586
+        x: 1683.2537
+        y: 939.5238
         width: 160
         height: 30
     - id: 68
@@ -35982,8 +36785,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 691.63586
+        x: 1683.2537
+        y: 989.5236
         width: 160
         height: 30
     - id: 69
@@ -36049,8 +36852,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 741.63586
+        x: 1683.2537
+        y: 1039.5233
         width: 160
         height: 30
     - id: 70
@@ -36117,8 +36920,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 791.63586
+        x: 1683.2537
+        y: 1089.5233
         width: 160
         height: 30
     - id: 71
@@ -36184,8 +36987,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 841.63586
+        x: 1683.2537
+        y: 1139.5233
         width: 160
         height: 30
     - id: 72
@@ -36239,14 +37042,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
+
+        Variable["ChatarreroDespedido"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 891.63586
+        x: 1683.2537
+        y: 1189.5233
         width: 160
         height: 30
     - id: 73
@@ -36306,7 +37112,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["ENDING"] == true and (Variable["ChatarreroSabeCabezaPerdida"]
-        == false)
+        == false) and (Variable["ChatarreroDespedido"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -36937,7 +37743,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 83
+        destinationConversationID: 13
+        destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -36949,9 +37761,70 @@ MonoBehaviour:
         y: 487.5072
         width: 160
         height: 30
+    - id: 84
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ten buen viaje, gracias por todo.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["ChatarreroDespedido"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2402.1492
+        y: 49.81279
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1220.4556, y: 11.054675}
-    canvasZoom: 0.857044
+    canvasScrollPosition: {x: 670.81616, y: 0}
+    canvasZoom: 0.87654436
   - id: 14
     fields:
     - title: Title
@@ -37070,6 +37943,18 @@ MonoBehaviour:
         destinationDialogueID: 28
         isConnector: 0
         priority: 2
+      - originConversationID: 14
+        originDialogueID: 0
+        destinationConversationID: 14
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      - originConversationID: 14
+        originDialogueID: 0
+        destinationConversationID: 14
+        destinationDialogueID: 43
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -37165,7 +38050,8 @@ MonoBehaviour:
         destinationDialogueID: 25
         isConnector: 0
         priority: 2
-      conditionsString: Variable["CrocodileCostumeEntregado"] == false
+      conditionsString: Variable["CrocodileCostumeEntregado"] == false and (Variable["ENDING"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -38456,7 +39342,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["CrocodileCostumeEntregado"] == true and (Variable["VerjaCandelariaAbierta"]
-        == false)
+        == false) and (Variable["ENDING"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -39086,7 +39972,7 @@ MonoBehaviour:
         destinationDialogueID: 31
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["ENDING"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -40027,8 +40913,475 @@ MonoBehaviour:
         y: 461.52634
         width: 160
         height: 30
+    - id: 42
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Ay, ay... \xBFMe han dicho que te vas ya?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 42
+        destinationConversationID: 14
+        destinationDialogueID: 44
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["ENDING"] == true and (Variable["CandelariaDespedida"]
+        == false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1915.5764
+        y: 232.67545
+        width: 160
+        height: 30
+    - id: 43
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Eres un alma buena de verdad, de verdad.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 43
+        destinationConversationID: 14
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["ENDING"] == true and (Variable["CandelariaDespedida"]
+        == true)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2170.7031
+        y: 231.39337
+        width: 160
+        height: 30
+    - id: 44
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "S\xED... me voy a seguir buscando a la artista desaparecida."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 44
+        destinationConversationID: 14
+        destinationDialogueID: 45
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1915.5764
+        y: 282.67545
+        width: 160
+        height: 30
+    - id: 45
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ay... menuda lianta, precupando a todo el mundo.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 45
+        destinationConversationID: 14
+        destinationDialogueID: 46
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1915.5764
+        y: 332.67545
+        width: 160
+        height: 30
+    - id: 46
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Bueno, de todas formas, me alegro de que sigas adelante. Mi hombre
+          apuesto y yo te recordaremos como alguien bueno, bueno de verdad.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 46
+        destinationConversationID: 14
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1915.5764
+        y: 382.67545
+        width: 160
+        height: 30
+    - id: 47
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "En sus ojos ves se emociona al verte esta \xFAltima vez... No quiere
+          que te vayas."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 47
+        destinationConversationID: 14
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2174.5498
+        y: 382.6747
+        width: 160
+        height: 30
+    - id: 48
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 17
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ay, vete ya, vete ya.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2174.5498
+        y: 432.6747
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 174.14203}
+    canvasScrollPosition: {x: 171.79376, y: 0}
     canvasZoom: 0.7800055
   - id: 15
     fields:
@@ -51181,8 +52534,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 4.7832212, y: 3.7384796}
-    canvasZoom: 1.0100023
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.9800023
   syncInfo:
     syncActors: 0
     syncItems: 0
