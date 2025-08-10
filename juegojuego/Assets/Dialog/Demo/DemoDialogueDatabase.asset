@@ -1480,6 +1480,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 33
+    fields:
+    - title: Name
+      value: ChatarreroDespedido
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 19
     fields:
@@ -31698,6 +31712,12 @@ MonoBehaviour:
         destinationDialogueID: 73
         isConnector: 0
         priority: 2
+      - originConversationID: 13
+        originDialogueID: 0
+        destinationConversationID: 13
+        destinationDialogueID: 84
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -35156,7 +35176,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["ENDING"] == true and (Variable["ChatarreroSabeCabezaPerdida"]
-        == true)
+        == true) and (Variable["ChatarreroDespedido"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -35230,8 +35250,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1801.1772
-        y: 184.8003
+        x: 1694.9244
+        y: 482.688
         width: 160
         height: 30
     - id: 57
@@ -35297,8 +35317,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1801.1772
-        y: 234.8003
+        x: 1694.9244
+        y: 532.688
         width: 160
         height: 30
     - id: 58
@@ -35365,8 +35385,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1802.3413
-        y: 291.6358
+        x: 1696.0885
+        y: 589.5235
         width: 160
         height: 30
     - id: 60
@@ -35440,8 +35460,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1802.3413
-        y: 341.6358
+        x: 1696.0885
+        y: 639.5235
         width: 160
         height: 30
     - id: 61
@@ -35507,8 +35527,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1678.6604
-        y: 396.30298
+        x: 1572.4076
+        y: 694.1907
         width: 160
         height: 30
     - id: 62
@@ -35577,8 +35597,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 442.80273
+        x: 1683.2537
+        y: 740.6904
         width: 160
         height: 30
     - id: 63
@@ -35644,8 +35664,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1901.5193
-        y: 395.13623
+        x: 1795.2665
+        y: 693.0239
         width: 160
         height: 30
     - id: 64
@@ -35712,8 +35732,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 492.80267
+        x: 1683.2537
+        y: 790.6904
         width: 160
         height: 30
     - id: 65
@@ -35780,8 +35800,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 541.636
+        x: 1683.2537
+        y: 839.5237
         width: 160
         height: 30
     - id: 66
@@ -35847,8 +35867,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 591.63586
+        x: 1683.2537
+        y: 889.52356
         width: 160
         height: 30
     - id: 67
@@ -35915,8 +35935,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 641.63586
+        x: 1683.2537
+        y: 939.5238
         width: 160
         height: 30
     - id: 68
@@ -35982,8 +36002,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 691.63586
+        x: 1683.2537
+        y: 989.5236
         width: 160
         height: 30
     - id: 69
@@ -36049,8 +36069,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 741.63586
+        x: 1683.2537
+        y: 1039.5233
         width: 160
         height: 30
     - id: 70
@@ -36117,8 +36137,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 791.63586
+        x: 1683.2537
+        y: 1089.5233
         width: 160
         height: 30
     - id: 71
@@ -36184,8 +36204,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 841.63586
+        x: 1683.2537
+        y: 1139.5233
         width: 160
         height: 30
     - id: 72
@@ -36239,14 +36259,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
+
+        Variable["ChatarreroDespedido"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1789.5065
-        y: 891.63586
+        x: 1683.2537
+        y: 1189.5233
         width: 160
         height: 30
     - id: 73
@@ -36306,7 +36329,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["ENDING"] == true and (Variable["ChatarreroSabeCabezaPerdida"]
-        == false)
+        == false) and (Variable["ChatarreroDespedido"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -36937,7 +36960,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 13
+        originDialogueID: 83
+        destinationConversationID: 13
+        destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -36949,9 +36978,70 @@ MonoBehaviour:
         y: 487.5072
         width: 160
         height: 30
+    - id: 84
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 14
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ten buen viaje, gracias por todo.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 13
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["ChatarreroDespedido"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2402.1492
+        y: 49.81279
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1220.4556, y: 11.054675}
-    canvasZoom: 0.857044
+    canvasScrollPosition: {x: 566.3418, y: 0}
+    canvasZoom: 0.4070443
   - id: 14
     fields:
     - title: Title
@@ -51181,8 +51271,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 4.7832212, y: 3.7384796}
-    canvasZoom: 1.0100023
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.9800023
   syncInfo:
     syncActors: 0
     syncItems: 0
