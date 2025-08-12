@@ -22304,7 +22304,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22851,8 +22851,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 84.91569, y: 0}
-    canvasZoom: 0.7440001
+    canvasScrollPosition: {x: 821.75323, y: 0}
+    canvasZoom: 1.108
   - id: 4
     fields:
     - title: Title
@@ -29982,7 +29982,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -29993,7 +29993,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 332.8438, y: 0}
+    canvasScrollPosition: {x: 813.3571, y: 0}
     canvasZoom: 1.1675013
   - id: 12
     fields:
@@ -33230,13 +33230,13 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 49
         destinationConversationID: 12
-        destinationDialogueID: 54
+        destinationDialogueID: 58
         isConnector: 0
         priority: 2
       - originConversationID: 12
         originDialogueID: 49
         destinationConversationID: 12
-        destinationDialogueID: 58
+        destinationDialogueID: 54
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -33307,7 +33307,7 @@ MonoBehaviour:
         destinationDialogueID: 51
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FarewellCounter"] <= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -33530,8 +33530,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "He visto que ya te has despedido de la mayor\xEDa. \xBFQuieres irte
-          ya o vas a hablar con alguien m\xE1s antes de marchar?"
+        value: "He visto que ya te has despedido de algunos. \xBFQuieres irte ya
+          o vas a hablar con alguien m\xE1s antes de marchar?"
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -33832,7 +33832,7 @@ MonoBehaviour:
         destinationDialogueID: 59
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FarewellCounter"] >= 6
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -33840,7 +33840,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2766.2485
-        y: 164.49417
+        y: 165.91968
         width: 160
         height: 30
     - id: 59
@@ -33911,8 +33911,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1547.2588, y: 23.649994}
-    canvasZoom: 0.97251415
+    canvasScrollPosition: {x: 1589.9797, y: 0}
+    canvasZoom: 1.1335139
   - id: 13
     fields:
     - title: Title
@@ -37510,8 +37510,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1697.2501
-        y: 86.0768
+        x: 1697.2502
+        y: 91.04855
         width: 160
         height: 30
     - id: 56
@@ -38601,8 +38601,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1683.2537
-        y: 1189.5233
+        x: 1681.6764
+        y: 1129.5889
         width: 160
         height: 30
     - id: 73
@@ -39368,8 +39368,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2402.1492
-        y: 49.81279
+        x: 2403.392
+        y: 37.383377
         width: 160
         height: 30
     - id: 85
@@ -39440,8 +39440,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 766.3612, y: 0}
-    canvasZoom: 0.93404436
+    canvasScrollPosition: {x: 552.02637, y: 145.4242}
+    canvasZoom: 0.80454355
   - id: 14
     fields:
     - title: Title
@@ -42858,7 +42858,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -42998,7 +42998,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1361.1001, y: 20.281052}
+    canvasScrollPosition: {x: 1363.4447, y: 16.373276}
     canvasZoom: 1.279505
   - id: 15
     fields:
@@ -48018,7 +48018,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["ChatarreroViajeroDespedido"] = true
+      userScript: 'Variable["ChatarreroViajeroDespedido"] = true
+
+        Variable["FarewellCounter"]
+        = Variable["FarewellCounter"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -48029,8 +48032,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1334.989, y: 0}
-    canvasZoom: 0.7805307
+    canvasScrollPosition: {x: 1877.3647, y: 0}
+    canvasZoom: 1.2645305
   - id: 16
     fields:
     - title: Title
