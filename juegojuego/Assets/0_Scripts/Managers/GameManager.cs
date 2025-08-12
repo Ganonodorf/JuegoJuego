@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameState initialGameState;
 
+    [SerializeField] private bool juegoEnIngles = false;
+
     private bool finJuego;
 
     // En el awake decimos que si cuando el GameObject que tenga este script es creado
@@ -41,8 +43,11 @@ public class GameManager : MonoBehaviour
         HacerCursorVisible();
 
         UpdateGameState(initialGameState);
-
-        DialogueManager.SetLanguage("en");
+        
+        if(juegoEnIngles)
+            DialogueManager.SetLanguage("en");
+        else
+            DialogueManager.SetLanguage("es");
     }
 
     // Para devolver el GameState
