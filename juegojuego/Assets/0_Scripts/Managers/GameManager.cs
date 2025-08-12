@@ -43,11 +43,16 @@ public class GameManager : MonoBehaviour
         HacerCursorVisible();
 
         UpdateGameState(initialGameState);
+
+        DialogueManager.SetLanguage(juegoEnIngles ? "en" : "es");
         
+        /*
+        Eso que hay arriba es lo mismo que esto de abajo
         if(juegoEnIngles)
             DialogueManager.SetLanguage("en");
         else
             DialogueManager.SetLanguage("es");
+        */
     }
 
     // Para devolver el GameState
