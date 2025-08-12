@@ -10028,7 +10028,8 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["FeligresaDespedida"] == false
+      conditionsString: Variable["FeligresaDespedida"] == false and (Variable["ENDING"]
+        == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10089,7 +10090,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: (Variable["ENDING"] == true) and (Variable["FeligresaDespedida"]
+        == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10633,13 +10635,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1766.8705
-        y: 376.0315
+        x: 1766.0298
+        y: 375.1908
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.2507324, y: 0}
-    canvasZoom: 0.799504
+    canvasScrollPosition: {x: 1429.5077, y: 0}
+    canvasZoom: 1.1895037
   - id: 6
     fields:
     - title: Title
@@ -22304,7 +22306,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
+
+        Variable["MonstruasDespedida"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22851,8 +22856,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 821.75323, y: 0}
-    canvasZoom: 1.108
+    canvasScrollPosition: {x: 1471.2894, y: 12.5418}
+    canvasZoom: 1.0480001
   - id: 4
     fields:
     - title: Title
@@ -29648,13 +29653,8 @@ MonoBehaviour:
         destinationDialogueID: 54
         isConnector: 0
         priority: 2
-      - originConversationID: 11
-        originDialogueID: 52
-        destinationConversationID: 11
-        destinationDialogueID: 56
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["EnterradoraDespedida"] == false
+      conditionsString: Variable["EnterradoraDespedida"] == false and (Variable["ENDING"]
+        == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29662,7 +29662,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1629.0813
-        y: 66.95122
+        y: 132.86536
         width: 160
         height: 30
     - id: 53
@@ -29716,7 +29716,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: Variable["EnterradoraDespedida"] == true and (Variable["ENDING"]
+        == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29790,8 +29791,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1629.0813
-        y: 116.95122
+        x: 1626.9034
+        y: 182.41562
         width: 160
         height: 30
     - id: 55
@@ -29858,8 +29859,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1630.6056
-        y: 166.95122
+        x: 1629.3307
+        y: 232.41562
         width: 160
         height: 30
     - id: 56
@@ -29926,8 +29927,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1630.6056
-        y: 216.95122
+        x: 1628.4277
+        y: 282.41565
         width: 160
         height: 30
     - id: 57
@@ -29982,19 +29983,22 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
+
+        Variable["EnterradoraDespedida"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1630.6056
-        y: 266.95123
+        x: 1628.4277
+        y: 332.4157
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 813.3571, y: 0}
-    canvasZoom: 1.1675013
+    canvasScrollPosition: {x: 460.37656, y: 0}
+    canvasZoom: 0.92750156
   - id: 12
     fields:
     - title: Title
@@ -33432,7 +33436,7 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 52
         destinationConversationID: 12
-        destinationDialogueID: 53
+        destinationDialogueID: 60
         isConnector: 0
         priority: 2
       conditionsString: Variable["FarewellCounter"] >= 1
@@ -33457,11 +33461,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 13
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -33469,7 +33473,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Vale.
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -33503,8 +33507,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2763.4907
-        y: 297.90244
+        x: 2768.282
+        y: 358.2754
         width: 160
         height: 30
     - id: 54
@@ -33910,9 +33914,72 @@ MonoBehaviour:
         y: 207.29636
         width: 160
         height: 30
+    - id: 60
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 13
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Vale.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 60
+        destinationConversationID: 12
+        destinationDialogueID: 53
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2763.0713
+        y: 307.61447
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1589.9797, y: 0}
-    canvasZoom: 1.1335139
+    canvasScrollPosition: {x: 2170.344, y: 36.415405}
+    canvasZoom: 1.043514
   - id: 13
     fields:
     - title: Title
