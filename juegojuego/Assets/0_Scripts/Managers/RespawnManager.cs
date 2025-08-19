@@ -8,6 +8,80 @@ public class RespawnManager : MonoBehaviour
 
     private GameObject playerGO;
 
+    [SerializeField] private GameObject juanaRespawn;
+    [SerializeField] private GameObject poligonoRespawn;
+    [SerializeField] private GameObject exteriorRespawn;
+    [SerializeField] private GameObject farewellRespawn;
+    [SerializeField] private GameObject tunelRespawn;
+
+    private GameObject activeRespawnPoint;
+
+    
+
+    public void UpdateActiveRespawn(RespawnPoint newRespawn)
+    {
+        switch (newRespawn)
+        {
+            case RespawnPoint.JuanaRespawn:
+                activeRespawnPoint = juanaRespawn;
+                break;
+            case RespawnPoint.PoligonoRespawn:
+                activeRespawnPoint = poligonoRespawn;
+                break;
+            case RespawnPoint.ExteriorRespawn:
+                activeRespawnPoint = exteriorRespawn;
+                break;
+            case RespawnPoint.FarewellRespawn:
+                activeRespawnPoint = farewellRespawn;
+                break;
+            case RespawnPoint.TunelRespawn:
+                activeRespawnPoint = tunelRespawn;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void MoveToActiveRespawnPoint()
+    {
+        playerGO.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+        playerGO.transform.GetComponent<Rigidbody>().position = new Vector3(activeRespawnPoint.transform.position.x,
+                                                              activeRespawnPoint.transform.position.y,
+                                                              activeRespawnPoint.transform.position.z);
+
+        playerGO.transform.GetComponent<Rigidbody>().rotation = new Quaternion(activeRespawnPoint.transform.rotation.x,
+                                                                 activeRespawnPoint.transform.rotation.y,
+                                                                 activeRespawnPoint.transform.rotation.z,
+                                                                 activeRespawnPoint.transform.rotation.w);
+    }
+
+    public void UpdateActiveRespawnJuana()
+    {
+        UpdateActiveRespawn(RespawnPoint.JuanaRespawn);
+    }
+
+    public void UpdateActiveRespawnPoligono()
+    {
+        UpdateActiveRespawn(RespawnPoint.PoligonoRespawn);
+    }
+
+    public void UpdateActiveRespawnExterior()
+    {
+        UpdateActiveRespawn(RespawnPoint.ExteriorRespawn);
+    }
+
+    public void UpdateActiveRespawnFarewell()
+    {
+        UpdateActiveRespawn(RespawnPoint.FarewellRespawn);
+    }
+
+    public void UpdateActiveRespawnTunel()
+    {
+        UpdateActiveRespawn(RespawnPoint.TunelRespawn);
+    }
+
+
     private void Awake()
     {
         //HacerloInmortal();
@@ -17,6 +91,7 @@ public class RespawnManager : MonoBehaviour
     private void Start()
     {
         BuscarGO();
+        UpdateActiveRespawnJuana();
     }
 
     private void HacerloInmortal()
@@ -32,6 +107,7 @@ public class RespawnManager : MonoBehaviour
         }
     }
 
+    /*
     public void MoverARespawnMasCercano()
     {
         GameObject puntoRespawnMasCercano = BuscarPuntoRespawnMasCercano();
@@ -65,11 +141,23 @@ public class RespawnManager : MonoBehaviour
 
         return puntoRespawnMasCercano;
     }
+    */
 
     private void BuscarGO()
     {
-        puntosRespawn = GameObject.FindGameObjectsWithTag(Constantes.Juego.TAG_RESPAWN);
+        //puntosRespawn = GameObject.FindGameObjectsWithTag(Constantes.Juego.TAG_RESPAWN);
 
         playerGO = GameObject.FindGameObjectWithTag(Constantes.Player.TAG_PLAYER);
     }
 }
+
+
+public enum RespawnPoint
+{
+    JuanaRespawn,
+    PoligonoRespawn,
+    ExteriorRespawn,
+    FarewellRespawn,
+    TunelRespawn
+}
+

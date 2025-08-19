@@ -6,7 +6,7 @@ public class LimiteMapa : MonoBehaviour
     {
         if(collider.transform.name == Constantes.Player.NOMBRE_GO)
         {
-            RespawnManager.Instance.MoverARespawnMasCercano();
+            RespawnManager.Instance.MoveToActiveRespawnPoint();
         }
     }
 }

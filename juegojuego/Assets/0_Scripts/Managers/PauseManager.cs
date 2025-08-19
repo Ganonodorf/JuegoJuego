@@ -65,7 +65,7 @@ public class PauseManager : MonoBehaviour
             GameManager.Instance.UpdateGameState(GameState.Conduciendo);
         }
 
-        RespawnManager.Instance.MoverARespawnMasCercano();
+        RespawnManager.Instance.MoveToActiveRespawnPoint();
     }
 
     public void BotonReiniciar()
