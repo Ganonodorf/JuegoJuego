@@ -113,6 +113,7 @@ public class PauseManager : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.Pausa.performed += contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed += contexto => Pausa();
 
+        InputManager.Instance.controles.UI.UnPause.performed += contexto => BotonContinuar();
         InputManager.Instance.controles.UI.MovimientoDer.performed += contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.MovimientoIzq.performed += contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.Arriba.performed += contexto => OptionallySelectFirst();
@@ -124,6 +125,7 @@ public class PauseManager : MonoBehaviour
         InputManager.Instance.controles.Conduciendo.Pausa.performed -= contexto => Pausa();
         InputManager.Instance.controles.Inventario.Pausa.performed -= contexto => Pausa();
 
+        InputManager.Instance.controles.UI.UnPause.performed -= contexto => BotonContinuar();
         InputManager.Instance.controles.UI.MovimientoDer.performed -= contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.MovimientoIzq.performed -= contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.Arriba.performed -= contexto => OptionallySelectFirst();

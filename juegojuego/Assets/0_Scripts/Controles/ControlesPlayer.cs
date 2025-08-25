@@ -1262,6 +1262,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UnPause"",
+                    ""type"": ""Button"",
+                    ""id"": ""67af1258-1d67-4494-badd-2ef9fe4f87e4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1482,6 +1491,28 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Abajo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ac7b122e-0e23-4982-b5a9-14d75a140d6d"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnPause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a6dec4e1-16fd-416f-8f85-26b72942b7d2"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnPause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1728,6 +1759,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_UI_Foto = m_UI.FindAction("Foto", throwIfNotFound: true);
         m_UI_Arriba = m_UI.FindAction("Arriba", throwIfNotFound: true);
         m_UI_Abajo = m_UI.FindAction("Abajo", throwIfNotFound: true);
+        m_UI_UnPause = m_UI.FindAction("UnPause", throwIfNotFound: true);
         // CamaraEditor
         m_CamaraEditor = asset.FindActionMap("CamaraEditor", throwIfNotFound: true);
         m_CamaraEditor_Movimiento = m_CamaraEditor.FindAction("Movimiento", throwIfNotFound: true);
@@ -2123,6 +2155,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Foto;
     private readonly InputAction m_UI_Arriba;
     private readonly InputAction m_UI_Abajo;
+    private readonly InputAction m_UI_UnPause;
     public struct UIActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -2133,6 +2166,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @Foto => m_Wrapper.m_UI_Foto;
         public InputAction @Arriba => m_Wrapper.m_UI_Arriba;
         public InputAction @Abajo => m_Wrapper.m_UI_Abajo;
+        public InputAction @UnPause => m_Wrapper.m_UI_UnPause;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2160,6 +2194,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Abajo.started += instance.OnAbajo;
             @Abajo.performed += instance.OnAbajo;
             @Abajo.canceled += instance.OnAbajo;
+            @UnPause.started += instance.OnUnPause;
+            @UnPause.performed += instance.OnUnPause;
+            @UnPause.canceled += instance.OnUnPause;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -2182,6 +2219,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Abajo.started -= instance.OnAbajo;
             @Abajo.performed -= instance.OnAbajo;
             @Abajo.canceled -= instance.OnAbajo;
+            @UnPause.started -= instance.OnUnPause;
+            @UnPause.performed -= instance.OnUnPause;
+            @UnPause.canceled -= instance.OnUnPause;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -2312,6 +2352,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnFoto(InputAction.CallbackContext context);
         void OnArriba(InputAction.CallbackContext context);
         void OnAbajo(InputAction.CallbackContext context);
+        void OnUnPause(InputAction.CallbackContext context);
     }
     public interface ICamaraEditorActions
     {

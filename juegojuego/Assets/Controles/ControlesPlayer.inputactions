@@ -1240,6 +1240,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UnPause",
+                    "type": "Button",
+                    "id": "67af1258-1d67-4494-badd-2ef9fe4f87e4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1460,6 +1469,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Abajo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ac7b122e-0e23-4982-b5a9-14d75a140d6d",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a6dec4e1-16fd-416f-8f85-26b72942b7d2",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnPause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
