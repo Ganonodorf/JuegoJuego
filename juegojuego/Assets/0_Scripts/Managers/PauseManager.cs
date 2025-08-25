@@ -14,6 +14,8 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject respawnButton;
     [SerializeField] private GameObject switchLanguageButton;
     [SerializeField] private GameObject exitButton;
+    [SerializeField] private GameObject sliderX;
+    [SerializeField] private GameObject sliderY;
 
     [SerializeField] private GameObject camaraExteriores;
     [SerializeField] private GameObject camaraInteriores;
@@ -114,6 +116,7 @@ public class PauseManager : MonoBehaviour
         InputManager.Instance.controles.Inventario.Pausa.performed += contexto => Pausa();
 
         InputManager.Instance.controles.UI.UnPause.performed += contexto => BotonContinuar();
+
         InputManager.Instance.controles.UI.MovimientoDer.performed += contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.MovimientoIzq.performed += contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.Arriba.performed += contexto => OptionallySelectFirst();
@@ -126,6 +129,7 @@ public class PauseManager : MonoBehaviour
         InputManager.Instance.controles.Inventario.Pausa.performed -= contexto => Pausa();
 
         InputManager.Instance.controles.UI.UnPause.performed -= contexto => BotonContinuar();
+
         InputManager.Instance.controles.UI.MovimientoDer.performed -= contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.MovimientoIzq.performed -= contexto => OptionallySelectFirst();
         InputManager.Instance.controles.UI.Arriba.performed -= contexto => OptionallySelectFirst();
@@ -139,6 +143,8 @@ public class PauseManager : MonoBehaviour
             && EventSystem.current.currentSelectedGameObject != respawnButton
             && EventSystem.current.currentSelectedGameObject != switchLanguageButton
             && EventSystem.current.currentSelectedGameObject != exitButton
+            && EventSystem.current.currentSelectedGameObject != sliderX
+            && EventSystem.current.currentSelectedGameObject != sliderY
             )
             resumeButton.GetComponent<Button>().Select();
     }
