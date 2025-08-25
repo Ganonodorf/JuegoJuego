@@ -139,6 +139,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SwitchLanguage()
+    {
+        if (juegoEnIngles)
+        {   
+            DialogueManager.SetLanguage("es");
+            juegoEnIngles = false;
+        }
+
+        else
+        {
+            DialogueManager.SetLanguage("en");
+            juegoEnIngles = true;
+        }
+            
+    }
+
     public void UpdateGameStateDialogo()
     {
         UpdateGameState(GameState.Dialogo);

@@ -12,6 +12,7 @@ public class PauseManager : MonoBehaviour
 
     [SerializeField] private GameObject resumeButton;
     [SerializeField] private GameObject respawnButton;
+    [SerializeField] private GameObject switchLanguageButton;
     [SerializeField] private GameObject exitButton;
 
     [SerializeField] private GameObject camaraExteriores;
@@ -34,6 +35,7 @@ public class PauseManager : MonoBehaviour
         resumeButton.GetComponent<Button>().onClick.AddListener(BotonContinuar);
         respawnButton.GetComponent<Button>().onClick.AddListener(BotonRespawn);
         //pausaGO.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(BotonReiniciar);
+        switchLanguageButton.GetComponent<Button>().onClick.AddListener(BotonSwitchLanguage);
         exitButton.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
 
@@ -79,6 +81,11 @@ public class PauseManager : MonoBehaviour
         InputManager.Instance.gameObject.SetActive(false);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void BotonSwitchLanguage()
+    {
+        GameManager.Instance.SwitchLanguage();
     }
 
     public void BotonSalir()
@@ -128,6 +135,7 @@ public class PauseManager : MonoBehaviour
         if (pausaGO.activeSelf
             && EventSystem.current.currentSelectedGameObject != resumeButton
             && EventSystem.current.currentSelectedGameObject != respawnButton
+            && EventSystem.current.currentSelectedGameObject != switchLanguageButton
             && EventSystem.current.currentSelectedGameObject != exitButton
             )
             resumeButton.GetComponent<Button>().Select();

@@ -16,7 +16,7 @@ MonoBehaviour:
   - Default
   - en
   m_languageValues: 0000000001000000
-  m_fieldKeys: 01000000020000000600000007000000080000000400000012000000050000000d0000000a0000000f0000000e0000000b0000001100000010000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d000000
+  m_fieldKeys: 010000000200000006000000070000001e0000001c0000001d000000080000001f0000000400000012000000050000000d0000000a0000000f0000000e0000000b0000001100000010000000130000001400000015000000160000001700000018000000190000001a0000001b00000020000000
   m_fieldValues:
   - m_fieldName: Jugar
     m_keys: 0000000001000000
@@ -38,16 +38,36 @@ MonoBehaviour:
     m_values:
     - Respawn
     - 
+  - m_fieldName: Switch Language to English
+    m_keys: 0000000001000000
+    m_values:
+    - 
+    - "Cambiar idioma a espa\xF1ol"
+  - m_fieldName: "Sensibilidad de C\xE1mara X"
+    m_keys: 0000000001000000
+    m_values:
+    - 
+    - Camera Sensitivity X
+  - m_fieldName: "Sensibilidad de C\xE1mara Y"
+    m_keys: 0000000001000000
+    m_values:
+    - 
+    - Camera Sensitivity Y
   - m_fieldName: Reiniciar
     m_keys: 0100000000000000
     m_values:
     - Reset
     - 
-  - m_fieldName: Pulsa E del teclado o A del mando para hablar
+  - m_fieldName: '- Inventario'
     m_keys: 0000000001000000
     m_values:
     - 
-    - Press E on the keyboard or A on the controller to talk
+    - '- Inventory'
+  - m_fieldName: '- Hablar'
+    m_keys: 0000000001000000
+    m_values:
+    - 
+    - '- Talk'
   - m_fieldName: Pulsa E del teclado o A del mando para recoger
     m_keys: 0100000000000000
     m_values:
@@ -61,12 +81,12 @@ MonoBehaviour:
   - m_fieldName: Chatarrero del agua
     m_keys: 0100000000000000
     m_values:
-    - Water scrap dealer
+    - Water Junkman
     - 
   - m_fieldName: Chatarrero viajero
     m_keys: 0100000000000000
     m_values:
-    - Traveling scrap dealer
+    - Traveling Junkman
     - 
   - m_fieldName: Deambulante adormilado
     m_keys: 0100000000000000
@@ -91,7 +111,7 @@ MonoBehaviour:
   - m_fieldName: La Cura
     m_keys: 0100000000000000
     m_values:
-    - The Priest
+    - The Priestess
     - 
   - m_fieldName: Bicifijo roto
     m_keys: 0100000000000000
@@ -121,7 +141,7 @@ MonoBehaviour:
   - m_fieldName: Malino
     m_keys: 0100000000000000
     m_values:
-    - Malin
+    - Malino
     - 
   - m_fieldName: "Detector de radiaci\xF3n"
     m_keys: 0100000000000000
@@ -134,21 +154,16 @@ MonoBehaviour:
     - Crocodile costume
     - 
   - m_fieldName: "\xA1Muchas gracias por jugar! Si te ha gustado d\xE9janos un comentario
-      en Itch.Io y comp\xE1rtelo. @carmencarmencvg @juanmacabreracruz @juanjo_garbas"
+      en Itch.Io y comp\xE1rtelo. @carmencarmencvg @juanmahalo @juanjo_garbas"
     m_keys: 0100000000000000
     m_values:
     - Thank you very much for playing! If you liked it leave us a comment on Itch.Io
-      and share it. @carmencarmencvg @juanmacabreracruz @juanjo_garbas
+      and share it. @carmencarmencvg @juanmahalo @juanjo_garbas
     - 
-  - m_fieldName: "Sensibilidad de C\xE1mara X"
-    m_keys: 0000000001000000
+  - m_fieldName: Objeto recogido
+    m_keys: 0100000000000000
     m_values:
+    - Item picked up
     - 
-    - Camera Sensitivity X
-  - m_fieldName: "Sensibilidad de C\xE1mara Y"
-    m_keys: 0000000001000000
-    m_values:
-    - 
-    - Camera Sensitivity Y
   m_nextLanguageID: 3
-  m_nextFieldID: 30
+  m_nextFieldID: 33

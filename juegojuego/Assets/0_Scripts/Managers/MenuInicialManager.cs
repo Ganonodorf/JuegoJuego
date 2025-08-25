@@ -10,6 +10,7 @@ public class MenuInicialManager : MonoBehaviour
     private GameObject camaraMenu;
 
     [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject switchLanguageButton;
     [SerializeField] private GameObject exitButton;
 
 
@@ -46,6 +47,7 @@ public class MenuInicialManager : MonoBehaviour
     private void LinkearFunciones()
     {
         startButton.GetComponent<Button>().onClick.AddListener(BotonJugar);
+        switchLanguageButton.GetComponent<Button>().onClick.AddListener(BotonSwitchLanguage);
         exitButton.GetComponent<Button>().onClick.AddListener(BotonSalir);
     }
 
@@ -56,6 +58,11 @@ public class MenuInicialManager : MonoBehaviour
         camaraMenu.GetComponent<CinemachineVirtualCamera>().enabled = false;
 
         GameManager.Instance.UpdateGameState(GameState.SecuenciaInicial);
+    }
+
+    public void BotonSwitchLanguage()
+    {
+        GameManager.Instance.SwitchLanguage();
     }
 
     public void BotonSalir()
@@ -74,6 +81,7 @@ public class MenuInicialManager : MonoBehaviour
     {
         if(menuInicialGO.activeSelf 
             && EventSystem.current.currentSelectedGameObject != startButton
+            && EventSystem.current.currentSelectedGameObject != switchLanguageButton
             && EventSystem.current.currentSelectedGameObject != exitButton
             )
         startButton.GetComponent<Button>().Select();

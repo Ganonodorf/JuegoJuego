@@ -51,8 +51,8 @@ namespace Constantes
             public const string TEXTO_NOTIFICACION_OBJETO_SOLTADO = "Objeto soltado";
             public const string TEXTO_NOTIFICACION_OBJ_FOCUSEADO = "Pulsa E para soltar el objeto";
             public const string TEXTO_NOTIFICACION_INV_LLENO = "Inventario lleno";
-            public const string TEXTO_NOTIFICACION_OBJETO_RECOGIDO_EN = "Picked item";
-            public const string TEXTO_NOTIFICACION_OBJETO_SOLTADO_EN = "Dropped item";
+            public const string TEXTO_NOTIFICACION_OBJETO_RECOGIDO_EN = "Item picked up";
+            public const string TEXTO_NOTIFICACION_OBJETO_SOLTADO_EN = "Item dropped";
             public const string TEXTO_NOTIFICACION_OBJ_FOCUSEADO_EN = "Press E to drop the item";
             public const string TEXTO_NOTIFICACION_INV_LLENO_EN = "Inventory full";
         }

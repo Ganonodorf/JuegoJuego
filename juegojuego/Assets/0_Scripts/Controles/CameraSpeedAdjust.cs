@@ -21,17 +21,6 @@ public class CameraSpeedAdjust : MonoBehaviour
         cameraInteriores.m_XAxis.m_MaxSpeed = cameraSpeedSliderX.value;
         cameraInteriores.m_YAxis.m_MaxSpeed = cameraSpeedSliderY.value;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
 }
