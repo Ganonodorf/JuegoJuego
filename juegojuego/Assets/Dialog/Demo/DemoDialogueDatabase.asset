@@ -10982,7 +10982,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 60
+        destinationConversationID: 10
+        destinationDialogueID: 61
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 'Variable["FeligresaDespedida"] = true;
 
@@ -10997,8 +11003,71 @@ MonoBehaviour:
         y: 375.1908
         width: 160
         height: 30
+    - id: 61
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "La feligresa parece quedarse en paz con esta despedida. Su cara denota
+          que le importas y te tendr\xE1 presente."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: The parishioner seems to be at peace after this farewell. Her face
+          shows that she clearly cares about you and will have you on her mind.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1766.0298
+        y: 425.1908
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1467.7952, y: 128.54997}
+    canvasScrollPosition: {x: 1203.9626, y: 0}
     canvasZoom: 1.1295037
   - id: 6
     fields:
@@ -23268,7 +23337,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 95
+        destinationConversationID: 5
+        destinationDialogueID: 98
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -23423,8 +23498,69 @@ MonoBehaviour:
         y: 58.151398
         width: 160
         height: 30
+    - id: 98
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Tras la despedida, las se\xF1oras vuelven a su partida."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: After this goodbye, they turn back to their game.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1931.405
+        y: 423.84103
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1150.0638, y: 0}
+    canvasScrollPosition: {x: 1161.2772, y: 0}
     canvasZoom: 1.2484983
   - id: 4
     fields:
@@ -30593,7 +30729,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 57
+        destinationConversationID: 11
+        destinationDialogueID: 58
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
 
@@ -30606,6 +30748,68 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1327.0334
         y: 332.4156
+        width: 160
+        height: 30
+    - id: 58
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "La enterradora pondera esta \xFAltima cuesti\xF3n y con ella se despide
+          de ti."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: The gravedigger ponders this last question and bids you farewell.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1327.0334
+        y: 382.4156
         width: 160
         height: 30
     entryGroups: []
@@ -34607,8 +34811,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 786.37384, y: 0}
-    canvasZoom: 0.9470165
+    canvasScrollPosition: {x: 2031.5483, y: 20.265945}
+    canvasZoom: 1.3170166
   - id: 13
     fields:
     - title: Title
@@ -40064,7 +40268,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Safe travels, thank you fro everything.
+        value: Safe travels, thank you for everything.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -40166,8 +40370,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1165.9058, y: 661.3729}
-    canvasZoom: 0.7445436
+    canvasScrollPosition: {x: 1235.5398, y: 353.72623}
+    canvasZoom: 1.0290444
   - id: 14
     fields:
     - title: Title
@@ -43738,7 +43942,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1531.8057, y: 149.26703}
+    canvasScrollPosition: {x: 1434.075, y: 0}
     canvasZoom: 0.85950536
   - id: 15
     fields:
@@ -48639,7 +48843,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 74
+        destinationConversationID: 15
+        destinationDialogueID: 76
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 'Variable["ChatarreroViajeroDespedido"] = true
 
@@ -48725,8 +48935,72 @@ MonoBehaviour:
         y: 482.6557
         width: 160
         height: 30
+    - id: 76
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "El Chatarrero Viajero se despide de ti con sencillez. Notas su familiaridad
+          con el proceso de decir adi\xF3s. Quiz\xE1 espera que os volv\xE1is a encontrar."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: The Traveling Junkman bids you farewell with simplicity. You notice
+          his familiarity with the process of saying goodbye. Perhaps he hopes you
+          will meet again.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2768.1038
+        y: 509.87082
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2009.8326, y: 64.23815}
+    canvasScrollPosition: {x: 1975.3273, y: 0}
     canvasZoom: 0.72453076
   - id: 16
     fields:
