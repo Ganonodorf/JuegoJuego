@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CarFrontLights : MonoBehaviour
 {
+    [SerializeField] private GameObject esferaLucesEncendida;
+
     [SerializeField] private AudioClip sonidoEncenderLuces;
     [SerializeField] private AudioClip sonidoApagarLuces;
 
@@ -29,10 +31,12 @@ public class CarFrontLights : MonoBehaviour
             if (nuevoEstadoLuces)
             {
                 audioSource.PlayOneShot(sonidoEncenderLuces);
+                esferaLucesEncendida.SetActive(true);
             }
             else
             {
                 audioSource.PlayOneShot(sonidoApagarLuces);
+                esferaLucesEncendida.SetActive(false);
             }
 
             this.gameObject.GetComponent<Light>().enabled = nuevoEstadoLuces;
