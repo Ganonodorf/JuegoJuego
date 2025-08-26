@@ -859,6 +859,15 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pito"",
+                    ""type"": ""Button"",
+                    ""id"": ""e378c810-8224-47a8-814e-a43cd92548b2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1200,6 +1209,28 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Foto"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96db4267-d1d1-4676-afb2-3a5b1f1d3c61"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pito"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c5084ec1-15b1-47da-b18a-11e31fb13ffa"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pito"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1751,6 +1782,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_Dialogo_Derrape = m_Dialogo.FindAction("Derrape", throwIfNotFound: true);
         m_Dialogo_Luces = m_Dialogo.FindAction("Luces", throwIfNotFound: true);
         m_Dialogo_Foto = m_Dialogo.FindAction("Foto", throwIfNotFound: true);
+        m_Dialogo_Pito = m_Dialogo.FindAction("Pito", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MovimientoDer = m_UI.FindAction("MovimientoDer", throwIfNotFound: true);
@@ -2055,6 +2087,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Dialogo_Derrape;
     private readonly InputAction m_Dialogo_Luces;
     private readonly InputAction m_Dialogo_Foto;
+    private readonly InputAction m_Dialogo_Pito;
     public struct DialogoActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -2067,6 +2100,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @Derrape => m_Wrapper.m_Dialogo_Derrape;
         public InputAction @Luces => m_Wrapper.m_Dialogo_Luces;
         public InputAction @Foto => m_Wrapper.m_Dialogo_Foto;
+        public InputAction @Pito => m_Wrapper.m_Dialogo_Pito;
         public InputActionMap Get() { return m_Wrapper.m_Dialogo; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2100,6 +2134,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Foto.started += instance.OnFoto;
             @Foto.performed += instance.OnFoto;
             @Foto.canceled += instance.OnFoto;
+            @Pito.started += instance.OnPito;
+            @Pito.performed += instance.OnPito;
+            @Pito.canceled += instance.OnPito;
         }
 
         private void UnregisterCallbacks(IDialogoActions instance)
@@ -2128,6 +2165,9 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Foto.started -= instance.OnFoto;
             @Foto.performed -= instance.OnFoto;
             @Foto.canceled -= instance.OnFoto;
+            @Pito.started -= instance.OnPito;
+            @Pito.performed -= instance.OnPito;
+            @Pito.canceled -= instance.OnPito;
         }
 
         public void RemoveCallbacks(IDialogoActions instance)
@@ -2343,6 +2383,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnDerrape(InputAction.CallbackContext context);
         void OnLuces(InputAction.CallbackContext context);
         void OnFoto(InputAction.CallbackContext context);
+        void OnPito(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

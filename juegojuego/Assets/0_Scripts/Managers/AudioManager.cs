@@ -27,6 +27,8 @@ public class AudioManager : MonoBehaviour
 
         InputManager.Instance.controles.Conduciendo.Pito.performed += contexto => HacerSonarElPito();
         InputManager.Instance.controles.Conduciendo.Pito.canceled += contexto => DejarDeSonarElPito();
+        InputManager.Instance.controles.Dialogo.Pito.performed += contexto => HacerSonarElPito();
+        InputManager.Instance.controles.Dialogo.Pito.canceled += contexto => DejarDeSonarElPito();
     }
 
     private void OnDestroy()
@@ -35,6 +37,8 @@ public class AudioManager : MonoBehaviour
 
         InputManager.Instance.controles.Conduciendo.Pito.performed -= contexto => HacerSonarElPito();
         InputManager.Instance.controles.Conduciendo.Pito.canceled -= contexto => DejarDeSonarElPito();
+        InputManager.Instance.controles.Dialogo.Pito.performed -= contexto => HacerSonarElPito();
+        InputManager.Instance.controles.Dialogo.Pito.canceled -= contexto => DejarDeSonarElPito();
     }
 
     private void CambioEstadoJuego(GameState nuevoEstadoJuego, GameState viejoEstadoJuego)

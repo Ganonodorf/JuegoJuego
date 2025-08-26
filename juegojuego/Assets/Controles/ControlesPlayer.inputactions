@@ -837,6 +837,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pito",
+                    "type": "Button",
+                    "id": "e378c810-8224-47a8-814e-a43cd92548b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1178,6 +1187,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Foto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96db4267-d1d1-4676-afb2-3a5b1f1d3c61",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pito",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5084ec1-15b1-47da-b18a-11e31fb13ffa",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pito",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
