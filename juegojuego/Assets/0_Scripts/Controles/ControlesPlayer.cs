@@ -868,6 +868,24 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ScrollArriba"",
+                    ""type"": ""Button"",
+                    ""id"": ""e5f56e8f-7823-42cb-bfdd-b764b85e351d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ScrollAbajo"",
+                    ""type"": ""Button"",
+                    ""id"": ""dd36c83d-2d9d-4e6b-b5df-24cef1c04aef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1231,6 +1249,28 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pito"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""287d87ff-cc5e-4e41-b935-45df93eca07f"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollArriba"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1fa36117-d1a5-4032-8c16-ea905e6c3e55"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollAbajo"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1783,6 +1823,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         m_Dialogo_Luces = m_Dialogo.FindAction("Luces", throwIfNotFound: true);
         m_Dialogo_Foto = m_Dialogo.FindAction("Foto", throwIfNotFound: true);
         m_Dialogo_Pito = m_Dialogo.FindAction("Pito", throwIfNotFound: true);
+        m_Dialogo_ScrollArriba = m_Dialogo.FindAction("ScrollArriba", throwIfNotFound: true);
+        m_Dialogo_ScrollAbajo = m_Dialogo.FindAction("ScrollAbajo", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MovimientoDer = m_UI.FindAction("MovimientoDer", throwIfNotFound: true);
@@ -2088,6 +2130,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Dialogo_Luces;
     private readonly InputAction m_Dialogo_Foto;
     private readonly InputAction m_Dialogo_Pito;
+    private readonly InputAction m_Dialogo_ScrollArriba;
+    private readonly InputAction m_Dialogo_ScrollAbajo;
     public struct DialogoActions
     {
         private @ControlesPlayer m_Wrapper;
@@ -2101,6 +2145,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         public InputAction @Luces => m_Wrapper.m_Dialogo_Luces;
         public InputAction @Foto => m_Wrapper.m_Dialogo_Foto;
         public InputAction @Pito => m_Wrapper.m_Dialogo_Pito;
+        public InputAction @ScrollArriba => m_Wrapper.m_Dialogo_ScrollArriba;
+        public InputAction @ScrollAbajo => m_Wrapper.m_Dialogo_ScrollAbajo;
         public InputActionMap Get() { return m_Wrapper.m_Dialogo; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2137,6 +2183,12 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Pito.started += instance.OnPito;
             @Pito.performed += instance.OnPito;
             @Pito.canceled += instance.OnPito;
+            @ScrollArriba.started += instance.OnScrollArriba;
+            @ScrollArriba.performed += instance.OnScrollArriba;
+            @ScrollArriba.canceled += instance.OnScrollArriba;
+            @ScrollAbajo.started += instance.OnScrollAbajo;
+            @ScrollAbajo.performed += instance.OnScrollAbajo;
+            @ScrollAbajo.canceled += instance.OnScrollAbajo;
         }
 
         private void UnregisterCallbacks(IDialogoActions instance)
@@ -2168,6 +2220,12 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             @Pito.started -= instance.OnPito;
             @Pito.performed -= instance.OnPito;
             @Pito.canceled -= instance.OnPito;
+            @ScrollArriba.started -= instance.OnScrollArriba;
+            @ScrollArriba.performed -= instance.OnScrollArriba;
+            @ScrollArriba.canceled -= instance.OnScrollArriba;
+            @ScrollAbajo.started -= instance.OnScrollAbajo;
+            @ScrollAbajo.performed -= instance.OnScrollAbajo;
+            @ScrollAbajo.canceled -= instance.OnScrollAbajo;
         }
 
         public void RemoveCallbacks(IDialogoActions instance)
@@ -2384,6 +2442,8 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
         void OnLuces(InputAction.CallbackContext context);
         void OnFoto(InputAction.CallbackContext context);
         void OnPito(InputAction.CallbackContext context);
+        void OnScrollArriba(InputAction.CallbackContext context);
+        void OnScrollAbajo(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

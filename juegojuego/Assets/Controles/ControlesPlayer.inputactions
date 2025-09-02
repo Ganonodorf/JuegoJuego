@@ -846,6 +846,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ScrollArriba",
+                    "type": "Button",
+                    "id": "e5f56e8f-7823-42cb-bfdd-b764b85e351d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ScrollAbajo",
+                    "type": "Button",
+                    "id": "dd36c83d-2d9d-4e6b-b5df-24cef1c04aef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1209,6 +1227,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pito",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "287d87ff-cc5e-4e41-b935-45df93eca07f",
+                    "path": "<Gamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScrollArriba",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1fa36117-d1a5-4032-8c16-ea905e6c3e55",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScrollAbajo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

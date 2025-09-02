@@ -2803,6 +2803,7 @@ GameObject:
   - component: {fileID: 6980154786085077768}
   - component: {fileID: 2799731508952037624}
   - component: {fileID: 6498382171710651433}
+  - component: {fileID: 3284470705607588181}
   m_Layer: 5
   m_Name: Scroll Rect
   m_TagString: Untagged
@@ -2928,6 +2929,18 @@ MonoBehaviour:
   scrollbar: {fileID: 0}
   smoothScroll: 1
   smoothScrollSpeed: 5
+--- !u!114 &3284470705607588181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8553005010646410554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6454f6312885b844bfdab3ef5334908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8605907281920812180
 GameObject:
   m_ObjectHideFlags: 0
