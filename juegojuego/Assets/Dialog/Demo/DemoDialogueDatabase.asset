@@ -2094,9 +2094,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Volver con los que ya consideras los tuyos te da paz.
-
-'
+        value: Volver con los que ya consideras los tuyos te da paz.
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -5136,7 +5134,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1075.0746
-        y: 558.5137
+        y: 559.8623
         width: 160
         height: 30
     - id: 37
@@ -6616,7 +6614,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 474.9744, y: 14.834808}
+    canvasScrollPosition: {x: 802.6891, y: 72.82535}
     canvasZoom: 0.74149877
   - id: 10
     fields:
@@ -10509,7 +10507,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 53
         destinationConversationID: 10
-        destinationDialogueID: 54
+        destinationDialogueID: 62
         isConnector: 0
         priority: 2
       - originConversationID: 10
@@ -10518,8 +10516,17 @@ MonoBehaviour:
         destinationDialogueID: 55
         isConnector: 0
         priority: 2
+      - originConversationID: 10
+        originDialogueID: 53
+        destinationConversationID: 10
+        destinationDialogueID: 54
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["FeligresaDespedida"] = true;
+
+        ["FarewellCounter"]
+        = Variable["FarewellCounter"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10557,8 +10564,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Well... thanks to you helping me with my arm... I was able to join
-          the congregation.
+        value: Well... thanks to you helping me with the arm thing... I was able
+          to join the congregation.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -10584,18 +10591,18 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 54
         destinationConversationID: 10
-        destinationDialogueID: 56
+        destinationDialogueID: 66
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Consigue un brazo") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1675.2227
-        y: 168.83289
+        x: 1984.7618
+        y: 172.62317
         width: 160
         height: 30
     - id: 55
@@ -10621,11 +10628,12 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Al final... conoc\xED a Manoli y las dem\xE1s."
+        value: "Al final, no entr\xE9 en la iglesia... Conoc\xED a Manoli y a las
+          dem\xE1s."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Actually... I met Manoli and the others.
+        value: In the end, I didn't join the church... I met Manoli and the others.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -10654,15 +10662,15 @@ MonoBehaviour:
         destinationDialogueID: 58
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Consigue un brazo") ~= "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1876.2166
-        y: 167.72852
+        x: 1767.5621
+        y: 175.30902
         width: 160
         height: 30
     - id: 56
@@ -10688,11 +10696,13 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Necesitaba un lugar as\xED, donde tener algo de seguridad."
+        value: "No son las personas m\xE1s agradables, pero necesitaba un lugar as\xED,
+          donde tener algo de seguridad."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: I needed a place like this, where I could feel safe.
+        value: They're not the nicest people, but I needed a place like that, where
+          I could feel safe.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -10718,7 +10728,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 56
         destinationConversationID: 10
-        destinationDialogueID: 57
+        destinationDialogueID: 67
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10728,8 +10738,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1675.2227
-        y: 218.83289
+        x: 1986.0253
+        y: 279.3201
         width: 160
         height: 30
     - id: 57
@@ -10795,8 +10805,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1766.8705
-        y: 324.62204
+        x: 1768.1338
+        y: 376.42245
         width: 160
         height: 30
     - id: 58
@@ -10822,11 +10832,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\xBFS\xED? Son buenas personas, \xBFverdad?"
+        value: "\xBFS\xED? \xBFEres feliz con ellas?"
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Yes? They're good people, aren't they?
+        value: Yes? Are you happy with them?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -10862,8 +10872,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1876.2166
-        y: 217.72852
+        x: 1767.5621
+        y: 224.0456
         width: 160
         height: 30
     - id: 59
@@ -10919,7 +10929,7 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 59
         destinationConversationID: 10
-        destinationDialogueID: 57
+        destinationDialogueID: 65
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10929,8 +10939,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1876.2166
-        y: 267.72852
+        x: 1767.5621
+        y: 276.57245
         width: 160
         height: 30
     - id: 60
@@ -10990,17 +11000,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["FeligresaDespedida"] = true;
-
-        ["FarewellCounter"]
-        = Variable["FarewellCounter"] + 1'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1766.0298
-        y: 375.1908
+        x: 1893.6357
+        y: 462.36707
         width: 160
         height: 30
     - id: 61
@@ -11062,13 +11069,412 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1766.0298
-        y: 425.1908
+        x: 1893.6357
+        y: 512.36707
+        width: 160
+        height: 30
+    - id: 62
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Te vi pasar a toda prisa y no tuve la oportunidad de decirte nada.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I saw you rushing by and I didn't have a chance to say anything to
+          you.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 62
+        destinationConversationID: 10
+        destinationDialogueID: 63
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["HabladoFeligresa"] == false
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1540.0486
+        y: 172.89523
+        width: 160
+        height: 30
+    - id: 63
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Espero que all\xE1 donde vayas encuentres aquello que buscas."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I hope that wherever you go, you find what you are looking for.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 63
+        destinationConversationID: 10
+        destinationDialogueID: 64
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1540.0486
+        y: 222.89523
+        width: 160
+        height: 30
+    - id: 64
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "La feligresa no parece quedarse en paz con esta despedida. Su cara
+          denota que le hubiese gustado conocerte m\xE1s."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: The parishioner does not seem to be at peace with this goodbye. Her
+          face shows that she would have liked to get to know you better.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1540.0486
+        y: 274.15866
+        width: 160
+        height: 30
+    - id: 65
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Ellas me cuidan y se preocupan mucho por m\xED."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 65
+        destinationConversationID: 10
+        destinationDialogueID: 57
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1768.8256
+        y: 325.30902
+        width: 160
+        height: 30
+    - id: 66
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\xBFY te gusta estar ah\xED?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: And you like it there?
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 66
+        destinationConversationID: 10
+        destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1984.7618
+        y: 222.62317
+        width: 160
+        height: 30
+    - id: 67
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Me alegro por ti entonces.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I'm happy for you then.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 67
+        destinationConversationID: 10
+        destinationDialogueID: 60
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1984.7618
+        y: 329.3201
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1203.9626, y: 0}
-    canvasZoom: 1.1295037
+    canvasScrollPosition: {x: 1157.5261, y: 16.42453}
+    canvasZoom: 0.79149926
   - id: 6
     fields:
     - title: Title
@@ -21338,8 +21744,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1314.3828
-        y: 343.3281
+        x: 1314.3827
+        y: 344.47232
         width: 160
         height: 30
     - id: 68
@@ -22615,7 +23021,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\xBFQu\xE9? ya te vas, \xBFno?"
+        value: "Qu\xE9, ya te vas, \xBFno?"
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -22656,8 +23062,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1835.2482
-        y: 24.870148
+        x: 1897.0323
+        y: 36.311638
         width: 160
         height: 30
     - id: 86
@@ -22683,11 +23089,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Lo dicho: ten cuidado por ah\xED."
+        value: "Lo dicho, ten cuidado por ah\xED."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 'What I said: be careful out there.'
+        value: What I said, be careful out there.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -22718,8 +23124,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2149.5344
-        y: 18.917747
+        x: 2211.3174
+        y: 30.359238
         width: 160
         height: 30
     - id: 87
@@ -22775,6 +23181,12 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 87
         destinationConversationID: 5
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 87
+        destinationConversationID: 5
         destinationDialogueID: 88
         isConnector: 0
         priority: 2
@@ -22785,7 +23197,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
+      userScript: 'Variable["FarewellCounter"] + 1;
 
         Variable["MonstruasDespedida"]
         = true'
@@ -22794,8 +23206,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1832.9441
-        y: 85.58443
+        x: 1894.7283
+        y: 97.02592
         width: 160
         height: 30
     - id: 88
@@ -22821,13 +23233,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Me alegro mucho por t\xED. Todas nosotras, vaya. Esperamos que tengas
-          un buen viaje y que nos podamos volver a ver."
+        value: Me alegro mucho por ti, todas nosotras vaya.
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: I'm very happy for you. All of us, in fact. We hope you have a good
-          trip and that we can see each other again.
+        value: I'm very happy for you, all of us.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -22853,7 +23263,7 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 88
         destinationConversationID: 5
-        destinationDialogueID: 90
+        destinationDialogueID: 107
         isConnector: 0
         priority: 2
       conditionsString: "(CurrentQuestState(\"Ll\xE9vale la comida a la pareja de
@@ -22865,8 +23275,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1743.7573
-        y: 184.19464
+        x: 1899.9609
+        y: 196.70908
         width: 160
         height: 30
     - id: 89
@@ -22892,12 +23302,12 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Estupendo. Con la mala leche que tengo encima mejor que te busques
-          otro sitio para ir por ah\xED dando tumbos e incordiando a la gente."
+        value: "Estupendo, con la mala leche que tengo encima... Mejor que te busques
+          otro sitio para ir por ah\xED dando tumbos e incordiar a la gente."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Great. With the bad mood I'm in, you'd better find somewhere else
+        value: Great, with the bad mood I'm in... You'd better find somewhere else
           to go stumbling around and bothering people.
         type: 4
         typeString: CustomFieldType_Localization
@@ -22934,8 +23344,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1933.706
-        y: 182.34103
+        x: 2089.9082
+        y: 193.8045
         width: 160
         height: 30
     - id: 90
@@ -22961,12 +23371,12 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "A lo lejos se escucha un estruendo terrible. Un rugido profundo que
-          hace temblar el suelo y la carrocer\xEDa del coche."
+        value: "A lo lejos se escucha un estruendo colosal. Un rugido profundo que
+          hace temblar el suelo y tu carrocer\xEDa."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: In the distance, a terrible roar can be heard. A deep rumble that
+        value: In the distance, a colossal roar can be heard. A deep rumble that
           makes the ground and your car body shake.
         type: 4
         typeString: CustomFieldType_Localization
@@ -23003,8 +23413,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1743.7573
-        y: 234.19464
+        x: 1903.2025
+        y: 398.4857
         width: 160
         height: 30
     - id: 91
@@ -23030,15 +23440,13 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Ah claro, Maria Antonia no ha podido venir a despedirse porque est\xE1
-          sepultada. Creo que te est\xE1 diciendo que tengas cuidado y que suerte
-          desde el otro lado del puente."
+        value: "Maria Antonia est\xE1 triste porque no ha podido venir a despedirte.
+          Te dice que tengas cuidado y que vuelvas a contarle tus aventuras."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Oh, of course, Maria Antonia couldn't come to say goodbye because
-          she's buried. I think she's telling you to be careful and wishing you luck
-          from the other side of the bridge.
+        value: Maria Antonia is sad because she couldn't come to say goodbye. She's
+          telling you to be careful and to come back and tell her about your adventures.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -23074,8 +23482,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1743.7573
-        y: 284.19464
+        x: 1903.2025
+        y: 451.64035
         width: 160
         height: 30
     - id: 92
@@ -23101,15 +23509,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "El terrible alarido no es inteligible. Sin embargo, poniendo atenci\xF3n,
-          te alcanza la sensaci\xF3n de que es un mensaje lleno de apreciaci\xF3n
-          y buenas intenciones."
+        value: "El colosal alarido no es inteligible y te hace vibrar el coraz\xF3n.
+          Poniendo atenci\xF3n, te da la sensaci\xF3n de que es un mensaje lleno
+          de apreciaci\xF3n y buenas intenciones."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: The terrible scream is unintelligible. However, if you listen carefully,
-          you get the feeling that it is a message full of appreciation and good
-          intentions.
+        value: The colossal scream is unintelligible and make your heart shake. However,
+          if you listen carefully, you get the feeling that it is a message full
+          of appreciation and good intentions.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -23135,7 +23543,7 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 92
         destinationConversationID: 5
-        destinationDialogueID: 95
+        destinationDialogueID: 110
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -23145,8 +23553,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1743.7573
-        y: 334.19464
+        x: 1904.2726
+        y: 502.78397
         width: 160
         height: 30
     - id: 93
@@ -23172,13 +23580,13 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Me he tenido que traer a estas a este sitio na m\xE1s que para no
-          aguantar a la Mar\xEDa Antonia que estaba s\xFAper pesada."
+        value: "Me he tenido que traer a \xE9stas aqu\xED por no aguantar a la Maria
+          Antonia que estaba s\xFAper pesada."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: "I had to bring them here just to get away from Mar\xEDa Antonia,
-          who was being really annoying."
+        value: I had to bring them here just to get away from Maria Antonia, who
+          was being really annoying.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -23204,7 +23612,7 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 93
         destinationConversationID: 5
-        destinationDialogueID: 94
+        destinationDialogueID: 112
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -23214,78 +23622,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1933.706
-        y: 232.34103
-        width: 160
-        height: 30
-    - id: 94
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 19
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "Por las caras que te est\xE1n poniendo las otras jugadoras, deduces
-          que la pobre Maria Antonia no estaba siendo tan pesada y Manoli probablemente
-          haya liado alg\xFAn pifostio."
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: "From the looks on the other players' faces, you deduce that poor
-          Mar\xEDa Antonia wasn't being so annoying and Manoli probably made a scene."
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 5
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 5
-        originDialogueID: 94
-        destinationConversationID: 5
-        destinationDialogueID: 95
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1932.5923
-        y: 282.34103
+        x: 2089.977
+        y: 246.43103
         width: 160
         height: 30
     - id: 95
@@ -23311,11 +23649,12 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Bueno, igualmente... Ten cuidado por ah\xED."
+        value: "Bueno, igualmente... Ten cuidado por ah\xED y no me des m\xE1s disgustos
+          de los que ya tengo."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Well, anyway... Be careful out there.
+        value: Well, anyway... Be careful out there and don't give me any more trouble.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -23351,8 +23690,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1932.206
-        y: 373.84103
+        x: 2090.5803
+        y: 500.24567
         width: 160
         height: 30
     - id: 96
@@ -23521,11 +23860,13 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Tras la despedida, las se\xF1oras vuelven a su partida."
+        value: "Te das cuenta de que aunque enfadada, la se\xF1ora est\xE1 un poco
+          preocupada por ti. No quiere que te pase nada malo."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: After this goodbye, they turn back to their game.
+        value: You realize that even though she is angry, the lady is a little worried
+          about you. She doesn't want anything bad to happen to you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -23555,13 +23896,1150 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1931.405
-        y: 423.84103
+        x: 2089.779
+        y: 552.3672
+        width: 160
+        height: 30
+    - id: 99
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Pues ya te vale, \xBFya podr\xEDas haber saludado o algo no? Vas
+          por ah\xED y no nos dices ni hola, que falta de educaci\xF3n."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Come on, you could have said hello or something, couldn't you? You're
+          walking around and you don't even say hello to us, how rude.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 99
+        destinationConversationID: 5
+        destinationDialogueID: 100
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["HabladoMonstruas"] == false
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1700.2227
+        y: 195.08014
+        width: 160
+        height: 30
+    - id: 100
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: La verdad es que no cuesta nada saludar.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: It costs nothing to say hello.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 100
+        destinationConversationID: 5
+        destinationDialogueID: 101
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1700.2227
+        y: 245.08014
+        width: 160
+        height: 30
+    - id: 101
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ni un poco.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Not even a bit.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 101
+        destinationConversationID: 5
+        destinationDialogueID: 102
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1701.2742
+        y: 295.08014
+        width: 160
+        height: 30
+    - id: 102
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Bueno, tendr\xE1 prisa la criatura."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Don't be harsh, the child must be in a hurry.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 102
+        destinationConversationID: 5
+        destinationDialogueID: 103
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1700.2227
+        y: 345.08014
+        width: 160
+        height: 30
+    - id: 103
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Ni prisa ni nada. Encima que vas a buscar a la Magdalenita... Ya
+          nos podr\xEDas haber preguntado o algo."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: There is no excuse. On top of that, you're going to look for Magdalenita...
+          You could have asked us or something.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 103
+        destinationConversationID: 5
+        destinationDialogueID: 104
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1700.2227
+        y: 395.08014
+        width: 160
+        height: 30
+    - id: 104
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Lo siento...
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I'm sorry...
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 104
+        destinationConversationID: 5
+        destinationDialogueID: 105
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1700.2227
+        y: 445.08014
+        width: 160
+        height: 30
+    - id: 105
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Bueno anda, vete, que llevo un cabreo encima que ni te cuento. Y ten
+          cuidado.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Well, get out of here, I'm so pissed off... And be careful.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 105
+        destinationConversationID: 5
+        destinationDialogueID: 106
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1700.2227
+        y: 495.08014
+        width: 160
+        height: 30
+    - id: 106
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Aunque enfadada, te das cuenta de que la se\xF1ora est\xE1 un poco
+          preocupada por ti. Esperaba haberte conocido m\xE1s."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Although angry, you realize that the woman is a little worried about
+          you. She was hoping to get to know you better.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1700.2227
+        y: 546.16595
+        width: 160
+        height: 30
+    - id: 107
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Ten buen viaje cielo.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Have a good trip sweetheart.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 107
+        destinationConversationID: 5
+        destinationDialogueID: 108
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1899.9609
+        y: 246.70908
+        width: 160
+        height: 30
+    - id: 108
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Ten cuidado por ah\xED, que hay mucha gente rara."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Be careful out there, there are a lot of strange people around.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 108
+        destinationConversationID: 5
+        destinationDialogueID: 109
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1899.9609
+        y: 296.70908
+        width: 160
+        height: 30
+    - id: 109
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Vuelve a visitarnos, que con las prisas no te has jugado ni una partidita.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Come back and visit us again, we didn't even play a single game with
+          you.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 109
+        destinationConversationID: 5
+        destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1899.9609
+        y: 347.77917
+        width: 160
+        height: 30
+    - id: 110
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Muchas gracias a todas.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Thank you all.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 110
+        destinationConversationID: 5
+        destinationDialogueID: 111
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1903.2025
+        y: 552.78394
+        width: 160
+        height: 30
+    - id: 111
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Las se\xF1oras vuelven a la partida y ves que hacen un esfuerzo por
+          no mostrar la tristeza que sienten. Te han cogido mucho cari\xF1o."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: The ladies return to the game and you see that they are making an
+          effort not to show how sad they feel. They have grown very fond of you.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1905.343
+        y: 605.9941
+        width: 160
+        height: 30
+    - id: 112
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Bueno, es que te has puesto...
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Well, you've just gotten in a mood...
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 112
+        destinationConversationID: 5
+        destinationDialogueID: 113
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2089.977
+        y: 296.43103
+        width: 160
+        height: 30
+    - id: 113
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Muy pesada, muy pesada...
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Very annoying, very annoying...
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 113
+        destinationConversationID: 5
+        destinationDialogueID: 114
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2089.977
+        y: 347.48254
+        width: 160
+        height: 30
+    - id: 114
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "No habl\xE9is mucho que se va a poner peor."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Don't say too much, or it will only get worse.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 114
+        destinationConversationID: 5
+        destinationDialogueID: 115
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2091.0286
+        y: 395.37952
+        width: 160
+        height: 30
+    - id: 115
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 9
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\xBFEst\xE1is hoy pesaditas eh?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: You are being a bit of a pain today, huh?
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 115
+        destinationConversationID: 5
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2091.0286
+        y: 445.37952
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1161.2772, y: 0}
-    canvasZoom: 1.2484983
+    canvasScrollPosition: {x: 1485.9578, y: 99.89391}
+    canvasZoom: 0.95100915
   - id: 4
     fields:
     - title: Title
@@ -30407,8 +31885,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1327.687
-        y: 131.82097
+        x: 1548.3539
+        y: 122.13316
         width: 160
         height: 30
     - id: 53
@@ -30470,8 +31948,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1565.2383
-        y: 128.2517
+        x: 1786.9816
+        y: 118.56389
         width: 160
         height: 30
     - id: 54
@@ -30531,14 +32009,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["FarewellCounter"] + 1;
+
+        Variable["EnterradoraDespedida"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1325.5092
-        y: 182.41562
+        x: 1547.2524
+        y: 172.72781
         width: 160
         height: 30
     - id: 55
@@ -30570,7 +32051,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: en
         value: Yes, yes, that's what they tell me. That's great. I'm sure there are
-          interesting things in store for you later on.
+          interesting things ahead for you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -30596,7 +32077,13 @@ MonoBehaviour:
       - originConversationID: 11
         originDialogueID: 55
         destinationConversationID: 11
-        destinationDialogueID: 56
+        destinationDialogueID: 59
+        isConnector: 0
+        priority: 2
+      - originConversationID: 11
+        originDialogueID: 55
+        destinationConversationID: 11
+        destinationDialogueID: 60
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -30606,8 +32093,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1327.9364
-        y: 232.41562
+        x: 1549.6797
+        y: 222.72781
         width: 160
         height: 30
     - id: 56
@@ -30633,13 +32120,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Las arrugas de su amable rostro acent\xFAan a\xFAn m\xE1s la expresi\xF3n.
+        value: "Las arrugas de su amable rostro acent\xFAan a\xFAn m\xE1s su expresi\xF3n
+          mientras te mira en lo m\xE1s profundo de tu interior con sus ojos grises.
           Se apena de verte marchar."
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: The wrinkles on his kind face accentuate his expression even more.
-          She is sad to see you leave.
+        value: The wrinkles on his kind face accentuate his expression even more
+          while looking deep into your soul with her gray eyes. She is sad to see
+          you go.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -30675,8 +32164,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1327.0334
-        y: 282.41565
+        x: 1659.3734
+        y: 442.64194
         width: 160
         height: 30
     - id: 57
@@ -30702,12 +32191,12 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Me pregunto... \xBFqu\xE9 pasar\xE1 con los muertos m\xE1s all\xE1
+        value: "Me pregunto... \xBFQu\xE9 pasar\xE1 con los muertos m\xE1s all\xE1
           del t\xFAnel?"
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: I wonder... what will happen to the dead beyond the tunnel?
+        value: I wonder... What will happen to the dead beyond the tunnel?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -30737,17 +32226,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
-
-        Variable["EnterradoraDespedida"]
-        = true'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1327.0334
-        y: 332.4156
+        x: 1552.0493
+        y: 532.9979
         width: 160
         height: 30
     - id: 58
@@ -30808,13 +32294,422 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1327.0334
-        y: 382.4156
+        x: 1552.0493
+        y: 582.9979
+        width: 160
+        height: 30
+    - id: 59
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 12
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "La pr\xF3xima vez que vengas por aqu\xED, p\xE1sate por el cementerio
+          y charlamos un rato."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Next time you're in <b>The Grime</b>, why don't you stop by the cemetery
+          and we can chat for a while?
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 59
+        destinationConversationID: 11
+        destinationDialogueID: 62
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["HabladoEnterradora"] == false
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1445.8401
+        y: 286.41028
+        width: 160
+        height: 30
+    - id: 60
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 12
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\xBFQu\xE9 crees que vas a llevar all\xE1 donde vas? \xBFAlegr\xEDa
+          o tristeza?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: What do you think you will take with you wherever you go? Joy or sadness?
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 60
+        destinationConversationID: 11
+        destinationDialogueID: 64
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["HabladoEnterradora"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1659.0266
+        y: 284.47964
+        width: 160
+        height: 30
+    - id: 62
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 12
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Claro, as\xED lo har\xE9."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Sure, I will.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 62
+        destinationConversationID: 11
+        destinationDialogueID: 63
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1444.8351
+        y: 336.41028
+        width: 160
+        height: 30
+    - id: 63
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 19
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Las arrugas de su amable rostro acent\xFAan a\xFAn m\xE1s su expresi\xF3n
+          afable."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: The wrinkles on his kind face accentuate his affable expression even
+          more.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 63
+        destinationConversationID: 11
+        destinationDialogueID: 57
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1445.8401
+        y: 386.41028
+        width: 160
+        height: 30
+    - id: 64
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 12
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Em...
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Um...
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 64
+        destinationConversationID: 11
+        destinationDialogueID: 65
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1659.0266
+        y: 333.4466
+        width: 160
+        height: 30
+    - id: 65
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 12
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Es una pregunta sin respuesta cielo. Hasta que no lo vivas no lo
+          sabr\xE1s."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: It's a question with no answer, honey. Until you experience it, you
+          won't know.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 11
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 11
+        originDialogueID: 65
+        destinationConversationID: 11
+        destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1659.0266
+        y: 384.47964
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1001.7863, y: 75.95399}
-    canvasZoom: 1.1675013
+    canvasScrollPosition: {x: 1179.2837, y: 93.21279}
+    canvasZoom: 0.95299846
   - id: 12
     fields:
     - title: Title
