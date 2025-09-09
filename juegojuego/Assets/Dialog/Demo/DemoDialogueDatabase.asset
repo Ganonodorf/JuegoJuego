@@ -19032,11 +19032,11 @@ MonoBehaviour:
       - title: Title
         value: Mus3
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 6
         type: 5
@@ -19048,17 +19048,17 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: No hay mus.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 'SetActive(CamaraAnamari,false);
 
           SetActive(CamaraPaqui,true)'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: en
         value: No mus.
         type: 4
@@ -19066,11 +19066,11 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Response Menu Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Menu Text en
         value: 
         type: 4
@@ -23381,11 +23381,13 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraConchaENDING,false);
+
+          SetActive(LandscapeCamera,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: f7907989-1a0f-4d57-a730-47533e36fac4
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
@@ -23590,11 +23592,13 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraManoliENDING,false);
+
+          SetActive(LandscapeCamera,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: b96632c9-bd78-4378-87eb-bb606b0589bd
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
@@ -23662,7 +23666,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 6b9b21f4-5a3e-4e6d-96df-1bf767a92b79
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
@@ -24000,7 +24004,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraManoliENDING,false);
+
+          SetActive(CamaraAnamariENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24067,7 +24073,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraAnamariENDING,false);
+
+          SetActive(CamaraPaquiENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24134,7 +24142,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraPaquiENDING,false);
+
+          SetActive(CamaraConchaENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24167,7 +24177,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1700.2227
-        y: 345.08014
+        y: 343.87677
         width: 160
         height: 30
     - id: 103
@@ -24203,7 +24213,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraConchaENDING,false);
+
+          SetActive(CamaraPaquiENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24468,7 +24480,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraManoliENDING,false);
+
+          SetActive(CamaraAnamariENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24535,7 +24549,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraAnamariENDING,false);
+
+          SetActive(CamaraPaquiENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24603,7 +24619,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraPaquiENDING,false);
+
+          SetActive(CamaraConchaENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24636,7 +24654,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1899.9609
-        y: 347.77917
+        y: 346.5758
         width: 160
         height: 30
     - id: 110
@@ -24670,7 +24688,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(LandscapeCamera,false);
+
+          SetActive(CamaraManoliENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24800,7 +24820,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(LandscapeCamera,false);
+
+          SetActive(CamaraAnamariENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24833,7 +24855,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2089.977
-        y: 296.43103
+        y: 297.6344
         width: 160
         height: 30
     - id: 113
@@ -24867,7 +24889,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraAnamariENDING,false);
+
+          SetActive(CamaraPaquiENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -24900,7 +24924,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2089.977
-        y: 347.48254
+        y: 348.6859
         width: 160
         height: 30
     - id: 114
@@ -24934,7 +24958,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraPaquiENDING,false);
+
+          SetActive(CamaraConchaENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -25001,7 +25027,9 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
-        value: 
+        value: 'SetActive(CamaraConchaENDING,false);
+
+          SetActive(CamaraManoliENDING,true)'
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -25038,8 +25066,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 369.83167, y: 0}
-    canvasZoom: 0.8010093
+    canvasScrollPosition: {x: 1420.7415, y: 38.697666}
+    canvasZoom: 0.83100927
   - id: 4
     fields:
     - title: Title
@@ -50897,8 +50925,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1981.9722, y: 0}
-    canvasZoom: 0.72453076
+    canvasScrollPosition: {x: 2269.137, y: 85.35449}
+    canvasZoom: 0.9645305
   - id: 16
     fields:
     - title: Title
