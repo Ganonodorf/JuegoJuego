@@ -4,6 +4,7 @@ using UnityEngine;
 using Constantes;
 using System;
 using PixelCrushers.DialogueSystem;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class UIManager : MonoBehaviour
 
     private GameObject botonInventarioGO;
     private GameObject notificacionInventarioGO;
+
+    private GameObject iconoNotificacionInventarioGO;
 
     private IEnumerator moverBotonInventarioRoutine;
     private IEnumerator moverNotificacionInventarioRoutine;
@@ -39,23 +42,15 @@ public class UIManager : MonoBehaviour
 
         SuscribirseEventos();
 
-        LocalizarMensajes();
+        CargarMensajes();
     }
 
-    private void LocalizarMensajes()
+    private void CargarMensajes()
     {
-        if(Localization.language == "en"){
-            objetoRecogidoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO_EN;
-            objetoSoltadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO_EN;
-            objetoFocuseadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO_EN;
-            inventarioLlenoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO_EN;
-        }
-        else{
-            objetoRecogidoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO;
-            objetoSoltadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO;
-            objetoFocuseadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO;
-            inventarioLlenoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO;
-        }
+        objetoRecogidoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO;
+        objetoSoltadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO;
+        objetoFocuseadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO;
+        inventarioLlenoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO;
     }
 
     private void GameManager_OnGameStateChanged(GameState nuevoEstado, GameState anteriorEstado)
@@ -67,6 +62,7 @@ public class UIManager : MonoBehaviour
             {
                 StopCoroutine(moverBotonInventarioRoutine);
             }
+            
             moverBotonInventarioRoutine = OcultarBotonInventarioCoroutine();
             StartCoroutine(moverBotonInventarioRoutine);
         }
@@ -81,6 +77,7 @@ public class UIManager : MonoBehaviour
             moverBotonInventarioRoutine = MostrarBotonInventarioCoroutine();
             StartCoroutine(moverBotonInventarioRoutine);
 
+            iconoNotificacionInventarioGO.GetComponent<Image>().enabled = false;
             EjecutarNotificacion(string.Empty, OcultarNotificacionInventarioCoroutine());
         }
 
@@ -92,18 +89,34 @@ public class UIManager : MonoBehaviour
 
     private void InventarioManager_OnInventarioChanged(InventarioMensajes mensaje)
     {
+        if(Localization.language == "en"){
+            objetoRecogidoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO_EN;
+            objetoSoltadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO_EN;
+            objetoFocuseadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO_EN;
+            inventarioLlenoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO_EN;
+        }
+        else{
+            objetoRecogidoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_RECOGIDO;
+            objetoSoltadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJETO_SOLTADO;
+            objetoFocuseadoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_OBJ_FOCUSEADO;
+            inventarioLlenoLocalizado = Constantes.Inventario.UI.TEXTO_NOTIFICACION_INV_LLENO;
+        }
         switch (mensaje)
         {
             case InventarioMensajes.ObjetoAgregado:
+                iconoNotificacionInventarioGO.GetComponent<Image>().enabled = false;
                 EjecutarNotificacion(objetoRecogidoLocalizado, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.ObjetoSoltado:
+                iconoNotificacionInventarioGO.GetComponent<Image>().enabled = false;
                 EjecutarNotificacion(objetoSoltadoLocalizado, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.ObjetoFocuseado:
+                iconoNotificacionInventarioGO.GetComponent<Image>().enabled = true;
                 EjecutarNotificacion(objetoFocuseadoLocalizado, MostrarNotificacionInventarioCoroutine());
                 break;
             case InventarioMensajes.InventarioLleno:
+                iconoNotificacionInventarioGO.GetComponent<Image>().enabled = false;
                 EjecutarNotificacion(inventarioLlenoLocalizado, MostrarYOcultarNotificacionInventarioCoroutine());
                 break;
             default:
@@ -250,5 +263,6 @@ public class UIManager : MonoBehaviour
     {
         botonInventarioGO = GameObject.FindGameObjectWithTag(Inventario.UI.TAG_ICONO_INVENTARIO);
         notificacionInventarioGO = GameObject.FindGameObjectWithTag(Inventario.UI.TAG_NOTIFICACION_INVENTARIO);
+        iconoNotificacionInventarioGO = notificacionInventarioGO.GetComponentInChildren<Image>().gameObject;
     }
 }

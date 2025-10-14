@@ -16,17 +16,17 @@ MonoBehaviour:
   - Default
   - en
   m_languageValues: 0000000001000000
-  m_fieldKeys: 010000000200000006000000070000001e0000001c0000001d000000080000001f0000000400000012000000050000000d0000000a0000000f0000000e0000000b0000001100000010000000130000001400000015000000160000001700000018000000190000001a0000001b00000020000000
+  m_fieldKeys: 010000000200000006000000070000001e0000001c0000001d000000080000001f0000000400000012000000050000000d0000000a0000000f0000000e0000000b0000001100000010000000130000001400000015000000160000001700000018000000190000001a0000001b00000022000000
   m_fieldValues:
   - m_fieldName: Jugar
     m_keys: 0000000001000000
     m_values:
     - 
     - Play
-  - m_fieldName: Salir
+  - m_fieldName: "Salir del juego<br>(perder\xE1s el progreso)"
     m_keys: 0100000000000000
     m_values:
-    - Exit
+    - Exit game<br>(you'll lose all progress)
     - 
   - m_fieldName: Continuar
     m_keys: 0100000000000000
@@ -159,10 +159,10 @@ MonoBehaviour:
     m_values:
     - Thank you very much for playing! If you liked it leave us a comment on Itch.Io.<br><br>@ColectRayente<br>@JuanmaHalo<br>@Juanjo_GarBas
     - 
-  - m_fieldName: Objeto recogido
-    m_keys: 0100000000000000
+  - m_fieldName: '- Recoger objeto'
+    m_keys: 0000000001000000
     m_values:
-    - Item picked up
     - 
+    - '- Pick up item'
   m_nextLanguageID: 3
-  m_nextFieldID: 33
+  m_nextFieldID: 35
