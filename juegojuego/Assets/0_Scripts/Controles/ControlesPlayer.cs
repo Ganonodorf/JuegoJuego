@@ -197,6 +197,39 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""D-pad left right"",
+                    ""id"": ""de734c40-7980-4cbc-aa36-cfcc0da94987"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""4dac977f-8bf6-41f3-94ec-fca5dd042160"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""93c4efcd-5c90-402e-aefc-769ee0075806"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""aec1b45b-0f3b-4cf8-b52d-8c7240289233"",
                     ""path"": ""<Gamepad>/buttonSouth"",
@@ -790,21 +823,21 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Arriba"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""550c0531-0ab2-477a-8065-7a950a37fd62"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Abajo"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""1bd1d002-0d8b-4d8c-94e8-62bfe81867d6"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Seleccion"",
@@ -1077,6 +1110,61 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""ed2b80a7-5f02-45ec-b15c-29dcea5000b2"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""c55f7732-9b1d-4561-b4e6-780910ea23fc"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""6e2fb970-0d32-4b52-8eec-13b4bdedd74f"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""947d3b92-7754-4752-8e4d-bb0227466471"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""1b0189da-699d-411f-92b9-76c4a3a008f4"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovimientoLateral"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": ""Gatillos"",
                     ""id"": ""08e334cc-0a73-4281-88dc-2becbcdb6608"",
                     ""path"": ""2DVector(mode=2)"",
@@ -1282,7 +1370,7 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""MovimientoDer"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""8fed8cdb-867e-4eda-af21-1e36edd61509"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -1291,12 +1379,12 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""MovimientoIzq"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""c35e9715-9d30-4d0a-90d4-2832b4e179a5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Accion"",
@@ -1318,21 +1406,21 @@ public partial class @ControlesPlayer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Arriba"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""f51dc570-2cf9-4862-b986-959972f8ed30"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Abajo"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""c6654285-7662-4c21-a94b-51ec05627797"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""UnPause"",
