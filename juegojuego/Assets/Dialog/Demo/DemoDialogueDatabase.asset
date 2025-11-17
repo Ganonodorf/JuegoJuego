@@ -10525,7 +10525,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["FeligresaDespedida"] = true;
 
-        ["FarewellCounter"]
+        Variable["FarewellCounter"]
         = Variable["FarewellCounter"] + 1'
       onExecute:
         m_PersistentCalls:
@@ -11473,7 +11473,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 930.00684, y: 0}
     canvasZoom: 0.8214992
   - id: 6
     fields:
@@ -23197,7 +23197,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["FarewellCounter"] + 1;
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
 
         Variable["MonstruasDespedida"]
         = true'
@@ -25066,7 +25066,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1420.7415, y: 38.697666}
+    canvasScrollPosition: {x: 1279.9492, y: 0}
     canvasZoom: 0.83100927
   - id: 4
     fields:
@@ -32037,7 +32037,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["FarewellCounter"] + 1;
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
 
         Variable["EnterradoraDespedida"]
         = true'
@@ -32736,7 +32736,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 306.01825, y: 0}
+    canvasScrollPosition: {x: 951.03625, y: 5.599121}
     canvasZoom: 0.8929985
   - id: 12
     fields:
@@ -36733,8 +36733,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1631.9519, y: 0}
-    canvasZoom: 0.7480154
+    canvasScrollPosition: {x: 1855.7977, y: 110.06214}
+    canvasZoom: 0.9940126
   - id: 13
     fields:
     - title: Title
@@ -42294,7 +42294,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 269.94672, y: 0}
+    canvasScrollPosition: {x: 1206.5214, y: 446.10898}
     canvasZoom: 0.7890446
   - id: 14
     fields:
@@ -45873,7 +45873,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 1265.844, y: 50.028748}
     canvasZoom: 0.85950536
   - id: 15
     fields:
@@ -50789,7 +50789,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["ChatarreroViajeroDespedido"] = true
+      userScript: 'Variable["ChatarreroViajeroDespedido"] = true;
 
         Variable["FarewellCounter"]
         = Variable["FarewellCounter"] + 1'
@@ -50938,8 +50938,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 221.91064, y: 0}
-    canvasZoom: 1.0905288
+    canvasScrollPosition: {x: 2029.9927, y: 0}
+    canvasZoom: 0.84352756
   - id: 16
     fields:
     - title: Title
