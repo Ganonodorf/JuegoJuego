@@ -16,6 +16,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject exitButton;
     [SerializeField] private GameObject sliderX;
     [SerializeField] private GameObject sliderY;
+    [SerializeField] private GameObject sliderVolume;
 
     [SerializeField] private GameObject camaraExteriores;
     [SerializeField] private GameObject camaraInteriores;
@@ -145,6 +146,7 @@ public class PauseManager : MonoBehaviour
             && EventSystem.current.currentSelectedGameObject != exitButton
             && EventSystem.current.currentSelectedGameObject != sliderX
             && EventSystem.current.currentSelectedGameObject != sliderY
+            && EventSystem.current.currentSelectedGameObject != sliderVolume
             )
             resumeButton.GetComponent<Button>().Select();
     }

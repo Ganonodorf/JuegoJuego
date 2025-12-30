@@ -496,11 +496,11 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name
-      value: "<color=#4748F5>Do\xF1a Candelaria</color>"
+      value: "<color=#7878FF>Do\xF1a Candelaria</color>"
       type: 0
       typeString: CustomFieldType_Text
     - title: Display Name en
-      value: <color=#4748F5>Mrs. Candelaria</color>
+      value: <color=#7878FF>Mrs. Candelaria</color>
       type: 0
       typeString: CustomFieldType_Localization
     - title: NodeColor
@@ -10525,7 +10525,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["FeligresaDespedida"] = true;
 
-        ["FarewellCounter"]
+        Variable["FarewellCounter"]
         = Variable["FarewellCounter"] + 1'
       onExecute:
         m_PersistentCalls:
@@ -11473,7 +11473,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 930.00684, y: 0}
     canvasZoom: 0.8214992
   - id: 6
     fields:
@@ -23197,7 +23197,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["FarewellCounter"] + 1;
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
 
         Variable["MonstruasDespedida"]
         = true'
@@ -25066,8 +25066,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1420.7415, y: 38.697666}
-    canvasZoom: 0.83100927
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8140086
   - id: 4
     fields:
     - title: Title
@@ -31807,7 +31807,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: The gravedigger looks at you, scrutinizing your soul.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -32037,7 +32037,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["FarewellCounter"] + 1;
+      userScript: 'Variable["FarewellCounter"] = Variable["FarewellCounter"] + 1;
 
         Variable["EnterradoraDespedida"]
         = true'
@@ -32736,7 +32736,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 306.01825, y: 0}
+    canvasScrollPosition: {x: 2.239624, y: 1.119812}
     canvasZoom: 0.8929985
   - id: 12
     fields:
@@ -36733,8 +36733,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2002.6083, y: 39.869137}
-    canvasZoom: 0.9870169
+    canvasScrollPosition: {x: 1855.7977, y: 110.06214}
+    canvasZoom: 0.9940126
   - id: 13
     fields:
     - title: Title
@@ -37484,7 +37484,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: You see? This is nor radioactive. Mi detector is not beeping. Although
+        value: You see? This is not radioactive. Mi detector is not beeping. Although
           it does emit some kind of weird energy. It's giving me a tingling in mi
           arm.
         type: 4
@@ -42294,8 +42294,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 269.94672, y: 0}
-    canvasZoom: 0.7890446
+    canvasScrollPosition: {x: 416.83484, y: 0}
+    canvasZoom: 0.8900404
   - id: 14
     fields:
     - title: Title
@@ -42530,7 +42530,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 204.49806
-        y: 136.83522
+        y: 135.67177
         width: 160
         height: 30
     - id: 2
@@ -43142,7 +43142,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 
+        value: Do you know where the artist who has disappeared lives? She's the
+          one who made the malino from before.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -43214,7 +43215,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 
+        value: Yes. Her house is just outside the compound. Behind the fence.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -43285,7 +43286,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 
+        value: Can you open the gate for me?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -43356,7 +43357,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 
+        value: Yes, of course. Right after my appointment.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -45055,7 +45056,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Um... yes, yes... Yes?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -45149,7 +45150,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ah! That's a funny one. I don't know where she is, but you can expect
+          anything from her. More than once I've seen her talking to herself on the
+          beach. I asked her about it and she said she was talking to a fish. The
+          shameless woman!
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -45217,7 +45221,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: The old woman gets upset and starts shouting. She is not only angry,
+          she is also worried.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -45282,11 +45287,13 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "\xA1Y me dice que la loca soy yo! \xA1Yo! Ay ay ay\u2026 Y, \xBFd\xF3nde
           se habr\xE1 metido ahora? \xA1No creo que se haya atrevido a irse para
-          El Pueblo! \xA1Espero que no!\r"
+          <b>El Pueblo</b>! \xA1Espero que no!\r"
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: And she tells me I'm the crazy one! Me! Oh dear... Where could she
+          have gone now? I don't think she dared to go to <b>The Town</b>! I hope
+          not!
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -45353,7 +45360,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Well, I just have to go to her house. Do you know where it is?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -45866,7 +45873,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1350.777, y: 50.02881}
+    canvasScrollPosition: {x: 1265.844, y: 50.028748}
     canvasZoom: 0.85950536
   - id: 15
     fields:
@@ -47361,7 +47368,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1749.2926
-        y: 280.99292
+        y: 280.07593
         width: 160
         height: 30
     - id: 25
@@ -49513,7 +49520,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ah, Yes. But she looks disoriented or something... I can't get her
+          to open the gate.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -50782,7 +50790,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["ChatarreroViajeroDespedido"] = true
+      userScript: 'Variable["ChatarreroViajeroDespedido"] = true;
 
         Variable["FarewellCounter"]
         = Variable["FarewellCounter"] + 1'
@@ -50931,8 +50939,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 152.21973, y: 0}
-    canvasZoom: 1.0905288
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8325265
   - id: 16
     fields:
     - title: Title
@@ -52437,11 +52445,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 15
         type: 5
@@ -52453,15 +52461,15 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: JAJAJA. Hola.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: en
         value: HAHAHA. Hello.
         type: 4
@@ -52469,11 +52477,11 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Response Menu Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Menu Text en
         value: 
         type: 4
@@ -53217,7 +53225,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.96750534
+    canvasZoom: 0.8320048
   - id: 17
     fields:
     - title: Title
@@ -54172,11 +54180,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 19
         type: 5
@@ -54188,19 +54196,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Las olas rompen contra el metal oxidado.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: Continue()@4
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
         value: b3ea8990-a1d7-4353-8c1b-3a828b85e018
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: en
         value: Waves break against rusted metal.
         type: 4
@@ -54208,7 +54216,7 @@ MonoBehaviour:
       - title: Response Menu Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Menu Text en
         value: 
         type: 4
