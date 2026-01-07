@@ -731,7 +731,7 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: Display Name en
       value: 
-      type: 4
+      type: 0
       typeString: CustomFieldType_Localization
     - title: Display Name
       value: 
@@ -2046,6 +2046,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -2115,6 +2119,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -2182,6 +2190,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -2249,6 +2261,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 19
       isRoot: 0
       isGroup: 0
@@ -3466,7 +3482,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: BROTHERS! Since the day of <b>The Trial</b>, we have been here worshipping
+        value: BROTHERS! Since the day of <b>The Trial</b> we have been here worshipping
           our <b>Beloved</b>. This new fixed bicifix, built with our own hands, is
           the symbol that unites us to him.
         type: 4
@@ -4419,7 +4435,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Since we are all here and have paid our dues, we are the only ones
+        value: Since we are all here and have paid the due, we are the only ones
           in <b>The Grime</b> who have chosen the right path.
         type: 4
         typeString: CustomFieldType_Localization
@@ -4566,7 +4582,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: That is why this symbol of love and our sacrifice makes this parish
+        value: That is why this symbol of love and our sacrifice makes this church
           a holy place of...
         type: 4
         typeString: CustomFieldType_Localization
@@ -5020,8 +5036,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: <b>The Beloved</b> thanks you, is indebted to you, and you will be
-          rewarded. To be locked inside that metal prison, you have done a great
+        value: <b>The Beloved</b> thanks you, he is indebted to you, and you will
+          be rewarded. To be locked inside that metal prison, you have done a great
           job. <b>The Beloved</b> does not forget.
         type: 4
         typeString: CustomFieldType_Localization
@@ -5093,8 +5109,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: PARISHIONERS!!! You did well to come to this parish and perform the
-          <b>Act of Faith</b>. Being in <b>The Grime</b>, this place is a haven of
+        value: PARISHIONERS!!! You did well to come to this church and perform the
+          <b>Act of faith</b>. Being in <b>The Grime</b>, this place is a haven of
           peace far from the elitist infidels of <b>The Town</b> and a lifeline for
           all the wretches who find themselves here. WE WILL BE THEIR SALVATION!!!
           OUR TRUTH IS PURE!!!
@@ -5454,7 +5470,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Of course, sister, you are already one of our Church.
+        value: Of course, sister, you are already one of our church.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -5527,9 +5543,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: While wandering around <b>The Grime</b> after performing the <b>Act
-          of Faith</b>, I saw other beings like you. They were piled up and lifeless.
-          Perhaps you will find what you need nearby.
+        value: While I was wandering around <b>The Grime</b> after performing the
+          <b>Act of Faith</b>, I saw other beings like you. They were piled up and
+          lifeless. Perhaps you will find what you need nearby.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -5886,7 +5902,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: FORGIVE HER, OH MY <b>BELOVED</b>! She knows not what she does...
+        value: FORGIVE HER, OH MY <b>BELOVED</b>! She doesn't know what she's doing...
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -5923,7 +5939,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1625.1478
-        y: 508.56
+        y: 507.54114
         width: 160
         height: 30
     - id: 48
@@ -6614,8 +6630,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 18.338806}
-    canvasZoom: 1.0414985
+    canvasScrollPosition: {x: 537.001, y: 91.75209}
+    canvasZoom: 0.8014988
   - id: 10
     fields:
     - title: Title
@@ -6789,8 +6805,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: You see a woman with her head down, muttering things under her breath.
-          She seems worried about something.
+        value: You see a woman with her head down, murmuring softly. She seems worried
+          about something.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -6862,7 +6878,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Ey... Hi? Are you ok?
+        value: Ey... Are you ok?
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -9052,7 +9068,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Are you Paco el Fabricante's partner?
+        value: Are you Paco the manufacturer's partner?
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -9482,7 +9498,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 
+        value: Oh my... That looks so delicious...
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -10366,6 +10382,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10434,6 +10454,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10496,6 +10520,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10580,6 +10608,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10648,6 +10680,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10717,6 +10753,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10784,6 +10824,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10851,6 +10895,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10918,6 +10966,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -10985,6 +11037,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -11054,6 +11110,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -11116,6 +11176,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -11183,6 +11247,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -11252,6 +11320,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -11298,7 +11370,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: They take care of me and worry about me a lot.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -11313,6 +11385,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -11380,6 +11456,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -11447,6 +11527,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -12638,7 +12722,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Hmm, let's see... This seems to work... Not as it should...
+        value: Hmm, let's see... This seems to work... Not as it should... But works...
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -12850,8 +12934,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: What do you mean, what's going on? What's wrong with you? Don't you
-          know this is a national road? You can't drive around without a driving
+        value: What do you mean with "what's going on"? What's wrong with you? Don't
+          you know this is a national road? You can't drive around without a driving
           licence or having passed a vehicle inspection.
         type: 4
         typeString: CustomFieldType_Localization
@@ -12935,7 +13019,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Menu Text en
-        value: What do you mean, a driving licence?
+        value: What do you mean with "a driving license"?
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -13649,7 +13733,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: What's wrong with you!? Don't you know this is a national road? You
+        value: What's wrong with you? Don't you know this is a national road? You
           can't drive around without a driving licence or having passed a vehicle
           inspection.
         type: 4
@@ -14155,7 +14239,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: WHAT!?
+        value: WHAT?
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -14298,7 +14382,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: SPEAK LOUDER, BOY, I CAN'T HEAR YOU WITH ALL THE NOISE MANU IS MAKING!
+        value: SPEAK LOUDER, GIRL, I CAN'T HEAR YOU WITH ALL THE NOISE MANU IS MAKING!
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -14442,7 +14526,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: WHAT DO YOU MEAN I'M MAKING NOISE!?
+        value: WHAT DO YOU MEAN I'M MAKING NOISE?
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -14517,7 +14601,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: en
         value: WELL, YOU SPEND ALL DAY AT THE TYPEWRITER, YOU DON'T EVEN STOP WHILE
-          TALKING!
+          TALKING TO ME!
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -15242,7 +15326,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: '[Shout] DO YOU HAVE ONE?!'
+        value: '[Shout] DO YOU HAVE ONE?'
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -16111,7 +16195,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: en
         value: The church priestess has asked me to fix this. Could you help me?
-          [Show them the broken bicifix].
+          [Show the broken bicifix].
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -17193,7 +17277,7 @@ MonoBehaviour:
         typeString: 
       - title: en
         value: Pff... To be honest, no, I don't like those people at all. I think
-          they're just causing problems for <b>The Grime</b>. They go around acting
+          they're just causing problems to <b>The Grime</b>. They go around acting
           like saviours, but they're just a fucking cult.
         type: 4
         typeString: CustomFieldType_Localization
@@ -17265,7 +17349,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: A very beautiful arm, I think it rings a bell...
+        value: A very beautiful arm, I think I have seen it before...
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -18550,7 +18634,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Yo have so many extra arms, Manoly. Come on, give her some. You will
+        value: Yo have so many extra arms Manoli. Come on, give her some. You will
           grow them out again anyway...
         type: 4
         typeString: CustomFieldType_Localization
@@ -18701,7 +18785,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Of course! you should have asked before.
+        value: Of course! You should have asked before.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -19279,7 +19363,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Grande, yes.
+        value: Big, yes.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -19571,7 +19655,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Take one. Chica, no.
+        value: Take one. Small, no.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -19721,7 +19805,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Quiero.
+        value: I want.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -19790,7 +19874,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Quiero.
+        value: I want.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -19863,7 +19947,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Pares no.
+        value: Pairs, no.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -20155,7 +20239,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Juego yes.
+        value: Game, yes.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -20228,7 +20312,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 
+        value: No.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -20519,7 +20603,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: What!? You have pairs!? Don't you know the rules or what?
+        value: What? You have pairs? Don't you know the rules or what?
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -20738,7 +20822,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: We win again, Anamary. We're going to fleece them today.
+        value: We win again, Anamari. We're going to fleece them today.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -20812,8 +20896,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Damn it, Paqui. It's one thing you don't remember The Trial, but you
-          see yourself everyday in the mirror...
+        value: Damn it, Paqui. It's ok you don't remember The Trial, but you see
+          yourself everyday in the mirror...
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -22661,7 +22745,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: The lady with eight arms and a bad mood called Manolu was going to
+        value: The lady with eight arms and a bad mood called Manoli was going to
           answer to the being that's embeded in the rock, but at that moment she
           notices your presence and turns towards you.
         type: 4
@@ -23040,6 +23124,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23108,6 +23196,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23170,6 +23262,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23252,6 +23348,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23323,6 +23423,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23394,6 +23498,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23463,6 +23571,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23534,6 +23646,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23605,6 +23721,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23673,6 +23793,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23742,6 +23866,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23813,6 +23941,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23885,6 +24017,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -23948,6 +24084,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24017,6 +24157,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24086,6 +24230,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24155,6 +24303,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24226,6 +24378,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24293,6 +24449,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24361,6 +24521,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24430,6 +24594,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24493,6 +24661,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24562,6 +24734,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24632,6 +24808,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24701,6 +24881,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24770,6 +24954,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24833,6 +25021,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24902,6 +25094,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -24971,6 +25167,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -25040,6 +25240,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -25756,7 +25960,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: How about you take lunch to my partner first?
+        value: How about you take the lunch to my partner first?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -25977,7 +26181,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Okay, who are they?
+        value: Okay, who is it?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -28662,7 +28866,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Are you Paco el Fabricante's partner?
+        value: Are you Paco the manufacturer's partner?
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -28955,7 +29159,7 @@ MonoBehaviour:
       - title: en
         value: We spend our lives trying to survive it, striving to achieve something
           we can call happiness. But of course, how do you achieve that? It is unique
-          to each individual; there is no secret to happiness.
+          to each individual, there is no secret to happiness.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -29028,9 +29232,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: To find your own, you must look within yourself... You see? Are you
-          following me? But you must dare to look clearly, for within you also lies
-          your greatest darkness and your shadow.
+        value: To find your own, you must look within yourself... Yes? Are you following
+          me? But you must dare to look clearly, for within you also lies your greatest
+          darkness and your shadow.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -30334,7 +30538,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: No, daughter, I am friends with everyone, but I am not anyone's partner.
+        value: No dear, I am friends with everyone, but I am not anyone's partner.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -31632,7 +31836,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 
+        value: "\xBFHmm?"
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -31736,7 +31940,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: en
         value: You feel that the lady in front of you is looking deep into your soul,
-          scrutinising your innermost being. It seems as if she understands you perfectly.
+          scrutinizing your innermost being. It seems as if she understands you perfectly.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -31891,6 +32095,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -31960,6 +32168,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32022,6 +32234,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32094,6 +32310,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32171,6 +32391,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32239,6 +32463,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32307,6 +32535,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32370,6 +32602,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32423,7 +32659,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: What do you think you will take with you wherever you go? Joy or sadness?
+        value: What do you think you will take with you wherever you go? Joy or sorrow?
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -32438,6 +32674,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32505,6 +32745,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32574,6 +32818,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32641,6 +32889,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -32710,6 +32962,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 11
       isRoot: 0
       isGroup: 0
@@ -33071,7 +33327,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: My... body... hurts.
+        value: My body... hurts...
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -34313,8 +34569,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Hm... I see. Me, I've been trying to get something interesting out
-          of these...
+        value: Hm... I see. I'm trying to get something interesting out of this...
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -35173,7 +35428,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: en
         value: It's possible that they might need somebody like you in The Town,
-          go there and find your way.
+          go there and find your way. Perhaps they know where my friend is.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -35326,6 +35581,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35436,6 +35695,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35503,6 +35766,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35570,6 +35837,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35637,6 +35908,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35704,6 +35979,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35774,6 +36053,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35841,6 +36124,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35902,6 +36189,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -35969,6 +36260,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36050,6 +36345,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36117,6 +36416,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36179,6 +36482,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36246,6 +36553,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36309,6 +36620,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36382,6 +36697,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36449,6 +36768,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36516,6 +36839,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36577,6 +36904,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36644,6 +36975,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -36707,6 +37042,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -37485,7 +37824,7 @@ MonoBehaviour:
         typeString: 
       - title: en
         value: You see? This is not radioactive. Mi detector is not beeping. Although
-          it does emit some kind of weird energy. It's giving me a tingling in mi
+          it does emit some kind of weird energy. It's giving me a tingling in my
           arm.
         type: 4
         typeString: CustomFieldType_Localization
@@ -38507,9 +38846,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: An event in the sky let the head incandescent head fall down, the
-          head that I'm searching for. A powerful head that rests somewhere around
-          here, I'm sure.
+        value: An event in the sky let the incandescent head fall down, the head
+          that I'm searching for. A powerful head that rests somewhere around here,
+          I'm sure.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -39169,7 +39508,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: A man yells.
+        value: A man is yelling at you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -39241,7 +39580,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Therefore, your existance is already defined in the obstruction of
+        value: Therefore, your existence is already defined in the obstruction of
           solar radiation that bathes the rest of The Grime.
         type: 4
         typeString: CustomFieldType_Localization
@@ -40261,6 +40600,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40328,6 +40671,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40396,6 +40743,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40463,6 +40814,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40532,6 +40887,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40603,6 +40962,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40676,6 +41039,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40749,6 +41116,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40816,6 +41187,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40885,6 +41260,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -40960,6 +41339,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41027,6 +41410,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41096,6 +41483,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41164,6 +41555,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41231,6 +41626,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41300,6 +41699,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41367,6 +41770,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41434,6 +41841,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41498,6 +41909,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -41698,8 +42113,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: What? No no no no... It can't be, the head poseses such a great evergy
-          that mere contact with it coudl desintegrate you. It can't be...
+        value: What? No no no... It can't be, the head poseses such a great evergy
+          that mere contact with it could desintegrate you. It can't be...
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -41770,7 +42185,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Well, the Catfish wasn't exactly ok really...
+        value: Well, the Catfish wasn't really that good, to be honest...
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -42140,6 +42555,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -42207,6 +42626,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -42268,6 +42691,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -43215,7 +43642,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Yes. Her house is just outside the compound. Behind the fence.
+        value: Yes. Her house is just outside the industrial state. Behind the fence.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -43501,7 +43928,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Aaah... Ok,ok.
+        value: Aaah... Ok, ok.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -44937,6 +45364,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -44989,7 +45420,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Ah! Yes, yes.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -45004,6 +45435,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45071,6 +45506,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45168,6 +45607,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45237,6 +45680,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45308,6 +45755,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45375,6 +45826,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45442,6 +45897,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45510,6 +45969,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45578,6 +46041,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45645,6 +46112,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45714,6 +46185,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45786,6 +46261,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -45853,6 +46332,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -49043,6 +49526,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49113,6 +49600,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49185,6 +49676,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49260,6 +49755,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49327,6 +49826,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49394,6 +49897,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49467,6 +49974,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49536,6 +50047,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49608,6 +50123,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49677,6 +50196,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49744,6 +50267,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49817,6 +50344,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49885,6 +50416,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -49952,6 +50487,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50019,6 +50558,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50082,6 +50625,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50149,6 +50696,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50210,6 +50761,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50280,6 +50835,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50355,6 +50914,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50422,6 +50985,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50491,6 +51058,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50564,6 +51135,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50635,6 +51210,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50708,6 +51287,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50775,6 +51358,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50849,6 +51436,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -50919,6 +51510,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -51534,7 +52129,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: The catfish emerges from the water, revealing that it has mutated
+        value: The Catfish emerges from the water, revealing that it has mutated
           and fused with a nuclear warhead.
         type: 4
         typeString: CustomFieldType_Localization
@@ -52339,7 +52934,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Go on, take it to Magdalenita's house and stop asking silly questions.
+        value: Come on, take it to Magdalenita's house and stop asking silly questions.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -52839,6 +53434,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -52926,6 +53525,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -52979,7 +53582,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: The catfish gives you the crocodile costume. The smell it will leave
+        value: The Catfish gives you the crocodile costume. The smell it will leave
           on the seats will last a couple of weeks.
         type: 4
         typeString: CustomFieldType_Localization
@@ -52995,6 +53598,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -53064,6 +53671,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -53131,6 +53742,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -53198,6 +53813,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -54638,7 +55257,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: 'Someone... '
+        value: Someone...
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -55114,8 +55733,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: A makeshift sign stands before you. It is handmade from a fallen tree
-          trunk and some altarpieces.
+        value: A crossroads signpost stands before you. It is handmade from a fallen
+          tree trunk and some pieces of wood.
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -55186,7 +55805,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: '[Read the first poster].'
+        value: '[Read the first sign].'
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -55257,7 +55876,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: '[Read the second poster].'
+        value: '[Read the second sign].'
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -55328,7 +55947,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: '[Read the third poster].'
+        value: '[Read the third sign].'
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -55365,7 +55984,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 419.02924
-        y: 334.86362
+        y: 333.97076
         width: 160
         height: 30
     - id: 5
@@ -55478,7 +56097,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: "The text reads: \u2018Parish of the Bicifix\u2019. It looks like
+        value: "The text reads: \u2018Church of the Bicifix\u2019. It looks like
           someone has erased what was there and written this over it."
         type: 4
         typeString: CustomFieldType_Localization
@@ -55553,7 +56172,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: "The text reads: \u2018Picnic areas\u2019. There is a deck of cards
+        value: "The text reads: \u2018Picnic area\u2019. There is a deck of cards
           drawn next to it."
         type: 4
         typeString: CustomFieldType_Localization
@@ -55799,7 +56418,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Would you like to read something else?
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -55894,7 +56513,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: '[Read the fourth poster].'
+        value: '[Read the fourth sign].'
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -55967,7 +56586,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: "The text reads: \u2018\u201CCemetery of the Joyful Castle\u201D."
+        value: "The text reads: \u2018Cemetery of the Joyful Castle'."
         type: 4
         typeString: CustomFieldType_Localization
       - title: EventGuid
@@ -56003,8 +56622,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 606.71436
-        y: 382.1132
+        x: 605.82153
+        y: 383.00604
         width: 160
         height: 30
     entryGroups: []
@@ -56389,7 +57008,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Leave it, leave it. I'll open it for you.
+        value: Never mind, never mind. I'll open it for you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Response Menu Sequence
@@ -56594,7 +57213,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: en
-        value: Go back the way you came and look for him. Many know him as the catfish,
+        value: Go back the way you came and look for him. Many know him as the Catfish,
           but he is an envoy from heaven. He will be back there, watching over us
           and keeping us safe.
         type: 4
@@ -58056,6 +58675,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58129,6 +58752,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58196,6 +58823,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58263,6 +58894,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58330,6 +58965,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58397,6 +59036,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58470,6 +59113,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58537,6 +59184,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58604,6 +59255,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58673,6 +59328,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58740,6 +59399,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58809,6 +59472,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58878,6 +59545,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -58947,6 +59618,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59026,6 +59701,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59094,6 +59773,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59163,6 +59846,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59230,6 +59917,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59297,6 +59988,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59366,6 +60061,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59440,6 +60139,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59509,6 +60212,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59578,6 +60285,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59651,6 +60362,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59718,6 +60433,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59785,6 +60504,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59852,6 +60575,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59921,6 +60648,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -59988,6 +60719,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60056,6 +60791,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60123,6 +60862,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60192,6 +60935,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60261,6 +61008,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60334,6 +61085,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60402,6 +61157,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60469,6 +61228,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60536,6 +61299,10 @@ MonoBehaviour:
         value: a17e2288-7fd6-4666-ba73-729688ded3ce
         type: 0
         typeString: 
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60599,6 +61366,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60672,6 +61443,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60739,6 +61514,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60806,6 +61585,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60881,6 +61664,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -60948,6 +61735,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61015,6 +61806,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61084,6 +61879,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61151,6 +61950,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61212,6 +62015,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61285,6 +62092,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61352,6 +62163,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61420,6 +62235,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61493,6 +62312,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61560,6 +62383,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61612,7 +62439,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: I wish you all the best.
+        value: I wish you the best.
         type: 4
         typeString: CustomFieldType_Localization
       - title: Sequence
@@ -61627,6 +62454,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -61647,8 +62478,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 22.492792, y: 648.1247}
-    canvasZoom: 1.4150305
+    canvasScrollPosition: {x: 6.7922945, y: 626.6969}
+    canvasZoom: 1.2650306
   syncInfo:
     syncActors: 0
     syncItems: 0
