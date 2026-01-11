@@ -9292,7 +9292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99423736
+      value: 0.9942373
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9300,11 +9300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.006188181
+      value: 0.0061881803
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00066610245
+      value: -0.0006661024
       objectReference: {fileID: 0}
     - target: {fileID: 8673178956274309359, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Follow
@@ -95573,6 +95573,62 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: a482169b-8a2e-4a29-916d-0a80e6161411
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2092873503}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 2092873502}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: abrirPuertas
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: a894fa6e-89d2-467f-8033-7b09efc0009b
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2092873503}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 751677269}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!4 &1216399559
 Transform:
   m_ObjectHideFlags: 0
@@ -101001,11 +101057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.066144384
+      value: -0.06614433
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0021370505
+      value: -0.0021370489
       objectReference: {fileID: 0}
     - target: {fileID: 3229794659023920547, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalPosition.x

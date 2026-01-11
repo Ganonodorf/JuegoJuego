@@ -47201,7 +47201,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 605.8131
+        x: 613.0201
         y: 274.26874
         width: 160
         height: 30
@@ -47477,7 +47477,7 @@ MonoBehaviour:
       - originConversationID: 15
         originDialogueID: 18
         destinationConversationID: 15
-        destinationDialogueID: 35
+        destinationDialogueID: 77
         isConnector: 0
         priority: 2
       - originConversationID: 15
@@ -47494,7 +47494,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 827.07135
-        y: 589.3063
+        y: 588.28845
         width: 160
         height: 30
     - id: 20
@@ -48689,7 +48689,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1033.5103
-        y: 374.96262
+        y: 376.0466
         width: 160
         height: 30
     - id: 38
@@ -48977,7 +48977,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1474.837
-        y: 280.4032
+        y: 279.38538
         width: 160
         height: 30
     - id: 42
@@ -49049,8 +49049,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1471.6909
-        y: 382.40952
+        x: 1469.4502
+        y: 583.00024
         width: 160
         height: 30
     - id: 43
@@ -49120,8 +49120,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1474.127
-        y: 445.36963
+        x: 1471.8862
+        y: 647.0443
         width: 160
         height: 30
     - id: 44
@@ -49194,8 +49194,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1246.6962
-        y: 379.35498
+        x: 1245.5369
+        y: 327.18265
         width: 160
         height: 30
     - id: 45
@@ -51533,9 +51533,219 @@ MonoBehaviour:
         y: 509.87082
         width: 160
         height: 30
+    - id: 77
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Primero te voy a abrir esta
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: en
+        value: First, let me open this one.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: EventGuid
+        value: a482169b-8a2e-4a29-916d-0a80e6161411
+        type: 0
+        typeString: 
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 77
+        destinationConversationID: 15
+        destinationDialogueID: 78
+        isConnector: 0
+        priority: 2
+      conditionsString: "Variable[\"PuertaInteriorAbierta\"] == false and \n(Variable[\"PuertaPlayaAbierta\"]
+        == false)"
+      userScript: Variable["PuertaInteriorAbierta"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 825.73926
+        y: 689.81854
+        width: 160
+        height: 30
+    - id: 78
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "As\xED podr\xE1s regresar m\xE1s f\xE1cil si lo necesitas."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: en
+        value: That way, you can return more easily if you need to.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: Menu Text en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: EventGuid
+        value: a894fa6e-89d2-467f-8033-7b09efc0009b
+        type: 0
+        typeString: 
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 78
+        destinationConversationID: 15
+        destinationDialogueID: 79
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 825.7392
+        y: 738.8009
+        width: 160
+        height: 30
+    - id: 79
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Y ahora la otra.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Now the other one.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 79
+        destinationConversationID: 15
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 824.72144
+        y: 786.7653
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8325265
+    canvasScrollPosition: {x: 606.8633, y: 242.78107}
+    canvasZoom: 0.9225265
   - id: 16
     fields:
     - title: Title
