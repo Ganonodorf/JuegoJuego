@@ -5855,6 +5855,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2123523333367203866, guid: 89986293785933c41ba8390b78dd9d3f, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2551280005766749384, guid: 89986293785933c41ba8390b78dd9d3f, type: 3}
       propertyPath: m_Name
       value: Cura
@@ -9228,11 +9232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0061599123
+      value: 0.006159876
       objectReference: {fileID: 0}
     - target: {fileID: 1796738599844634192, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00089044956
+      value: -0.0008904443
       objectReference: {fileID: 0}
     - target: {fileID: 3868807839614905530, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9292,7 +9296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9942373
+      value: 0.99423736
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9300,11 +9304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0061881803
+      value: 0.006188181
       objectReference: {fileID: 0}
     - target: {fileID: 5195609900463988814, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0006661024
+      value: -0.00066610245
       objectReference: {fileID: 0}
     - target: {fileID: 8673178956274309359, guid: 5b575565b5870214d97b790dcb325d18, type: 3}
       propertyPath: m_Follow
@@ -12799,7 +12803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7608320478178949470, guid: fd5a48f67b6d4204b833968694a6f19e, type: 3}
       propertyPath: actor
-      value: Cabo Mayor Paco
+      value: Cabo mayor Paco
       objectReference: {fileID: 0}
     - target: {fileID: 7608320478178949470, guid: fd5a48f67b6d4204b833968694a6f19e, type: 3}
       propertyPath: standardDialogueUISettings.subtitleColor.b
@@ -22884,6 +22888,10 @@ PrefabInstance:
     - target: {fileID: 509436180841408306, guid: b2527310f119e4e4198591a2d4014a22, type: 3}
       propertyPath: standardDialogueUISettings.applyColorToPrependedName
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110924909921978990, guid: b2527310f119e4e4198591a2d4014a22, type: 3}
+      propertyPath: overrideName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5816231240742671538, guid: b2527310f119e4e4198591a2d4014a22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61407,7 +61415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Mesa Trabajo
+  actor: Mesa de trabajo
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -62342,6 +62350,10 @@ PrefabInstance:
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 5093866318697830715}
+    - target: {fileID: 3065401428792316750, guid: 394ab9d47b5773942a15a652ddd60b85, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4507150367942192122, guid: 394ab9d47b5773942a15a652ddd60b85, type: 3}
       propertyPath: m_Name
       value: CamaraPaquiENDING
@@ -63466,7 +63478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7608320478178949470, guid: fd5a48f67b6d4204b833968694a6f19e, type: 3}
       propertyPath: actor
-      value: Deambulante Adormilado
+      value: Deambulante adormilado
       objectReference: {fileID: 0}
     - target: {fileID: 7608320478178949470, guid: fd5a48f67b6d4204b833968694a6f19e, type: 3}
       propertyPath: standardDialogueUISettings.subtitleColor.b
@@ -66838,7 +66850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Chatarrero Viajero
+  actor: Chatarrero viajero
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -66947,7 +66959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Chaterrero viajero
+  overrideName: 
   overrideUseMessage: '- Hablar'
   maxUseDistance: 30
   events:
@@ -73521,7 +73533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915991161344409048, guid: b5f0c07117326fa4e869912bd2f14931, type: 3}
       propertyPath: actor
-      value: El Viento
+      value: El viento
       objectReference: {fileID: 0}
     - target: {fileID: 1915991161344409048, guid: b5f0c07117326fa4e869912bd2f14931, type: 3}
       propertyPath: standardDialogueUISettings.subtitleColor.b
@@ -77977,7 +77989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Chatarrero de Agua
+  actor: Chatarrero de agua
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -81894,6 +81906,10 @@ PrefabInstance:
       propertyPath: m_Priority
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 5110924909921978990, guid: b2527310f119e4e4198591a2d4014a22, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5816231240742671538, guid: b2527310f119e4e4198591a2d4014a22, type: 3}
       propertyPath: m_LocalPosition.x
       value: -121.20097
@@ -85009,7 +85025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7672010913149955211, guid: 0ca62f46de7b7074ab8d72b1d96bf293, type: 3}
       propertyPath: overrideName
-      value: Manu el Fabricante
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7672010913149955211, guid: 0ca62f46de7b7074ab8d72b1d96bf293, type: 3}
       propertyPath: overrideUseMessage
@@ -86078,7 +86094,7 @@ MonoBehaviour:
     applyColorToPrependedName: 1
     prependActorNameSeparator: ': '
     prependActorNameFormat: \>{0}\<{1}
-    subtitleColor: {r: 0.1027946, g: 0.4313523, b: 0.6603774, a: 1}
+    subtitleColor: {r: 0.92156863, g: 1, b: 0.59607846, a: 1}
 --- !u!114 &1077792043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101091,11 +101107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.06614433
+      value: -0.066144384
       objectReference: {fileID: 0}
     - target: {fileID: 3054744321625947128, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0021370489
+      value: -0.0021370505
       objectReference: {fileID: 0}
     - target: {fileID: 3229794659023920547, guid: dd09c54e47617cf43a2e9b40db8a2855, type: 3}
       propertyPath: m_LocalPosition.x
@@ -104337,6 +104353,10 @@ PrefabInstance:
       propertyPath: standardDialogueUISettings.applyColorToPrependedName
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1700637015215372839, guid: 4fb393bc76f6a0a4b9fce2e92da608c6, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1820249656725353843, guid: 4fb393bc76f6a0a4b9fce2e92da608c6, type: 3}
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -105181,6 +105201,10 @@ PrefabInstance:
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 5093866318697830715}
+    - target: {fileID: 4590065241380254687, guid: 65f2254ce982af84584662f6ef8457d8, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5830199698572594933, guid: 65f2254ce982af84584662f6ef8457d8, type: 3}
       propertyPath: standardDialogueUISettings.setSubtitleColor
       value: 1
@@ -113125,6 +113149,10 @@ PrefabInstance:
       propertyPath: standardDialogueUISettings.applyColorToPrependedName
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1700637015215372839, guid: 4fb393bc76f6a0a4b9fce2e92da608c6, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1820249656725353843, guid: 4fb393bc76f6a0a4b9fce2e92da608c6, type: 3}
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -113672,7 +113700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Juana
+  actor: Juana la pipa
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -113782,7 +113810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Juana la pipa
+  overrideName: 
   overrideUseMessage: '- Hablar'
   maxUseDistance: 50
   events:
@@ -120003,6 +120031,10 @@ PrefabInstance:
     - target: {fileID: 3010155790927477388, guid: 65f2254ce982af84584662f6ef8457d8, type: 3}
       propertyPath: m_Priority
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590065241380254687, guid: 65f2254ce982af84584662f6ef8457d8, type: 3}
+      propertyPath: overrideName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5830199698572594933, guid: 65f2254ce982af84584662f6ef8457d8, type: 3}
       propertyPath: standardDialogueUISettings.setSubtitleColor
@@ -136137,7 +136169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Chatarrero de Agua
+  actor: Chatarrero de agua
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -136246,7 +136278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: Chatarrero del agua
+  overrideName: 
   overrideUseMessage: '- Hablar'
   maxUseDistance: 5
   events:
@@ -141224,6 +141256,10 @@ PrefabInstance:
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 5093866318697830715}
+    - target: {fileID: 3065401428792316750, guid: 394ab9d47b5773942a15a652ddd60b85, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6131160097258863645, guid: 394ab9d47b5773942a15a652ddd60b85, type: 3}
       propertyPath: m_LocalPosition.x
       value: 418.899
@@ -151649,6 +151685,10 @@ PrefabInstance:
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 248091569}
+    - target: {fileID: 4009982507236488165, guid: c9fdbc94200106b4898899db5e20ad21, type: 3}
+      propertyPath: overrideName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5829596008940920845, guid: c9fdbc94200106b4898899db5e20ad21, type: 3}
       propertyPath: standardDialogueUISettings.setSubtitleColor
       value: 1
@@ -153181,7 +153221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Juana
+  actor: Juana la pipa
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -153756,7 +153796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Chatarrero de Agua
+  actor: Chatarrero de agua
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -153822,7 +153862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: El Siluro
+  actor: El siluro
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -153855,7 +153895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Chatarrero Viajero
+  actor: Chatarrero viajero
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -153888,7 +153928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Chatarrero Viajero
+  actor: Chatarrero viajero
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
