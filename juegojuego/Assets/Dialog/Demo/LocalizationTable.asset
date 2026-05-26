@@ -23,10 +23,12 @@ MonoBehaviour:
     m_values:
     - 
     - Play
-  - m_fieldName: "Salir del juego<br>(perder\xE1s el progreso)"
+  - m_fieldName: Salir del juego  (y perder el progreso)
     m_keys: 0100000000000000
     m_values:
-    - Exit game<br>(you'll lose all progress)
+    - 'Exit game
+
+      (and lose all progress)'
     - 
   - m_fieldName: Continuar
     m_keys: 0100000000000000
@@ -43,16 +45,16 @@ MonoBehaviour:
     m_values:
     - 
     - "Cambiar idioma a espa\xF1ol"
-  - m_fieldName: "Sensibilidad de C\xE1mara X"
+  - m_fieldName: "Sensibilidad del eje horizontal de la c\xE1mara"
     m_keys: 0000000001000000
     m_values:
     - 
-    - Camera Sensitivity X
-  - m_fieldName: "Sensibilidad de C\xE1mara Y"
+    - Horizontal Camera Sensitivity
+  - m_fieldName: "Sensibilidad del eje vertical de la c\xE1mara"
     m_keys: 0000000001000000
     m_values:
     - 
-    - Camera Sensitivity Y
+    - Vertical Camera Sensitivity
   - m_fieldName: Reiniciar
     m_keys: 0100000000000000
     m_values:
@@ -153,18 +155,22 @@ MonoBehaviour:
     m_values:
     - Crocodile costume
     - 
-  - m_fieldName: "\xA1Muchas gracias por jugar! Si te ha gustado d\xE9janos un comentario
-      en Itch.Io y comp\xE1rtelo.<br><br>@ColectRayente<br>@JuanmaHalo<br>@Juanjo_GarBas"
+  - m_fieldName: "\xA1Muchas gracias por jugar! Si te ha gustado, d\xE9janos un comentario
+      en itch.io o una rese\xF1a en Steam y comp\xE1rtelo.  @ColectRayente @JuanmaHalo
+      @Juanjo_GarBas  Correcci\xF3n de textos y localizaci\xF3n:  Pablo Garc\xEDa
+      Villegas"
     m_keys: 0100000000000000
     m_values:
-    - Thank you very much for playing! If you liked it leave us a comment on Itch.Io.<br><br>@ColectRayente<br>@JuanmaHalo<br>@Juanjo_GarBas
+    - "Thank you very much for playing!\nIf you liked it,\nplease leave a comment
+      on itch.io\nor a review on Steam\nand share the game.\n\n@ColectRayente\n@JuanmaHalo\n@Juanjo_GarBas\n\nProofreading
+      and localization:\nPablo Garc\xEDa Villegas"
     - 
   - m_fieldName: '- Recoger objeto'
     m_keys: 0000000001000000
     m_values:
     - 
     - '- Pick up item'
-  - m_fieldName: Salir del juego
+  - m_fieldName: Salir
     m_keys: 0000000001000000
     m_values:
     - 
@@ -174,11 +180,11 @@ MonoBehaviour:
     m_values:
     - 
     - Continue  >>>
-  - m_fieldName: "Volumen M\xFAsica"
+  - m_fieldName: "Volumen de la m\xFAsica"
     m_keys: 0000000001000000
     m_values:
     - 
-    - Music Volume
+    - Music volume
   - m_fieldName: '- Leer'
     m_keys: 0100000000000000
     m_values:
